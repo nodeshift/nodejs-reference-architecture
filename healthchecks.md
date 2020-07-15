@@ -1,6 +1,6 @@
 # Health Checks
 
-## Modules
+## Recomended Components
 
 We don't recommend the use of a module to add health checks to your application. It's
 best to stick with a minimal implementation for most cases. The tradeoff between the amount

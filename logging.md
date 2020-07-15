@@ -1,7 +1,5 @@
 # Logging
 
-## Modules
-
 ## Recommended Components
 
 * Pino - http://getpino.io/#/
