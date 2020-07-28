@@ -15,7 +15,6 @@
   Istio provides a service mesh, includes security features https://istio.io/docs/tasks/security/
   IBM provides an Istio Adapter for App Identity and Access https://istio.io/docs/reference/config/policy-and-telemetry/adapters/app-identity-access-adapter/
 
-
 ## Guidance
 
 * Use Helmet to configure http headers to address security attacks.
@@ -30,20 +29,20 @@
 
 * A pure Backend API that never deals with a fronted should never be concern of redirecting or dealing with end users, they would required an access/api token or assume the proxy/gateway in front is already handling this and not require token at all. https://github.com/ibm-cloud-security/appid-video-tutorials/blob/master/02b-simple-node-backend-app/app.js
 
-
 * The browser/client should never have access to access token.
 
 * The Authorization Server will interact with the user and once is authenticated it will return to the browser with a grant code, which in turn can be used by the Web App request an access token. With this access token the WebApp can access a Backend API for a resource.
 
 * Use the refresh token when ever possible, this avoids re-authentication.
 
-* Istio Adatper for AppID can handle the authentication and authorization of the client, this leaves the nodejs service without the responsabilities to handling authentication or authorization. https://github.com/ibm-cloud-security/app-identity-and-access-adapter
-
-* Using Istio you can handle authorization based on roles for the nodejs service, for example all authenticated users can read data via http method GET, but only users with `role=admin` are allow to write data via http method POST.
-
 * Do not use OAUTH2 implicit grant, is preferred to use Authorization code workflow.
 
 * Use OIDC ID token for authentication, they are represented as JSON Web Token (JWT) and it contains the requested claims.
+
+* When using Istio:
+  * Istio Adatper for AppID can handle the authentication and authorization of the client, this leaves the nodejs service without the responsabilities to handling authentication or authorization. https://github.com/ibm-cloud-security/app-identity-and-access-adapter
+
+  * Using Istio you can handle authorization based on roles for the nodejs service, for example all authenticated users can read data via http method GET, but only users with `role=admin` are allow to write data via http method POST.
 
 ## Learning Resources
 
