@@ -34,7 +34,7 @@ The `team` consists of engineers from across groups within IBM and Red Hat who:
 
 * Whenever possible components should have been validated at scale within the `team's`
   JavaScript/Node.js deployments or in engagements with our customers.
-* We need to consider licensing and other due diligence when selection components.
+* We need to consider licensing and other due diligence when selecting components.
 * We are going to start with a focus on the back-end, a similar effort for front-end
   components will make sense as a follow on.
 
