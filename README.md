@@ -40,7 +40,8 @@ The `team` consists of engineers from across groups within IBM and Red Hat who:
 
 ## Components
 
-The reference architecture covers the following components:
+The reference architecture covers the following components (currently a work in progress
+with only a subset of sections having recommendations):
 
 * Functional Components
   * [Web Framework](./webframework.md)
