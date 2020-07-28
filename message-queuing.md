@@ -11,8 +11,8 @@
 ## Kafka
 
 Recommendation is to use [node-rdkafka][], because it is:
-- Widely used and recommended by IBM and RedHat messaging teams,
-  for performance, features, and protocol compatiblity.
+- Widely used and recommended by the messaging groups within the `teams`
+  organizations for performance, features, and protocol compatiblity.
 - Based on the same [librdkafka](https://github.com/edenhill/librdkafka),
   maintained by the Kafka project and used by most language clients.
 
@@ -33,27 +33,6 @@ individual application, but will also impact the Kafka cluster for other users.
 Architect applications so that they connect and keep
 an open connection on which events are processed when they arrive.
 
-### IBM and Red Hat use
-
-* Included in the Cloud Event service samples:
-  - https://github.com/ibm-messaging/event-streams-samples/blob/master/docs/librdkafka.md
-  - https://github.com/ibm-messaging/event-streams-samples/tree/master/kafka-nodejs-console-sample
-
-* Used as part of the Quality Engineering testing for AMQ Streams(Red Hat Kafka product
-  at Red Hat (from Simon Woodman swoodman@redhat.com>). In Red Hat backlog to `productize`
-  librdkafka which package is based on.
-  
-* Andrew Schofield(Chief Architect Event streams, Hybrid Cloud) indicated that node-rdkafka is
-  the library that most people have had success with.
-
-### Support capability:
-
-* Lead contact: ?
-
-The first place to try and get help if we need to field questions is by posting to the
-`#eventstreams-onprem` slack channel. If that does not work out Dale Lane <dale.lane@uk.ibm.com>
-from the Cloud messaging team has agreed to help out.
-
 ## ActiveMQ
 
 Recommendation is to use [rhea][] which supports AMQP1.0 
@@ -62,15 +41,6 @@ higher weekly downloads than the competing module for ActiveMQ which supports th
 protocol (the native ActiveMQ protocol).
 
 ### Guidance
-
-### IBM and Red Hat use
-
-- [rhea][] was written by and is maintained by Red Hat. Lead maintainer is jross@redhat.com.
-- Included in the Red Hat nodeshift starters [nodejs-messaging-work-queue](https://github.com/nodeshift-starters/nodejs-messaging-work-queue/blob/master/frontend)
-
-### Support capability:
-
-* Lead contact: jross@redhat.com
 
 ## Redis
 
