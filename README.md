@@ -19,7 +19,7 @@ good, but these are the ones we know best and have the most experience with.
 * Due to the above these are the components the `team` is best positioned when working with internal and external customers.
   However, we do not include formal support for these components in any of our support offerings unless specifically identified
   in those offerings.
-* The recommended components may change over time as technologies and approaches change. 
+* The recommended components may change over time as technologies and approaches change.
 
 ### The team
 
@@ -82,4 +82,6 @@ with only a subset of sections having recommendations):
   * Loadbalancing
   * [Failure Handling](./failurehandling.md)
 
+## Contributing
 
+To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTING.md).
