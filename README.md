@@ -32,7 +32,7 @@ The `team` consists of engineers from across groups within IBM and Red Hat who:
 
 ### Key tenets
 
-* Whenever possible components should have been validated at scale within the `teams`
+* Whenever possible components should have been validated at scale within the `team's`
   JavaScript/Node.js deployments or in engagements with our customers.
 * We need to consider licensing and other due diligence when selection components.
 * We are going to start with a focus on the back-end, a similar effort for front-end
