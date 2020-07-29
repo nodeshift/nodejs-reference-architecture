@@ -1,6 +1,6 @@
 # Web Framework
 
-## Recomended Components
+## Recommended Components
 
 * Express - https://expressjs.com/
   With 10 million downloads a month, Express is the most popular backend Node.js web framework.
@@ -16,10 +16,10 @@ When deploying Express we have the following additional recommendations:
 * Use the latest version of the 4.x release line. This version is currently the most suitable for production use.
   We recommend using ~4.x.y (where x.y reflects the version you start at) in your package.json so that you get patch
   version updates as you update your application in development.  We recommend planned periodic reviews
-  to decide when to upate to new minor versions.
+  to decide when to update to new minor versions.
 
 * Use different ports for different concerns when possible.
-  An application can provide additional endpoints for metrics collection or other concerns. It is recommeded that
+  An application can provide additional endpoints for metrics collection or other concerns. It is recommended that
   the main port (for example 3000 or 8080) be reserved for business logic and an admin
   port be used for supporting endpoints. This helps to separate out requests to business logic and makes it easier to collect
   data specific to requests to the business logic.

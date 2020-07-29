@@ -53,7 +53,7 @@ with only a subset of sections having recommendations):
   * Databases
   * [Authentication and Authorization](./auth.md)
   * Caching
-  * Multithreading
+  * Multi-threading
   * Consuming Services
   * Node versions/images
   * Transactions_handling
@@ -79,7 +79,7 @@ with only a subset of sections having recommendations):
   * Deployment
     * Containers
     * Serverless
-  * Loadbalancing
+  * Load-balancing
   * [Failure Handling](./failurehandling.md)
 
 ## Contributing

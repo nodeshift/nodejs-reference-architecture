@@ -1,18 +1,18 @@
 # Health Checks
 
-## Recomended Components
+## Recommended Components
 
 We don't recommend the use of a module to add health checks to your application. It's
 best to stick with a minimal implementation for most cases. The tradeoff between the amount
-of code you need to add to your application for a minimal implementaion versus
+of code you need to add to your application for a minimal implementation versus
 the costs of adding a new dependency leads us to recommend adding the code directly.
 Examples of how to add this code to your application are provided in the Guidance section.
 
 ## Guidance
 
 Kubernetes includes built in liveness and readiness monitoring and document
-requirements for these endpoints. We recommened following the
-kubenetes requirements as they are well defined, broadly used, and make
+requirements for these endpoints. We recommended following the
+kubernetes requirements as they are well defined, broadly used, and make
 your application ready for Kubernetes deployment even if you initially use
 something else.
 
@@ -26,7 +26,7 @@ server is up and responding to requests and is the most commonly used probe
 type for services that expose HTTP as part of their function.
 
 When using a Service Mesh (Istio), there are are potential
-issues that you need to address. If you have mutal TLS enabled,
+issues that you need to address. If you have mutual TLS enabled,
 using `httpGet` probes with Istio requires some specific configuration. Check the Istio
 [guide](https://istio.io/docs/ops/configuration/mesh/app-health-check/) to see
 the options available when using HTTP request. If this configuration is
@@ -84,7 +84,7 @@ liveness or readiness.
 ### Frequency of checking
 
 Since probe states shouldn't change once the application is serving traffic,
-there is no need for agressive probe periods. The initial delay for the liveness
+there is no need for aggressive probe periods. The initial delay for the liveness
 probe should be ample enough for application startup. If its too short,
 Kubernetes will keep terminating the container before it serves traffic. Since
 the only typical reason to not respond to a readiness probe once the application

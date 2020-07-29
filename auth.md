@@ -1,6 +1,6 @@
 # Authentication
 
-## Recomended Components
+## Recommended Components
 
 * Passport - http://www.passportjs.org/
   Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. Is based on strategies which allows for a large number of integrations.
@@ -23,7 +23,7 @@
 
 * Use a web strategy based on AppID when ever possible.
 
-* There is a difference between a WebApp/BFF(Backaend for Frontend) and a pure Backend API that never deals with a Frontend like a Web Browser. Known this differences will help understand the requirments in terms of security.
+* There is a difference between a WebApp/BFF(Backend for Frontend) and a pure Backend API that never deals with a Frontend like a Web Browser. Known this differences will help understand the requirements in terms of security.
 
 * A Frontend WebApp should never handle end user credentials such as username/password, it should always delegate to an Authorization Server for example AppID service. https://github.com/ibm-cloud-security/appid-video-tutorials/blob/master/02a-simple-node-web-app/app.js
 
@@ -40,7 +40,7 @@
 * Use OIDC ID token for authentication, they are represented as JSON Web Token (JWT) and it contains the requested claims.
 
 * When using Istio:
-  * Istio Adatper for AppID can handle the authentication and authorization of the client, this leaves the nodejs service without the responsabilities to handling authentication or authorization. https://github.com/ibm-cloud-security/app-identity-and-access-adapter
+  * Istio Adapter for AppID can handle the authentication and authorization of the client, this leaves the nodejs service without the responsibilities to handling authentication or authorization. https://github.com/ibm-cloud-security/app-identity-and-access-adapter
 
   * Using Istio you can handle authorization based on roles for the nodejs service, for example all authenticated users can read data via http method GET, but only users with `role=admin` are allow to write data via http method POST.
 

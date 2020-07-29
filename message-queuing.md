@@ -12,7 +12,7 @@
 
 Recommendation is to use [node-rdkafka][], because it is:
 - Widely used and recommended by the messaging groups within the `teams`
-  organizations for performance, features, and protocol compatiblity.
+  organizations for performance, features, and protocol compatibility.
 - Based on the same [librdkafka](https://github.com/edenhill/librdkafka),
   maintained by the Kafka project and used by most language clients.
 

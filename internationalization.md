@@ -1,6 +1,6 @@
 # Internationalization
 
-## Recomended Components
+## Recommended Components
 
 * Built in to JavaScript
 
@@ -13,7 +13,7 @@ Ecma-402/Ecma-262 support for `Intl` object and related functionality such as St
 - Upper/Lower casing and normalization: converting strings to a normalized or cased form…  In many languages, there are multiple representations of the same character which will not compare as equal with `===` unless they are normalized. In Turkish, the uppercase of `i` is `İ` (with a dot), not `I` (without a dot).
 
 * Language data use by the above functions is bundled into the Node.js runtime As of Node.js 13. For versions prior to Node.js 13
-  this data must be installed separately and confired as outlined in [providing icu data at runtime](https://github.com/nodejs/node/blob/master/doc/api/intl.md#providing-icu-data-at-runtime).  We recommend using the [full-icu]( https://www.npmjs.com/package/full-icu) module to install this data when needed.
+  this data must be installed separately and configured as outlined in [providing icu data at runtime](https://github.com/nodejs/node/blob/master/doc/api/intl.md#providing-icu-data-at-runtime).  We recommend using the [full-icu]( https://www.npmjs.com/package/full-icu) module to install this data when needed.
 
 The built-in `Intl` does not currently support some of the functionality that may be required for an internationalized user experience. For example, a common requirement is to present a translated version of a message such as `You have ${count} messages.` Two components are required:
 

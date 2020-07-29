@@ -16,8 +16,8 @@
 
 * Export prometheus endpoints for containers running Node.js applications. Without
   these end points it can be difficult monitor your applications. Prometheus is
-  the defato standard for exposing metrics in Cloud Native applications. Futher
-  Cloud Native infrastructure (Kubernetes distributions) make it easly to collect
+  the defacto standard for exposing metrics in Cloud Native applications. Further
+  Cloud Native infrastructure (Kubernetes distributions) make it easily to collect
   prometheus metrics and it is also easy to collect and graph even if you need
   to install the infrastructure components.
 
@@ -28,9 +28,9 @@
 * For HTTP expose the `RED` metrics as:
   - request rate - requests which are handled ok (status code==2xx). Expose this as the total 
     count. 
-  - error rate - rquests which are not handled ok ( status code!=2xx). Expose this metric
+  - error rate - requests which are not handled ok ( status code!=2xx). Expose this metric
     as a percentage of the total rate.
-  - request latency - duration of requests which are handled ok, grouped into ranges/backets and
+  - request latency - duration of requests which are handled ok, grouped into ranges/buckets and
     exposed through a prometheus histogram.
 
 * [prometheus-nodejs-tutorial](https://github.com/csantanapr/prometheus-nodejs-tutorial) provides
@@ -40,7 +40,7 @@
   Configure prometheus middleware as the first middleware to start the timer as soon as possible.
   When setting up the middleware define your expose route for metrics `/metrics` before activating the middleware
   to avoid calls to `/metrics` to be counted as part of the metrics, you can do the same for 
-  liveness and readiness checks to define them before promtheus middleware if you want to discard them from your
+  liveness and readiness checks to define them before prometheus middleware if you want to discard them from your
   http metrics calculations. 
   
   
@@ -57,6 +57,6 @@
   to get the 95 percentile over all instances over 5m window would be
   `histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket{code="2xx", app="myapp"}[5m]))`
 
-* Export addiitonal custom metrics to provide key attributes about the operation of
+* Export additional custom metrics to provide key attributes about the operation of
   your application which are not part of the standard metrics.
 
