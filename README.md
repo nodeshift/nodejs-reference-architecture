@@ -60,9 +60,10 @@ with only a subset of sections having recommendations):
 
 * Development
   * Static Assets
-  * Testing
   * Keeping up to date
   * Code Quality
+    * [Code Consistency](./code-consistency.md)
+    * Testing
   * References to CI/CD
   * Npm Mirroring
   * Secure Development Process
