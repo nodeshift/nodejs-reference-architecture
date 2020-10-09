@@ -52,7 +52,7 @@ with only a subset of sections having recommendations):
   * API Definition
   * Databases
   * [Authentication and Authorization](./docs/functional-components/auth.md)
-  * Caching
+  * [Data Caching](./docs/functional-components/data-caching.md)
   * Multi-threading
   * Consuming Services
   * Node versions/images
