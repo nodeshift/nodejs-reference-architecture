@@ -44,13 +44,13 @@ The reference architecture covers the following components (currently a work in 
 with only a subset of sections having recommendations):
 
 * Functional Components
-  * [Template Engines](./template-engines.md)
-  * [Message Queuing](./message-queuing.md)
-  * [Internationalization](./internationalization.md)
+  * [Template Engines](./docs/functional-components/template-engines.md)
+  * [Message Queuing](./docs/functional-components/message-queuing.md)
+  * [Internationalization](./docs/functional-components/internationalization.md)
   * Accessibility
   * API Definition
   * Databases
-  * [Authentication and Authorization](./auth.md)
+  * [Authentication and Authorization](./docs/functional-components/auth.md)
   * Caching
   * Multi-threading
   * Consuming Services
@@ -61,26 +61,26 @@ with only a subset of sections having recommendations):
   * Static Assets
   * Keeping up to date
   * Code Quality
-    * [Code Consistency](./code-consistency.md)
+    * [Code Consistency](./docs/development/code-consistency.md)
     * Testing
   * References to CI/CD
   * Npm Mirroring
   * Secure Development Process
 
 * Operations
-  * [Health Checks](./healthchecks.md)
+  * [Health Checks](./docs/operations/healthchecks.md)
   * Monitoring/Metrics
     * Monitoring
-    * [Metrics Collection](./metrics.md)
+    * [Metrics Collection](./docs/operations/metrics.md)
     * Distributed Tracing
   * Problem Determination
-  * [Logging](./logging.md)
+  * [Logging](./docs/operations/logging.md)
   * Rollout
   * Deployment
     * Containers
     * Serverless
   * Load-balancing
-  * [Failure Handling](./failurehandling.md)
+  * [Failure Handling](./docs/operations/failurehandling.md)
 
 ## Contributing
 
