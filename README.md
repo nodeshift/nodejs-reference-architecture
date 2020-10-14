@@ -44,6 +44,7 @@ The reference architecture covers the following components (currently a work in 
 with only a subset of sections having recommendations):
 
 * Functional Components
+  * [Web Framework](./docs/functional-components/webframework.md)
   * [Template Engines](./docs/functional-components/template-engines.md)
   * [Message Queuing](./docs/functional-components/message-queuing.md)
   * [Internationalization](./docs/functional-components/internationalization.md)
