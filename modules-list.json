@@ -1,0 +1,70 @@
+[
+  {
+    "name": "cldr-localenames-full",
+    "npmlink": "https://npmjs.com/package/cldr-localenames-full"
+  },
+  {
+    "name": "eslint",
+    "npmlink": "https://www.npmjs.com/package/eslint"
+  },
+  {
+    "name": "express",
+    "npmlink": "https://www.npmjs.com/package/express"
+  },
+  {
+    "name": "express-prom-bundle",
+    "npmlink": "https://www.npmjs.com/package/express-prom-bundle"
+  },
+  {
+    "name": "helmet",
+    "npmlink": "https://www.npmjs.com/package/helmet"
+  },
+  {
+    "name": "ibmcloud-appid",
+    "npmlink": "https://www.npmjs.com/package/ibmcloud-appid"
+  },
+  {
+    "name": "i18next",
+    "npmlink": "https://www.npmjs.com/package/i18next"
+  },
+  {
+    "name": "i18next-icu",
+    "npmlink": "https://www.npmjs.com/package/i18next-icu"
+  },
+  {
+    "name": "i18next-express-middleware",
+    "npmlink": "https://www.npmjs.com/package/i18next-express-middleware"
+  },
+  {
+    "name": "i18next-node-fs-backend",
+    "npmlink": "https://www.npmjs.com/package/i18next-node-fs-backend"
+  },
+  {
+    "name": "ioredis",
+    "npmlink": "https://www.npmjs.com/package/ioredis"
+  },
+  {
+    "name": "node-rdkafka",
+    "npmlink": "https://www.npmjs.com/package/node-rdkafka"
+  },
+  {
+    "name": "opossum",
+    "npmlink": "https://www.npmjs.com/package/opossum"
+  },
+  {
+    "name": "passport",
+    "npmlink": "https://www.npmjs.com/package/passport"
+  },
+  {
+    "name": "pino",
+    "npmlink": "https://www.npmjs.com/package/pino"
+  },
+  {
+    "name": "prom-client",
+    "npmlink": "https://www.npmjs.com/package/prom-client"
+  },
+  {
+    "name": "rhea",
+    "npmlink": "https://www.npmjs.com/package/rhea"
+  }
+]
