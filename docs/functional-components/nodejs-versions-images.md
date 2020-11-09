@@ -16,7 +16,7 @@
 We recommend that you use only [LTS](https://github.com/nodejs/release#release-phases)
 versions for production use, and in addition test on the latest `Current` in order
 to prepare for future upgrades. A new LTS version is available every October from the
-project and past LTS versions go EOL in April 30 months after they were released.
+project and past LTS versions go EOL in April, 30 months after they were released.
 You should 
 
 ### Raw binaries
