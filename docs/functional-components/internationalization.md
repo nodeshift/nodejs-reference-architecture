@@ -2,7 +2,7 @@
 
 ## Recommended Components
 
-- Built in to JavaScript
+* Built in to JavaScript
 
 Ecma-402/Ecma-262 support for `Intl` object and related functionality such as String.localeCompare [Node Intl.html](https://github.com/nodejs/node/blob/master/doc/api/intl.md) . Widely supported, growing feature set. Use the API when possible. (Also available on all major browsers.) These functions, in general, accept a Locale string (such as `en-CA` for English in Canada) to specify which language and cultural preference should be used.
 
@@ -10,10 +10,10 @@ Ecma-402/Ecma-262 support for `Intl` object and related functionality such as St
   - Always use `String.localeCompare()` to compare textual content from users.
 - Date/Time and Number formatting: language-aware output of dates/times and numbers.
 
-- Upper/Lower casing and normalization: converting strings to a normalized or cased form… In many languages, there are multiple representations of the same character which will not compare as equal with `===` unless they are normalized. In Turkish, the uppercase of `i` is `İ` (with a dot), not `I` (without a dot).
+- Upper/Lower casing and normalization: converting strings to a normalized or cased form…  In many languages, there are multiple representations of the same character which will not compare as equal with `===` unless they are normalized. In Turkish, the uppercase of `i` is `İ` (with a dot), not `I` (without a dot).
 
 * Language data use by the above functions is bundled into the Node.js runtime As of Node.js 13. For versions prior to Node.js 13
-  this data must be installed separately and configured as outlined in [providing icu data at runtime](https://github.com/nodejs/node/blob/master/doc/api/intl.md#providing-icu-data-at-runtime). We recommend using the [full-icu](https://www.npmjs.com/package/full-icu) module to install this data when needed.
+  this data must be installed separately and configured as outlined in [providing icu data at runtime](https://github.com/nodejs/node/blob/master/doc/api/intl.md#providing-icu-data-at-runtime).  We recommend using the [full-icu]( https://www.npmjs.com/package/full-icu) module to install this data when needed.
 
 The built-in `Intl` does not currently support some of the functionality that may be required for an internationalized user experience. For example, a common requirement is to present a translated version of a message such as `You have ${count} messages.` Two components are required:
 
@@ -24,15 +24,15 @@ The built-in `Intl` does not currently support some of the functionality that ma
   - Spanish (Spain): `Tienes ${count} mensajes.` -> **Tienes 1.234 mensajes.**
   - Note: that translation may require a re-ordering of the substituted components, and is also affected by specific plural rules in a particular language.
 
-For Resource Loading and Message Format, we recommend [i18next](https://www.i18next.com/) -- With >500,000 downloads a month, i18next is one of the most popular internationalization framework for Node.js.
+For Resource Loading and Message Format, we recommend [i18next](https://www.i18next.com/) --  With >500,000 downloads a month, i18next is one of the most popular internationalization framework for Node.js.
 It provides the capabilities needed to manage strings within your application so that they can be
 displayed in the locale appropriate for the end user. It is also supported on the browser.
 
-- We recommend using i18next with the [i18next-icu](https://www.npmjs.com/package/i18next-icu) module so that ICU MessageFormat syntax is used. There is industry wide work to standardize on the MessageFormat syntax. For more details you can read about current progress [https://github.com/unicode-org/message-format-wg](https://github.com/unicode-org/message-format-wg).
+  - We recommend using i18next with the [i18next-icu](https://www.npmjs.com/package/i18next-icu) module so that ICU MessageFormat syntax is used. There is industry wide work to standardize on the MessageFormat syntax. For more details you can read about current progress [https://github.com/unicode-org/message-format-wg](https://github.com/unicode-org/message-format-wg).
 
-- For loading localized content, we recommend using [i18next-node-fs-backend](https://www.npmjs.com/package/i18next-node-fs-backend) which is a backend that allows you to load translated resources as JSON files from the filesystem.
+  - For loading localized content, we recommend using [i18next-node-fs-backend](https://www.npmjs.com/package/i18next-node-fs-backend) which is a backend that allows you to load translated resources as JSON files from the filesystem.
 
-- If you are using express or a web framework that supports express middleware, [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware)
+  - If you are using express or a web framework that supports express middleware, [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware)
   provides support for language detection/management when using i18next.
 
 Translated Language and Region Names: Applications which display a list of languages or countries/regions to users often must translate that list into many other languages according to their ISO code. Using the industry-standard vetted [CLDR](https://unicode.org/cldr) data will avoid the need to manually maintain and translate such a list. We recommend that you use this data via its [NPM module](https://npmjs.com/package/cldr-localenames-full). For example, to fetch the name of "French" in "Spanish". Note that this is a large package, containing data for over 500 locales.
@@ -44,6 +44,7 @@ francés
 ```
 
 Also Note that there is ongoing active work to move the above features into JavaScript. To see details or even to influence the priorities, see [github.com/tc39/ecma402](https://github.com/tc39/proposals/blob/master/ecma402/README.md#active-proposals).
+
 
 ## Guidance
 
@@ -61,3 +62,4 @@ similar short lived assets.
 
 It is not recommended to translate low-level error and status messages.
 See [logging](./logging.md) for additional guidance.
+
