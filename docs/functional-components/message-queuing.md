@@ -2,23 +2,21 @@
 
 ## Recommended packages
 
-| Server   | Recommended client |
-| -------- | ------------------ |
-| Kafka    | [node-rdkafka][]   |
-| ActiveMQ | [rhea][]           |
-| Redis    | [ioredis][]        |
+| Server       |  Recommended client        |
+|--------------|----------------------------|
+|Kafka         |  [node-rdkafka][]          |
+|ActiveMQ      |  [rhea][]                  |
+|Redis         |  [ioredis][]               |
 
 ## Kafka
 
 Recommendation is to use [node-rdkafka][], because it is:
-
 - Widely used and recommended by the messaging groups within the `teams`
   organizations for performance, features, and protocol compatibility.
 - Based on the same [librdkafka](https://github.com/edenhill/librdkafka),
   maintained by the Kafka project and used by most language clients.
 
 This is not without risks:
-
 - In the midst of a maintenance challenge that it may or may not be
   [pulling out of](https://github.com/Blizzard/node-rdkafka/issues/628).
 - It is written in C++, which can be problematic in some environments.
@@ -30,16 +28,16 @@ based on what happens going forward.
 
 Reuse connections. Do not write apps that connect/send/disconnect
 repeatedly in a loop. This will result in poor performance, not only for the
-individual application, but will also impact the Kafka cluster for other users.
+individual application, but will also impact the Kafka cluster for other users. 
 
 Architect applications so that they connect and keep
 an open connection on which events are processed when they arrive.
 
 ## ActiveMQ
 
-Recommendation is to use [rhea][] which supports AMQP1.0
+Recommendation is to use [rhea][] which supports AMQP1.0 
 (one of the protocols supported by ActiveQ). This module is maintained by Red Hat and has
-higher weekly downloads than the competing module for ActiveMQ which supports the STOMP
+higher weekly downloads than the competing module for ActiveMQ which supports the STOMP 
 protocol (the native ActiveMQ protocol).
 
 ### Guidance
