@@ -48,9 +48,9 @@ application traffic.
 The response does not need to return any data, but status must be `200/OK`. For
 humans, it may be useful to return a minimal response body, such as `ok`.
 
-It may be tempting (particularly based on 
+It may be tempting (particularly based on
 tutorials available on the web) to do additional internal state checks
-or checks on the availability of dependencies. 
+or checks on the availability of dependencies.
 
 For liveness probes in particular
 this can often do more harm than good as the end result is the container
@@ -64,8 +64,8 @@ for the service to modify its probe states to
 participate in container orchestration. For example, stopping responding on
 /ready and allowing active connections to drain on the main port. When these
 requirements exist it makes sense to implement a more complete readiness
-endpoint. In other cases it is better to stick to the 
-simple implementation. For example, in the case of a database that is 
+endpoint. In other cases it is better to stick to the
+simple implementation. For example, in the case of a database that is
 down, it is better to respond indicating there is a problem with the database
 versus failing the readiness check as that results in the loss of the
 ability to provided 5xx responses to requests so that the client
@@ -78,7 +78,7 @@ liveness probes, respectively.
 
 Any route name can work if it agrees with the probe configuration, but in the
 absence of some requirement by the tooling, best to use names that have a
-clear relationship to their purpose.  `/health` is not clear as to whether it is
+clear relationship to their purpose. `/health` is not clear as to whether it is
 liveness or readiness.
 
 ### Frequency of checking
@@ -102,14 +102,13 @@ It is easy to add simple endpoints with with pure Express.js,
 or your framework of choice. For example with Express:
 
 ```javascript
-const app = require('express')();
+const app = require("express")();
 
 // Note that when collecting metrics, the management endpoints should be
 // implemented before the instrumentation that collects metrics, so that
 // these endpoints are not counted in the metrics.
-app.get('/ready', (req, res) => res.status(200).json({status:"ok"}));
-app.get('/live', (req, res) => res.status(200).json({status:"ok"}));
-
+app.get("/ready", (req, res) => res.status(200).json({ status: "ok" }));
+app.get("/live", (req, res) => res.status(200).json({ status: "ok" }));
 
 // ... rest of app...
 
@@ -119,13 +118,12 @@ app.listen();
 The kubernetes endpoints exposed by the application have to agree with the probe configuration:
 
 ```yaml
-  readinessProbe:
-    httpGet:
-      path: /ready
-      port: 3000
-  livenessProbe:
-    httpGet:
-      path: /live
-      port: 3000
+readinessProbe:
+  httpGet:
+    path: /ready
+    port: 3000
+livenessProbe:
+  httpGet:
+    path: /live
+    port: 3000
 ```
-
