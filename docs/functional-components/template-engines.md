@@ -9,7 +9,7 @@ No recommended packages.
 Server side templating is no longer common for creating UIs, and has never been
 common for implementing microservice APIs.
 
-React and Angular have alternatives to templating (Server Side Rendering, SSR).
+React and Angular have alternatives to templating  (Server Side Rendering, SSR).
 
 If a template engine is included in a toolset, then it doesn't have to be
 chosen, the recommendation would be to use the one provided (for example,
