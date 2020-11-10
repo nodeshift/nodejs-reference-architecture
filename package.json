@@ -8,7 +8,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "lint": "prettier ./docs/**/*.md --write"
+    "lint": "prettier ./README.md ./docs/**/*.md --write"
   },
   "dependencies": {
     "prettier": "2.0.5"
