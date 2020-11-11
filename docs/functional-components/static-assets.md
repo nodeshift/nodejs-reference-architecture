@@ -3,7 +3,7 @@
 ## Recommended packages
 
 * [express-static](https://expressjs.com/en/starter/static-files.html). 
-Express static is part of the express.js package that allows evelopers to expose static middlewares.
+Express static is part of the express.js package that allows developers to expose static middlewares.
 
 ## Guidance
 
