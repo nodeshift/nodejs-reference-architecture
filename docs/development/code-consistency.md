@@ -16,7 +16,7 @@ Consistency should be enforced through automated tooling
 which is well integrated into the process of landing
 Pull Requests (or equivalent).
 
-There are benefits to consistency across an organiziation but
+There are benefits to consistency across an organization but
 it is also imporant that teams are empowered to do what is
 right for their projects. We recommend starting with an
 organizational standard and then adjusting based on the
