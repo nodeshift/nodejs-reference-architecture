@@ -66,7 +66,7 @@ we recommend the binaries which come with RHEL.
 
 ### Binaries with FIPs support  
 
-The community is an awkward period where the only suppored versions
+The community is at an awkward period where the only supported versions
 of OpenSSL do not have a FIPs certication. The community binaries
 and containers are, therefore, not suitable for deployments that
 need FIPs compliance.  
@@ -161,6 +161,5 @@ This will ensure you can ensure that any issues specific to your
 deployment can be reported/addressed by the project before it
 becomes LTS and ensure you have enough time before the existing LTS
 version you are using goes EOL in April.
-
 
 
