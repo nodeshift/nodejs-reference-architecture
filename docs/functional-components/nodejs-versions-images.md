@@ -27,7 +27,7 @@ supported platforms on the [download](https://nodejs.org/en/download/) page.
 These are the most up to date packages available and new releases show
 up on this page first.
 
-### Windws and Mac installers
+### Windows and Mac installers
 
 The Node.js projects provides installers for Windows and Mac
 on the [download](https://nodejs.org/en/download/) page.
@@ -161,5 +161,4 @@ This will ensure you can ensure that any issues specific to your
 deployment can be reported/addressed by the project before it
 becomes LTS and ensure you have enough time before the existing LTS
 version you are using goes EOL in April.
-
 
