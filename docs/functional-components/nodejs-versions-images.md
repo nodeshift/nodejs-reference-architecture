@@ -98,7 +98,7 @@ sizes using [multi-stage docker builds](https://docs.docker.com/develop/develop-
 The larger images has all of the tools need to build the application while
 the minimal image has only the base components needed to run Node.js. In both cases
 these images bundle in the binaries which are available on the Node.js download
-site and support multiple ptatforms (x64, PPC and s390)
+site and support multiple ptatforms (x64, PPC and s390).
 
 Images are also provided for Alpine which can allow you to achieve even smaller
 images sizes. **However**, if you check the
@@ -161,4 +161,3 @@ This will ensure you can ensure that any issues specific to your
 deployment can be reported/addressed by the project before it
 becomes LTS and ensure you have enough time before the existing LTS
 version you are using goes EOL in April.
-
