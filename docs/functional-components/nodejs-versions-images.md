@@ -106,7 +106,7 @@ images sizes. **However**, if you check the
 file for the Node.js project you'll see that support for Alpine is `experimental`.
 This also means that there is no binary which can be bundled and instead
 the creation of the Alpine containers includes building the binaries
-themselves. For there reasons we don't recommend using the Alpine images
+themselves. For these reasons we don't recommend using the Alpine images
 unless the smaller size is an absolute requirement.
 
 ### Commercially Supported Containers
