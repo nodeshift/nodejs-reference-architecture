@@ -151,7 +151,7 @@ mailing list is used to provide advance notice of security releases
 and will give you the earliest warning that you may need
 to update your Node.js version.
 
-For new applications alwasys start with the latest LTS version.
+For new applications always start with the latest LTS version.
 
 For existing applications plan to do advance testing on your next
 target LTS version when it is released in April each year (it will be the
