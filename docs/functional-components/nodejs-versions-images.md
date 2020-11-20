@@ -123,7 +123,7 @@ the rhel or ubi images available from the
 
 ### Containers with FIPs support  
 
-The community is an awkward period where the only suppored versions
+The community is at an awkward period where the only supported versions
 of OpenSSL do not have a FIPs certication. The community binaries
 and containers are, therefore, not suitable for deployments that
 need FIPs compliance.  
