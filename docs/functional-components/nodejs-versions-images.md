@@ -41,7 +41,7 @@ Node.js version managers provide an easier way to get Node.js
 versions from the Node.js download site and switch between them.
 The the teams organizations have the most experience with
 [nvm](https://github.com/nvm-sh/nvm)
-with the caveat that it does not support windows and that
+with the caveat that it does not support Windows and that
 it should only be used for development as opposed to production
 deployments.
 
