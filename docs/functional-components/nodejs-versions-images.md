@@ -53,7 +53,7 @@ installed using the native package managers for that OS.
 
 **Note:** It is quite common for the version of Node.js which
 is installed in this way to be tied to the OS version.
-for example if you simply install `apt-get install nodejs` on
+For example if you simply install `apt-get install nodejs` on
 Ubuntu 18.04 you get Node.js v8.10.0 which is already end of life (EOL). 
 
 Therefore, it is generally not recommeneded that you use the default
