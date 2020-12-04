@@ -66,5 +66,9 @@
   {
     "name": "rhea",
     "npmlink": "https://www.npmjs.com/package/rhea"
+  },
+  {
+    "name": "lru-cache",
+    "npmlink": "https://www.npmjs.com/package/lru-cache"
   }
 ]
