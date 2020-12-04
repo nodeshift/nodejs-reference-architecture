@@ -8,7 +8,7 @@
 
 For serving static resources on the application, we recommend using [express-static][] middleware as it has been widely used and tested in production.
 
-When using express.static() method, we can serve static resources directly by specifying the folder name where we have stored our static resources.
+When using `express.static()` method, we can serve static resources directly by specifying the folder name where we have stored our static resources.
 
 Documentation for the middleware can be found [here][express-static]
 
