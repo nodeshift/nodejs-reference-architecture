@@ -18,7 +18,7 @@ The static middleware allows caching of static resources via exposed [caching-he
 
 Origin servers communicate caching instructions via the header `Cache-Control`. The values of `Cache-Control` are called directives. Example directives include: `max-age`, `no-store, no-cache, must-revalidate`, `public, private`, etc.
 
-Freshness control of the resource happens in cache and is based on time. The validation happens on origin server is based on time and identifiers (ETags).
+Freshness control of the resource happens in cache and is based on time. The validation that happens on origin server is based on time and identifiers (ETags).
 
 ### Naming Static Assets
 
