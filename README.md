@@ -89,10 +89,13 @@ As a minium, any modules recommended as part of this reference architeucture sho
 
 * The module is not deprecated.
 * The module has an appropriate license.
-  * _Can we define what we consider an 'appropriate' license is in this context?_
+  * Generally leaning towards permissive licenses such as MIT - others should be reviewed on case by case basis.
 * The module runs on LTS versions of Node.js.
 * The module has appropriate testing.
-* The module is still receiving updates and producing.releases to fix known security vulnerabilities.
+* The module is appropriately maintained:
+  * Regular releases (where appropriate).
+  * Critical bugs reports are acknowledged and addressed.
+  * Reported security vulnerabilities are patched and released.
 
 ## Contributing
 
