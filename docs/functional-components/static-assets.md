@@ -12,7 +12,7 @@ When using `express.static()` method, we can serve static resources directly by 
 
 Documentation for the middleware can be found [here][express-static]
 
-## Caching
+### Caching
 
 The static middleware allows caching of static resources via exposed [caching-headers][].
 
