@@ -2,15 +2,15 @@
 
 ## Recommended packages
 
-* [express-static][]: `express-static` is part of the Express.js package that allows developers to expose static middlewares.
+* [express.static][]: `express.static` is part of the Express.js package that allows developers to expose static middlewares.
 
 ## Guidance
 
-For serving static resources on the application, we recommend using [express-static][] middleware as it has been widely used and tested in production.
+For serving static resources on the application, we recommend using [express.static][] middleware as it has been widely used and tested in production.
 
 When using `express.static()` method, we can serve static resources directly by specifying the folder name where we have stored our static resources.
 
-Documentation for the middleware can be found [here][express-static]
+Documentation for the middleware can be found [here][express.static]
 
 ### Caching
 
@@ -30,5 +30,5 @@ When using bundlers you will explicitly need to generate different filenames eve
 Example for webpack (most popular bundler) can be found [here][webpack-caching]. 
 
 [caching-headers]: https://www.freecodecamp.org/news/an-in-depth-introduction-to-http-caching-cache-control-vary/
-[express-static]: https://expressjs.com/en/starter/static-files.html
+[express.static]: https://expressjs.com/en/4x/api.html#express.static
 [webpack-caching]: https://webpack.js.org/guides/caching
