@@ -57,7 +57,7 @@ with only a subset of sections having recommendations):
   - [Data Caching](./docs/functional-components/data-caching.md)
   - Multi-threading
   - Consuming Services
-  - Node versions/images
+  - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
   - Transactions_handling
 
 - Development
