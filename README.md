@@ -85,7 +85,7 @@ with only a subset of sections having recommendations):
 
 ## Module Diligence
 
-As a minium, any modules recommended as part of this reference architeucture should meet the following criteria:
+As a minimum, any modules recommended as part of this reference architecture should meet the following criteria:
 
 * The module is not deprecated.
 * The module has an appropriate license.
