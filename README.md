@@ -86,6 +86,20 @@ with only a subset of sections having recommendations):
   - Load-balancing
   - [Failure Handling](./docs/operations/failurehandling.md)
 
+## Module Diligence
+
+As a minimum, any modules recommended as part of this reference architecture should meet the following criteria:
+
+* The module is not deprecated.
+* The module has an appropriate license.
+  * Generally leaning towards permissive licenses such as MIT - others should be reviewed on case by case basis.
+* The module runs on LTS versions of Node.js.
+* The module has appropriate testing.
+* The module is appropriately maintained:
+  * Regular releases (where appropriate).
+  * Critical bugs reports are acknowledged and addressed.
+  * Reported security vulnerabilities are patched and released.
+
 ## Contributing
 
 To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTING.md).
