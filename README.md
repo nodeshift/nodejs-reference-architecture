@@ -55,7 +55,7 @@ with only a subset of sections having recommendations):
   - Databases
   - [Authentication and Authorization](./docs/functional-components/auth.md)
   - [Data Caching](./docs/functional-components/data-caching.md)
-  - Multi-threading
+  - [Multi-threading](./docs/functional-components/multi-threading.md)
   - Consuming Services
   - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
   - Transactions_handling
