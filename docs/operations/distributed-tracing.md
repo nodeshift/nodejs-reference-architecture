@@ -10,8 +10,6 @@ including Node. OpenTelemetry is not yet released as a final stable version and 
 OpenTelemetry replaces both OpenTracing and OpenCensus, neither of which are actively being
 developed (security fixes only).
 
-* [Jaeger](https://www.jaegertracing.io/) provides visualization of distributed traces.
-
 For adding instrumentation to Node applications and services:
 
 * [@opentelemetry/node](https://www.npmjs.com/package/@opentelemetry/node) - See the
@@ -41,6 +39,7 @@ missing when trying to investigate some critical failure.
 
 ### Recommended infrastructure
 
+* [Jaeger](https://www.jaegertracing.io/) provides visualization of distributed traces.
 * [ElasticSearch & Kibana](https://www.elastic.co/elastic-stack) provides storage for persisting
 the data behind Jaeger as well as alternate mechanisms in Kibana to search, visualize, and manage
 that data.
