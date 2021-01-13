@@ -17,7 +17,7 @@ which is well integrated into the process of landing
 Pull Requests (or equivalent).
 
 There are benefits to consistency across an organization but
-it is also imporant that teams are empowered to do what is
+it is also important that teams are empowered to do what is
 right for their projects. We recommend starting with an
 organizational standard and then adjusting based on the
 needs of the team.
@@ -27,7 +27,7 @@ needs of the team.
 - ESLint - https://eslint.org/
 
 ESLint is broadly used with the `teams` organizations and has broad usage
-across the JavaScript ecosystem with > 11 million weekly downlaods.
+across the JavaScript ecosystem with > 11 million weekly downloads.
 It can be configured to reflect the coding style followed by most
 if not all teams.
 
@@ -40,7 +40,7 @@ if not all teams.
   - minimizing what can be potentially divisive discussions to agree
     on the style to be followed.
   - leveraging the experience of what has worked for other teams.
-  - increasing the likelyhood of familiarity for new team members.
+  - increasing the likelihood of familiarity for new team members.
 
   Examples include:
 
@@ -67,7 +67,7 @@ if not all teams.
 
   substituting X with your chosen config. You can also get started by running `npx eslint --init` which
   will ask you a number of interactive questions and then create your `.eslintrc.json` file and add
-  the required depenencies into your package.json.
+  the required dependencies into your package.json.
 
 - Ensure you have a gitignore file so derived files do not get linted. A minimal one can be
   created with:
