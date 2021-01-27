@@ -100,7 +100,7 @@ const formatters = {
 ```
 
 3) Define an express middleware layer to be loaded before authentication
-middleware that binds the cls-hooked namepsace to the request, 
+middleware that binds the cls-hooked context to the request, 
 and adds in the trace-id.
 ```
 import { getOrCreateNamespace } from './cls_hooked';
@@ -128,7 +128,10 @@ const traceabilityMiddleware: RequestHandler =
       session.set('TraceId', traceId);
       // Always return the trace-id as header so we can debug/trace calls
       // that don't return an error but didn't work right
-      res.set(Headers.TraceId, traceId);
+      res.set('X-Trace-Id', traceId);
+
+      // By invoking next in here, the cls_hooked context remains
+      // active for the following express middlware layers to access
       return next();
     },
     session.createContext()
