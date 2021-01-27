@@ -120,9 +120,8 @@ const traceabilityMiddleware: RequestHandler =
       const passedTraceId = req.get('X-Trace-Id');
       const traceId = passedTraceId ? passedTraceId : uuid();
 
-      // Assuming your authentication layer wrote the OID/UID into the Request
-      // similar to this
-      //since the context forked, it contains stale values needs explicit reset
+      // Since the context is forked, it may contain stale values
+      // needing an explicit reset
       session.set('OID', undefined);
       session.set('UID', undefined);
       session.set('TraceId', traceId);
