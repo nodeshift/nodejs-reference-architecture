@@ -28,7 +28,7 @@ When deploying Pino we have the following additional recommendations:
   to be set through an Environment variable so that can be easily
   changed in container environments.
 - Use the [redaction](https://github.com/pinojs/pino/blob/HEAD/docs/redaction.md)
-  option to ensure sensitive data is not logged.  Simiarly, if you're using the
+  option to ensure sensitive data is not logged. Simiarly, if you're using the
   [convict](https://www.npmjs.com/package/convict) library to manage application
   configuration data (like database credentials), marking appropriate fields as
   sensitive will redact them when logging the config structures at startup.
@@ -39,23 +39,24 @@ When deploying Pino we have the following additional recommendations:
 - Don't throw and catch multiple errors, throw once and catch/log at the
   highest level.
 - Every source file should utilize Pino's child method off of the common logger
-  instance, passing in { file: module } to make the source file path is part of 
+  instance, passing in { file: module } to make the source file path is part of
   the log.
 
 # Generating user and trace filterable logs
 
-If your application is going to be utilized by a large number of users, your 
-support team will likely require the ability to be able filter logs to actions 
-from a specific user or organization (details of such are specific to your 
-authentication nodel), or to be able to see all the logs corresponding to a 
-specific REST call. Rather than force the developers to pass and log those values 
-with every log line, a cleaner technique is to utilize async-hooks to store those 
-values in express middleware, and utilize log formatters to print those stored 
-values.  In the example below we used 
-[cls-hooked](https://www.npmjs.com/package/cls-hooked) package to reference 
+If your application is going to be utilized by a large number of users, your
+support team will likely require the ability to be able filter logs to actions
+from a specific user or organization (details of such are specific to your
+authentication nodel), or to be able to see all the logs corresponding to a
+specific REST call. Rather than force the developers to pass and log those values
+with every log line, a cleaner technique is to utilize async-hooks to store those
+values in express middleware, and utilize log formatters to print those stored
+values. In the example below we used
+[cls-hooked](https://www.npmjs.com/package/cls-hooked) package to reference
 async_hooks.
 
-1) Define a local cls-hooked library (./cls_hooked.ts in this case) like:
+1. Define a local cls-hooked library (./cls_hooked.ts in this case) like:
+
 ```
 import * as cls_hooked from 'cls-hooked';
 /**
@@ -73,8 +74,9 @@ function getOrCreateNamespace(namespace: string): cls_hooked.Namespace {
 export { getOrCreateNamespace };
 ```
 
-2) Define a log [formatter](https://getpino.io/#/docs/api?id=formatters-object)
-that adds the desired entries into the log:
+2. Define a log [formatter](https://getpino.io/#/docs/api?id=formatters-object)
+   that adds the desired entries into the log:
+
 ```
 import { getOrCreateNamespace } from './cls_hooked';
 const session = getOrCreateNamespace('logging');
@@ -99,9 +101,10 @@ const formatters = {
 }
 ```
 
-3) Define an express middleware layer to be loaded before authentication
-middleware that binds the cls-hooked context to the request, 
-and adds in the trace-id.
+3. Define an express middleware layer to be loaded before authentication
+   middleware that binds the cls-hooked context to the request,
+   and adds in the trace-id.
+
 ```
 import { getOrCreateNamespace } from './cls_hooked';
 import { v4 as uuid } from 'uuid';
@@ -137,8 +140,9 @@ const traceabilityMiddleware: RequestHandler =
   );
 ```
 
-4) Update your authentication express middleware layer to write the OID and UID
-into the cls-hooked session, example from a JWT-token based authentication scheme:
+4. Update your authentication express middleware layer to write the OID and UID
+   into the cls-hooked session, example from a JWT-token based authentication scheme:
+
 ```
 const session = getOrCreateNamespace('logging');
 
