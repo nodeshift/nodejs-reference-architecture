@@ -44,13 +44,16 @@ When deploying Pino we have the following additional recommendations:
 
 # Generating user and trace filterable logs
 
-If your application is going to be utilized by a large number of users, your
-support team will likely require the ability to be able filter logs to actions
-from a specific user or organization (details of such are specific to your
-authentication nodel), or to be able to see all the logs corresponding to a
-specific REST call. Rather than force the developers to pass and log those values
-with every log line, a cleaner technique is to utilize the cls-hooked
-library and log formatters in your application as such:
+If your application is going to be utilized by a large number of users, your 
+support team will likely require the ability to be able filter logs to actions 
+from a specific user or organization (details of such are specific to your 
+authentication nodel), or to be able to see all the logs corresponding to a 
+specific REST call. Rather than force the developers to pass and log those values 
+with every log line, a cleaner technique is to utilize async-hooks to store those 
+values in express middleware, and utilize log formatters in your 
+application to print those stored values.  In the example below we used 
+[cls-hooked](https://www.npmjs.com/package/cls-hooked) package to reference
+async_hooks.
 
 1) Define a local cls-hooked library (./cls_hooked.ts in this case) like:
 ```
