@@ -60,13 +60,16 @@ library can provide similar function.
 
 ```
 // to be passed into Pino logger construction
+const { AsyncLocalStorage } = require('async_hooks');
+export const loggingStorage = new AsyncLocalStorage();
 const emptyLocalStorage = new Map();
+
 const formatters = {
   log (obj) {
-    const als = asyncLocalStorage.getStore() || emptyLocalStorage;
-    const orgId: string = als.get('OID');
-    const userId: string = als.get('UID');
-    const transactionId: string = als.get('TraceId');
+    const ls = loggingStorage.getStore() || emptyLocalStorage;
+    const orgId: string = ls.get('OID');
+    const userId: string = ls.get('UID');
+    const transactionId: string = ls.get('TraceId');
     if (orgId) {
       obj['OID'] = orgId;
     }
@@ -86,6 +89,7 @@ const formatters = {
    and adds in the trace-id.
 
 ```
+import { loggingStorage } from <./logging_lib_above>
 import { v4 as uuid } from 'uuid';
 import { RequestHandler, Request, Response, NextFunction } from 'express';
 const traceabilityMiddleware: RequestHandler =
@@ -94,14 +98,14 @@ const traceabilityMiddleware: RequestHandler =
       const passedTraceId = req.get('X-Trace-Id');
       const traceId = passedTraceId ? passedTraceId : uuid();
 
-      const als = new Map(['TraceId', traceId]);
+      const ls = new Map(['TraceId', traceId]);
       // Always return the trace-id as header so we can debug/trace calls
       // that don't return an error but didn't work right
       res.set('X-Trace-Id', traceId);
 
       // By invoking next in here, the cls_hooked context remains
       // active for the following express middlware layers to access
-      asyncLocalStorage.enterWith(als);
+      loggingStorage.enterWith(ls);
       return next();
     },
     session.createContext()
@@ -112,8 +116,7 @@ const traceabilityMiddleware: RequestHandler =
    into the asyncLocalStorage, example from a JWT-token based authentication scheme:
 
 ```
-const session = getOrCreateNamespace('logging');
-
+import { loggingStorage } from <./logging_lib_above>
 ...
 < inside the authentication middlware >
     const token = opts.tokenFrom(req);
@@ -122,12 +125,12 @@ const session = getOrCreateNamespace('logging');
       const authentication = await opts.verifier.verifyAndDecode(token);
 
       // Set things for logger down the line
-      const als = asyncLocalStorage.getStore();
-      if (als && authentication.uid) {
-        als.set('UID', authentication.uid);
+      const ls = loggingStorage.getStore();
+      if (ls && authentication.uid) {
+        ls.set('UID', authentication.uid);
       }
-      if (als && authentication.oid) {
-        als.set('OID', authentication.oid);
+      if (ls && authentication.oid) {
+        ls.set('OID', authentication.oid);
       }
 ...
 ```
