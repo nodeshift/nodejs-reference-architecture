@@ -50,9 +50,9 @@ from a specific user or organization (details of such are specific to your
 authentication nodel), or to be able to see all the logs corresponding to a 
 specific REST call. Rather than force the developers to pass and log those values 
 with every log line, a cleaner technique is to utilize async-hooks to store those 
-values in express middleware, and utilize log formatters in your 
-application to print those stored values.  In the example below we used 
-[cls-hooked](https://www.npmjs.com/package/cls-hooked) package to reference
+values in express middleware, and utilize log formatters to print those stored 
+values.  In the example below we used 
+[cls-hooked](https://www.npmjs.com/package/cls-hooked) package to reference 
 async_hooks.
 
 1) Define a local cls-hooked library (./cls_hooked.ts in this case) like:
@@ -74,7 +74,7 @@ export { getOrCreateNamespace };
 ```
 
 2) Define a log [formatter](https://getpino.io/#/docs/api?id=formatters-object)
-that adds the desired entries into the log. An example is:
+that adds the desired entries into the log:
 ```
 import { getOrCreateNamespace } from './cls_hooked';
 const session = getOrCreateNamespace('logging');
