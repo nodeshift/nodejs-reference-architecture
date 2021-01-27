@@ -107,7 +107,7 @@ import { getOrCreateNamespace } from './cls_hooked';
 import { v4 as uuid } from 'uuid';
 import { RequestHandler, Request, Response, NextFunction } from 'express';
 const session = getOrCreateNamespace('logging');
-const getTraceabilityMiddleware: RequestHandler = 
+const traceabilityMiddleware: RequestHandler =
   session.bind(
     async (req: Request, res: Response, next: NextFunction) => {
       if (req instanceof EventEmitter) {
