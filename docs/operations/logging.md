@@ -49,44 +49,24 @@ support team will likely require the ability to be able filter logs to actions
 from a specific user or organization (details of such are specific to your
 authentication nodel), or to be able to see all the logs corresponding to a
 specific REST call. Rather than force the developers to pass and log those values
-with every log line, a cleaner technique is to utilize async-hooks to store those
-values in express middleware, and utilize log formatters to print those stored
-values. In the example below we used
-[cls-hooked](https://www.npmjs.com/package/cls-hooked) package to reference
-async_hooks.
+with every log line, a cleaner technique is to utilize
+[asyncLocalStorage](https://nodejs.org/api/async_hooks.html#async_hooks_class_asynclocalstorage)
+to store those values in express middleware, and fetch them back out inside a log formatter.
+If you have to use an older nodejs that doesn't support asyncLocalStorage, the [cls-hooked](https://www.npmjs.com/package/cls-hooked)
+library can provide similar function.
 
-1. Define a local cls-hooked library (./cls_hooked.ts in this case) like:
-
-```
-import * as cls_hooked from 'cls-hooked';
-/**
- * Wraps cls_hooked getNamespace or createNamespace.
- * There should only be one createNamespace per namespace. Otherwise a new
- * session is created in a different context and loaded into cls.
- *
- * @param namespace name of namespace
- * @return {cls_hooked.Namespace} existing or new namespace
- */
-function getOrCreateNamespace(namespace: string): cls_hooked.Namespace {
-  const ns = cls_hooked.getNamespace(namespace);
-  return ns ? ns : cls_hooked.createNamespace(namespace);
-}
-export { getOrCreateNamespace };
-```
-
-2. Define a log [formatter](https://getpino.io/#/docs/api?id=formatters-object)
+1. Define a log [formatter](https://getpino.io/#/docs/api?id=formatters-object)
    that adds the desired entries into the log:
 
 ```
-import { getOrCreateNamespace } from './cls_hooked';
-const session = getOrCreateNamespace('logging');
-
 // to be passed into Pino logger construction
+const emptyLocalStorage = new Map();
 const formatters = {
   log (obj) {
-    const orgId: string = session.get('OID');
-    const userId: string = session.get('UID');
-    const transactionId: string = session.get('TraceId');
+    const als = asyncLocalStorage.getStore() || emptyLocalStorage;
+    const orgId: string = als.get('OID');
+    const userId: string = als.get('UID');
+    const transactionId: string = als.get('TraceId');
     if (orgId) {
       obj['OID'] = orgId;
     }
@@ -101,47 +81,35 @@ const formatters = {
 }
 ```
 
-3. Define an express middleware layer to be loaded before authentication
-   middleware that binds the cls-hooked context to the request,
+2. Define an express middleware layer to be loaded before authentication
+   middleware that binds the asyncLocalStorage to the REST request,
    and adds in the trace-id.
 
 ```
-import { getOrCreateNamespace } from './cls_hooked';
 import { v4 as uuid } from 'uuid';
 import { RequestHandler, Request, Response, NextFunction } from 'express';
-const session = getOrCreateNamespace('logging');
 const traceabilityMiddleware: RequestHandler =
   session.bind(
     async (req: Request, res: Response, next: NextFunction) => {
-      if (req instanceof EventEmitter) {
-        session.bindEmitter(req);
-      }
-      if (res instanceof EventEmitter) {
-        session.bindEmitter(res);
-      }
-
       const passedTraceId = req.get('X-Trace-Id');
       const traceId = passedTraceId ? passedTraceId : uuid();
 
-      // Since the context is forked, it may contain stale values
-      // needing an explicit reset
-      session.set('OID', undefined);
-      session.set('UID', undefined);
-      session.set('TraceId', traceId);
+      const als = new Map(['TraceId', traceId]);
       // Always return the trace-id as header so we can debug/trace calls
       // that don't return an error but didn't work right
       res.set('X-Trace-Id', traceId);
 
       // By invoking next in here, the cls_hooked context remains
       // active for the following express middlware layers to access
+      asyncLocalStorage.enterWith(als);
       return next();
     },
     session.createContext()
   );
 ```
 
-4. Update your authentication express middleware layer to write the OID and UID
-   into the cls-hooked session, example from a JWT-token based authentication scheme:
+3. Update your authentication express middleware layer to write the OID and UID
+   into the asyncLocalStorage, example from a JWT-token based authentication scheme:
 
 ```
 const session = getOrCreateNamespace('logging');
@@ -154,11 +122,12 @@ const session = getOrCreateNamespace('logging');
       const authentication = await opts.verifier.verifyAndDecode(token);
 
       // Set things for logger down the line
-      if (authentication.uid) {
-        session.set('UID', authentication.uid);
+      const als = asyncLocalStorage.getStore();
+      if (als && authentication.uid) {
+        als.set('UID', authentication.uid);
       }
-      if (authentication.oid) {
-        session.set('OID', authentication.oid);
+      if (als && authentication.oid) {
+        als.set('OID', authentication.oid);
       }
 ...
 ```
