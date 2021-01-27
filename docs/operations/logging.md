@@ -29,9 +29,9 @@ When deploying Pino we have the following additional recommendations:
   changed in container environments.
 - Use the [redaction](https://github.com/pinojs/pino/blob/HEAD/docs/redaction.md)
   option to ensure sensitive data is not logged.  Simiarly, if you're using the
-  convict library to manage application configuration data (like database credentials),
-  marking appropriate fields as sensitive will redact them when logging the config
-  structures at startup.
+  [convict](https://www.npmjs.com/package/convict) library to manage application
+  configuration data (like database credentials), marking appropriate fields as
+  sensitive will redact them when logging the config structures at startup.
 - Limit the use of warn, error, and fatal levels to information
   which must always be logged.
 - Limit the use of info level to important information which can
@@ -39,7 +39,8 @@ When deploying Pino we have the following additional recommendations:
 - Don't throw and catch multiple errors, throw once and catch/log at the
   highest level.
 - Every source file should utilize Pino's child method off of the common logger
-  instance, passing in { file: module } to make the file path part of the log.
+  instance, passing in { file: module } to make the source file path is part of 
+  the log.
 
 # Generating user and trace filterable logs
 
@@ -69,7 +70,7 @@ function getOrCreateNamespace(namespace: string): cls_hooked.Namespace {
 export { getOrCreateNamespace };
 ```
 
-2) define a log formatter (https://getpino.io/#/docs/api?id=formatters-object)
+2) Define a log [formatter](https://getpino.io/#/docs/api?id=formatters-object)
 that adds the desired entries into the log. An example is:
 ```
 import { getOrCreateNamespace } from './cls_hooked';
@@ -103,8 +104,8 @@ import { getOrCreateNamespace } from './cls_hooked';
 import { v4 as uuid } from 'uuid';
 import { RequestHandler, Request, Response, NextFunction } from 'express';
 const session = getOrCreateNamespace('logging');
-function traceabilityMiddleware: RequestHandler {
-  return session.bind(
+const getTraceabilityMiddleware: RequestHandler = 
+  session.bind(
     async (req: Request, res: Response, next: NextFunction) => {
       if (req instanceof EventEmitter) {
         session.bindEmitter(req);
