@@ -66,3 +66,22 @@ https://github.com/apollographql/graphql-tag
 If you use typescript in your project we recomend GraphQL-Code-Generator to generate typings for both client and server:
 
 https://graphql-code-generator.com
+
+### Persisted queries
+
+Persisted queries are mechanism to improve performance by utilizing already cached and well known queries.
+Those queries can be also later hosted on the CDN.
+
+For persisted queries we can use approaches that are:
+
+- Dynamic (no need to compile queries on client as server caches them)
+- Static (requires client side compilation)
+
+For static persited queries we recomend
+https://github.com/valu-digital/graphql-codegen-persisted-query-ids
+
+For dynamic persisted queries we recomend 
+
+2. [Apollo APQs](https://www.apollographql.com/docs/apollo-server/performance/apq/) which needs [Apollo server](https://www.apollographql.com/docs/apollo-server/)
+
+
