@@ -20,6 +20,42 @@ Origin servers communicate caching instructions via the header `Cache-Control`. 
 
 Freshness control of the resource happens in cache and is based on time. The validation that happens on origin server is based on time and identifiers (ETags).
 
+#### Common Directive Use Cases
+
+Note: Upstream systems can be picky about interpreting directives for caching.
+
+##### Caching static assets for a year
+
+Cache static assets for a year if the filename and contents are uniquely generated
+
+```
+Cache-Control: public, max-age=31536000
+
+```
+
+If `Cache-Control` does not have max-age, it will respect Expires header
+
+```
+Cache-Control: public
+Expires: Sat, 13 Feb 2022 07:00:00 GMT
+```
+
+##### Caching HTTP resources only on browser
+
+In some cases, we want to force cache only for the browser and not for CDN or other upstream caches.
+
+```
+Cache-Control: private
+```
+
+##### No caching allowed
+
+Force upstream to not cache at all. Useful if you need to ensure that an HTTP resource always goes to origin (for example, if the HTTP resource varies due to a cookie and the endpoint is common to all users)
+
+```
+Cache-Control: no-store, no-cache, must-revalidate
+```
+
 ### Naming Static Assets
 
 If you configured your static middleware to use client side caching please make sure that 
