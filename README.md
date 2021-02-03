@@ -57,11 +57,12 @@ with only a subset of sections having recommendations):
   - [Data Caching](./docs/functional-components/data-caching.md)
   - Multi-threading
   - Consuming Services
-  - Node versions/images
+  - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
   - Transactions_handling
 
 - Development
 
+  - Building good containers
   - [Static Assets](./docs/functional-components/static-assets.md)
   - Keeping up to date
   - Code Quality
@@ -85,6 +86,20 @@ with only a subset of sections having recommendations):
     - Serverless
   - Load-balancing
   - [Failure Handling](./docs/operations/failurehandling.md)
+
+## Module Diligence
+
+As a minimum, any modules recommended as part of this reference architecture should meet the following criteria:
+
+* The module is not deprecated.
+* The module has an appropriate license.
+  * Generally leaning towards permissive licenses such as MIT - others should be reviewed on case by case basis.
+* The module runs on LTS versions of Node.js.
+* The module has appropriate testing.
+* The module is appropriately maintained:
+  * Regular releases (where appropriate).
+  * Critical bugs reports are acknowledged and addressed.
+  * Reported security vulnerabilities are patched and released.
 
 ## Contributing
 
