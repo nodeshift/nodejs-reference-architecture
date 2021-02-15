@@ -6,7 +6,7 @@ There are different strategies when dealing with assets/resources in a Node.js a
 
 ### Static only content
 
-If your application has only client JavaScript, like a Single Page Application (SPA), look no further. You most likely do not need to use Node.js to host the static content. You can use web servers or object storage like `nginx`, `Apache`, `COS`, `S3`, etc.
+If your application has only client JavaScript, like a Single Page Application (SPA), look no further. You most likely do not need to use Node.js to host the static content. You can use web servers or object storage like `nginx`, `Apache`, `COS`, `S3`, etc, and front that system with caching (CDN).
 
 ### Application with dynamically growing content (user generated content)
 
@@ -40,7 +40,7 @@ The static middleware allows caching of static resources via exposed [caching-he
 
 Origin servers communicate caching instructions via the header `Cache-Control`. The values of `Cache-Control` are called directives. Example directives include: `max-age`, `no-store, no-cache, must-revalidate`, `public, private`, etc.
 
-Freshness control of the resource happens in cache and is based on time. The validation that happens on origin server is based on time and identifiers (ETags).
+Freshness control of the resource happens in cache and is based on time. The validation that happens on origin server is based on time and identifiers (ETags). It is important to have ETag header on all HTTP resources (better/stronger than time based header).
 
 #### Common Directive Use Cases
 
@@ -77,6 +77,16 @@ Force upstream to not cache at all. Useful if you need to ensure that an HTTP re
 ```
 Cache-Control: no-store, no-cache, must-revalidate
 ```
+
+#### Advanced Caching Guidance
+
+For more advanced use cases, caching can be controlled independently of the `Cache-Control` headers. Depending on upstream caching system, you can configure `Cache-Control` header from origin to the CDN, and configure a separate set of caching rules for downstream (the browsers).
+
+Say for example your application contains pages/resources that change depending on a user's logged in state. It is important that `Cache-Control` is not cached on the browser, however we can still cache at the edge and control the "cache key" based on unique identifiers (such as a userId).
+
+This ensures less hits to origin, takes advantage of caching at the edge, and removes the potential for bad user experiences due to aggressively cached pages.
+
+If the application contains uniquely different pages/resources from a non-logged in user, you could keep `Cache-Control` with `private, max-age=300` (or max-age as appropriate based on content and session expiration). 
 
 ### Naming Static Assets
 
