@@ -1,4 +1,26 @@
-## Static assets
+# Static assets
+
+## Strategies
+
+There are different strategies when dealing with assets/resources in a Node.js application:
+
+### Static only content
+
+If your application has only client JavaScript, like a Single Page Application (SPA), look no further. You most likely do not need to use Node.js to host the static content. You can use web servers or object storage like `nginx`, `Apache`, `COS`, `S3`, etc.
+
+### Application with dynamically growing content (user generated content)
+
+If your application has primarily server logic, but with growing content, consider using Node.js in combination with an external storage system like `COS` or `S3`. For example, if you have a Node.js application for uploading images, instead of saving images to the file system, consider saving images to object storage. This is a more scalable approach compared to saving images on the file system, which can grow beyond the infrastructure. 
+
+### Application with frontend
+
+If your application has client and server logic, then you should consider using Node.js web server (express) with static middleware. It is a best practice to couple your frontend and backend together as a single, deployable artifact. Doing so addresses concerns such as:
+
+* Syncing assets to external environments (CDNs, object storage, etc)
+* Deploying artifact to different environments (because the assets are self contained, no issues with syncing)
+* Able to use same domain for HTTP2
+
+Read futher for additional guidance on using cache-control headers for static assets.
 
 ## Recommended packages
 
@@ -22,7 +44,7 @@ Freshness control of the resource happens in cache and is based on time. The val
 
 #### Common Directive Use Cases
 
-Note: Upstream systems can be picky about interpreting directives for caching.
+Note: Upstream systems can be picky about interpreting directives for caching. You may have to read documentation for the particular system (Akamai, Fastly, Google CDN, Cloudflare, nginx, varnish) to verify valid directives.
 
 ##### Caching static assets for a year
 
