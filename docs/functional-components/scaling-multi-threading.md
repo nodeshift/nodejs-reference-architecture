@@ -6,7 +6,7 @@ nature of JavaScript means that Node.js can handle a larger number of
 concurrent requests on that single thread. 
 
 At the same time that does not mean that Node.js applications/solutions are
-`single-threaded`. Today's computers provide multipe concurrent threads of
+`single-threaded`. Today's computers provide multiple concurrent threads of
 execution (either with multiple cores and/or cores that can support
 multiple concurrent threads of execution) and Node.js applications have
 long exploited those additional threads by running multiple Node.js instances.
