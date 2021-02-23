@@ -63,7 +63,7 @@ with only a subset of sections having recommendations):
 - Development
 
   - Building good containers
-  - Static Assets
+  - [Static Assets](./docs/functional-components/static-assets.md)
   - Keeping up to date
   - Code Quality
     - [Code Consistency](./docs/development/code-consistency.md)
