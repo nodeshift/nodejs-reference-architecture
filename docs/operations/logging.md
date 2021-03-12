@@ -19,7 +19,7 @@ and good performance.
 
 When deploying Pino we have the following additional recommendations:
 
-- send logs to standard out and use log aggregation tools to collect
+- Send logs to standard out and use log aggregation tools to collect
   logs across processes, containers and applications. All log processing
   should be done in a separate process.
 - Plan for a final resting place for log data. After 7 days migrate
@@ -28,109 +28,22 @@ When deploying Pino we have the following additional recommendations:
   to be set through an Environment variable so that can be easily
   changed in container environments.
 - Use the [redaction](https://github.com/pinojs/pino/blob/HEAD/docs/redaction.md)
-  option to ensure sensitive data is not logged. Simiarly, if you're using the
-  [convict](https://www.npmjs.com/package/convict) library to manage application
-  configuration data (like database credentials), marking appropriate fields as
-  sensitive will redact them when logging the config structures at startup.
+  option to ensure sensitive data is not logged. Do note that this implementation 
+  does not allow one to dynamically add fields to be redacted [^1].
 - Limit the use of warn, error, and fatal levels to information
   which must always be logged.
 - Limit the use of info level to important information which can
   always be logged without introducing significant overhead.
 - Don't throw and catch multiple errors, throw once and catch/log at the
-  highest level.
+  highest level,
+- When catching errors at a high level, log the error.stack unless the thrown error 
+  type is known and expected.
 - Every source file should utilize Pino's child method off of the common logger
   instance, passing in { file: module } to make the source file path is part of
   the log.
 
-# Generating user and trace filterable logs
+[^1]: If you require ability to dynamically append what is redacted (like values read 
+  from a secret-storage like Vault), one can implement redacting logic inside a Pino 
+  [logMethod](https://getpino.io/#/docs/api?id=logmethod) to filter the message 
+  string and objects.
 
-If your application is going to be utilized by a large number of users, your
-support team will likely require the ability to be able filter logs to actions
-from a specific user or organization (details of such are specific to your
-authentication nodel), or to be able to see all the logs corresponding to a
-specific REST call. Rather than force the developers to pass and log those values
-with every log line, a cleaner technique is to utilize
-[asyncLocalStorage](https://nodejs.org/api/async_hooks.html#async_hooks_class_asynclocalstorage)
-to store those values in express middleware, and fetch them back out inside a log formatter.
-If you have to use an older nodejs that doesn't support asyncLocalStorage, the [cls-hooked](https://www.npmjs.com/package/cls-hooked)
-library can provide similar function.
-
-1. Define a log [formatter](https://getpino.io/#/docs/api?id=formatters-object)
-   that adds the desired entries into the log:
-
-```
-// to be passed into Pino logger construction
-const { AsyncLocalStorage } = require('async_hooks');
-export const loggingStorage = new AsyncLocalStorage();
-const emptyLocalStorage = new Map();
-
-const formatters = {
-  log (obj) {
-    const ls = loggingStorage.getStore() || emptyLocalStorage;
-    const orgId: string = ls.get('OID');
-    const userId: string = ls.get('UID');
-    const transactionId: string = ls.get('TraceId');
-    if (orgId) {
-      obj['OID'] = orgId;
-    }
-    if (userId) {
-      obj['UID'] = userId;
-    }
-    if (transactionId) {
-      obj['TraceId'] = transactionId;
-    }
-    return obj;
-  }
-}
-```
-
-2. Define an express middleware layer to be loaded before authentication
-   middleware that binds the asyncLocalStorage to the REST request,
-   and adds in the trace-id.
-
-```
-import { loggingStorage } from <./logging_lib_above>
-import { v4 as uuid } from 'uuid';
-import { RequestHandler, Request, Response, NextFunction } from 'express';
-const traceabilityMiddleware: RequestHandler =
-  session.bind(
-    async (req: Request, res: Response, next: NextFunction) => {
-      const passedTraceId = req.get('X-Trace-Id');
-      const traceId = passedTraceId ? passedTraceId : uuid();
-
-      const ls = new Map(['TraceId', traceId]);
-      // Always return the trace-id as header so we can debug/trace calls
-      // that don't return an error but didn't work right
-      res.set('X-Trace-Id', traceId);
-
-      // By invoking next in here, the cls_hooked context remains
-      // active for the following express middlware layers to access
-      loggingStorage.enterWith(ls);
-      return next();
-    },
-    session.createContext()
-  );
-```
-
-3. Update your authentication express middleware layer to write the OID and UID
-   into the asyncLocalStorage, example from a JWT-token based authentication scheme:
-
-```
-import { loggingStorage } from <./logging_lib_above>
-...
-< inside the authentication middlware >
-    const token = opts.tokenFrom(req);
-    if (token) {
-      // Token validation
-      const authentication = await opts.verifier.verifyAndDecode(token);
-
-      // Set things for logger down the line
-      const ls = loggingStorage.getStore();
-      if (ls && authentication.uid) {
-        ls.set('UID', authentication.uid);
-      }
-      if (ls && authentication.oid) {
-        ls.set('OID', authentication.oid);
-      }
-...
-```
