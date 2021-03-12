@@ -42,7 +42,7 @@ When deploying Pino we have the following additional recommendations:
   instance, passing in { file: module } to make the source file path is part of
   the log.
 
-
+### Footnotes:
 <a name="footnote1">1</a>: If you require ability to dynamically append what is 
   redacted (like values read from a secret-storage like Vault), one can implement 
   redacting logic inside a Pino
