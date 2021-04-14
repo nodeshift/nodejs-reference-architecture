@@ -16,7 +16,7 @@ For adding instrumentation to Node applications and services:
   [Getting Started Guide](https://github.com/open-telemetry/opentelemetry-js/blob/master/getting-started/README.md)
 
 Reasons for choosing OpenTelemetry:
-- the open source tracing library that's replacing both OpenCensus and openTracing
+- the open source tracing library that's replacing both OpenCensus and OpenTracing
 - handles basic use cases really well, includes good default configuration for most use cases
 - includes support for newer efficient Node implementation for correlating outbound traffic 
   to incoming requests
