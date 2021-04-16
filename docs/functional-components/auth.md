@@ -35,7 +35,7 @@
 
 - Use the refresh token whenever possible, this avoids re-authentication.
 
-- Do not use OAUTH2 implicit grant, is preferred to use Authorization code workflow.
+- Do not use OAUTH2 implicit grant (https://tools.ietf.org/html/rfc6749#section-4.2), instead use the Authorization code workflow (https://tools.ietf.org/html/rfc6749#section-4.1) whenever possible.
 
 - Use OIDC ID token for authentication, they are represented as JSON Web Token (JWT) and it contains the requested claims.
 
