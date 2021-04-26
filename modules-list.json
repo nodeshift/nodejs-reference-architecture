@@ -70,5 +70,13 @@
   {
     "name": "lru-cache",
     "npmlink": "https://www.npmjs.com/package/lru-cache"
+  },
+  {
+    "name": "mocha",
+    "npmlink": "https://www.npmjs.com/package/mocha"
+  },
+  {
+    "name": "jest",
+    "npmlink": "https://www.npmjs.com/package/jest"
   }
 ]
