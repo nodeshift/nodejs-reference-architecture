@@ -6,7 +6,7 @@ The best package to use for testing often depends on the type and scope of a pro
 versus one size fits all. For that reason we'll mention two of the test frameworks
 that the team has had success with.
 
-## Jest - https://jestjs.io
+## Jest - <https://jestjs.io>
 
 [Jest][] is a popular testing framework from Facebook. It excels at testing React and other
 component-based web applications, and can be used in other contexts.  It is considered an
@@ -15,7 +15,7 @@ other features (such as snapshot testing and code coverage) out-of-the-box.
 
 Jest is owned by Facebook.
 
-## Mocha - https://mochajs.org
+## Mocha - <https://mochajs.org>
 
 [Mocha][] is a widely used, mature (created in 2011) and stable project. While Node.js
 is the main area of focus and support, Mocha can also be used in a browser context.
@@ -40,7 +40,6 @@ When snapshots are useful. [Snapshots][] provide an easy to use way of testing o
 of a function and saving the result as a snapshot artifact, which can then be used to
 compare against as a test.
 
-
 ```shell
 import React from 'react';
 import renderer from 'react-test-renderer';
@@ -64,7 +63,7 @@ When you want a smaller dependency tree (91 packages versus 522).
 When Jest's opinions, environment proxies and dependency upon [Babel][] are unfavorable for your use-case.
 
 As an example of potential problems with Jest's environment proxies, Jest replaces globals in the environment in a
-way that can cause failures with native addons. As an example, this simple test fails: 
+way that can cause failures with native addons. As an example, this simple test fails:
 
 ```JavaScript
 const addon = require('bindings')('hello');
@@ -85,7 +84,7 @@ static napi_value ExceptionMethod(napi_env env, napi_callback_info info) {
 }
 ```
 
-and the failure reports the exception as `TypeError: type exception` 
+and the failure reports the exception as `TypeError: type exception`
 
 ```shell
  FAIL  __tests__/test.js
@@ -118,7 +117,7 @@ _See the [Mocha documentation][] and [examples repository][] for more informatio
 Most Mocha users will want to consume a third-party _assertion library_. Besides the Node.js
 built-in [`assert` module][], Mocha recommends one of the following:
 
-- [Chai][]: the most popular general-purpose assertion library, with traditional and "natural language" APIs available 
+- [Chai][]: the most popular general-purpose assertion library, with traditional and "natural language" APIs available
 - [Unexpected][]: a string-based natural language API, Mocha uses Unexpected in its own tests
 
 Both of the above have their own plugin ecosystems.
