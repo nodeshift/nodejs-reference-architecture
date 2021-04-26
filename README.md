@@ -68,7 +68,7 @@ with only a subset of sections having recommendations):
   - Keeping up to date
   - Code Quality
     - [Code Consistency](./docs/development/code-consistency.md)
-    - Testing
+    - [Testing](./docs/development/testing.md)
   - References to CI/CD
   - Npm Mirroring
   - Secure Development Process
