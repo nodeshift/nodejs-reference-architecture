@@ -38,23 +38,20 @@ When using a compile-to-JavaScript language (like TypeScript).
 
 When snapshots are useful. [Snapshots][] provide an easy to use way of testing output
 of a function and saving the result as a snapshot artifact, which can then be used to
-compare against as a test.
+compare against as a test. As an example:
 
 ```shell
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Link from '../Link.react';
-
-it('renders correctly', () => {
-  const tree = renderer
-    .create(<Link page="http://www.facebook.com">Facebook</Link>)
-    .toJSON();
-  expect(tree).toMatchSnapshot();
-});
-In the case that snapshot tests do not match the artifact, it will report a test failure. The test
-can be easily fixed by running jest test --updateSnapshot, however it is advised you only do so until
-after validating/verifying the results of the new snapshot artifact.
+test('unknown service', () => {
+    expect(() => {
+      bindings.getBinding('DOEST_NOT_EXIST');
+    }).toThrowErrorMatchingSnapshot('unknown service');
+  });
 ```
+
+The first time the test is run it will create/store a snapshot of the exepcted exception.
+On subsequent runs if the exception does not match the snapshot, it will report
+a test failure. This makes generating/capturing the result from an operation being tested
+fast and easy.
 
 ### When Mocha might be the better choice
 
