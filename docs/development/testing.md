@@ -2,37 +2,121 @@
 
 ## Recommended Packages
 
-## Mocha - https://mochajs.org
-
-[Mocha][] is the most _depended-upon_ package on the npm registry. It is a mature (created in 2011) and stable project. While Node.js is the main area of focus and support, Mocha can also be used in a browser context.  Mocha values flexibility, and as such, is considered an _unopinionated_ framework.  Mocha has a large ecosystem of plugins and extensions.
-
-Mocha is an [OpenJS Foundation][] project with open governance.  An IBMer (@boneskull) is a lead maintainer of the project.
+The best package to use for testing often depends on the type and scope of a project
+versus one size fits all. For that reason we'll mention two of the test frameworks
+that the team has had success with.
 
 ## Jest - https://jestjs.io
 
-[Jest][] is a popular testing framework from Facebook.  It excels at testing React and other component-based web applications, and can be used in other contexts.  It is considered an _opinionated_ framework, as it provides its own set of assertions, spies/stubs/mocks, and other features (such as snapshot testing and code coverage) out-of-the-box.
+[Jest][] is a popular testing framework from Facebook. It excels at testing React and other
+component-based web applications, and can be used in other contexts.  It is considered an
+_opinionated_ framework, as it provides its own set of assertions, spies/stubs/mocks, and
+other features (such as snapshot testing and code coverage) out-of-the-box.
 
 Jest is owned by Facebook.
 
+## Mocha - https://mochajs.org
+
+[Mocha][] is a widely used, mature (created in 2011) and stable project. While Node.js
+is the main area of focus and support, Mocha can also be used in a browser context.
+Mocha is an _unopinionated_ framework with a large ecosystem of plugins and extensions.
+
+Mocha is an [OpenJS Foundation][] project with open governance.
+
 ## Guidance
 
-While in some cases the choice between the two frameworks is a matter of personal or team preference, Jest has a clear advantage when unit testing React- or component-based applications.  Jest's opinions, environment proxies and dependency upon [Babel][] may be unfavorable for your use-case.  Mocha provides the same environment as the context in which it runs (Node.js or browser), which makes it suitable for testing directly within a real browser.  When using a compile-to-JavaScript language (like TypeScript), Jest has better support out-of-the-box.
+Both Mocha and Jest provide test parallelization. By default this is disabled by default in Mocha,
+as many use-cases see a negative performance impact when running tests in parallel. If you
+experience longer test times than expected you should check if enabling or disabling
+parallelism will improve test run times.
 
-Both Mocha and Jest provide test parallelization, but this is disabled by default in Mocha, as many use-cases see a negative performance impact when running tests in parallel.
+### When Jest might be the better choice
 
-Mocha supports ESM natively in Node.js v12 and newer.
+When testing testing React or component-based applications.
 
-Both testing frameworks are used widely within IBM, though Mocha is supported directly.
+When using a compile-to-JavaScript language (like TypeScript).
+
+When snapshots are useful. [Snapshots][] provide an easy to use way of testing output
+of a function and saving the result as a snapshot artifact, which can then be used to
+compare against as a test.
+
+
+```shell
+import React from 'react';
+import renderer from 'react-test-renderer';
+import Link from '../Link.react';
+
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<Link page="http://www.facebook.com">Facebook</Link>)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
+In the case that snapshot tests do not match the artifact, it will report a test failure. The test
+can be easily fixed by running jest test --updateSnapshot, however it is advised you only do so until
+after validating/verifying the results of the new snapshot artifact.
+```
+
+### When Mocha might be the better choice
+
+When you want a smaller dependency tree (91 packages versus 522).
+
+When Jest's opinions, environment proxies and dependency upon [Babel][] are unfavorable for your use-case.
+
+As an example of potential problems with Jest's environment proxies, Jest replaces globals in the environment in a
+way that can cause failures with native addons. As an example, this simple test fails: 
+
+```JavaScript
+const addon = require('bindings')('hello');
+
+describe('test suite 1', () => {
+  test('exception', () => {
+    expect(addon.exception()).toThrow(TypeError);
+  });
+});
+```
+
+even thought the addon is throwing the expected exception:
+
+```C++
+static napi_value ExceptionMethod(napi_env env, napi_callback_info info) {
+   napi_throw_type_error(env, "code1", "type exception");
+   return NULL;
+}
+```
+
+and the failure reports the exception as `TypeError: type exception` 
+
+```shell
+ FAIL  __tests__/test.js
+  ● test suite 1 › exception
+
+    TypeError: type exception
+
+      3 | describe('test suite 1', () => {
+      4 |   test('exception', () => {
+    > 5 |     expect(addon.exception()).toThrow(TypeError);
+        |                  ^
+      6 |   });
+      7 | });
+      8 |
+
+      at Object.<anonymous> (__tests__/test.js:5:18)
+```
+
+An equivalent test runs successfully with Mocha.
 
 ### Recommended Packages to Use Alongside Mocha
 
-Because Mocha is unopinionated, it does not ship with "batteries included."  While Mocha is usable without any other third-party library, many users find the following libraries and tools helpful.
+Because Mocha is unopinionated, it does not ship with "batteries included." While Mocha is usable
+without any other third-party library, many users find the following libraries and tools helpful.
 
 _See the [Mocha documentation][] and [examples repository][] for more information on integrating with other tools_.
 
 #### Assertion Library
 
-Most Mocha users will want to consume a third-party _assertion library_.  Besides the Node.js built-in [`assert` module][], Mocha recommends one of the following:
+Most Mocha users will want to consume a third-party _assertion library_. Besides the Node.js
+built-in [`assert` module][], Mocha recommends one of the following:
 
 - [Chai][]: the most popular general-purpose assertion library, with traditional and "natural language" APIs available 
 - [Unexpected][]: a string-based natural language API, Mocha uses Unexpected in its own tests
@@ -54,17 +138,7 @@ Mocha does not automatically compute code coverage. If you need it, use:
 
 - [nyc][]: the most popular code-coverage tool; the successor CLI for Istanbul
 
-#### Running Tests in the Browser
-
-Mocha runs natively in a browser, but it does not provide means of automation. For integration into your CI suite, use:
-
-- [webdriverio][]: for end-to-end tests of any browser-based application
-- [Protractor][]: for end-to-end tests of Angular/AngularJS applications
-- [Karma][]: a general-purpose _test runner_ for browser automation with a large ecosystem of plugins; can be used for a variety of testing strategies and across different browsers
-
 ### Recommended Packages to use Alongside Jest
-
-TBD
 
 [`assert` module]: https://nodejs.org/api/assert.html#assert_assert
 [Babel]: https://babeljs.io
