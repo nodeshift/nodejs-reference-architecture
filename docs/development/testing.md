@@ -25,7 +25,7 @@ Mocha is an [OpenJS Foundation][] project with open governance.
 
 ## Guidance
 
-Both Mocha and Jest provide test parallelization. By default this is disabled by default in Mocha,
+Both Mocha and Jest provide test parallelization. By default this is disabled in Mocha,
 as many use-cases see a negative performance impact when running tests in parallel. If you
 experience longer test times than expected you should check if enabling or disabling
 parallelism will improve test run times.
@@ -137,8 +137,6 @@ Mocha does not automatically compute code coverage. If you need it, use:
 
 - [nyc][]: the most popular code-coverage tool; the successor CLI for Istanbul
 
-### Recommended Packages to use Alongside Jest
-
 [`assert` module]: https://nodejs.org/api/assert.html#assert_assert
 [Babel]: https://babeljs.io
 [Chai]: https://www.npmjs.com/package/chai
@@ -154,3 +152,4 @@ Mocha does not automatically compute code coverage. If you need it, use:
 [Testdouble]: https://www.npmjs.com/package/testdouble
 [Unexpected]: https://www.npmjs.com/package/unexpected
 [webdriverio]: https://www.npmjs.org/package/webdriverio
+[Snapshots]: https://jestjs.io/docs/snapshot-testing 
