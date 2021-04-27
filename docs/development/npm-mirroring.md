@@ -1,4 +1,4 @@
-# NPM Mirroring
+# Npm Proxy / Internal Registry
 
 The npm registry is a key part of the node(and Javascript) ecosystem.  It allows users to install third-party easily with just a few commands.  But what happens when you are part of an organization that limits internet access, or you are worried that a module you use might disappear from the public registry.  This is where having a layer between your organization and the public npm registry can help.  This is commonly refered to as a npm mirror/npm proxy
 
