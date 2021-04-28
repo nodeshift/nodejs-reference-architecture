@@ -16,6 +16,10 @@ There are a few different reasons why you might consider mirroring the public np
 
 * If you have limited network access
 
+* Using a proxy/mirror can provide a centralized point for scanning for security vulnerabilities
+
+* A mirror can reduce the dependecy on the public registry.
+
 * You need to maintain a copy of a module incase it is removed from the public registry.
 
 Using a npm mirror/proxy is fairly easy.  You can set the *registry* that the npm cli uses by running `npm set registry URL`.  You can also use the `HTTP_PROXY` and `HTTPS_PROXY` environment variables to set the mirrored registry.
