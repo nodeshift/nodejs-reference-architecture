@@ -19,6 +19,8 @@ When creating modules that will be published to an internal registry that is not
 *Not sure if this section makes sense in this doc or not*
 
 * Release-please?
+* Standard version for changelog?
+* use of npm version?
 * Link to the ci token article
 
 
