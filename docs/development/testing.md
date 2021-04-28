@@ -32,7 +32,7 @@ parallelism will improve test run times.
 
 ### When Jest might be the better choice
 
-When testing testing React or component-based applications.
+When testing React or component-based applications.
 
 When using a compile-to-JavaScript language (like TypeScript).
 
