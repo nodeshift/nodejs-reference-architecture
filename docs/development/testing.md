@@ -100,7 +100,7 @@ and the failure reports the exception as `TypeError: type exception`
       at Object.<anonymous> (__tests__/test.js:5:18)
 ```
 
-An equivalent test runs successfully with Mocha.
+An equivalent test runs successfully with Mocha.  The full source for the test is here: https://github.com/nodeshift-blog-examples/jest-with-native-addon-issue
 
 ### Recommended Packages to Use Alongside Mocha
 
