@@ -70,7 +70,10 @@ with only a subset of sections having recommendations):
     - [Code Consistency](./docs/development/code-consistency.md)
     - [Testing](./docs/development/testing.md)
   - References to CI/CD
-  - Npm Mirroring
+  - Npm
+    - Npm Proxy / Internal Registries
+    - Npm Publishing
+    - Package Development
   - Secure Development Process
 
 - Operations
