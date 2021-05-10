@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('../../static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Build with collaboration with various communities
+        Built with collaboration with various teams across Red Hat and IBM.
       </>
     ),
   },
