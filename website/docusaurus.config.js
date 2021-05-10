@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Node.JS Reference Specification',
+  title: 'Node.JS Reference Architecture',
   tagline: 'Enteprise-Ready Node.js',
   url: 'https://wtrocki.github.io',
   baseUrl: '/nodejs-reference-architecture/',
