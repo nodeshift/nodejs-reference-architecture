@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Node.js Reference Architecture
 
 ## Overview
