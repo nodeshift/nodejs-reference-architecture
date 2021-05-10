@@ -5,43 +5,43 @@ and server side applications
 
 ## Recommended Packages for Node.js Server development
 
-* express-graphql - https://graphql.org/graphql-js/express-graphql
+* `express-graphql` - https://graphql.org/graphql-js/express-graphql
 Exposes GraphQL schema using Express.js
 
-* GraphQL Tools - https://github.com/ardatan/graphql-tools
+* `GraphQL Tools` - https://github.com/ardatan/graphql-tools
 Builds GraphQL schema using resolvers
 
-* DataLoader - https://github.com/graphql/dataloader
+* `DataLoader` - https://github.com/graphql/dataloader
 Prevents from overfetching data when querying relationships
 
 ## Recomended packages for Client side development
 
-* GraphQL-Tag - https://github.com/apollographql/graphql-tag
+* `GraphQL-Tag` - https://github.com/apollographql/graphql-tag
 Compiles graphql schema on the client (provides browserify plugin)
 
-* URQL - https://formidable.com/open-source/urql
+* `URQL` - https://formidable.com/open-source/urql
 GraphQL Client with caching and offline support
 
-* Apollo-Client - https://github.com/apollographql/apollo-client/
+* `Apollo-Client` - https://github.com/apollographql/apollo-client/
 Alternative GraphQL Client with caching and offline support
 
-* GraphQL-Code-Generator - https://graphql-code-generator.com
+* `GraphQL-Code-Generator` - https://graphql-code-generator.com
 Generates TypeScript source code for client and server
 
 ## Recommended Tools for visualizing GraphQL Schema and Queries
 
-* graphiql- https://github.com/graphql/graphiql
+* `graphiql` - https://github.com/graphql/graphiql
 Graphiql is web application that allows you to build and execute GraphQL queries against your schema
 
-* GraphQL-CLI https://github.com/Urigo/graphql-cli
+* `GraphQL-CLI` https://github.com/Urigo/graphql-cli
 Suite of tools and commands for performing various operations on GraphQL schema. 
 
 ## Recomended practices for GraphQL Schema development
 
-* GraphQL Rules https://graphql-rules.com/
+* `GraphQL Rules` - https://graphql-rules.com/
 Set of recomendations for building proper schema
 
-* GraphQL CRUD https://graphqlcrud.org
+* `GraphQL CRUD` - https://graphqlcrud.org
 Set of rules and generators to automate building GraphQL schema
 
 ## Guidance
