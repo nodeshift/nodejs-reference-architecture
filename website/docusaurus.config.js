@@ -37,7 +37,7 @@ module.exports = {
           title: 'Docs',
           items: [
             {
-              label: 'Reference Specification',
+              label: 'Reference Architecture',
               to: '/docs/intro',
             },
           ],
