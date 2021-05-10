@@ -2,8 +2,8 @@
 module.exports = {
   title: 'Node.JS Reference Specification',
   tagline: 'Enteprise-Ready Node.js',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  url: 'https://wtrocki.github.io',
+  baseUrl: '/nodejs-reference-architecture/',
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
