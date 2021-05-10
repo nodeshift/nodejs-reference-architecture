@@ -7,8 +7,8 @@ module.exports = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'wtrocki', // Usually your GitHub org/user name.
+  projectName: 'nodejs-reference-architecture', // Usually your repo name.
   themeConfig: {
     navbar: {
       title: 'Node.JS Reference Specification',
