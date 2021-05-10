@@ -11,7 +11,7 @@ module.exports = {
   projectName: 'nodejs-reference-architecture', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Node.JS Reference Specification',
+      title: 'Node.JS Reference Architecture',
       logo: {
         alt: 'Node.JS Reference Specification Logo',
         src: 'img/logo.svg',
