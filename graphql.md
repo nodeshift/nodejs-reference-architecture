@@ -28,13 +28,21 @@ Alternative GraphQL Client with caching and offline support
 * GraphQL-Code-Generator - https://graphql-code-generator.com
 Generates TypeScript source code for client and server
 
-## Recomended practices for GraphQL Schema development
+## Recommended Tools for visualizing GraphQL Schema and Queries
 
-* GraphQL CRUD https://graphqlcrud.org
-Set of rules and generators to automate building GraphQL schema
+* graphiql- https://github.com/graphql/graphiql
+Graphiql is web application that allows you to build and execute GraphQL queries against your schema
 
 * GraphQL-CLI https://github.com/Urigo/graphql-cli
 Suite of tools and commands for performing various operations on GraphQL schema. 
+
+## Recomended practices for GraphQL Schema development
+
+* GraphQL Rules https://graphql-rules.com/
+Set of recomendations for building proper schema
+
+* GraphQL CRUD https://graphqlcrud.org
+Set of rules and generators to automate building GraphQL schema
 
 ## Guidance
 
