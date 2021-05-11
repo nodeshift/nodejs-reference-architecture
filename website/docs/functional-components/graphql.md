@@ -1,3 +1,6 @@
+---
+sidebar_position: 10
+---
 # GraphQL Development
 
 GraphQL developement requires number of tools and packages that can be used on both client and server. Our target will be to provide comprehensive set of the tools to add graphql support for both client 
