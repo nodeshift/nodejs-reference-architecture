@@ -5,12 +5,12 @@ The npm registry is a key part of the node(and Javascript) ecosystem.  It allows
 
 ## Recommended Components
 
-The *team* has familiarity with using both Artifactory and Sonatype Nexus.
+The *team* has familiarity with using both Artifactory and Sonatype Nexus.  Both have free and enterprise grade tiers available.
 
 
 ## Guidance
 
-There are a few different reasons why you might consider mirroring the public npm registry.
+It is recommended to use a Proxy/Mirror when possible. There are a few different reasons why you might consider this.
 
 * You need to limit the installation of modules to only a specific set.
 
@@ -22,13 +22,18 @@ There are a few different reasons why you might consider mirroring the public np
 
 * You need to maintain a copy of a module incase it is removed from the public registry.
 
+* Being a good npm citizen.  The public registry is a free service and npm allows for [update to 5 million requests per month](https://blog.npmjs.org/post/187698412060/acceptible-use), which can be used up quickly with CI builds.
+
 Using a npm mirror/proxy is fairly easy.  You can set the *registry* that the npm cli uses by running `npm set registry URL`.  You can also use the `HTTP_PROXY` and `HTTPS_PROXY` environment variables to set the mirrored registry.
 
+Since these registry are not Node.js specific and can be used by other languages, organizations might already have something running where npm support can be turned on.
 
 ## Learning Resources
 
 https://jfrog.com/artifactory/
 
 https://guides.sonatype.com/repo3/quick-start-guides/proxying-maven-and-npm/
+
+https://www.sonatype.com/products/repository-oss-vs-pro-features
 
 https://verdaccio.org/
