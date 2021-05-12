@@ -1,7 +1,7 @@
 # GraphQL Development
 
-GraphQL developement requires number of tools and packages that can be used on both client and server. Our target will be to provide comprehensive set of the tools to add graphql support for both client 
-and server side applications
+GraphQL developement requires number of tools and packages that can be used on both client and server. 
+Our target will be to provide comprehensive set of the tools to add graphql support for both client and server side applications
 
 ## Recommended Packages for Node.js Server development
 
@@ -58,14 +58,19 @@ https://github.com/ardatan/graphql-tools#example
 Developers can use top level database query languages. 
 We recomend using Knex(http://knexjs.org/) for performing queries from GraphQL to relational databases.
 
-If your GraphQL model have relationships please consider using DataLoader to prevent from overfetching problem:
+If your GraphQL Schema contains relationships that can lead to "N+1 Problem", please consider using DataLoader library.
 
 https://github.com/graphql/dataloader
 
+Usage of the dataloader will be specific to your database/ORM solution.
+
 ### GraphQL Client
 
-For GraphQL client we recomend URQL (https://formidable.com/open-source/urql/) that can work with React and any other JS based library. 
-When using bundler we strongly recomend to compile your graphql queries using GraphQL-Tag:
+For GraphQL client we recomend URQL that can work with React and any other JavaScript based library. 
+
+https://formidable.com/open-source/urql 
+
+When using module bundler we strongly recomend to compile your graphql queries using GraphQL-Tag: 
 
 https://github.com/apollographql/graphql-tag
 
@@ -74,6 +79,37 @@ https://github.com/apollographql/graphql-tag
 If you use typescript in your project we recomend GraphQL-Code-Generator to generate typings for both client and server:
 
 https://graphql-code-generator.com
+
+### Instrumentation and Tracking
+
+For instrumentation and tracking we recomend using official OpenTelemetry package
+
+https://www.npmjs.com/package/@opentelemetry/instrumentation-graphql
+
+## Rate Limiting and Query Complexity
+
+When building GraphQL API we often need to restrict it in terms of complexity and query rate. 
+
+For rejecting complex queries and detecting possible API missuse we recomend using
+
+https://github.com/slicknode/graphql-query-complexity
+
+For building fixed window rate limiting middleware for GraphQL we recomend
+
+https://github.com/ravangen/graphql-rate-limit
+
+## Authorization
+
+When building GraphQL we can build our authorization logic inside resolvers.
+Developers can use any library or solution that is specific to their infrastructure.
+We recomend to follow official authorization guide: 
+
+https://graphql.org/learn/authorization
+
+For `Keycloak SSO` users we recomend library that provides helpers and GraphQL directives for authorization and authentication:
+
+https://github.com/aerogear/keycloak-connect-graphql
+
 
 ### Persisted queries
 

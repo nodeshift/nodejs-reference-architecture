@@ -52,7 +52,7 @@ with only a subset of sections having recommendations):
   - [Internationalization](./docs/functional-components/internationalization.md)
   - Accessibility
   - API Definition
-  - [GraphQL](./graphql.md)
+  - [GraphQL](./docs/functional-components/graphql.md)
   - Databases
   - [Authentication and Authorization](./docs/functional-components/auth.md)
   - [Data Caching](./docs/functional-components/data-caching.md)
