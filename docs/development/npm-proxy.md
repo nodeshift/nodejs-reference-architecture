@@ -24,7 +24,7 @@ It is recommended to use a Proxy/Mirror when possible. There are a few different
 
 * Being a good npm citizen.  The public registry is a free service and npm allows for [update to 5 million requests per month](https://blog.npmjs.org/post/187698412060/acceptible-use), which can be used up quickly with CI builds.
 
-Using a npm mirror/proxy is fairly easy.  You can set the *registry* that the npm cli uses by running `npm set registry URL`. 
+Using a npm mirror/proxy is fairly easy.  You can set the *registry* that the npm cli uses by running `npm set registry URL`.
 
 Since these registry are not Node.js specific and can be used by other languages, organizations might already have something running where npm support can be turned on.
 
@@ -35,5 +35,3 @@ https://jfrog.com/artifactory/
 https://guides.sonatype.com/repo3/quick-start-guides/proxying-maven-and-npm/
 
 https://www.sonatype.com/products/repository-oss-vs-pro-features
-
-https://verdaccio.org/
