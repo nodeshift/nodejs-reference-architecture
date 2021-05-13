@@ -71,7 +71,7 @@ with only a subset of sections having recommendations):
     - [Testing](./docs/development/testing.md)
   - References to CI/CD
   - Npm
-    - Npm Proxy / Internal Registries
+    - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
     - Npm Publishing
     - Package Development
   - Secure Development Process
