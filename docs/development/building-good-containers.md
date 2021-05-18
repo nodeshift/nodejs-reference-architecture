@@ -107,11 +107,6 @@ to problems. You can read about the issue in:
 [Tini](https://github.com/krallin/tini) is a process manager some of our teams have
 used successefully.
 
-## Avoid npm start 
-
-npm scripts don't pass OS signals to the Node.js application which
-can result in problems with signal handling and shutdown.
-
 ## Manage scaling outside of the container
 
 Avoid using the cluster module and processes managers inside of the
