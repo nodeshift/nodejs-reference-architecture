@@ -1,0 +1,116 @@
+{
+  "modules": [
+    {
+      "name": "cldr-localenames-full",
+      "npmLink": "https://npmjs.com/package/cldr-localenames-full"
+    },
+    {
+      "name": "eslint",
+      "npmlink": "https://www.npmjs.com/package/eslint"
+    },
+    {
+      "name": "express",
+      "npmlink": "https://www.npmjs.com/package/express"
+    },
+    {
+      "name": "express-prom-bundle",
+      "npmlink": "https://www.npmjs.com/package/express-prom-bundle"
+    },
+    {
+      "name": "helmet",
+      "npmlink": "https://www.npmjs.com/package/helmet"
+    },
+    {
+      "name": "ibmcloud-appid",
+      "npmlink": "https://www.npmjs.com/package/ibmcloud-appid"
+    },
+    {
+      "name": "i18next",
+      "npmlink": "https://www.npmjs.com/package/i18next"
+    },
+    {
+      "name": "i18next-icu",
+      "npmlink": "https://www.npmjs.com/package/i18next-icu"
+    },
+    {
+      "name": "i18next-express-middleware",
+      "npmlink": "https://www.npmjs.com/package/i18next-express-middleware"
+    },
+    {
+      "name": "i18next-node-fs-backend",
+      "npmlink": "https://www.npmjs.com/package/i18next-node-fs-backend"
+    },
+    {
+      "name": "ioredis",
+      "npmlink": "https://www.npmjs.com/package/ioredis"
+    },
+    {
+      "name": "node-rdkafka",
+      "npmlink": "https://www.npmjs.com/package/node-rdkafka"
+    },
+    {
+      "name": "opossum",
+      "npmlink": "https://www.npmjs.com/package/opossum"
+    },
+    {
+      "name": "passport",
+      "npmlink": "https://www.npmjs.com/package/passport"
+    },
+    {
+      "name": "pino",
+      "npmlink": "https://www.npmjs.com/package/pino"
+    },
+    {
+      "name": "prom-client",
+      "npmlink": "https://www.npmjs.com/package/prom-client"
+    },
+    {
+      "name": "rhea",
+      "npmlink": "https://www.npmjs.com/package/rhea"
+    },
+    {
+      "name": "lru-cache",
+      "npmlink": "https://www.npmjs.com/package/lru-cache"
+    },
+    {
+      "name": "mocha",
+      "npmlink": "https://www.npmjs.com/package/mocha"
+    },
+    {
+      "name": "jest",
+      "npmlink": "https://www.npmjs.com/package/jest"
+    }
+  ],
+  "licenses": {
+    "allow": ["MIT", "Apache-2.0", "ISC", "BSD-2-Clause", "BSD-3-Clause"],
+    "rules": {
+      "cldr-localenames-full": {
+        "override": ["Unicode-DFS-2016"]
+      },
+      "express-prom-bundle": {
+        "override": ["WTFPL"]
+      },
+      "ibmcloud-appid": {
+        "override": ["AFLv2.1", "Unlicense"]
+      },
+      "i18next-icu": {
+        "override": ["0BSD"]
+      },
+      "ioredis": {
+        "allow": ["Apache"]
+      },
+      "mocha": {
+        "override": ["Python-2.0"]
+      },
+      "jest": {
+        "override": [
+          "CC-BY-4.0",
+          "AFLv2.1",
+          "CC-BY-3.0",
+          "CC0-1.0",
+          "Unlicense"
+        ]
+      }
+    }
+  }
+}
