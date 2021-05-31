@@ -9,6 +9,7 @@ Node.js applications in containers for deployments:
 * add key tools for problem determination
 * use a process manager 
 * setting memory limits
+* tooling for building containers
 
 This section relies of you having already chosen the base images to
 start with. For recommendations on base images check out
@@ -88,6 +89,57 @@ about a few examples in these references:
 It is recommended that you use multi-stage builds to minimize
 container size.
 
+When using multi-stage builds there are two additional
+techniques which can make your build/development process
+more efficient:
+* using `.dockerignore`
+* image layering
+
+### using `.dockerignore`
+
+You might wonder why `.dockerignore` would be useful if
+you have a multistage build and only `COPY` the required
+artifacts into the deployment image. In this case it is
+not about keeping the final image size small, but instead
+avoiding slowing down copies into the initial build
+image.
+
+As an example, it's common to run npm install locally
+to validate the package.json or test locally. If you do
+that a COPY command which would normally copy over only
+the files required to build (ex `COPY --chown=1001:0 . .`)
+will end up copying the `node_modules` directory, and
+taking a lot longer.
+
+It's recommended that you use a `.dockerignore` file
+which at a minium includes:
+
+```shell
+node_modules
+.git
+.cache
+```
+
+### dependency image
+
+The dependencies for your application likely change
+less often than the code for your application. This
+means that if you build/install your depdencies and
+application in the same step you'll end up building/installing
+the depdencies even when they have not changed. Couple
+that will the fact that it often takes much longer
+to build/install the depdencies than the application
+and the result is that your build will likely take
+longer than needed.
+
+In order to optimize your build times it is often useful
+to build a dependency image. The creation of the
+dependency image builds/installs the appliation dependencies
+to create a new image (often this is just npm install). Each
+time you change your application you then build on top of
+that dependency image which can often just be a `COPY`
+of JavaScript and other static files into the
+dependency image.
 
 ## Add key tools for problem determination
 
@@ -122,4 +174,32 @@ From our experience it as efficient or more efficient to handle
 scaling outside of the container and ensures the layer with the
 best information can scale your application when needed.
 
-##
+## setting memory limits
+
+The Node.js runtime sets default memory limits for the heap which may not
+match what you want to use in production.
+
+Use an environment variable in your start scripts so that you can
+tell the Node.js runtime in the container to use a limit which matches
+the amount of memory you will provide to the container when it is run.
+
+The following is an example of doing so in the start script within
+`package.json`:
+
+```shell
+"start": "if [ -z \"$MAX_NODE_MEMORY\" ]; then export MAX_NODE_MEMORY=2048; fi; node --max-old-space-size=$MAX_NODE_MEMORY bin/app.js",
+
+```
+
+This will then allow you to conifgure the `max-old-space-size` to
+align with what you define in your kubernetes deployment files or
+set withe the --memory option in docker run commands.
+
+## tooling for building containers
+
+When containers where first introduced the only way to build
+and run them was with `docker`. Depending on the operating
+system you are running on, there may be other options which
+provide advantages and are worth considering. You can
+read more about some of these in
+[Podman and Buildah for Docker users](https://developers.redhat.com/blog/2019/02/21/podman-and-buildah-for-docker-users#what_is_buildah_and_why_would_i_use_it_-h2).
