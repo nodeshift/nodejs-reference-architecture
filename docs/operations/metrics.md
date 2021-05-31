@@ -60,3 +60,9 @@
 
 - Export additional custom metrics to provide key attributes about the operation of
   your application which are not part of the standard metrics.
+
+- Be aware that the prometheus client instance needs to be a singleton within your app.  For example, if your
+  application imports separate packages that utilize the "prom-client" package, like customized RabbitMQ &
+  Redis drivers that write metrics to prom-client, you need to make sure they use the same prom-client instance.
+  A common way to do that is to make the prom-client instance as an optional parameter in the constructor for
+  those drivers, and then your app can pass in the same prom-client instance into both.
