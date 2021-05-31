@@ -8,6 +8,12 @@ Node.js applications in containers for deployments:
 * use multi-stage builds
 * add key tools for problem determination
 * use a process manager 
+* setting memory limits
+
+This section relies of you having already chosen the base images to
+start with. For recommendations on base images check out
+[Node.js Versions and Container Images - Container images](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/functional-components/nodejs-versions-images.md#container-images)
+and [Node.js Versions and Container Images - Commercially Supported Containers](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/functional-components/nodejs-versions-images.md#commercially-supported-containers).
 
 ## Build non-root containers
 
@@ -27,10 +33,10 @@ always check what user will be used by default.
 
 ```shell
 USER 1001
-RUN chown -R 1001:0 /some/directory
+COPY --chown=1001:0 . .
 ```
 
-It is recommended that you build your containers as `non-root`.
+It is recommended that you run processes as `non-root` inside your containers.
 
 * Avoid using trusted ports
 
