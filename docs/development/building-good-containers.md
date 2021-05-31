@@ -9,6 +9,7 @@ Node.js applications in containers for deployments:
 * add key tools for problem determination
 * use a process manager 
 * setting memory limits
+* avoiding using `npm` to start application
 * tooling for building containers
 
 This section relies of you having already chosen the base images to
@@ -194,6 +195,24 @@ The following is an example of doing so in the start script within
 This will then allow you to conifgure the `max-old-space-size` to
 align with what you define in your kubernetes deployment files or
 set withe the --memory option in docker run commands.
+
+## avoiding using `npm` to start application
+
+While you will often see `CMD ["npm", "start"]` in docker files
+used to build Node.js applications there are a number
+of good reasons to avoid this:
+
+* One less component. You generally don't need `npm` to start
+  your application. If you avoid using it in the container
+  then you will not be exposed to any security vulnerabilities
+  that might exist in that component or its dependencies.
+* One less process. Instead of running 2 process (npm and node)
+  you will only run 1.
+* There can be issues with signals and child processes. You
+  can read more about that in the Node.js docker best practices
+  [CMD](https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#cmd).
+
+Instead use a command like `CMD ["node","index.js"]`,
 
 ## tooling for building containers
 
