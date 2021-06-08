@@ -28,7 +28,7 @@ Which one to go with is solely up to you and your preference.
 
 #### Tests and Docs
 
-For your tests and extra docs, it's your preference on whether to publish them or not.
+For your tests and any extra documentation, like API reference docs, that goes beyond the packages README, it's your preference on whether to publish them or not.  If the source code for the package is hosted on github, it is a common practice to use github pages to host any API reference docs and provide a link to those in the README.
 
 
 #### Transpiling Sources
