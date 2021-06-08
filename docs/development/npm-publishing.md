@@ -28,7 +28,7 @@ Which one to go with is solely up to you and your preference.
 
 #### Tests and Docs
 
-For your tests and any extra documentation, like API reference docs, that goes beyond the packages README, it's your preference on whether to publish them or not.  If the source code for the package is hosted on github, it is a common practice to use github pages to host any API reference docs and provide a link to those in the README.
+For your tests and any extra documentation, like API reference docs, that goes beyond the packages README, it's your preference on whether to publish them or not.  Not including these files can decrease the size of the package that is being installed.  If the source code for the package is hosted on github, it is a common practice to use github pages to host any API reference docs and provide a link to those in the README and the package.json.
 
 
 #### Transpiling Sources
@@ -55,9 +55,27 @@ The npm cli also provides a [`version` command](https://docs.npmjs.com/cli/v7/co
 
 #### Publish Internal Modules
 
-// TODO: need input from the other folks
+When publishing to an internal registry, like Artifactory or Nexus, it is recommended to scope your package.  This adds extra protection if this module is accidently published to a public registry.
 
+How to publish to an internal registry is up to you, but there are a couple ways that the team use.
 
+* [publishConfig](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#publishconfig)
+
+The `publishConfig` is a set of config values that will be used at publish-time. It's especially handy if you want to set the tag, registry or access, so that you can ensure that a given package is not tagged with "latest", published to the global public registry or that a scoped module is private by default.  An example of specifiying an internal registry is below:
+
+```
+"publishConfig":{
+  "registry": "http://my-internal-registry.local"
+}
+```
+
+* .npmrc
+
+A `.npmrc` file can also be used either per project or globally to change the registry that your package is published to.  The contents of this file might look something like this:
+
+```
+registry=http://my-internal-registry.local
+```
 
 ## Learning Resources
 
