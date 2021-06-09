@@ -4,7 +4,7 @@ There are a number of recommendations based on our experience building
 Node.js applications in containers for deployments:
 
 * build non-root containers
-* avoid using trusted ports
+* avoid reserved/privileged ports (i.e. 1-1023)
 * use multi-stage builds
 * add key tools for problem determination
 * use a process manager 
