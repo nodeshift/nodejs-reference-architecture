@@ -28,16 +28,28 @@ Which one to go with is solely up to you and your preference.
 
 #### Tests and Docs
 
-For your tests and any extra documentation, like API reference docs, that goes beyond the packages README, it's your preference on whether to publish them or not.  Not including these files can decrease the size of the package that is being installed.  If the source code for the package is hosted on github, it is a common practice to use github pages to host any API reference docs and provide a link to those in the README and the package.json.
+For your tests and any extra documentation, like API reference docs, that goes beyond the packages README, it's your preference on whether to publish them or not. For modules that the team publishes, the tests are not included.
+
+Not including these files can decrease the size of the package that is being installed.  If the source code for the package is hosted on github, it is a common practice to use github pages to host any API reference docs and provide a link to those in the README and the package.json.
 
 
 #### Transpiling Sources
 
 A package written in another language like TypeScript should be published with transpiled JavaScript as the primary executable.
 
-Generally the original sources should not be required to use your published package, but it's your preference whether to publish them or not.
+Generally the original sources should not be required to use your published package, but it's your preference whether to publish them or not.  Similar to the guidance on tests, the modules that the team publishs that are transpiled only contain the generated code.
 
 If your module does require any build steps, it is recommended to run those before you publish and not when the user installs the package.  This is where you would use the `prePublish` script as mentioned above.
+
+It is important to note that if you are using Typescript or are generating type definitions for your package, that you make sure to add a reference to the generated type file in your package.json.  For Example:
+
+```
+  "name": "some_module",
+  "description": "A module that does something",
+  "main": "./bin/index.js",
+  "module": "index.js",
+  "types": "types/index.d.ts"
+```
 
 #### Module Versions
 
