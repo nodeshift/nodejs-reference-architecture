@@ -55,27 +55,17 @@ The npm cli also provides a [`version` command](https://docs.npmjs.com/cli/v7/co
 
 #### Publish Internal Modules
 
-When publishing to an internal registry, like Artifactory or Nexus, it is recommended to scope your package.  This adds extra protection if this module is accidently published to a public registry.
+When publishing to an internal registry, like Artifactory or Nexus, it is recommended to scope your package.  This adds extra protection if this module is accidently published to a public registry and avoids the dependecy confusion hack mentioned above.
 
-How to publish to an internal registry is up to you, but there are a couple ways that the team use.
-
-* [publishConfig](https://docs.npmjs.com/cli/v7/configuring-npm/package-json#publishconfig)
-
-The `publishConfig` is a set of config values that will be used at publish-time. It's especially handy if you want to set the tag, registry or access, so that you can ensure that a given package is not tagged with "latest", published to the global public registry or that a scoped module is private by default.  An example of specifiying an internal registry is below:
-
-```
-"publishConfig":{
-  "registry": "http://my-internal-registry.local"
-}
-```
-
-* .npmrc
+How to publish to an internal registry is up to you, but the team recommneds the usage of a `.npmrc` file.
 
 A `.npmrc` file can also be used either per project or globally to change the registry that your package is published to.  The contents of this file might look something like this:
 
 ```
 registry=http://my-internal-registry.local
 ```
+
+If you are using the global `.npmrc` file, you can use the [npmrc module](https://www.npmjs.com/package/npmrc) to easily switch between multiple `.npmrc` configurations, although it is not necessary for publishing to an internal registry.
 
 ## Learning Resources
 
