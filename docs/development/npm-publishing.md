@@ -11,7 +11,7 @@ It is also a good practice to have a "prepublish" npm script in the package.json
 
 The use of scoped pacakges is a good practice if you are creating many related packages.
 
-When creating modules that will be published to an internal registry that is not upstream npm, it is a good practice to scope those modules to the name of your organization.  It is also important that you or your company are the owners of the scoped orginization on upstream npm.  This is important if a public module which depends on a private module is accidently published to upstream npm
+When creating modules that will be published to an internal registry that is not upstream npm, it is a good practice to scope those modules to the name of your organization.  It is also important that you or your company are the owners of the scoped orginization on upstream npm.  This is important if a public module which depends on a private module is accidently published to upstream npm, which can lead to the "Dependecy Confusion" hack that is outlined [in this post](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610)
 
 ## Publishing Modules
 
