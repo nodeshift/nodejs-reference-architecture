@@ -41,7 +41,7 @@ Generally the original sources should not be required to use your published pack
 
 If your module does require any build steps, it is recommended to run those before you publish and not when the user installs the package.  This is where you would use the `prePublish` script as mentioned above.
 
-It is important to note that if you are using Typescript or are generating type definitions for your package, that you make sure to add a reference to the generated type file in your package.json.  For Example:
+It is important if you are using Typescript or are generating type definitions for your package, that you make sure to add a reference to the generated type file in your package.json and ensure that the file is included when publishing.  For Example:
 
 ```
   "name": "some_module",
@@ -84,6 +84,5 @@ If you are using the global `.npmrc` file, you can use the [npmrc module](https:
 * https://github.blog/changelog/2020-10-02-npm-automation-tokens/
 
 * https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610
-
 
 
