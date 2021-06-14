@@ -28,7 +28,9 @@ Which one to go with is solely up to you and your preference.
 
 #### Tests and Docs
 
-For your tests and any extra documentation, like API reference docs, that goes beyond the packages README, it's your preference on whether to publish them or not. For modules that the team publishes, the tests are not included.
+For your tests and any extra documentation, like API reference docs, that goes beyond the packages README, you can choose to publish them or not. For modules that the team publishes we:
+* include docs
+* exclude tests
 
 Not including these files can decrease the size of the package that is being installed.  If the source code for the package is hosted on github, it is a common practice to use github pages to host any API reference docs and provide a link to those in the README and the package.json.
 
@@ -84,4 +86,3 @@ If you are using the global `.npmrc` file, you can use the [npmrc module](https:
 * https://github.blog/changelog/2020-10-02-npm-automation-tokens/
 
 * https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610
-
