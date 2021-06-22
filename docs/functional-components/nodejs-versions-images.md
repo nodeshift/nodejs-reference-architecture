@@ -118,7 +118,7 @@ include the Node.js binaries.
 For example, if you want to take advantage of the support for
 Node.js that comes with RHEL or Red Hat Runtimes you will need to use
 the rhel or ubi images available from the
-[Red Hat container catalog](https://catalog.redhat.com/)
+[Red Hat container catalog](https://catalog.redhat.com/software/containers/search?q=node.js)
 
 ### Containers with FIPs support  
 
