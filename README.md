@@ -22,6 +22,8 @@ good, but these are the ones we know best and have the most experience with.
   in those offerings.
 - The recommended components may change over time as technologies and approaches change.
 
+If you want to learn more about some of the discussions that went into the Node.js reference architecture you can check out the [Introduction to the Node.js reference architectura](https://developers.redhat.com/blog/2021/03/08/introduction-to-the-node-js-reference-architecture-part-1-overview) blog post series.
+
 ### The team
 
 The `team` consists of engineers from across groups within IBM and Red Hat who:
