@@ -84,8 +84,8 @@ There are different ways to build containers but most
 will support using a build and run image. You read more
 about a few examples in these references:
 
-[multistage-build](https://docs.docker.com/develop/develop-images/multistage-build/)
-[Modern web applications on OpenShift: Part 2 -- Using chained builds](https://developers.redhat.com/blog/2018/10/23/modern-web-applications-on-openshift-part-2-using-chained-builds)
+* [multistage-build](https://docs.docker.com/develop/develop-images/multistage-build/)
+* [Modern web applications on OpenShift: Part 2 -- Using chained builds](https://developers.redhat.com/blog/2018/10/23/modern-web-applications-on-openshift-part-2-using-chained-builds)
 
 It is recommended that you use multi-stage builds to minimize
 container size.
