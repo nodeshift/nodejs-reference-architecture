@@ -108,6 +108,7 @@ To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTIN
 
 ## Contributors
 
+* Bethany Griggs - Sr. Software Engineer - Red Hat
 * Dominic Harries - Dev Lead at IBM Garage for Cloud
 * Jim Lindeman - Sr. Software Engineer - IBM
 * Lucas Holmquist - Sr. Software Engineer - Red Hat
