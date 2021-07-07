@@ -82,34 +82,31 @@
     }
   ],
   "licenses": {
-    "allow": ["MIT", "Apache-2.0", "ISC", "BSD-2-Clause", "BSD-3-Clause"],
+    "allow": [
+      "MIT", 
+      "Apache-2.0", 
+      "ISC", 
+      "BSD-2-Clause", 
+      "BSD-3-Clause", 
+      "Unlicense", 
+      "WTFPL", 
+      "Unicode-DFS-2016"
+    ],
     "rules": {
-      "cldr-localenames-full": {
-        "override": ["Unicode-DFS-2016"]
-      },
-      "express-prom-bundle": {
-        "override": ["WTFPL"]
-      },
-      "ibmcloud-appid": {
-        "override": ["AFLv2.1", "Unlicense"]
-      },
-      "i18next-icu": {
-        "override": ["0BSD"]
-      },
       "ioredis": {
         "allow": ["Apache"]
       },
+      "ibmcloud-appid": {
+        "allow": ["BSD"]
+      },
+      "i18next-icu":{
+        "allow": ["0BSD"]
+      },
       "mocha": {
-        "override": ["Python-2.0"]
+        "allow": ["Python-2.0"]
       },
       "jest": {
-        "override": [
-          "CC-BY-4.0",
-          "AFLv2.1",
-          "CC-BY-3.0",
-          "CC0-1.0",
-          "Unlicense"
-        ]
+        "allow": ["CC-BY-4.0"]
       }
     }
   }
