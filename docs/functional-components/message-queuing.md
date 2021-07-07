@@ -38,7 +38,7 @@ significant, whether that matters for a real-world application will
 depend on the application.
 
 At this point our recommendation is: 
-* if you need the highest possibe performance, are
+* if you need the highest possible performance or longest track record of production use and are
 using an older version of Node.js (14.x or earlier) and can tolerate
 the risk on the maintenance side [node-rdkafka][] may still be
 your best choice.
