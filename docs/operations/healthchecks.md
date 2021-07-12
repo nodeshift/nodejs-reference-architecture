@@ -73,7 +73,7 @@ knows what's wrong.
 
 ### Endpoints
 
-We recommend using `/readyz` and `/livez` as the endpoints for the readiness and
+We recommend that you use consistent naming for your endpoints across micro-services.  `/readyz` and `/livez` are common choices for the endpoints for the readiness and
 liveness probes, respectively.
 
 Any route name can work if it agrees with the probe configuration, but in the
