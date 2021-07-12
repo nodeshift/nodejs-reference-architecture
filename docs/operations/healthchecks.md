@@ -85,7 +85,6 @@ it's best to clarify.
 
 The "z" at the end of `/readyz` and `/livez` are a pattern called "z pages" that
 is a pattern used by [internal Kubernetes services](https://kubernetes.io/docs/reference/using-api/health-checks/) and has also been adopted by some other projects like [OpenCensus](https://opencensus.io/zpages/).
-itself.
 
 ### Frequency of checking
 
