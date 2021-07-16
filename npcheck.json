@@ -79,6 +79,10 @@
     {
       "name": "jest",
       "npmlink": "https://www.npmjs.com/package/jest"
+    },
+    {
+      "name": "kafkajs",
+      "npmlink": "https://www.npmjs.com/package/kafkajs"
     }
   ],
   "licenses": {

@@ -5,26 +5,47 @@
 | Server   | Recommended client |
 | -------- | ------------------ |
 | Kafka    | [node-rdkafka][]   |
+| Kafka    | [KafkaJS][]        |
 | ActiveMQ | [rhea][]           |
 | Redis    | [ioredis][]        |
 
 ## Kafka
 
-Recommendation is to use [node-rdkafka][], because it is:
+It's currently difficult to make a single recommendation for a Node.js
+Kafka client. 
 
-- Widely used and recommended by the messaging groups within the `teams`
-  organizations for performance, features, and protocol compatibility.
-- Based on the same [librdkafka](https://github.com/edenhill/librdkafka),
-  maintained by the Kafka project and used by most language clients.
+The team currently has the most real-world experience with 
+[node-rdkafka][]. In the past it has been widely used and
+recommended by the messaging groups within the `teams`
+organizations for performance, features, and protocol compatibility.
+One of it's strengths is that is based on the same
+[librdkafka](https://github.com/edenhill/librdkafka), maintained
+by the Kafka project and used by most language clients. **However**
+it is in the midst of a maintenance challenge that it does not
+seem to be pulling out of (for example at the time this was written
+node-rdkafka does not build on Node.js version 16).
 
-This is not without risks:
+[KafkaJS][] is a newer Node.js 
+Kafka client which is more actively maintained and is growing in
+popularity. It's pure JavaScript implementation makes it
+easier to install and use.  While we don't have past history of real-world
+experience with the KafkaJS client, we have reviewed the features
+and usage versus node-rdkafka and it compares favorably. The one
+potential caveat is with respect to performance where node-rdkafka, likely
+due to its use of [librdkafka](https://github.com/edenhill/librdkafka),
+comes out ahead. While the difference a simple benchmark is quite
+significant, whether that matters for a real-world application will
+depend on the application.
 
-- In the midst of a maintenance challenge that it may or may not be
-  [pulling out of](https://github.com/Blizzard/node-rdkafka/issues/628).
-- It is written in C++, which can be problematic in some environments.
-
-We are keeping an eye on the situation and may update the recommendation
-based on what happens going forward.
+At this point our recommendation is: 
+* if you need the highest possible performance or longest track record of production use and are
+using an older version of Node.js (14.x or earlier) and can tolerate
+the risk on the maintenance side [node-rdkafka][] may still be
+your best choice.
+* otherwise you should consider [KafkaJS][]. If your application
+has high performance requirements you should plan to validate
+that you can meet those requirements with KafkaJS early on in your
+development lifecycle.
 
 ### Guidance
 
@@ -63,3 +84,4 @@ sophisticated uses cases you should consider a more complete option like Kafka.
 [redis]: https://www.npmjs.com/package/redis
 [ioredis]: https://www.npmjs.com/package/ioredis
 [rhea]: https://www.npmjs.com/package/rhea
+[KafkaJS]: https://github.com/tulios/kafkajs
