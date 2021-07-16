@@ -158,7 +158,7 @@ the increase in size based on our experience.
 
 The Node.js and npm processes do not expect to run as PID 1
 which is the case when run in a container. There are 
-special expetations for the process run as PID 1 including
+special expectations for the process run as PID 1 including
 reaping zombies and not meeting these expectations can lead
 to problems. You can read about the issue in:
 [docker-and-the-pid-1-zombie-reaping-problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/) 
