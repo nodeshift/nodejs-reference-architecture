@@ -138,6 +138,8 @@ Mocha does not automatically compute code coverage. If you need it, use:
 
 - [nyc][]: the most popular code-coverage tool; the successor CLI for Istanbul
 
+For more on Code Coverage, see the [Code Coverage](./code-) section
+
 [`assert` module]: https://nodejs.org/api/assert.html#assert_assert
 [babel]: https://babeljs.io
 [chai]: https://www.npmjs.com/package/chai
