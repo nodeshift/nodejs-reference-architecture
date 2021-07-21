@@ -55,7 +55,7 @@ with only a subset of sections having recommendations):
   - Accessibility
   - API Definition
   - [GraphQL](./docs/functional-components/graphql.md)
-  - Databases
+  - [Databases](./docs/functional-components/databases.md)
   - [Authentication and Authorization](./docs/functional-components/auth.md)
   - [Data Caching](./docs/functional-components/data-caching.md)
   - [Scaling and Multi-threading](./docs/functional-components/scaling-multi-threading.md)
