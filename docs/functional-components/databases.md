@@ -20,10 +20,10 @@ clients:
 | CouchDB       | [nano][]                     |
 | Elasticsearch | [@elastic/elasticsearch][]   |
 | Generic SQL   | [odbc][]                     |
-| IBM Db2       | [ibm_db][], [odbc][]    |
+| IBM Db2       | [ibm_db][], [odbc][]         |
 | Mongo         | [mongodb][]                  |
 | MySQL/MariaDB | [mysql2][]                   |
-| Oracle        | [node-oracledb][]            |
+| Oracle        | [oracledb][]                 |
 | MS SQL Server | [mssql][]                    |
 | Postgress     | [pg][]                       |
 | Redis         | [ioredis][]                  |
@@ -158,7 +158,7 @@ instead of the SQL equivalents.
 [oracledb]: https://www.npmjs.com/package/oracledb
 [mysql]: https://www.npmjs.com/package/mysql
 [mysql2]: https://www.npmjs.com/package/mysql2
-[elasticsearch]: https://www.npmjs.com/package/@elastic/elasticsearch
+[@elastic/elasticsearch]: https://www.npmjs.com/package/@elastic/elasticsearch
 [odbc]: https://www.npmjs.com/package/odbc
 [cassandra-driver]: https://www.npmjs.com/package/cassandra-driver
 [idb-connector]: https://www.npmjs.com/package/idb-connector
