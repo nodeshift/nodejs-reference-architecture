@@ -43,7 +43,6 @@ problems: 14 (errors: 0 - warnings: 14)
 * With respect to (3) we are looking at web frameworks but the concensus is still the current recommendations
 * With respect to (1), after review it seems that being a data delivery package no testing is needed
 * With respect to the comments about "no support", those indicate that the package does not include
-an engines field or package-support.json file. We plan to update the message to indicate that w
+ an engines field or package-support.json file. We plan to update the message to indicate that we
   cannot tell autimatically if they support LTS versions. We have no reason to believe any of those
   flagged don't support the current LTS Node.js versions.
-
