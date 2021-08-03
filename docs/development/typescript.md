@@ -24,7 +24,7 @@ Many code editors (such as Visual Studio Code) provide support for type checking
 
 Code editors typically only run type checking for open files, so it is a good idea to run `tsc --noEmit` periodically to check the entire codebase, e.g. as a git pre-push hook.
 
-## Transpiling in prod
+## Ship JavaScript not TypeScript for deployment
 
 It's best practice to run the transpilation step as part of your deployment pipeline rather than dynamically in production, for the follow reasons:
 
@@ -61,4 +61,3 @@ Improves debuggability of compiled code by generating source maps.
 ## Sharing types with npm modules
 
 **TODO**: summarise [this](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)? 
-
