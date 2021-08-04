@@ -1,28 +1,37 @@
 # Typescript
 
-**Question**: should we recommend using typescript over javascript?
+TypeScript is a language that compiles to JavaScript and provides static typing by extending the JavaScript syntax. It is worth considering for larger projects as it can bring the following benefits:
 
-**TODO:** advantages of typescript over javascript?
+- **Error detection**: certain classes of errors can be caught at compile time rather than causing a runtime error, e.g. reading a property from an object that may be undefined.
 
-Node.js does not support running typescript natively, so it must first be transpiled to JavaScript. There are 2 widely used transpilers:
+- **Contextual help in code editors**: for supported editors, TypeScript enables rich code completion both for project code and imported modules via the [DefinitelyTyped](https://definitelytyped.org/) project.
 
-1. `tsc` - the compiler shipped with [typescript](https://www.npmjs.com/package/typescript), supports type checking and transpiles to JavaScript
+- **Refactoring support**: changing the signature of a function or structure of an object in an incompatible way will cause compilation errors where it is used. TypeScript also enables automated refactorings such as renaming variables across multiple files and extracting methods.  
 
-2. [`babel`](https://babeljs.io) - can transpile to javascript using the [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript) preset, does _not_ support type checking
+TypeScript does _not_ provide any runtime type checking. To validate data at runtime, use a library such as [ajv](https://github.com/ajv-validator/ajv) in combination with TypeScript.
 
-There are other transpilers such as [esbuild](https://esbuild.github.io) and [swc](https://swc.rs) but these are not yet widely adopted and not currently recommended.
+## Transpilers
 
-Avoid mixing transpilers on the same project as this can lead to inconsistencies. One common mistake is using `tsc` for code transpilation but `babel` (the [default](https://jestjs.io/docs/getting-started#using-typescript)) for jest tests.
+Node.js does not support running TypeScript natively, so it must first be transpiled to JavaScript. We recommend the `tsc` transpiler that is shipped with [typescript](https://www.npmjs.com/package/typescript). This supports both type checking and transpilation to JavaScript.
 
-More information on choosing a transpiler can be found in the [typescript documentation](https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html).
+For front end development, sometimes [`babel`](https://babeljs.io) is used with the [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript) preset for transpilation, but this does _not_ support type checking and we do not recommend it for Node.js. More information on choosing a transpiler can be found in the [typescript documentation](https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html).
+
+Avoid mixing transpilers on the same project as this can lead to inconsistencies. Sometimes projects unintentially use `babel` for their jest tests as it the [default](https://jestjs.io/docs/getting-started#using-typescript).
 
 ## Transpiling in development
 
-TODO: talk about nodemon with babel-node, `tsc -w`, `ts-node`
+The `tsc` compiler provides a useful watch mode, activated by the `-w` or `--watch` flag. This will automatically re-transpile source files when they change. If you want to also restart a Node.js server process when this happens, you can use this in combination with [nodemon](https://nodemon.io) using a module such as [concurrently](https://www.npmjs.com/package/concurrently). An example script for `package.json`:
 
-Many code editors (such as Visual Studio Code) provide support for type checking of typescript. If you're using one of these editors, you can speed up transpilation by using babel without type checking. **TODO**: check if there's a way to turn this on for `tsc` as well.
+```json
+{
+  "scripts": {
+    "dev": "concurrently -n tsc,node 'tsc -w' 'nodemon -w dist dist/server.js'"
+  }
+}
 
-Code editors typically only run type checking for open files, so it is a good idea to run `tsc --noEmit` periodically to check the entire codebase, e.g. as a git pre-push hook.
+```
+
+If you're using `babel` which does not perform type checking, it is a good idea to run `tsc --noEmit` periodically to check the entire codebase, e.g. as a git pre-push hook.
 
 ## Ship JavaScript not TypeScript for deployment
 
@@ -49,14 +58,6 @@ Babel and other transpilers process a single file at a time which is incompatibl
 ```
 
 Strict mode turns on a [number of other flags](https://www.typescriptlang.org/tsconfig#strict) which can help prevent bugs in your code. If you're migrating an existing project to typescript it might be difficult to turn this on, but for new projects it is recommended.
-
-```json
-"sourceMap": true
-```
-
-Improves debuggability of compiled code by generating source maps.
-
-**TODO**: something about not shipping source maps to prod
 
 ## Sharing types with npm modules
 
