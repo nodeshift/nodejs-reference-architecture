@@ -134,7 +134,6 @@ Use the odbc built in functions for:
 
 instead of the SQL equivalents.
 
-
 [ioredis]: https://www.npmjs.com/package/ioredis
 [redis]: https://www.npmjs.com/package/redis
 [pg]: https://www.npmjs.com/package/pg
