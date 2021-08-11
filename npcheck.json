@@ -33,12 +33,12 @@
       "npmlink": "https://www.npmjs.com/package/i18next-icu"
     },
     {
-      "name": "i18next-express-middleware",
-      "npmlink": "https://www.npmjs.com/package/i18next-express-middleware"
+      "name": "i18next-http-middleware",
+      "npmlink": "https://www.npmjs.com/package/i18next-http-middleware"
     },
     {
-      "name": "i18next-node-fs-backend",
-      "npmlink": "https://www.npmjs.com/package/i18next-node-fs-backend"
+      "name": "i18next-fs-backend",
+      "npmlink": "https://www.npmjs.com/package/i18next-fs-backend"
     },
     {
       "name": "ioredis",
@@ -107,6 +107,9 @@
     {
       "name": "pg",
       "npmlink": "https://www.npmjs.com/package/pg"
+    },
+      "name": "kafkajs",
+      "npmlink": "https://www.npmjs.com/package/kafkajs"
     }
   ],
   "licenses": {

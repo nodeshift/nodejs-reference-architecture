@@ -22,7 +22,7 @@ good, but these are the ones we know best and have the most experience with.
   in those offerings.
 - The recommended components may change over time as technologies and approaches change.
 
-If you want to learn more about some of the discussions that went into the Node.js reference architecture you can check out the [Introduction to the Node.js reference architectura](https://developers.redhat.com/blog/2021/03/08/introduction-to-the-node-js-reference-architecture-part-1-overview) blog post series.
+If you want to learn more about some of the discussions that went into the Node.js reference architecture you can check out the [Introduction to the Node.js reference architecture](https://developers.redhat.com/blog/2021/03/08/introduction-to-the-node-js-reference-architecture-part-1-overview) blog post series.
 
 ### The team
 
@@ -110,3 +110,11 @@ As a minimum, any modules recommended as part of this reference architecture sho
 ## Contributing
 
 To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTING.md).
+
+## Contributors
+
+* Bethany Griggs - Sr. Software Engineer - Red Hat
+* Dominic Harries - Dev Lead at IBM Garage for Cloud
+* Jim Lindeman - Sr. Software Engineer - IBM
+* Lucas Holmquist - Sr. Software Engineer - Red Hat
+* Michael Dawson - Node.js lead for Red Hat and IBM

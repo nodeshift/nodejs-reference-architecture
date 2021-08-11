@@ -30,9 +30,9 @@ displayed in the locale appropriate for the end user. It is also supported on th
 
 - We recommend using i18next with the [i18next-icu](https://www.npmjs.com/package/i18next-icu) module so that ICU MessageFormat syntax is used. There is industry wide work to standardize on the MessageFormat syntax. For more details you can read about current progress [https://github.com/unicode-org/message-format-wg](https://github.com/unicode-org/message-format-wg).
 
-- For loading localized content, we recommend using [i18next-node-fs-backend](https://www.npmjs.com/package/i18next-node-fs-backend) which is a backend that allows you to load translated resources as JSON files from the filesystem.
+- For loading localized content, we recommend using [i18next-fs-backend](https://www.npmjs.com/package/i18next-fs-backend) which is a backend that allows you to load translated resources as JSON files from the filesystem.
 
-- If you are using express or a web framework that supports express middleware, [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware)
+- If you are using express or a web framework that supports express middleware, [i18next-http-middleware](https://www.npmjs.com/package/i18next-http-middleware)
   provides support for language detection/management when using i18next.
 
 Translated Language and Region Names: Applications which display a list of languages or countries/regions to users often must translate that list into many other languages according to their ISO code. Using the industry-standard vetted [CLDR](https://unicode.org/cldr) data will avoid the need to manually maintain and translate such a list. We recommend that you use this data via its [NPM module](https://npmjs.com/package/cldr-localenames-full). For example, to fetch the name of "French" in "Spanish". Note that this is a large package, containing data for over 500 locales.
