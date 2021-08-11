@@ -141,8 +141,8 @@
         "allow": ["CC-BY-4.0"]
       },
       "ibm_db": {
-        "note": "buffers package that ibm_db depends on specifies MIT/X11 as the licence",
-        "allow": ["MIT/X11"]
+        "note": "buffers package that ibm_db depends on specifies MIT indirectly",
+        "allow": ["Custom: http://github.com/substack/node-bufferlist"]
       }
     }
   }
