@@ -140,7 +140,8 @@
       "jest": {
         "allow": ["CC-BY-4.0"]
       },
-      "buffers": {
+      "ibm_db": {
+        "note": "buffers package that ibm_db depends on specifies MIT/X11 as the licence",
         "allow": ["MIT/X11"]
       }
     }
