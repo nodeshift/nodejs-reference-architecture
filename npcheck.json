@@ -108,6 +108,7 @@
       "name": "pg",
       "npmlink": "https://www.npmjs.com/package/pg"
     },
+    {
       "name": "kafkajs",
       "npmlink": "https://www.npmjs.com/package/kafkajs"
     }
