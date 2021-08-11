@@ -15,7 +15,6 @@ clients:
 
 | Server        | Recommended client           |
 | ------------- | ---------------------------- |
-| Cassandra     | [cassandra-driver][]         |
 | Cloudant      | [cloudant-node-sdk][]        |
 | CouchDB       | [nano][]                     |
 | Elasticsearch | [@elastic/elasticsearch][]   |
