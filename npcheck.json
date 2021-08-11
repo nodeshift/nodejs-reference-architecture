@@ -79,6 +79,34 @@
     {
       "name": "jest",
       "npmlink": "https://www.npmjs.com/package/jest"
+    },
+    {
+      "name": "@ibm-cloud/cloudant",
+      "npmlink": "https://www.npmjs.com/package/@ibm-cloud/cloudant"
+    },
+    {
+      "name": "nano",
+      "npmlink": "https://www.npmjs.com/package/nano"
+    },
+    {
+      "name": "@elastic/elasticsearch",
+      "npmlink": "https://www.npmjs.com/package/@elastic/elasticsearch"
+    },
+    {
+      "name": "odbc",
+      "npmlink": "https://www.npmjs.com/package/odbc"
+    },
+    {
+      "name": "ibm_db",
+      "npmlink": "https://www.npmjs.com/package/ibm_db"
+    },
+    {
+      "name": "mondodb",
+      "npmlink": "https://www.npmjs.com/package/mongodb"
+    },
+    {
+      "name": "pg",
+      "npmlink": "https://www.npmjs.com/package/pg"
     }
   ],
   "licenses": {

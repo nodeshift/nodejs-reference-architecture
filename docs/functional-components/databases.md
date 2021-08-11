@@ -15,7 +15,7 @@ clients:
 
 | Server        | Recommended client           |
 | ------------- | ---------------------------- |
-| Cloudant      | [cloudant-node-sdk][]        |
+| Cloudant      | [@ibm-cloud/cloudant][]      |
 | CouchDB       | [nano][]                     |
 | Elasticsearch | [@elastic/elasticsearch][]   |
 | Generic SQL   | [odbc][]                     |
@@ -149,6 +149,6 @@ instead of the SQL equivalents.
 [idb-pconnector]: https://www.npmjs.com/package/idb-pconnector
 [ibm_db]: https://www.npmjs.com/package/ibm_db
 [mssql]: https://npmjs.com/package/mssql
-[cloudant-node-sdk]: https://github.com/IBM/cloudant-node-sdk
+[@ibm-cloud/cloudant]: https://www.npm.js.com/package/@ibm-cloud/cloudant
 [nano]: https://www.npmjs.com/package/nano
 [pouchdb]: https://www.npmjs.com/package/pouchdb
