@@ -139,6 +139,9 @@
       },
       "jest": {
         "allow": ["CC-BY-4.0"]
+      },
+      "buffers": {
+        "allow": ["MIT/X11"]
       }
     }
   }
