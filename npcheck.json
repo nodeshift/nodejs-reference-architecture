@@ -101,7 +101,7 @@
       "npmlink": "https://www.npmjs.com/package/ibm_db"
     },
     {
-      "name": "mondodb",
+      "name": "mongodb",
       "npmlink": "https://www.npmjs.com/package/mongodb"
     },
     {
