@@ -21,7 +21,6 @@ clients:
 | Generic SQL   | [odbc][]                     |
 | IBM Db2       | [ibm_db][], [odbc][]         |
 | Mongo         | [mongodb][]                  |
-| MySQL/MariaDB | [mysql2][]                   |
 | Oracle        | [oracledb][]                 |
 | MS SQL Server | [mssql][]                    |
 | Postgress     | [pg][]                       |
