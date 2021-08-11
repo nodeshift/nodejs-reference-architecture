@@ -82,11 +82,6 @@ CouchDB.
 If you are using classic Cloudant instances then you can use the clients
 recommended for CouchDB
 
-## Oracle
-
-Recommendation is to use [node-oracledb][] which is the
-official driver provided by the Oracle.
-
 ## IBM Db2
 
 On databases except for Db2 for i the recommendation is to
