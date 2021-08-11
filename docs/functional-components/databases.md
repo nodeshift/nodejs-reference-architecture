@@ -101,13 +101,6 @@ or additional installation.
   system user. In these cases ensure you run the Node.js program
   using the client as non-admin user.
 
-## MySQL/MariaDB
-
-There are two almost equally popular clients mysql and mysql2, however
-only [mysql2][] supports prepared statements. We recommend you
-use [mysql2][] as our experience is that you should use prepared
-statements (for security and performance reasons) whenever possible.
-
 ## Elasticsearch
 
 Recommendation is to use [@elastic/elasticsearch][] which is the
