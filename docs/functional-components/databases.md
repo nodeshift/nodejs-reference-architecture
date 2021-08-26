@@ -111,7 +111,7 @@ The primary recommendation is to use [nano][] which
 is the official Apache CouchDB client.
 
 A secondary recommendation is [pouchdb][] which makes it easy to
-have a local copy which is kept in sycn and is great for unit testing.
+have a local copy which is kept in sync and is great for unit testing.
 
 ## Generic SQL
 
