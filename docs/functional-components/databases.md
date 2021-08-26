@@ -6,7 +6,7 @@ to whichever database your project/organization has chosen.
 
 In most cases there is only a single client with widespread
 usage, often provided by the project or organizations which
-builds the datbase itself.
+builds the database itself.
 
 ## Recommended packages
 
