@@ -62,7 +62,7 @@ load of continuously restarting containers.
 For readiness probes, there are advanced use cases where it makes sense
 for the service to modify its probe states to
 participate in container orchestration. For example, stopping responding on
-/ready and allowing active connections to drain on the main port. When these
+/readyz and allowing active connections to drain on the main port. When these
 requirements exist it makes sense to implement a more complete readiness
 endpoint. In other cases it is better to stick to the
 simple implementation. For example, in the case of a database that is
@@ -73,13 +73,18 @@ knows what's wrong.
 
 ### Endpoints
 
-We recommend using `/ready` and `/live` as the endpoints for the readiness and
+We recommend that you use consistent naming for your endpoints across micro-services.  `/readyz` and `/livez` are common choices for the endpoints for the readiness and
 liveness probes, respectively.
 
 Any route name can work if it agrees with the probe configuration, but in the
 absence of some requirement by the tooling, best to use names that have a
-clear relationship to their purpose. `/health` is not clear as to whether it is
-liveness or readiness.
+clear relationship to their purpose. `/healthz` is not clear as to whether it is
+liveness or readiness.  Because
+[the differences between them are important](https://developers.redhat.com/blog/2020/11/10/you-probably-need-liveness-and-readiness-probes),
+it's best to clarify.
+
+The "z" at the end of `/readyz` and `/livez` are a pattern called "z pages" that
+is a pattern used by [internal Kubernetes services](https://kubernetes.io/docs/reference/using-api/health-checks/) and has also been adopted by some other projects like [OpenCensus](https://opencensus.io/zpages/).
 
 ### Frequency of checking
 
@@ -107,8 +112,8 @@ const app = require("express")();
 // Note that when collecting metrics, the management endpoints should be
 // implemented before the instrumentation that collects metrics, so that
 // these endpoints are not counted in the metrics.
-app.get("/ready", (req, res) => res.status(200).json({ status: "ok" }));
-app.get("/live", (req, res) => res.status(200).json({ status: "ok" }));
+app.get("/readyz", (req, res) => res.status(200).json({ status: "ok" }));
+app.get("/livez", (req, res) => res.status(200).json({ status: "ok" }));
 
 // ... rest of app...
 
@@ -120,10 +125,10 @@ The kubernetes endpoints exposed by the application have to agree with the probe
 ```yaml
 readinessProbe:
   httpGet:
-    path: /ready
+    path: /readyz
     port: 3000
 livenessProbe:
   httpGet:
-    path: /live
+    path: /livez
     port: 3000
 ```
