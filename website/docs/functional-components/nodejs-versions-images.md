@@ -6,16 +6,16 @@ sidebar_position: 7
 
 ## Recommended Components
 
-| Distribution type                 | Recommended source                                            |
-|-----------------------------------|---------------------------------------------------------------|
-| Raw binaries                      | [Node.js Download site](https://nodejs.org/en/download/)      |
-| Windows, Mac Installers           | [Node.js Download site](https://nodejs.org/en/download/)      |
-| Version manager                   | [nvm](https://github.com/nvm-sh/nvm)  |
-| Commercially Supported Binaries   | OS Packages from OS vendor                                    |
-| Binaries with FIPs support        | OS Packages from OS vendor                                    |
-| Containers                        | Official Docker images excluding Alpine                       |
-| Commercially Supported Containers | Images from distros (for example rhel or ubi images)          |
-| Containers with FIPs support      | Images from distros (for example rhel or ubi images)          |
+| Distribution type                 | Recommended source                                       |
+| --------------------------------- | -------------------------------------------------------- |
+| Raw binaries                      | [Node.js Download site](https://nodejs.org/en/download/) |
+| Windows, Mac Installers           | [Node.js Download site](https://nodejs.org/en/download/) |
+| Version manager                   | [nvm](https://github.com/nvm-sh/nvm)                     |
+| Commercially Supported Binaries   | OS Packages from OS vendor                               |
+| Binaries with FIPs support        | OS Packages from OS vendor                               |
+| Containers                        | Official Docker images excluding Alpine                  |
+| Commercially Supported Containers | Images from distros (for example rhel or ubi images)     |
+| Containers with FIPs support      | Images from distros (for example rhel or ubi images)     |
 
 We recommend that you use only [LTS](https://github.com/nodejs/release#release-phases)
 versions for production use, and in addition test on the latest `Current` in order
@@ -24,7 +24,7 @@ project and past LTS versions go EOL in April, 30 months after they were release
 
 ### Raw binaries
 
-The Node.js projects provides binaries for the 
+The Node.js projects provides binaries for the
 supported platforms on the [download](https://nodejs.org/en/download/) page.
 
 These are the most up to date packages available and new releases show
@@ -51,13 +51,13 @@ deployments.
 ### Commercially Supported Binaries
 
 Most often the easiest way to get support is from an operating system
-vendor. This generally requires using the binaries which are 
+vendor. This generally requires using the binaries which are
 installed using the native package managers for that OS.
 
 **Note:** It is quite common for the version of Node.js which
 is installed in this way to be tied to the OS version.
 For example if you simply install `apt-get install nodejs` on
-Ubuntu 18.04 you get Node.js v8.10.0 which is already end of life (EOL). 
+Ubuntu 18.04 you get Node.js v8.10.0 which is already end of life (EOL).
 
 Therefore, it is generally not recommeneded that you use the default
 Node.js version provided by an OS package manager. Instructions
@@ -67,12 +67,12 @@ help in configuring so that you get an up to date version.
 For Red Hat and IBM deployments that need commercial support
 we recommend the binaries which come with RHEL.
 
-### Binaries with FIPs support  
+### Binaries with FIPs support
 
 The community is at an awkward period where the only supported versions
 of OpenSSL do not have a FIPs certication. The community binaries
 and containers are, therefore, not suitable for deployments that
-need FIPs compliance.  
+need FIPs compliance.
 
 Several Operating system vendors have worked to include Node.js in
 the certification of their Operating systems and those are the
@@ -82,19 +82,20 @@ a requirement.
 For Red Hat and IBM deployments that need FIPs support
 we recommend the binaries which come with RHEL.
 
-### Container images 
+### Container images
 
 Container images are docker images which have the Node.js binaries already
 bundled into the container.
 
 The Node.js [docker](https://github.com/nodejs/docker-node) team works with docker hub
-to maintain as set of `official` nodejs docker images on hub.docker.com - 
+to maintain as set of `official` nodejs docker images on hub.docker.com -
 https://hub.docker.com/_/node
 
 Images are provided for:
-  * debian
-  * debian-minimal
-  * alpine
+
+- debian
+- debian-minimal
+- alpine
 
 There are two image flavors based on debian so that you can achieve smaller container
 sizes using [multi-stage docker builds](https://docs.docker.com/develop/develop-images/multistage-build/).
@@ -124,12 +125,12 @@ Node.js that comes with RHEL or Red Hat Runtimes you will need to use
 the rhel or ubi images available from the
 [Red Hat container catalog](https://catalog.redhat.com/software/containers/search?q=ubi%20node.js)
 
-### Containers with FIPs support  
+### Containers with FIPs support
 
 The community is at an awkward period where the only supported versions
 of OpenSSL do not have a FIPs certication. The community binaries
 and containers are, therefore, not suitable for deployments that
-need FIPs compliance.  
+need FIPs compliance.
 
 Several Operating system vendors have worked to include Node.js in
 the certification of their Operating systems and those are the

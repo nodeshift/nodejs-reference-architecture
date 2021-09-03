@@ -2,7 +2,6 @@
 sidebar_position: 1
 ---
 
-
 # Authentication
 
 ## Recommended Components

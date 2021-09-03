@@ -14,21 +14,21 @@ If your application has only client JavaScript, like a Single Page Application (
 
 ### Application with dynamically growing content (user generated content)
 
-If your application has primarily server logic, but with growing content, consider using Node.js in combination with an external storage system like `COS` or `S3`. For example, if you have a Node.js application for uploading images, instead of saving images to the file system, consider saving images to object storage. This is a more scalable approach compared to saving images on the file system, which can grow beyond the infrastructure. 
+If your application has primarily server logic, but with growing content, consider using Node.js in combination with an external storage system like `COS` or `S3`. For example, if you have a Node.js application for uploading images, instead of saving images to the file system, consider saving images to object storage. This is a more scalable approach compared to saving images on the file system, which can grow beyond the infrastructure.
 
 ### Application with frontend
 
 If your application has client and server logic, then you should consider using Node.js web server (express) with static middleware. It is a best practice to couple your frontend and backend together as a single, deployable artifact. Doing so addresses concerns such as:
 
-* Syncing assets to external environments (CDNs, object storage, etc)
-* Deploying artifact to different environments (because the assets are self contained, no issues with syncing)
-* Able to use same domain for HTTP2
+- Syncing assets to external environments (CDNs, object storage, etc)
+- Deploying artifact to different environments (because the assets are self contained, no issues with syncing)
+- Able to use same domain for HTTP2
 
 Read futher for additional guidance on using cache-control headers for static assets.
 
 ## Recommended packages
 
-* [express.static][]: `express.static` is part of the Express.js package that allows developers to expose static middlewares.
+- [express.static][]: `express.static` is part of the Express.js package that allows developers to expose static middlewares.
 
 ## Guidance
 
@@ -90,16 +90,16 @@ Say for example your application contains pages/resources that change depending 
 
 This ensures less hits to origin, takes advantage of caching at the edge, and removes the potential for bad user experiences due to aggressively cached pages.
 
-If the application contains uniquely different pages/resources from a non-logged in user, you could keep `Cache-Control` with `private, max-age=300` (or max-age as appropriate based on content and session expiration). 
+If the application contains uniquely different pages/resources from a non-logged in user, you could keep `Cache-Control` with `private, max-age=300` (or max-age as appropriate based on content and session expiration).
 
 ### Naming Static Assets
 
-If you configured your static middleware to use client side caching please make sure that 
-every modification in your code will be creating resources with different filename. 
+If you configured your static middleware to use client side caching please make sure that
+every modification in your code will be creating resources with different filename.
 
 When using bundlers you will explicitly need to generate different filenames every time content changes. If hash is used in filename, caching directives can be set as long as a year.
 
-Example for webpack (most popular bundler) can be found [here][webpack-caching]. 
+Example for webpack (most popular bundler) can be found [here][webpack-caching].
 
 [caching-headers]: https://www.freecodecamp.org/news/an-in-depth-introduction-to-http-caching-cache-control-vary/
 [express.static]: https://expressjs.com/en/4x/api.html#express.static

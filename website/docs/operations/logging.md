@@ -32,7 +32,7 @@ When deploying Pino we have the following additional recommendations:
   to be set through an Environment variable so that can be easily
   changed in container environments.
 - Use the [redaction](https://github.com/pinojs/pino/blob/HEAD/docs/redaction.md)
-  option to ensure sensitive data is not logged. Do note that this implementation 
+  option to ensure sensitive data is not logged. Do note that this implementation
   does not allow one to dynamically add fields to be redacted <sup>[1](#footnote1)</sup>.
 - Limit the use of warn, error, and fatal levels to information
   which must always be logged.
@@ -40,16 +40,16 @@ When deploying Pino we have the following additional recommendations:
   always be logged without introducing significant overhead.
 - Don't throw and catch multiple errors, throw once and catch/log at the
   highest level,
-- When catching errors at a high level, log the error.stack unless the thrown error 
+- When catching errors at a high level, log the error.stack unless the thrown error
   type is known and expected.
 - Every source file should utilize Pino's child method off of the common logger
   instance, passing in { file: module } to make the source file path is part of
   the log.
 
 ### Footnotes:
-<a name="footnote1">1</a>: If you require ability to dynamically append what is 
-  redacted (like values read from a secret-storage like Vault), one can implement 
-  redacting logic inside a Pino
-  [logMethod](https://getpino.io/#/docs/api?id=logmethod) to filter the message 
-  string and objects.
 
+<a name="footnote1">1</a>: If you require ability to dynamically append what is
+redacted (like values read from a secret-storage like Vault), one can implement
+redacting logic inside a Pino
+[logMethod](https://getpino.io/#/docs/api?id=logmethod) to filter the message
+string and objects.

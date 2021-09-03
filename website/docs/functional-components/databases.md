@@ -2,12 +2,11 @@
 sidebar_position: 3
 ---
 
-
 # Databases
 
 We'll not recommend which database to use but instead share
 our experience with the Node.js clients used to connect
-to whichever database your project/organization has chosen. 
+to whichever database your project/organization has chosen.
 
 In most cases there is only a single client with widespread
 usage, often provided by the project or organizations which
@@ -18,16 +17,16 @@ builds the database itself.
 Members of the team have had success using the following
 clients:
 
-| Server        | Recommended client           |
-| ------------- | ---------------------------- |
-| Cloudant      | [@ibm-cloud/cloudant][]      |
-| CouchDB       | [nano][]                     |
-| Elasticsearch | [@elastic/elasticsearch][]   |
-| Generic SQL   | [odbc][]                     |
-| IBM Db2       | [ibm_db][], [odbc][]         |
-| Mongo         | [mongodb][]                  |
-| Postgress     | [pg][]                       |
-| Redis         | [ioredis][]                  |
+| Server        | Recommended client         |
+| ------------- | -------------------------- |
+| Cloudant      | [@ibm-cloud/cloudant][]    |
+| CouchDB       | [nano][]                   |
+| Elasticsearch | [@elastic/elasticsearch][] |
+| Generic SQL   | [odbc][]                   |
+| IBM Db2       | [ibm_db][], [odbc][]       |
+| Mongo         | [mongodb][]                |
+| Postgress     | [pg][]                     |
+| Redis         | [ioredis][]                |
 
 There are popular databases for which there are
 no recommendations. However, if the team did not
@@ -36,15 +35,15 @@ included it in the list.
 
 ### General Guidance
 
-* Many clients support connection pooling. When available use
+- Many clients support connection pooling. When available use
   pooling to avoid creating a new connection for each request.
 
-* By default many clients will return all results for a query
+- By default many clients will return all results for a query
   unless you take steps to limit the result size. Unless you are
   sure the result set will always be a manageable size use
   avaliable options to return only a subset of results at a time.
 
-* Some of the the clients require a native database binding
+- Some of the the clients require a native database binding
   to be installed. This may limit the platforms on which
   you can run the client. Some may also support both
   pure JavaScript and native bindings. In those cases
@@ -59,7 +58,7 @@ widely used (if not only) client.
 ## Mongo
 
 Recommendation is to use [mongodb][] which is the
-official MongoDB driver provided by the Mongo 
+official MongoDB driver provided by the Mongo
 project.
 
 ## Redis
@@ -100,7 +99,7 @@ or additional installation.
 
 ### Guidance
 
-* On IBM i clients can inherit authentication based on the Operating
+- On IBM i clients can inherit authentication based on the Operating
   system user. In these cases ensure you run the Node.js program
   using the client as non-admin user.
 
@@ -134,8 +133,9 @@ Use the built in odbc connection pooling support to avoid creating/destroying
 a connecttion for each request.
 
 Use the odbc built in functions for:
-* isolation/commit
-* transaction support
+
+- isolation/commit
+- transaction support
 
 instead of the SQL equivalents.
 

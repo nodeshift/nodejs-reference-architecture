@@ -2,7 +2,6 @@
 sidebar_position: 5
 ---
 
-
 # Testing
 
 ## Recommended Packages
@@ -14,7 +13,7 @@ that the team has had success with.
 ## Jest - <https://jestjs.io>
 
 [Jest][] is a popular testing framework from Facebook. It excels at testing React and other
-component-based web applications, and can be used in other contexts.  It is considered an
+component-based web applications, and can be used in other contexts. It is considered an
 _opinionated_ framework, as it provides its own set of assertions, spies/stubs/mocks, and
 other features (such as snapshot testing and code coverage) out-of-the-box.
 
@@ -105,7 +104,7 @@ and the failure reports the exception as `TypeError: type exception`
       at Object.<anonymous> (__tests__/test.js:5:18)
 ```
 
-An equivalent test runs successfully with Mocha.  The full source for the test is here: https://github.com/nodeshift-blog-examples/jest-with-native-addon-issue
+An equivalent test runs successfully with Mocha. The full source for the test is here: https://github.com/nodeshift-blog-examples/jest-with-native-addon-issue
 
 ### Recommended Packages to Use Alongside Mocha
 
@@ -140,18 +139,18 @@ Mocha does not automatically compute code coverage. If you need it, use:
 - [nyc][]: the most popular code-coverage tool; the successor CLI for Istanbul
 
 [`assert` module]: https://nodejs.org/api/assert.html#assert_assert
-[Babel]: https://babeljs.io
-[Chai]: https://www.npmjs.com/package/chai
+[babel]: https://babeljs.io
+[chai]: https://www.npmjs.com/package/chai
 [examples repository]: https://github.com/mochajs/mocha-examples
-[Jest]: https://www.npmjs.com/package/jest
-[Karma]: https://www.npmjs.com/package/karma
-[Mocha documentation]: https://mochajs.org
-[Mocha]: https://www.npmjs.com/package/mocha
+[jest]: https://www.npmjs.com/package/jest
+[karma]: https://www.npmjs.com/package/karma
+[mocha documentation]: https://mochajs.org
+[mocha]: https://www.npmjs.com/package/mocha
 [nyc]: https://www.npmjs.com/package/nyc
-[OpenJS Foundation]: https://openjsf.org
-[Protractor]: https://www.npmjs.com/package/protractor
-[Sinon]: https://www.npmjs.com/package/sinon
-[Testdouble]: https://www.npmjs.com/package/testdouble
-[Unexpected]: https://www.npmjs.com/package/unexpected
+[openjs foundation]: https://openjsf.org
+[protractor]: https://www.npmjs.com/package/protractor
+[sinon]: https://www.npmjs.com/package/sinon
+[testdouble]: https://www.npmjs.com/package/testdouble
+[unexpected]: https://www.npmjs.com/package/unexpected
 [webdriverio]: https://www.npmjs.org/package/webdriverio
-[Snapshots]: https://jestjs.io/docs/snapshot-testing 
+[snapshots]: https://jestjs.io/docs/snapshot-testing
