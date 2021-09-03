@@ -24,9 +24,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/nodeshift/nodejs-reference-architecture',
-        },
-        theme: {
-        },
+        }
       }),
     ],
   ],
@@ -35,8 +33,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: darkCodeTheme,
+        darkTheme: lightCodeTheme,
       },
     }),
 });
