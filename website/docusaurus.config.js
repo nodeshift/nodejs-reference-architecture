@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
   title: 'Node.JS Reference Architecture',
   tagline: 'Node.js Reference Architecture',
   url: 'https://nodeshift.dev',
-  baseUrl: 'nodejs-reference-architecture/',
+  baseUrl: '/nodejs-reference-architecture/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -26,7 +26,6 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
           editUrl: 'https://github.com/nodeshift/nodejs-reference-architecture',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
