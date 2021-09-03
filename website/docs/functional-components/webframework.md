@@ -45,9 +45,6 @@ When deploying Express we have the following additional recommendations:
 
 - See the sections on Logging and Authentication for further recommendations
 
-- Leverage [CLI](cli-options) or [NODE](node-options) options to increase HTTP headers size. There may be circumstances when cookies pollute header size beyond the 8KB default limit. For such cases, adding `--max-http-header-size=32768` to command line arguments when running the Node.js script will increase the header size. Alternative method is to leverage NODE_OPTIONS environment variable: `NODE_OPTIONS='--max-http-header-size=32768'`
+- Leverage [CLI](https://nodejs.org/api/cli.html#cli_max_http_header_size_size) or [NODE](https://nodejs.org/api/cli.html#cli_node_options_options) options to increase HTTP headers size. There may be circumstances when cookies pollute header size beyond the 8KB default limit. For such cases, adding `--max-http-header-size=32768` to command line arguments when running the Node.js script will increase the header size. Alternative method is to leverage NODE_OPTIONS environment variable: `NODE_OPTIONS='--max-http-header-size=32768'`
 
   - When changing the max header size, take note of additional upstream clients. As an example, ingresses such as Nginx or even a CDN such as Akamai may need config changes to support the increased header size.
-
-[cli-options]: https://nodejs.org/api/cli.html#cli_max_http_header_size_size
-[node-options]: https://nodejs.org/api/cli.html#cli_node_options_options
