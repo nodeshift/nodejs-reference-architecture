@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Distributed Tracing
 
 ## Recommended Components
@@ -5,20 +9,21 @@
 Distributed tracing typically requires a mechanism for collecting traces (instrumentation)
 and a separate mechanism for reporting and visualizing those traces.
 
-* [OpenTelemetry](https://opentelemetry.io/) provides instrumentation in multiple languages
-including Node. OpenTelemetry is not yet released as a final stable version and is in Beta.
-OpenTelemetry replaces both OpenTracing and OpenCensus, neither of which are actively being
-developed (security fixes only).
+- [OpenTelemetry](https://opentelemetry.io/) provides instrumentation in multiple languages
+  including Node. OpenTelemetry is not yet released as a final stable version and is in Beta.
+  OpenTelemetry replaces both OpenTracing and OpenCensus, neither of which are actively being
+  developed (security fixes only).
 
 For adding instrumentation to Node applications and services:
 
-* [@opentelemetry/node](https://www.npmjs.com/package/@opentelemetry/node) - See the
+- [@opentelemetry/node](https://www.npmjs.com/package/@opentelemetry/node) - See the
   [Getting Started Guide](https://github.com/open-telemetry/opentelemetry-js/blob/master/getting-started/README.md)
 
 Reasons for choosing OpenTelemetry:
+
 - the open source tracing library that's replacing both OpenCensus and OpenTracing
 - handles basic use cases really well, includes good default configuration for most use cases
-- includes support for newer efficient Node implementation for correlating outbound traffic 
+- includes support for newer efficient Node implementation for correlating outbound traffic
   to incoming requests
 - supports multiple languages for tracing (not just Node) with a consistent API.
 
@@ -45,6 +50,7 @@ such that all traces are recorded. If sampling is enabled, it is inevitable that
 missing when trying to investigate some critical failure.
 
 Be aware that:
+
 - some error conditions that do not trigger network traffic are not traced (e.g. DNS lookup
   failures, etc.)
 - existing instrumentation libraries are not customizable (no hooks, or extension points -
@@ -54,19 +60,20 @@ Be aware that:
 
 ### Infrastructure
 
-* [Jaeger](https://www.jaegertracing.io/) provides visualization of distributed traces.
-* [ElasticSearch & Kibana](https://www.elastic.co/elastic-stack) provides storage for persisting
-the data behind Jaeger as well as alternate mechanisms in Kibana to search, visualize, and manage
-that data.
-* An alternate for Jaeger is [Zipkin](https://zipkin.io/) which is also directly supported by
-OpenTelemetry for visualizing distributed traces. The instrumentation in Node is not impacted
-by the selection of the visualization tool. Both Jaeger and Zipkin can be used concurrently if
-storage space is available. If using Zipkin, [Cassandra](https://cassandra.apache.org/) may be used
-instead of ElasticSearch.
+- [Jaeger](https://www.jaegertracing.io/) provides visualization of distributed traces.
+- [ElasticSearch & Kibana](https://www.elastic.co/elastic-stack) provides storage for persisting
+  the data behind Jaeger as well as alternate mechanisms in Kibana to search, visualize, and manage
+  that data.
+- An alternate for Jaeger is [Zipkin](https://zipkin.io/) which is also directly supported by
+  OpenTelemetry for visualizing distributed traces. The instrumentation in Node is not impacted
+  by the selection of the visualization tool. Both Jaeger and Zipkin can be used concurrently if
+  storage space is available. If using Zipkin, [Cassandra](https://cassandra.apache.org/) may be used
+  instead of ElasticSearch.
 
 ### Integration suggestions
 
 Data management becomes a critical aspect of distributed tracing. Consider:
+
 - expiring data as it ages out and is no longer relevant
 - volumes and network traffic can become excessive
 - storage costs can be large.

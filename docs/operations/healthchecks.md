@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Health Checks
 
 ## Recommended Components
@@ -73,13 +77,13 @@ knows what's wrong.
 
 ### Endpoints
 
-We recommend that you use consistent naming for your endpoints across micro-services.  `/readyz` and `/livez` are common choices for the endpoints for the readiness and
+We recommend that you use consistent naming for your endpoints across micro-services. `/readyz` and `/livez` are common choices for the endpoints for the readiness and
 liveness probes, respectively.
 
 Any route name can work if it agrees with the probe configuration, but in the
 absence of some requirement by the tooling, best to use names that have a
 clear relationship to their purpose. `/healthz` is not clear as to whether it is
-liveness or readiness.  Because
+liveness or readiness. Because
 [the differences between them are important](https://developers.redhat.com/blog/2020/11/10/you-probably-need-liveness-and-readiness-probes),
 it's best to clarify.
 

@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Testing
 
 ## Recommended Packages
@@ -8,8 +12,8 @@ that the team has had success with.
 
 ## Jest - <https://jestjs.io>
 
-[Jest][] is a popular testing framework from Facebook. It excels at testing React and other
-component-based web applications, and can be used in other contexts.  It is considered an
+[jest][] is a popular testing framework from Facebook. It excels at testing React and other
+component-based web applications, and can be used in other contexts. It is considered an
 _opinionated_ framework, as it provides its own set of assertions, spies/stubs/mocks, and
 other features (such as snapshot testing and code coverage) out-of-the-box.
 
@@ -17,7 +21,7 @@ Jest is owned by Facebook.
 
 ## Mocha - <https://mochajs.org>
 
-[Mocha][] is a widely used, mature (created in 2011) and stable project. While Node.js
+[mocha][] is a widely used, mature (created in 2011) and stable project. While Node.js
 is the main area of focus and support, Mocha can also be used in a browser context.
 Mocha is an _unopinionated_ framework with a large ecosystem of plugins and extensions.
 
@@ -57,7 +61,7 @@ fast and easy.
 
 When you want a smaller dependency tree (91 packages versus 522).
 
-When Jest's opinions, environment proxies and dependency upon [Babel][] are unfavorable for your use-case.
+When Jest's opinions, environment proxies and dependency upon [babel][] are unfavorable for your use-case.
 
 As an example of potential problems with Jest's environment proxies, Jest replaces globals in the environment in a
 way that can cause failures with native addons. As an example, this simple test fails:
@@ -100,22 +104,22 @@ and the failure reports the exception as `TypeError: type exception`
       at Object.<anonymous> (__tests__/test.js:5:18)
 ```
 
-An equivalent test runs successfully with Mocha.  The full source for the test is here: https://github.com/nodeshift-blog-examples/jest-with-native-addon-issue
+An equivalent test runs successfully with Mocha. The full source for the test is here: https://github.com/nodeshift-blog-examples/jest-with-native-addon-issue
 
 ### Recommended Packages to Use Alongside Mocha
 
 Because Mocha is unopinionated, it does not ship with "batteries included." While Mocha is usable
 without any other third-party library, many users find the following libraries and tools helpful.
 
-_See the [Mocha documentation][] and [examples repository][] for more information on integrating with other tools_.
+_See the [mocha documentation][] and [examples repository][] for more information on integrating with other tools_.
 
 #### Assertion Library
 
 Most Mocha users will want to consume a third-party _assertion library_. Besides the Node.js
 built-in [`assert` module][], Mocha recommends one of the following:
 
-- [Chai][]: the most popular general-purpose assertion library, with traditional and "natural language" APIs available
-- [Unexpected][]: a string-based natural language API, Mocha uses Unexpected in its own tests
+- [chai][]: the most popular general-purpose assertion library, with traditional and "natural language" APIs available
+- [unexpected][]: a string-based natural language API, Mocha uses Unexpected in its own tests
 
 Both of the above have their own plugin ecosystems.
 
@@ -123,8 +127,8 @@ Both of the above have their own plugin ecosystems.
 
 Many users will want a library providing _stubs, spies and mocks_ to aid isolation when writing unit tests.
 
-- [Sinon][]: the most popular stub, spy and mock library; mature
-- [Testdouble][]: a full-featured library with the ability to mock at the module level
+- [sinon][]: the most popular stub, spy and mock library; mature
+- [testdouble][]: a full-featured library with the ability to mock at the module level
 
 Both of the above have their own plugin ecosystems.
 
@@ -135,18 +139,18 @@ Mocha does not automatically compute code coverage. If you need it, use:
 - [nyc][]: the most popular code-coverage tool; the successor CLI for Istanbul
 
 [`assert` module]: https://nodejs.org/api/assert.html#assert_assert
-[Babel]: https://babeljs.io
-[Chai]: https://www.npmjs.com/package/chai
+[babel]: https://babeljs.io
+[chai]: https://www.npmjs.com/package/chai
 [examples repository]: https://github.com/mochajs/mocha-examples
-[Jest]: https://www.npmjs.com/package/jest
-[Karma]: https://www.npmjs.com/package/karma
-[Mocha documentation]: https://mochajs.org
-[Mocha]: https://www.npmjs.com/package/mocha
+[jest]: https://www.npmjs.com/package/jest
+[karma]: https://www.npmjs.com/package/karma
+[mocha documentation]: https://mochajs.org
+[mocha]: https://www.npmjs.com/package/mocha
 [nyc]: https://www.npmjs.com/package/nyc
-[OpenJS Foundation]: https://openjsf.org
-[Protractor]: https://www.npmjs.com/package/protractor
-[Sinon]: https://www.npmjs.com/package/sinon
-[Testdouble]: https://www.npmjs.com/package/testdouble
-[Unexpected]: https://www.npmjs.com/package/unexpected
+[openjs foundation]: https://openjsf.org
+[protractor]: https://www.npmjs.com/package/protractor
+[sinon]: https://www.npmjs.com/package/sinon
+[testdouble]: https://www.npmjs.com/package/testdouble
+[unexpected]: https://www.npmjs.com/package/unexpected
 [webdriverio]: https://www.npmjs.org/package/webdriverio
-[Snapshots]: https://jestjs.io/docs/snapshot-testing 
+[snapshots]: https://jestjs.io/docs/snapshot-testing

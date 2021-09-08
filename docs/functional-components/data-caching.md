@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Data Caching
 
 There are two main types of caching used within Node.js applications. These include:

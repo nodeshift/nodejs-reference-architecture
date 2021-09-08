@@ -1,16 +1,20 @@
+---
+sidebar_position: 1
+---
+
 # Building Good Containers
 
 There are a number of recommendations based on our experience building
 Node.js applications in containers for deployments:
 
-* build non-root containers
-* avoid reserved/privileged ports (i.e. 1-1023)
-* use multi-stage builds
-* add key tools for problem determination
-* use a process manager 
-* setting memory limits
-* avoiding using `npm` to start application
-* tooling for building containers
+- build non-root containers
+- avoid reserved/privileged ports (i.e. 1-1023)
+- use multi-stage builds
+- add key tools for problem determination
+- use a process manager
+- setting memory limits
+- avoiding using `npm` to start application
+- tooling for building containers
 
 This section relies of you having already chosen the base images to
 start with. For recommendations on base images check out
@@ -20,7 +24,7 @@ and [Node.js Versions and Container Images - Commercially Supported Containers](
 ## Build non-root containers
 
 Running processes as root, even in containers can be a security risk,
-particularly if external resources are mapped into the container. 
+particularly if external resources are mapped into the container.
 The following is a good article which explains why:
 [Processes In Containers Should Not Run As Root](https://medium.com/@mccode/processes-in-containers-should-not-run-as-root-2feae3f0df3b#:~:text=Containers%20are%20not%20trust%20boundaries,a%20container%20on%20your%20server)
 
@@ -40,7 +44,7 @@ COPY --chown=1001:0 . .
 
 It is recommended that you run processes as `non-root` inside your containers.
 
-* Avoid using trusted ports
+- Avoid using trusted ports
 
 Ports below 1024 are considered `trusted` and a process must have
 additional priviledges to be able to bind to them.
@@ -84,8 +88,8 @@ There are different ways to build containers but most
 will support using a build and run image. You read more
 about a few examples in these references:
 
-* [multistage-build](https://docs.docker.com/develop/develop-images/multistage-build/)
-* [Modern web applications on OpenShift: Part 2 -- Using chained builds](https://developers.redhat.com/blog/2018/10/23/modern-web-applications-on-openshift-part-2-using-chained-builds)
+- [multistage-build](https://docs.docker.com/develop/develop-images/multistage-build/)
+- [Modern web applications on OpenShift: Part 2 -- Using chained builds](https://developers.redhat.com/blog/2018/10/23/modern-web-applications-on-openshift-part-2-using-chained-builds)
 
 It is recommended that you use multi-stage builds to minimize
 container size.
@@ -93,8 +97,9 @@ container size.
 When using multi-stage builds there are two additional
 techniques which can make your build/development process
 more efficient:
-* using `.dockerignore`
-* image layering
+
+- using `.dockerignore`
+- image layering
 
 ### using `.dockerignore`
 
@@ -148,20 +153,19 @@ It can be difficult to add tooling/packages after the fact when
 issues are identified in production. Plan how you will
 investigate problems reported in production and include tooling
 in your containers in order to support problem determination
-workflows. 
+workflows.
 
 This may increase the size of your containers but is worth
 the increase in size based on our experience.
 
-
-## Use a process manager 
+## Use a process manager
 
 The Node.js and npm processes do not expect to run as PID 1
-which is the case when run in a container. There are 
+which is the case when run in a container. There are
 special expectations for the process run as PID 1 including
 reaping zombies and not meeting these expectations can lead
 to problems. You can read about the issue in:
-[docker-and-the-pid-1-zombie-reaping-problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/) 
+[docker-and-the-pid-1-zombie-reaping-problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/)
 
 [Tini](https://github.com/krallin/tini) is a process manager some of our teams have
 used successefully.
@@ -202,13 +206,13 @@ While you will often see `CMD ["npm", "start"]` in docker files
 used to build Node.js applications there are a number
 of good reasons to avoid this:
 
-* One less component. You generally don't need `npm` to start
+- One less component. You generally don't need `npm` to start
   your application. If you avoid using it in the container
   then you will not be exposed to any security vulnerabilities
   that might exist in that component or its dependencies.
-* One less process. Instead of running 2 process (npm and node)
+- One less process. Instead of running 2 process (npm and node)
   you will only run 1.
-* There can be issues with signals and child processes. You
+- There can be issues with signals and child processes. You
   can read more about that in the Node.js docker best practices
   [CMD](https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#cmd).
 

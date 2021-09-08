@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # Internationalization
 
 ## Recommended Components
@@ -60,4 +64,4 @@ similar short lived assets.
 ### Logging
 
 It is not recommended to translate low-level error and status messages.
-See [logging](./logging.md) for additional guidance.
+See [logging](../operations/logging.md) for additional guidance.

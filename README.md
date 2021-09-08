@@ -97,15 +97,15 @@ with only a subset of sections having recommendations):
 
 As a minimum, any modules recommended as part of this reference architecture should meet the following criteria:
 
-* The module is not deprecated.
-* The module has an appropriate license.
-  * Generally leaning towards permissive licenses such as MIT - others should be reviewed on case by case basis.
-* The module runs on LTS versions of Node.js.
-* The module has appropriate testing.
-* The module is appropriately maintained:
-  * Regular releases (where appropriate).
-  * Critical bugs reports are acknowledged and addressed.
-  * Reported security vulnerabilities are patched and released.
+- The module is not deprecated.
+- The module has an appropriate license.
+  - Generally leaning towards permissive licenses such as MIT - others should be reviewed on case by case basis.
+- The module runs on LTS versions of Node.js.
+- The module has appropriate testing.
+- The module is appropriately maintained:
+  - Regular releases (where appropriate).
+  - Critical bugs reports are acknowledged and addressed.
+  - Reported security vulnerabilities are patched and released.
 
 ## Contributing
 
@@ -113,8 +113,8 @@ To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTIN
 
 ## Contributors
 
-* Bethany Griggs - Sr. Software Engineer - Red Hat
-* Dominic Harries - Dev Lead at IBM Garage for Cloud
-* Jim Lindeman - Sr. Software Engineer - IBM
-* Lucas Holmquist - Sr. Software Engineer - Red Hat
-* Michael Dawson - Node.js lead for Red Hat and IBM
+- Bethany Griggs - Sr. Software Engineer - Red Hat
+- Dominic Harries - Dev Lead at IBM Garage for Cloud
+- Jim Lindeman - Sr. Software Engineer - IBM
+- Lucas Holmquist - Sr. Software Engineer - Red Hat
+- Michael Dawson - Node.js lead for Red Hat and IBM

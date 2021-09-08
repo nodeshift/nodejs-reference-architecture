@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Code Consistency
 
 It is important to the efficiency of teams working
