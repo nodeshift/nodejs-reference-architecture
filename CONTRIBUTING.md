@@ -27,6 +27,7 @@ sidebar_position: 1
 
 For more info please see: https://docusaurus.io/docs/create-doc
 
+
 ## Building and publishing website
 
 Website can be published by following commands
@@ -34,6 +35,6 @@ Website can be published by following commands
 ```
 cd website
 yarn
-yarn build 
+yarn copyDocs 
 GIT_USER=<youruser> USE_SSH=true yarn deploy 
 ```
