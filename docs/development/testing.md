@@ -12,7 +12,7 @@ that the team has had success with.
 
 ## Jest - <https://jestjs.io>
 
-[Jest][] is a popular testing framework from Facebook. It excels at testing React and other
+[jest][] is a popular testing framework from Facebook. It excels at testing React and other
 component-based web applications, and can be used in other contexts. It is considered an
 _opinionated_ framework, as it provides its own set of assertions, spies/stubs/mocks, and
 other features (such as snapshot testing and code coverage) out-of-the-box.
@@ -21,7 +21,7 @@ Jest is owned by Facebook.
 
 ## Mocha - <https://mochajs.org>
 
-[Mocha][] is a widely used, mature (created in 2011) and stable project. While Node.js
+[mocha][] is a widely used, mature (created in 2011) and stable project. While Node.js
 is the main area of focus and support, Mocha can also be used in a browser context.
 Mocha is an _unopinionated_ framework with a large ecosystem of plugins and extensions.
 
@@ -61,7 +61,7 @@ fast and easy.
 
 When you want a smaller dependency tree (91 packages versus 522).
 
-When Jest's opinions, environment proxies and dependency upon [Babel][] are unfavorable for your use-case.
+When Jest's opinions, environment proxies and dependency upon [babel][] are unfavorable for your use-case.
 
 As an example of potential problems with Jest's environment proxies, Jest replaces globals in the environment in a
 way that can cause failures with native addons. As an example, this simple test fails:
@@ -111,15 +111,15 @@ An equivalent test runs successfully with Mocha. The full source for the test is
 Because Mocha is unopinionated, it does not ship with "batteries included." While Mocha is usable
 without any other third-party library, many users find the following libraries and tools helpful.
 
-_See the [Mocha documentation][] and [examples repository][] for more information on integrating with other tools_.
+_See the [mocha documentation][] and [examples repository][] for more information on integrating with other tools_.
 
 #### Assertion Library
 
 Most Mocha users will want to consume a third-party _assertion library_. Besides the Node.js
 built-in [`assert` module][], Mocha recommends one of the following:
 
-- [Chai][]: the most popular general-purpose assertion library, with traditional and "natural language" APIs available
-- [Unexpected][]: a string-based natural language API, Mocha uses Unexpected in its own tests
+- [chai][]: the most popular general-purpose assertion library, with traditional and "natural language" APIs available
+- [unexpected][]: a string-based natural language API, Mocha uses Unexpected in its own tests
 
 Both of the above have their own plugin ecosystems.
 
@@ -127,8 +127,8 @@ Both of the above have their own plugin ecosystems.
 
 Many users will want a library providing _stubs, spies and mocks_ to aid isolation when writing unit tests.
 
-- [Sinon][]: the most popular stub, spy and mock library; mature
-- [Testdouble][]: a full-featured library with the ability to mock at the module level
+- [sinon][]: the most popular stub, spy and mock library; mature
+- [testdouble][]: a full-featured library with the ability to mock at the module level
 
 Both of the above have their own plugin ecosystems.
 
