@@ -29,6 +29,8 @@ good, but these are the ones we know best and have the most experience with.
 
 If you want to learn more about some of the discussions that went into the Node.js reference architecture you can check out the [Introduction to the Node.js reference architecture](https://developers.redhat.com/blog/2021/03/08/introduction-to-the-node-js-reference-architecture-part-1-overview) blog post series.
 
+The content of the reference architecture is managed in this github repository: https://github.com/nodeshift/nodejs-reference-architecture.
+
 ### The team
 
 The `team` consists of engineers from across groups within IBM and Red Hat who:
