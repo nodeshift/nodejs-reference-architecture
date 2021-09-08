@@ -35,5 +35,5 @@ Website can be published by following commands
 cd website
 yarn
 yarn build 
-GIT_USER=wtrocki USE_SSH=true yarn deploy 
+GIT_USER=<youruser> USE_SSH=true yarn deploy 
 ```
