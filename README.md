@@ -118,6 +118,6 @@ To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTIN
 - Jim Lindeman - Sr. Software Engineer - IBM
 - Lucas Holmquist - Sr. Software Engineer - Red Hat
 - Michael Dawson - Node.js lead for Red Hat and IBM
-- Wojciech Trocki - Software Engineer - Red Hat
+- Noel Madali - Web Architect - The Weather Company at IBM 
 - Tony Erwin - Senior Technical Staff Member - IBM
-- Noel Madali - Web Architect - The Weather Company at IBM
+- Wojciech Trocki - Software Engineer - Red Hat
