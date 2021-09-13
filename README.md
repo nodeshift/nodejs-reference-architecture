@@ -120,3 +120,4 @@ To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTIN
 - Michael Dawson - Node.js lead for Red Hat and IBM
 - Wojciech Trocki - Software Engineer - Red Hat
 - Tony Erwin - Senior Technical Staff Member - IBM
+- Noel Madali - Web Architect - The Weather Company at IBM
