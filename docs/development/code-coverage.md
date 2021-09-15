@@ -5,11 +5,14 @@ Code coverage is a software testing metric that determines the number of lines o
 To measure the lines of code that are actually exercised by test runs, various criteria are taken into consideration. Outlined below are a few important coverage criteria are used.
 
 Function Coverage – The functions in the source code that are called and executed at least once.
-Statement Coverage – The number of statements that have been successfully validated in the source code.
-Path Coverage – The flows containing a sequence of controls and conditions that have worked well at least once.
-Branch or Decision Coverage – The decision control structures (loops, for example) that have executed fine.
-Condition Coverage – The Boolean expressions that are validated and that executes both TRUE and FALSE as per the test runs.
 
+Statement Coverage – The number of statements that have been successfully validated in the source code.
+
+Path Coverage – The flows containing a sequence of controls and conditions that have worked well at least once.
+
+Branch or Decision Coverage – The decision control structures (loops, for example) that have executed fine.
+
+Condition Coverage – The Boolean expressions that are validated and that executes both TRUE and FALSE as per the test runs.
 
 
 ## Recommended Components
