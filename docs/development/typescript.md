@@ -45,13 +45,13 @@ It's best practice to run the transpilation step as part of your deployment pipe
 
 The typescript community have produced a series of [recommended base configurations for various versions of node](https://github.com/tsconfig/bases/). Using an up to date version means typescript will not polyfill capabilities that are natively supported by node, which can improve runtime performance.
 
-In addition to the above, we recommend setting the following in the `tsconfig.json` file:
+In addition to the above, we recommend setting the following in the `compilerOptions` section of the `tsconfig.json` file:
 
 ```json
 "isolatedModules": true
-````
+```
 
-Babel and other transpilers process a single file at a time which is incompatible with some typescript features. Turning on this flag will produce warnings if those features are used.
+This flag enables compatibility with Babel and other transpilers that process a project a single file at a time. Some TypeScript features such as `const enums` are not compatible with isolated modules, see the [TypeScript documentation](https://www.typescriptlang.org/tsconfig#isolatedModules) for more details. Turning on this flag will produce warnings if those features are used.
 
 ```json
 "strict": true
@@ -59,6 +59,40 @@ Babel and other transpilers process a single file at a time which is incompatibl
 
 Strict mode turns on a [number of other flags](https://www.typescriptlang.org/tsconfig#strict) which can help prevent bugs in your code. If you're migrating an existing project to typescript it might be difficult to turn this on, but for new projects it is recommended.
 
+```json
+"esModuleInterop": true
+```
+
+This improves TypeScript's [interoperability with with CommonJS/AMD/UMD modules](https://www.typescriptlang.org/tsconfig#esModuleInterop), particularly with regard to how default imports are handled. It is automatically enabled in the Node.js base configurations (see above).
+
+## Hierarchical TypeScript Configuration
+
+If you want to maintain consistency across several components (e.g. microservices) it is a good idea to create a standard base configuration which specifies appropriate and then have every component inherit from it. This can be done by publishing the base configuration as a versioned npm module and then referencing it in a `tsconfig.json` file as follows:
+
+```json
+"extends": "@yourproject/projectbase/tsconfig.json"
+```
+
+Multiple levels of inheritance are possible, so the `projectbase` configuration could inherit from one of the recommended base configurations described above.
+
 ## Sharing types with npm modules
 
-**TODO**: summarise [this](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html)? 
+If you are publishing a library code rather than an application it is good practice to publish types for that module alongside the compiled code. There are 2 steps required to enable this:
+
+ 1. Turn on [declaration generation](https://www.typescriptlang.org/tsconfig#declaration) in your `tsconfig.json`:
+
+    ```json
+    {
+      "compilerOptions": {
+        "declaration": true
+      }
+    }
+    ```
+ 2. Reference the main declaration file in your `package.json`:
+
+    ```json
+    {
+      "types": "./lib/index.d.ts"
+    }
+    ```
+You should also ensure you include dependencies for the types of modules that you depend on, see the [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) for further details.
