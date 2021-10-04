@@ -117,6 +117,7 @@ To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTIN
 - Carlos Santana - Senior Technical Staff Member - IBM
 - Dominic Harries - Dev Lead at IBM Garage for Cloud
 - Jim Lindeman - Sr. Software Engineer - IBM
+- Joe Sepi - Open Tech Program Director - IBM
 - Lucas Holmquist - Sr. Software Engineer - Red Hat
 - Michael Dawson - Node.js lead for Red Hat and IBM
 - Noel Madali - Web Architect - The Weather Company at IBM 
