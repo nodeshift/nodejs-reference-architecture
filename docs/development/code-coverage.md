@@ -22,31 +22,20 @@ Condition Coverage – The Boolean expressions that are validated and that execu
 
 # Guidance
 
+* Key User Stories
+  * Focus on higher coverage here
 
-RH Node.js team has been using nyc, posting to coveralls
+* Older Projects
+  * 30% is a good threshold
 
-Jim, not used to often, more important to focus on integration stories, versus code coverage
+* Greenfield Projects
+  * 70% is a good threshold
 
-Dominic, sometime use the built in coverage with Jest, don’t typically publish it.
+* Output to a format like lcov
 
-Weather company, generate reports using built in Jest support, don’t publish anywhere
+* Outside Contributors
+  * For opensource projects it is good to post the coverage some where
+  * Showing during PR's for opensource projects
 
-Is there a module/application distinction
-
-Unit versus end-to-end tests make a difference
-
-Coverage is good if you want outside coverage/contributions
-
-Dominic, big customer project, fed into sonar cube which collects a bunch of stuff on code quality. Uses lcov file (both Jest can istanbul) can generate that, pipeline blocked if falls below 85%, probably common
-
-Dominic, fairly common position, don’t need to target 100% coverage, upin 80-90s is good enough.
-
-System testing through, micro outages, was much more valuable than coverage.
-koasmonkey
-
-Running with Test
-
-output to a service?
-
-
-
+  * not necesarrily used to block PR's, more for informational
+  * Code coverage should never block a production deployment
