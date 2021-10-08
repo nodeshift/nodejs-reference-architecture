@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+---
+
 # Code Coverage
 
 Code coverage is a software testing metric that determines the number of lines of code that is successfully validated under a test procedure, which in turn, helps in analyzing how comprehensively a software is verified.
@@ -39,3 +43,7 @@ Condition Coverage – The Boolean expressions that are validated and that execu
 
   * not necesarrily used to block PR's, more for informational
   * Code coverage should never block a production deployment
+
+
+[jest]: https://www.npmjs.com/package/jest
+[nyc]: https://www.npmjs.com/package/nyc
