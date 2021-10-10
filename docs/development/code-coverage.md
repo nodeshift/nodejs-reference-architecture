@@ -19,31 +19,35 @@ Branch or Decision Coverage – The decision control structures (loops, for exam
 Condition Coverage – The Boolean expressions that are validated and that executes both TRUE and FALSE as per the test runs.
 
 
-## Recommended Components
+## Recommended Modules
 
 - [nyc][]: the most popular code-coverage tool; the successor CLI for Istanbul
 - [jest][]: Code coverage using the `--coverage` flag
 
 # Guidance
 
-* Key User Stories
-  * Focus on higher coverage here
+##  Key User Stories
 
-* Older Projects
-  * 30% is a good threshold
+If your application/module has some key user stories, it is important to focus on higher coverage there.
 
-* Greenfield Projects
-  * 70% is a good threshold
 
-* Output to a format like lcov
+## Coverage percentage thresholds
 
-* Outside Contributors
-  * For opensource projects it is good to post the coverage some where
-  * Showing during PR's for opensource projects
+If adding coverage to a project that is older that might not have any coverage yet, a good percentage threshold is about 30%.
 
-  * not necesarrily used to block PR's, more for informational
-  * Code coverage should never block a production deployment
+For those projects that are new, and just starting out, a good percentage threshold is about 70%.
 
+## OpenSource Projects
+
+For OpenSource projects, it might be helpful to post the results of the coverage to an external service, such as coveralls and creating an issue related to increasing the code coverage could be a way to attract contributors to the project.
+
+It is also common to report the coverage increase or decrease percentage during a PR.  This is more for informational purposes and not necessarily to block a merge.
+
+Code coverage should never block a production deployment
+
+## Output Formats
+
+A common output format is the lcov format, which
 
 [jest]: https://www.npmjs.com/package/jest
 [nyc]: https://www.npmjs.com/package/nyc
