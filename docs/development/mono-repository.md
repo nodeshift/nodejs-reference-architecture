@@ -64,7 +64,7 @@ You can modify the `package.json` `scripts` section with linting and testing com
 
 When building package artifacts (the build ) in the monorepo, we recommend:
 
-* [bazel](bazel)
+* [bazel][bazel]
 * Custom scripts
 
 ##### Publishing
@@ -91,5 +91,5 @@ If you are making a breaking change that is across all packages, apply major ver
 [changesets]: https://github.com/atlassian/changesets
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [bazel]: https://bazel.build/
-[linting]: ./linting.md
+[linting]: ./code-consistency.md
 [testing]: ./testing.md
