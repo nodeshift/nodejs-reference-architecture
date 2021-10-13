@@ -60,6 +60,13 @@ With a monorepo, teams can now leverage a common set of tooling for [linting](li
 
 Simply modify the `package.json` `scripts` section with linting and testing commands.
 
+##### Building
+
+When building package artifacts in the monorepo, we recommend:
+
+* [bazel](bazel)
+* Custom scripts
+
 ##### Publishing
 
 If you are working with a set of packages that need to be published, you can leverage:
@@ -78,5 +85,6 @@ If you are making a breaking change that is across all packages, apply major ver
 [npm-workspaces]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
 [changesets]: https://github.com/atlassian/changesets
 [semantic-release]: https://github.com/semantic-release/semantic-release
+[bazel]: https://bazel.build/
 [linting]: ./linting.md
 [testing]: ./testing.md
