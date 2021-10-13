@@ -56,7 +56,7 @@ Given the above, we should expect the following folder structure
 
 #### Maintaining
 
-With a monorepo, teams can now leverage a common set of tooling for [linting](linting) and [testing](testing) across all packages in the repository. 
+With a monorepo, teams can now leverage a common set of tooling for [linting](linting) and [testing](testing) across all packages in the repository. See our [code-consistency] section for further guidance.
 
 Simply modify the `package.json` `scripts` section with linting and testing commands.
 
@@ -83,6 +83,7 @@ If you are making a breaking change that is across all packages, apply major ver
 
 [yarn-workspaces]: https://classic.yarnpkg.com/lang/en/docs/workspaces/
 [npm-workspaces]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
+[code-consistency]: ./code-consistency.md#guidance
 [changesets]: https://github.com/atlassian/changesets
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [bazel]: https://bazel.build/
