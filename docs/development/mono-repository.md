@@ -8,7 +8,7 @@ Working across multiple repositories for the same project and/or team is cumbers
 
 ## Tooling
 
-To enable a mono-repository, we recommend leveraging [yarn workspaces](yarn-workspaces) or [npm workspaces](npm-workspaces).
+To enable a mono-repository, we recommend leveraging [yarn workspaces][yarn-workspaces] or [npm workspaces][npm-workspaces].
 
 ### Setup with Yarn Example
 
@@ -56,13 +56,13 @@ Given the above, we should expect the following folder structure
 
 #### Maintaining
 
-With a monorepo, teams can now leverage a common set of tooling for [linting](linting) and [testing](testing) across all packages in the repository. See our [code-consistency] section for further guidance.
+With a monorepo, teams can now leverage a common set of tooling for [linting][linting] and [testing][testing] across all packages in the repository. See our [code-consistency][code-consistency] section for further guidance.
 
 Simply modify the `package.json` `scripts` section with linting and testing commands.
 
 ##### Building
 
-When building package artifacts in the monorepo, we recommend:
+When building package artifacts (the build ) in the monorepo, we recommend:
 
 * [bazel](bazel)
 * Custom scripts
@@ -71,8 +71,8 @@ When building package artifacts in the monorepo, we recommend:
 
 If you are working with a set of packages that need to be published, you can leverage:
 
-* [changesets](changesets)
-* [semantic-release](semantic-release)
+* [changesets][changesets]
+* [semantic-release][semantic-release]
 
 We recommend following semantic versioning across all packages. If a change does not impact all packages, then bump the appropriate minor/patch version as necessary.
 
@@ -80,6 +80,10 @@ For example, if a Package A needs security remediation, and Package B does not, 
 
 If you are making a breaking change that is across all packages, apply major version to all packages.
 
+#### Advanced Tips / Tricks
+
+* TODO section blurb about hoisting and nohoist for strategies
+* TODO section for yarn resolutions
 
 [yarn-workspaces]: https://classic.yarnpkg.com/lang/en/docs/workspaces/
 [npm-workspaces]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
