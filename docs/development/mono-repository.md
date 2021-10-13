@@ -58,7 +58,7 @@ Given the above, we should expect the following folder structure
 
 With a monorepo, teams can now leverage a common set of tooling for [linting](linting) and [testing](testing) across all packages in the repository. See our [code-consistency] section for further guidance.
 
-Simply modify the `package.json` `scripts` section with linting and testing commands.
+You can modify the `package.json` `scripts` section with linting and testing commands.
 
 ##### Building
 
