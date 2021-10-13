@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ## Guidance (change guidance
 
-This reference describes what it means to use the API-first design approach with Node.js backends and JavaScript client applications. Reference is going to use OpenAPI standard along with supporting packages and tools we recomend to implement API first applications.
+This reference describes what it means to use the API-first design approach with Node.js backends and JavaScript client applications. Reference is going to use OpenAPI standard along with supporting packages and tools we recommend to implement API first applications.
 
 > NOTE: This guide focused on the OpenAPI Specification for building RESTfull services. 
 For GraphQL please refer to the dedicated [GraphQL Guide][]
