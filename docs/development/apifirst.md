@@ -67,7 +67,8 @@ Project is maintained by OpenAPI Generator Community
 
 #### Nodejs-express-server - <https://openapi-generator.tech/docs/generators/nodejs-express-server>
 
-This generator generates Express.js based stub implementation based on your OpenAPI file. Generation can be done by using openapi-generator cli:
+This generator generates Express.js based stub implementation based on your OpenAPI file. 
+Generation can be done by using openapi-generator cli:
 
 ```bash
 openapi-generator generate -g nodejs-express-server -i yourapi.json -o ./yourproject
@@ -75,17 +76,27 @@ openapi-generator generate -g nodejs-express-server -i yourapi.json -o ./yourpro
 
 ### Client Side generator
 
+#### typescript-node - <https://openapi-generator.tech/docs/generators/typescript-node>
+
+This generator generates client for Node.js backend that allows us to perform requests against another backend
+against a
+
+```bash
+openapi-generator generate -g nodejs-express-server -i yourapi.json -o ./yourproject
+```
 
 ### API mocking
 
-openapi-backend
-https://www.npmjs.com/package/openapi-backend
+#### openapi-backend - <https://www.npmjs.com/package/openapi-backend>
 
-## Request validation
+
+### Express validator
+
+#### express-openapi-validator
 
 https://www.npmjs.com/package/express-openapi-validator
 
-### Building API
+### Building OpenAPI
 
 https://www.npmjs.com/package/swagger-editor
 
@@ -95,6 +106,5 @@ https://github.com/42Crunch/vscode-openapi
 
 https://www.apicur.io/studio/
 
-[generator-community][]  
 
 [GraphQL Guide]: https://nodeshift.dev/nodejs-reference-architecture/functional-components/graphql
