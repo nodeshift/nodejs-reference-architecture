@@ -2,90 +2,32 @@
 sidebar_position: 6
 ---
 
-# API First REST backends with OpenAPI Specification 
+# REST APIs
 
-This reference describes what it means to use the API-first design approach with Node.js backends and JavaScript client applications. Reference is going to use OpenAPI standard along with supporting packages and tools we recommend to implement API first applications.
+Building [RESTFull](https://www.redhat.com/en/topics/api/what-is-a-rest-api) APIs is a typical use
+case for Node.js. There are two typical approaches:
 
-> NOTE: This guide focused on the OpenAPI Specification for building RESTfull services. 
-For GraphQL please refer to the dedicated [GraphQL Guide][]
+* API First - define the API, use tools to help scaffold and then fill in the implementation.
+* Code First - implemhdawson-patch-1ment the APIs and then document based on the API exposed.
 
-## Recommended Packages
+The team's experience is that the API first approach based on [OpenAPI](https://swagger.io/specification/)
+provides benefits in both initial implementation and maintenance and our recommended packages and
+guidance is based on that approach, particularly if one or more of the following are true:
 
-List bellow provides comprehensive set of libraries that can be used for end to end full stack application written in Node.JS, 
-Express.js and client side application.
+- New project without existing API
+- Client side and backend are developed by different teams that need way to communicate API changes
+- Development on clients and backends starts around the same time giving developers ability to mock API based on OpenAPI spec
 
-### Code Generation Tools
+> NOTE: This section of the reference arcahitecture focusses on building RESTfull APIs. 
+For GraphQL please refer to the [GraphQL Guide][] section.
 
-#### @openapitools/openapi-generator-cli - <https://openapi-generator.tech>
+## "API-first" approach
 
-CLI provides support for generating source code based on the OpenAPI spec. CLI supports wide range of languages and frameworks:
-
-https://openapi-generator.tech/docs/generators
-
-CLI has widespread usage across industry including many community projects at Red Hat.
-
-Project is maintained by OpenAPI Generator Community
-
-### Node.js backend generator
-
-#### nodejs-express-server - <https://openapi-generator.tech/docs/generators/nodejs-express-server>
-
-This generator generates Express.js based stub implementation based on your OpenAPI file. 
-Generation can be done by using openapi-generator cli:
-
-```bash
-openapi-generator generate -g nodejs-express-server -i yourapi.json -o ./yourproject
-```
-
-### Client generator
-
-#### typescript-node - <https://openapi-generator.tech/docs/generators/typescript-node>
-
-This generator generates client for Node.js backend that allows us to perform requests against another backend
-
-```bash
-openapi-generator generate -g typescript-node -i yourapi.json -o ./yourproject
-```
-
-### API mocking
-
-#### openapi-backend - <https://www.npmjs.com/package/openapi-backend>
-
-Openapi-backend allows us to mock based on OpenAPI file by returning predefined strings.
-Library provides way not only return predefined stubs but also perform validation or handle different use cases depending on request 
-
-
-#### @stoplightio/prism  - <https://www.npmjs.com/package/@stoplight/prism-http>
-
-Prism allows to automatically mock API using OpenAPI spec definitions.
-This package is recomended if you need was and out of the box way to mock API without any development involved.
-
-### API validation middleware
-
-#### express-openapi-validator <https://www.npmjs.com/package/express-openapi-validator>
-
-Validator for express middlewares
-
-### Building OpenAPI
-
-#### swagger-editor <https://www.npmjs.com/package/swagger-editor> 
-
-Most popular editor that can be embeeded into existing server or run standalone.
-If you need to use yaml format use: https://www.npmjs.com/package/openapi-editor
-
-## vscode-openapi <https://github.com/42Crunch/vscode-openapi>
-
-VScode plugin for building and validation of OpenAPI files
-
-## Guidance
-
-### What "API-first" mean?
-
-With the API-first approach, designing the API is the first priority before writing any code. Design of the API involves thorough thinking and planning through collaboration with different teams (both client and backend side). This result in high-level documentation describing the intent of the API and ability to build client without waiting for server to be finished.
+With the API-first approach, designing the API is the first priority before writing any code. Design of the API involves thorough thinking and planning through collaboration with different teams (both client and backend side). This results in high-level documentation describing the intent of the API and ability to build client without waiting for server to be finished.
 
 This API contract acts as a central draft keeping all your team members aligned on what your API’s objectives are and how your API’s resources are exposed. The finalization of the contract allows the team to build the interface of the application.
 
-After this, the cross-functional teams rely on this interface to build the rest of the application independent of each other. In practice teams can generate backends stubs and fully functional client libraries to avoid deviation from specification set in the OpenAPI spec file.
+After this, the cross-functional teams rely on this interface to build the rest of the application independent of each other. In practice, teams can generate backends stubs and fully functional client libraries to avoid deviation from specification set in the OpenAPI spec file.
 
 ## Code First vs API first
 
@@ -95,39 +37,80 @@ used to negotiate API between client and server.
 
 API first approach uses OpenAPI file as source of truth. Both client and server side generate code based on the OpenAPI file.
 
-### When to use OpenAPI first
+## Recommended Packages
 
-OpenAPI First is our default way to build services, but we recognize number of cases where taking that approach 
-might be benefitial for any team or company:
+List bellow provides comprehensive set of libraries that can be used for an end to end full stack application written in Node.JS, 
+Express.js as well as client side applications.
 
-- New project without existing API
-- Client side and backend are developed by different teams that need way to communicate API changes
-- Development on clients and backends starts around the same time giving developers ability to mock API based on OpenAPI spec
+### Code Generation Tools
 
+[openapitools/openapi-generator-cli](https://www.npmjs.com/package/@openapitools/openapi-generator-cli)
+This CLI provides support for generating source code based on the OpenAPI spec. The project that
+provides this cli for JavaScript also provides generators for a number of other
+languages as well. This CLI has widespread usage across industry including many community projects at Red Hat.
+The project is maintained by OpenAPI Generator Community and you can read the documentation
+here:- <https://openapi-generator.tech>. It can be used as both a backend and client generator as follows:
 
-### Rest API- Define the API using OpenAPI 3.0
+**backend generator**
 
-You can write OpenAPI definitions in YAML or JSON formats. 
+The nodejs-express-server option  can be used to generate Express.js based stub
+implementations based on your OpenAPI file. 
+```bash
+npx openapi-generator-cli generate -g nodejs-express-server -i yourapi.json -o ./yourproject
+```
+
+**Client generator**
+
+The typescript-node option can be used to generate a client for Node.js applications
+that allows us to perform requests against another backend
+
+```bash
+openapi-generator generate -g typescript-node -i yourapi.json -o ./yourproject
+```
+
+### API mocking
+
+[openapi-backend](https://www.npmjs.com/package/openapi-backend) allows you to mock based
+on an OpenAPI definition by returning predefined strings. The library provides way not only
+return predefined stubs but also perform validation or handle different use cases depending on request 
+
+[@stoplightio/prism](https://www.npmjs.com/package/@stoplight/prism-http) allows you to
+automatically mock API using OpenAPI spec definitions. This package is recomended if you
+need is an out of the box way to mock API without any development involved.
+
+### API validation middleware
+
+[express-openapi-validator](https://www.npmjs.com/package/express-openapi-validator) is a validator
+for express middleware that some of the build have used successfully.
+
+### Creating/editing OpenAPI Specificaitons
+
+[swagger-editor](https://www.npmjs.com/package/swagger-editor) is the most popular editor
+which can be embeeded into existing server or run standalone. If you want to edit your
+specifications in YAML, you can use the
+[openapi-editor](https://www.npmjs.com/package/openapi-editor) wrapper.
+
+[vscode-openapi](https://github.com/42Crunch/vscode-openapi) is a VScode plugin for
+building and validation of OpenAPI files that members of the team using vscode
+have used successfully.
+
+## Guidance
+
+Based on the teams experience we recommend the following:
+
+1. Define the API using OpenAPI 3.0, you can write the OpenAPI definitions in YAML or JSON formats, the team does not have a preference for one over the other.
+2. Prefer generating code from OpenAPI file for both client and server. Generating code based on the specification will ensure that the same types, formats are used. This will enable your team to iterate on the specification without worry of getting out of sync.
+3. When making changes in the OpenAPI file change it's [version](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml#L3). Changed version will help others to detect what kind of changes were made.
+4. When introducing breaking changes consider adding them as new endpoints by introducing another v2 prefix in the API path. 
+5. Every path should have `operationId` field specified. This field is used by generator to generate method names for clients etc.
+6. When building response objects preffer referencing predefined Objects and Enums in [Schemas](https://swagger.io/docs/specification/data-models/)
+7. If an API returns a specific [error object](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml#L148-L158) it should be defined in the Schemas.
+8. Declare servers and security scheme to enable users to call API from OpenAPI Editor and other tools. 
+9. Use [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to define namespaces for your API. Grouping operations with tags that will be used to organize your generated source code into folder structure.
+
+### A good example
+
 OpenAPI spec provides an complete and minimalistic [PetStore](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml) example. This example follows all the best practices and patterns for building API.
-Alternatively you can an automatically generate parts of the API from database.
-
-### Good patterns for building API First Fullstack Node.JS solutions
-
-1. Prefer generating code from OpenAPI file for both client and server. Generating code based on the specification will ensure that the same types, formats are used. This will enable your team to iterate on the specification without worry of getting out of sync.
-
-2. When making changes in the OpenAPI file change it's [version](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml#L3). Changed version will help others to detect what kind of changes were made.
-
-3. When introducing breaking changes consider adding them as new endpoints by introducing another v2 prefix in the API path. 
- 
-4. Every path should have `operationId` field specified. This field is used by generator to generate method names for clients etc.
-
-5. When building response objects preffer referencing predefined Objects and Enums in [Schemas](https://swagger.io/docs/specification/data-models/)
-
-6. If API return specific [error object](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml#L148-L158) it should be defined in Schemas.
-
-7. Declare servers and security scheme to enable users to call API from OpenAPI Editor and other tools. 
-
-8. Use [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to define namespaces for your API. Grouping operations with tags that will be used to organize your generated source code into folder structure.
 
 
 [GraphQL Guide]: https://nodeshift.dev/nodejs-reference-architecture/functional-components/graphql
