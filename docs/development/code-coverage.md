@@ -36,16 +36,20 @@ If your application/module has some key user stories, it is important to focus o
 For those projects that are new, and just starting out, a good percentage threshold is about 70%.  This is because with new projects, it is easier to add tests while creating the application.
 
 
-If adding coverage to a project that is older that might not have any coverage yet, it might be a little harder since adding tests to an older project with technical debt can be a challenge, especially for someone new coming into the project.  In this case a good percentage threshold is about 30% for the best return on investment.
+If adding coverage to a project that is older that might not have any coverage yet, it might be a little harder since adding tests to an older project with technical debt can be a challenge, especially for someone new coming into the project.  In this case a good percentage threshold is about 30%.  It is also our experience that when adding coverage to a older code base, focusing on the key user stories will give you the best return on investment.  Focusing on the Path and/or Branch/Decision coverage will also maximize the investment on getting to 30%.
 
 
 ## OpenSource Projects
 
 For OpenSource projects, it might be helpful to post the results of the coverage to an external service, such as coveralls and creating an issue related to increasing the code coverage could be a way to attract contributors to the project.
 
-It is also common to report the coverage increase or decrease percentage during a PR.  This is more for informational purposes and not necessarily to block a merge.
+It is also common to report the coverage increase or decrease percentage during a PR CI run.  In our experience, it is best to use this information in a code review rather than blocking a merge.
 
 Code coverage should never block a production deployment
+
+## Application vs. Module
+
+For Applications, the coverage should be driven by the key user stories/key paths that the application can take.  Were as for a module, it is important to coverage any API that is public.
 
 ## Output Formats
 
