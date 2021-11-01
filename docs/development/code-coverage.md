@@ -33,9 +33,11 @@ If your application/module has some key user stories, it is important to focus o
 
 ## Coverage percentage thresholds
 
-If adding coverage to a project that is older that might not have any coverage yet, a good percentage threshold is about 30%.
+For those projects that are new, and just starting out, a good percentage threshold is about 70%.  This is because with new projects, it is easier to add tests while creating the application.
 
-For those projects that are new, and just starting out, a good percentage threshold is about 70%.
+
+If adding coverage to a project that is older that might not have any coverage yet, it might be a little harder since adding tests to an older project with technical debt can be a challenge, especially for someone new coming into the project.  In this case a good percentage threshold is about 30% for the best return on investment.
+
 
 ## OpenSource Projects
 
