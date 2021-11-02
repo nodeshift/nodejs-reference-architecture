@@ -28,7 +28,8 @@ Condition Coverage – The Boolean expressions that are validated and that execu
 
 ##  Where to focus on higher coverage
 
-If your application/module has some key user stories, it is important to focus on higher coverage there.
+For applications, the coverage should be driven by the key user stories/key paths that the application can take.  For modules, it is important to cover all public APIs.
+
 
 
 ## Coverage percentage thresholds
