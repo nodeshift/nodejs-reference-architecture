@@ -8,7 +8,7 @@ Building [RESTFull](https://www.redhat.com/en/topics/api/what-is-a-rest-api) API
 case for Node.js. There are two typical approaches:
 
 * API First - define the API, use tools to help scaffold and then fill in the implementation.
-* Code First - implemhdawson-patch-1ment the APIs and then document based on the API exposed.
+* Code First - implement the APIs and then generate documentation based on exposed API
 
 The team's experience is that the API first approach based on [OpenAPI](https://swagger.io/specification/)
 provides benefits in both initial implementation and maintenance and our recommended packages and
