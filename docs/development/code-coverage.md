@@ -26,7 +26,7 @@ Condition Coverage – The Boolean expressions that are validated and that execu
 
 # Guidance
 
-##  Key User Stories
+##  Where to focus on higher coverage
 
 If your application/module has some key user stories, it is important to focus on higher coverage there.
 
