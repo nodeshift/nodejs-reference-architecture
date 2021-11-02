@@ -48,9 +48,6 @@ It is also common to report the coverage increase or decrease percentage during 
 
 Code coverage should never block a production deployment
 
-## Application vs. Module
-
-For Applications, the coverage should be driven by the key user stories/key paths that the application can take.  Were as for a module, it is important to coverage any API that is public.
 
 ## Output Formats
 
