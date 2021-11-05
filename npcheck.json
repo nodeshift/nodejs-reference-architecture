@@ -111,6 +111,10 @@
     {
       "name": "kafkajs",
       "npmlink": "https://www.npmjs.com/package/kafkajs"
+    },
+    {
+      "name": "nyc",
+      "npmlink":"https://www.npmjs.com/package/nyc"
     }
   ],
   "licenses": {
