@@ -44,7 +44,7 @@ COPY --chown=1001:0 . .
 
 It is recommended that you run processes as `non-root` inside your containers.
 
-- Avoid using trusted ports
+## Avoid using trusted ports
 
 Ports below 1024 are considered `trusted` and a process must have
 additional priviledges to be able to bind to them.
