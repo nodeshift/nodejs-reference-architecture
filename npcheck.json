@@ -147,6 +147,10 @@
       "ibm_db": {
         "note": "buffers package that ibm_db depends on specifies MIT indirectly",
         "allow": ["Custom: http://github.com/substack/node-bufferlist"]
+      },
+      "nyc": {
+        "note": "dependency caniuse-lite uses CC-BY-4.0",
+        "allow":  "allow": ["CC-BY-4.0"]
       }
     }
   }
