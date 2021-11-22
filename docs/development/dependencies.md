@@ -49,7 +49,7 @@ Based on the teams experience we recommend the following:
 
 When evaluating dependencies, the teams typically evaluate the top level
 dependencies versus the full tree **EXCEPT** for the following in which
-we evalute the full tree:
+we evaluate the full tree:
 * Licence Checks
 * Security vulnerabilities (CVEs)
 * Total sub-dependencies
