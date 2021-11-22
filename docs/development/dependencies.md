@@ -29,7 +29,7 @@ Based on the teams experience we recommend the following:
   to other possible options.
 * Prefer dependencies with an active, open, and inclusive community. 
   Note that in some cases a dependency may be "done" but open and 
-  inclusive is still immportant in those cases. Some
+  inclusive is still important in those cases. Some
   indicators to consider include:
   * Number of active contributors since inception
   * If you needed to contribute a fix would it be accepted?
