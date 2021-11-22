@@ -43,7 +43,7 @@ Based on the teams experience we recommend the following:
     [Canary in the Gold Mine](https://github.com/nodejs/citgm)?
   * If the depenency is a native module does it use Node-API (use
     of Node-API means that packages can work across Node.js major versions)
-* Only use depenencies with licences acceptable to your organization
+* Only use dependencies with licences acceptable to your organization
 * When choosing to use dependencies with a lower level of use in the 
   ecosystem doing a code review to look for red flags can be useful.
 
