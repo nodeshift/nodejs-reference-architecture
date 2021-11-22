@@ -41,7 +41,7 @@ Based on the teams experience we recommend the following:
   * Does it support the current Node.js LTS releases
   * Is the dependency tested by the Node.js project's
     [Canary in the Gold Mine](https://github.com/nodejs/citgm)?
-  * If the depenency is a native module does it use Node-API (use
+  * If the dependency is a native module does it use Node-API (use
     of Node-API means that packages can work across Node.js major versions)
 * Only use dependencies with licences acceptable to your organization
 * When choosing to use dependencies with a lower level of use in the 
