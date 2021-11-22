@@ -37,7 +37,7 @@ Based on the teams experience we recommend the following:
   * Do you have to move up to a new Major release to get security fixes?
   * What is the cadence of releases?
   * Is the project part of a larger project or Foundation?
-* Prefer depdencies aligned with the Node.js project releases
+* Prefer dependencies aligned with the Node.js project releases
   * Does it support the current Node.js LTS releases
   * Is the dependency tested by the Node.js project's
     [Canary in the Gold Mine](https://github.com/nodejs/citgm)?
