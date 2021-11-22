@@ -1,7 +1,6 @@
 ---
 sidebar_position: 7
 ---
-
 # Choosing and vetting dependencies
 
 Node.js applications and modules often use a number of third party
