@@ -152,7 +152,6 @@
         "note": "dependency caniuse-lite uses CC-BY-4.0",
         "allow": ["CC-BY-4.0"]
       }, 
-      {
       "eslint": {
         "note": "dependency argparse uses licence Python-2.0",
         "allow": ["Python-2.0"]
