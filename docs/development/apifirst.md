@@ -18,7 +18,7 @@ guidance is based on that approach, particularly if one or more of the following
 - Client side and backend are developed by different teams that need way to communicate API changes
 - Development on clients and backends starts around the same time giving developers ability to mock API based on OpenAPI spec
 
-> NOTE: This section of the reference arcahitecture focusses on building RESTfull APIs. 
+> NOTE: This section of the reference architecture focuses on building RESTfull APIs. 
 For GraphQL please refer to the [GraphQL Guide][] section.
 
 ## "API-first" approach
