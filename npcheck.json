@@ -113,7 +113,7 @@
       "npmlink": "https://www.npmjs.com/package/kafkajs"
     },
     {
-      "name": "openapi-generator-cli",
+      "name": "@openapitools/openapi-generator-cli",
       "npmlink": "https://www.npmjs.com/package/@openapitools/openapi-generator-cli"
     },
     {
@@ -121,7 +121,7 @@
       "npmlink": "https://www.npmjs.com/package/openapi-backend"
     },
     {
-      "name": "stoplight/prism-http",
+      "name": "@stoplight/prism-http",
       "npmlink": "https://www.npmjs.com/package/@stoplight/prism-http"
     },
     {

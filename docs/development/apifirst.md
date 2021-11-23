@@ -39,7 +39,7 @@ API first approach uses OpenAPI file as source of truth. Both client and server 
 
 ## Recommended Packages
 
-List bellow provides comprehensive set of libraries that can be used for an end to end full stack application written in Node.JS, 
+List bellow provides comprehensive set of libraries that can be used for an end to end full stack application written in Node.js, 
 Express.js as well as client side applications.
 
 ### Code Generation Tools
@@ -75,7 +75,7 @@ on an OpenAPI definition by returning predefined strings. The library provides w
 return predefined stubs but also perform validation or handle different use cases depending on request 
 
 [@stoplightio/prism](https://www.npmjs.com/package/@stoplight/prism-http) allows you to
-automatically mock API using OpenAPI spec definitions. This package is recomended if you
+automatically mock API using OpenAPI spec definitions. This package is recommended if you
 need is an out of the box way to mock API without any development involved.
 
 ### API validation middleware
@@ -83,10 +83,10 @@ need is an out of the box way to mock API without any development involved.
 [express-openapi-validator](https://www.npmjs.com/package/express-openapi-validator) is a validator
 for express middleware that some of the build have used successfully.
 
-### Creating/editing OpenAPI Specificaitons
+### Creating/editing OpenAPI Specifications
 
 [swagger-editor](https://www.npmjs.com/package/swagger-editor) is the most popular editor
-which can be embeeded into existing server or run standalone. If you want to edit your
+which can be embedded into an existing server or run standalone. If you want to edit your
 specifications in YAML, you can use the
 [openapi-editor](https://www.npmjs.com/package/openapi-editor) wrapper.
 
