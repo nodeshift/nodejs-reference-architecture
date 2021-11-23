@@ -1,3 +1,6 @@
+---
+sidebar_position: 6
+---
 # Typescript
 
 TypeScript is a language that compiles to JavaScript and provides static typing by extending the JavaScript syntax. It is worth considering for larger projects as it can bring the following benefits:

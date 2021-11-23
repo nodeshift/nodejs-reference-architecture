@@ -1,0 +1,35 @@
+# This workflow will run the due dilligence checks provided by `npcheck`:
+# - On demand.
+# - Regularly (once a week).
+# - When `npcheck.json` or this workflow file is changed.
+
+name: Due Dilligence
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0"
+  push:
+    branches: [ main ]
+    paths:
+      - ".github/workflows/npcheck.yml"
+      - "npcheck.json"
+  pull_request:
+    branches: [ main ]
+    paths:
+      - ".github/workflows/npcheck.yml"
+      - "npcheck.json"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ lts/* ]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npx npcheck --github-token ${{ secrets.GITHUB_TOKEN }}

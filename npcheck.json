@@ -135,6 +135,10 @@
     {
       "name": "openapi-editor",
       "npmlink": "https://www.npmjs.com/package/openapi-editor"
+    },
+    {
+      "name": "nyc",
+      "npmlink":"https://www.npmjs.com/package/nyc"
     }
   ],
   "licenses": {
@@ -167,6 +171,14 @@
       "ibm_db": {
         "note": "buffers package that ibm_db depends on specifies MIT indirectly",
         "allow": ["Custom: http://github.com/substack/node-bufferlist"]
+      },
+      "nyc": {
+        "note": "dependency caniuse-lite uses CC-BY-4.0",
+        "allow": ["CC-BY-4.0"]
+      }, 
+      "eslint": {
+        "note": "dependency argparse uses licence Python-2.0",
+        "allow": ["Python-2.0"]
       }
     }
   }

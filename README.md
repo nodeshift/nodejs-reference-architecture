@@ -71,6 +71,7 @@ with only a subset of sections having recommendations):
   - Code Quality
     - [Code Consistency](./docs/development/code-consistency.md)
     - [Testing](./docs/development/testing.md)
+    - [Code Coverage](./docs/development/code-coverage.md)
   - References to CI/CD
   - Npm
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
