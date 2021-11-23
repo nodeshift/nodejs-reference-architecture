@@ -111,6 +111,30 @@
     {
       "name": "kafkajs",
       "npmlink": "https://www.npmjs.com/package/kafkajs"
+    },
+    {
+      "name": "openapi-generator-cli",
+      "npmlink": "https://www.npmjs.com/package/@openapitools/openapi-generator-cli"
+    },
+    {
+      "name": "openapi-backend",
+      "npmlink": "https://www.npmjs.com/package/openapi-backend"
+    },
+    {
+      "name": "stoplight/prism-http",
+      "npmlink": "https://www.npmjs.com/package/@stoplight/prism-http"
+    },
+    {
+      "name": "express-openapi-validator",
+      "npmlink": "https://www.npmjs.com/package/express-openapi-validator"
+    },
+    {
+      "name": "swagger-editor",
+      "npmlink": "https://www.npmjs.com/package/swagger-editor"
+    },
+    {
+      "name": "openapi-editor",
+      "npmlink": "https://www.npmjs.com/package/openapi-editor"
     }
   ],
   "licenses": {
