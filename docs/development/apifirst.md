@@ -103,7 +103,7 @@ Based on the teams experience we recommend the following:
 3. When making changes in the OpenAPI file change it's [version](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml#L3). Changed version will help others to detect what kind of changes were made.
 4. When introducing breaking changes consider adding them as new endpoints by introducing another v2 prefix in the API path. 
 5. Every path should have `operationId` field specified. This field is used by generator to generate method names for clients etc.
-6. When building response objects preffer referencing predefined Objects and Enums in [Schemas](https://swagger.io/docs/specification/data-models/)
+6. When building response objects prefer referencing predefined Objects and Enums in [Schemas](https://swagger.io/docs/specification/data-models/)
 7. If an API returns a specific [error object](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml#L148-L158) it should be defined in the Schemas.
 8. Declare servers and security scheme to enable users to call API from OpenAPI Editor and other tools. 
 9. Use [tags](https://swagger.io/docs/specification/grouping-operations-with-tags/) to define namespaces for your API. Grouping operations with tags that will be used to organize your generated source code into folder structure.
