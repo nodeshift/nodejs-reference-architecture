@@ -56,7 +56,7 @@ here:- <https://openapi-generator.tech>. It can be used as both a backend and cl
 The nodejs-express-server option  can be used to generate Express.js based stub
 implementations based on your OpenAPI file. 
 ```bash
-npx openapi-generator-cli generate -g nodejs-express-server -i yourapi.json -o ./yourproject
+npx @openapitools/openapi-generator-cli generate -g nodejs-express-server -i yourapi.json -o ./yourproject
 ```
 
 **Client generator**
@@ -65,7 +65,7 @@ The typescript-node option can be used to generate a client for Node.js applicat
 that allows us to perform requests against another backend
 
 ```bash
-openapi-generator generate -g typescript-node -i yourapi.json -o ./yourproject
+npx @openapitools/openapi-generator-cli generate -g typescript-node -i yourapi.json -o ./yourproject
 ```
 
 ### API mocking
