@@ -52,7 +52,7 @@ dependencies versus the full tree **EXCEPT** for the following in which
 we evaluate the full tree:
 * Licence Checks
 * Security vulnerabilities (CVEs)
-* Total sub-dependencies
+Total number of sub-dependencies
 
 The Red Hat Node.js team is currently using
 [npcheck](https://github.com/nodeshift/npcheck)
