@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 1
 ---
 
-# REST APIs
+# REST APIs Development
 
 Building [RESTFull](https://www.redhat.com/en/topics/api/what-is-a-rest-api) APIs is a typical use
 case for Node.js. There are two typical approaches:
