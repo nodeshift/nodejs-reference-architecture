@@ -53,11 +53,11 @@ with only a subset of sections having recommendations):
   - [Message Queuing](./docs/functional-components/message-queuing.md)
   - [Internationalization](./docs/functional-components/internationalization.md)
   - Accessibility
-  - API Definition
   - [GraphQL](./docs/functional-components/graphql.md)
   - [Databases](./docs/functional-components/databases.md)
   - [Authentication and Authorization](./docs/functional-components/auth.md)
   - [Data Caching](./docs/functional-components/data-caching.md)
+  - [REST API Development](./docs/functional-components/rest-api-development.md)
   - [Scaling and Multi-threading](./docs/functional-components/scaling-multi-threading.md)
   - Consuming Services
   - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
