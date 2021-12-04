@@ -220,7 +220,7 @@ Instead use a command like `CMD ["node","index.js"]`,
 
 ## tooling for building containers
 
-When containers where first introduced the only way to build
+When containers were first introduced the only way to build
 and run them was with `docker`. Depending on the operating
 system you are running on, there may be other options which
 provide advantages and are worth considering. You can
