@@ -111,4 +111,5 @@ problems: 76 (errors: 0 - warnings: 76)
 * With respect to (13) as a passport plug-in strategy typings are not as important as they might be for some modules. 
 * With respect to (40) we think this is most likely an issue with npcheck as we believe JEST has tests
 * With respect to (53) openapi-generator-cli has a "test" script in package.json so this seems to be an error. 
-* With respect to (68) npcheck had some bugs in how vulns were reported.  minimist has 1 medium vulnerability which is older than 4 months. It appears the CVE has been fixed in 1.2.3 or later. It's due to swagger-editor@4.0.2 pulling in an older version in its dependencies.
+the CVE has been fixed in 1.2.3 or later. It's due to swagger-editor@4.0.2 pulling in an older version in its dependencies. Our investigation shows that its due to the use of the opencollective library and then react-ace which
+uses the older version of minimist.  The opencollective library says it will not get updates. This seems like a minimal risk.
