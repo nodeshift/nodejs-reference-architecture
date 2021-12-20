@@ -204,5 +204,10 @@
         "allow": ["CC-BY-4.0"]
       }
     }
+  },
+  "citgm": {
+    "note-1" : "ibmcloud-appid, @ibm-cloud/cloudant, opossum, ibm_db are Red Hat/IBM modules that would need broader usage before being considered for CITGM",
+    "note-2" : "cldr-localenames-full does not have tests as it is a data delivery module and therefore does not beong in CITGM",
+    "skip": ["ibmcloud-appid", "@ibm-cloud/cloudant", "opossum", "ibm_db", "cldr-localenames-full"]
   }
 }
