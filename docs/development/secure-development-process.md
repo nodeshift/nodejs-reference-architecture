@@ -88,6 +88,7 @@ Handle uncaught exceptions, listen to errors when using EventEmitters and check 
 
 Have a default handler for express (and other web frameworks) to avoid returning exceptions with the stack trace to the end user.
 
+
 **Avoid complex regexes**
 Complex regexes can lead to potential denial of service attacks. This article provides a good overview of the risks: [Regular_expression_Denial_of_Service_-_ReDoS](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS)
 
