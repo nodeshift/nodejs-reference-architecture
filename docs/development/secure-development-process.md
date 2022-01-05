@@ -76,7 +76,7 @@ information between requests.
 
 **Set NODE_ENV to production**
 
-Some packages use this do decide if they need to
+Some packages use this to decide if they need to
 lock things down/share less information.
 
 **use strict mode**
