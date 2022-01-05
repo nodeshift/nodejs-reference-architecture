@@ -165,7 +165,7 @@ Design your application to run with the least privileges required. Ensure your a
 
 ### Supporting logging and monitoring
 
-Design your applicaiton to log sensitive/interesting actions and to make it easy for monitoring tools to collect and analyse these logs to indentify suspicious patterns. See the section on [logging](../operations/logging.md) for package recommendations.
+Design your application to log sensitive/interesting actions and to make it easy for monitoring tools to collect and analyse these logs to indentify suspicious patterns. See the section on [logging](../operations/logging.md) for package recommendations.
 
 ### Externalize secrets
 
