@@ -138,6 +138,7 @@ Unvalidated input can result in:
 * sql injection
 * data corruption
 * denial of service
+
 Always validate user input before using it within your application code. Make sure you do this even if you do validation in the client side (browser, mobile application, etc.) as an attacker could send requests directly to the APIs without using the client.
 
 Do not pass unsanitized user input to the Node.js [child_process](https://nodejs.org/api/child_process.html) functions as this can result in command injection where an attacker can run a command on the server on which Node.js is running. This is a good article that goes into more details: 
