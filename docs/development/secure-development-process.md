@@ -202,7 +202,7 @@ create a depenency image. While is this good for build times as oultined in [dep
 
 Based on the teams experience we recommend:
 
-* For modules maintined in GitHub, enable the `snyc` integration 
+* For modules maintined in GitHub, enable the `snyk` integration 
   and review/land the PRs generated.
 * Test and ensure that the module runs/passes tests on the
   latest LTS versions. This will reduce risk when updates are required for Node.js security releases.
