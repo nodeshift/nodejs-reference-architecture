@@ -97,7 +97,7 @@ Complex regexes can lead to potential denial of service attacks. This article pr
 
 Limit the available attack surface by:
 * Only exposing APIs that are needed to support the intended
-  functionality. For example, when using express remove any uncessary routes.
+  functionality. For example, when using express remove any unnecessary routes.
 * Group all external endpoints under a prefix(for example /api). This
   makes it easier to only expose APIs which are intended to
   be external in the ingress configuration. Don’t path rewrite to /.
