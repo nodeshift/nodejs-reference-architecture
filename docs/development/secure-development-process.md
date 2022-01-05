@@ -139,7 +139,7 @@ Unvalidated input can result in:
 * data corruption
 * denial of service
 
-Do not pass unsanitized user input to the Node.js [child_process](https://nodejs.org/api/child_process.html) functions as this can result in command injection where an attacker can run a common on the server on which Node.js is running. This is a good article that goes into more details: 
+Do not pass unsanitized user input to the Node.js [child_process](https://nodejs.org/api/child_process.html) functions as this can result in command injection where an attacker can run a command on the server on which Node.js is running. This is a good article that goes into more details: 
 [avoiding-arbitrary-code-execution-vulnerabilities-when-using-nodejs-child-process-apis](https://developer.ibm.com/articles/avoiding-arbitrary-code-execution-vulnerabilities-when-using-nodejs-child-process-apis/).
 
 Avoid using the [eval](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) function. If you must use it, ensure that you have validate/sanitized all inputs that may be added to the string passed to eval.
