@@ -79,7 +79,7 @@ information between requests.
 Some packages use this to decide if they need to
 lock things down/share less information.
 
-**use strict mode**
+**Use strict mode**
 
 For files which are not part of ES6 modules enable strict mode by adding `use strict;` to the start of each file. This is not required for ES6 modules as strict mode is enabled by default.
 
