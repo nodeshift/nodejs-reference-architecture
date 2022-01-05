@@ -24,7 +24,7 @@ N/A
 ### Managing dependencies
 
 Dependencies are a common vector for security vulnerabilities
-and it is important to manage depenencies carefully. This
+and it is important to manage dependencies carefully. This
 is covered in the
 [choosing and vetting dependencies](./dependencies.md) section of the reference architecture.
 
