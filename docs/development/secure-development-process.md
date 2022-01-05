@@ -156,7 +156,7 @@ Unvalidated json input if written directly to a database or accessed by your app
 
 **Use static analysis**
 
-As part of PR process process, incorporate static analysis. A number of the teams members have had success with `Sonarqube` and `checkmarx` to complete these scans.
+As part of PR process, incorporate static analysis. A number of the teams members have had success with `Sonarqube` and `checkmarx` to complete these scans.
 
 ### Limiting required execution privileges
 
