@@ -56,7 +56,7 @@ file when building containers through one of these options:
 Defensive code should:
 * Avoid global state.
 * Set NODE_ENV to production.
-* use `strict` mode 
+* Use `strict` mode 
 * Include good exception handling
 * Avoid complex regexes
 * Limit the attack surface
