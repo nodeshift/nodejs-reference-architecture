@@ -85,6 +85,7 @@ For files which are not part of ES6 modules enable strict mode by adding `use st
 
 **Include good exception handling**
 
+
 Handle uncaught exceptions, listen to errors when using EventEmitters and check for errors passed into asynchronous calls.
 
 Have a default handler for express (and other web frameworks) to avoid returning exceptions with the stack trace to the end user.
