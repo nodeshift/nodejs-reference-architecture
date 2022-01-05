@@ -125,7 +125,7 @@ Harden external http endpoints by:
 
 **Avoid leaking info through errors**
 
-Do not expose senstive or intermal information in errors returned to the end user. Instead return a unique ID that can be tied back to more specific error information that is written to internals logs.
+Do not expose sensitive or internal information in errors returned to the end user. Instead return a unique ID that can be tied back to more specific error information that is written to internals logs.
 
 **Limit data sent back to front ends**
 
