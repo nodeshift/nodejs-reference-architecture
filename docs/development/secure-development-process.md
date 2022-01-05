@@ -103,7 +103,7 @@ Limit the available attack surface by:
   be external in the ingress configuration. Don’t path rewrite to /.
 * Limiting access based on authentication. When possible integrate
   an organizational Identity and access control provider instead of
-  implementation your own.
+  implementing your own.
 
 **Harden external HTTP endpoints**
 
