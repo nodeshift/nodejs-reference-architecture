@@ -205,4 +205,4 @@ Based on the teams experience we recommend:
 * For modules maintined in GitHub, enable the `snyc` integration 
   and review/land the PRs generated.
 * Test and ensure that the module runs/passes tests on the
-  latest LTS versions. This will reduce risk when upadates are required for Node.js security releases.
+  latest LTS versions. This will reduce risk when updates are required for Node.js security releases.
