@@ -115,11 +115,13 @@ Harden external http endpoints by:
   * Denial of service -> Content delivery network (CDN) and rate limit login
   * One customer using too much -> External API manager (for example Red Hat 3scale API management)
   * Over sized requests -> Enforcing request size limits
-* Prevent HTTP parameter polution with packages like
-  [hpp](https://www.npmjs.com/package/hpp)
-* Protect against Cross site scripting (XSS). For example by using a package like [xss](https://www.npmjs.com/package/xss).
-* Protect against cross site forgery requests
-  * Use Anti-CSRF tokens through packages like [csurf](https://www.npmjs.com/package/csurf)
+* If you are not using a Web Application Firewall (as part of your CDN or stand-alone), ensure you:
+  * Prevent HTTP parameter pollution with packages like
+    [hpp](https://www.npmjs.com/package/hpp)
+  * Protect against Cross site scripting (XSS). For example by using a package like [xss]
+    (https://www.npmjs.com/package/xss).
+  * Protect against cross site forgery requests
+    * Use Anti-CSRF tokens through packages like [csurf](https://www.npmjs.com/package/csurf)
 
 **Avoid leaking info through errors**
 
