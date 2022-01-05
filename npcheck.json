@@ -139,6 +139,18 @@
     {
       "name": "nyc",
       "npmlink":"https://www.npmjs.com/package/nyc"
+    },
+    {
+      "name": "dotenv",
+      "npmlink": "https://www.npmjs.com/package/dotenv"
+    }, 
+    {
+      "name": "node-vault",
+      "npmlink": "https://www.npmjs.com/package/node-vault"
+    },
+    {
+      "name": "@ibm-cloud/secrets-manager",
+      "npmlink": "https://www.npmjs.com/package/@ibm-cloud/secrets-manager"
     }
   ],
   "licenses": {

@@ -78,7 +78,7 @@ with only a subset of sections having recommendations):
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
     - [Npm Publishing](./docs/development/npm-publishing.md)
     - Package Development
-  - Secure Development Process
+  - [Secure Development Process](./docs/development/secure-development-process.md)
 
 - Operations
   - [Health Checks](./docs/operations/healthchecks.md)
