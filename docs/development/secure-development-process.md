@@ -163,7 +163,7 @@ As part of PR process, incorporate static analysis. A number of the teams member
 Design your application to run with the least privileges required. Ensure your application can run as a non-root user, especially when being deployed within containers. See [building-good-containers](./building-good-containers.md) for container recommendations.
 
 
-### Supporting logging and monitoring
+### Support logging and monitoring
 
 Design your application to log sensitive/interesting actions and to make it easy for monitoring tools to collect and analyse these logs to indentify suspicious patterns. See the section on [logging](../operations/logging.md) for package recommendations.
 
