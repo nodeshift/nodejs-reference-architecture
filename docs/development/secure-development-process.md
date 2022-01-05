@@ -44,7 +44,7 @@ if you have private modules. Avoid leaking information in the `.npmrc`
 file when building containers through one of these options:
 * Use 2 stages builds and avoiding copying the `.npmrc` to the final image
 * Avoid adding the secrets to any image in the build process by mounting
-  secrets into containers during the build process. Builda has some functionality
+  secrets into containers during the build process. Buildah has some functionality
   build in to make this easier. The
   [sneak secreats into your containers](https://projectatomic.io/blog/2018/06/sneak-secrets-into-containers)
   article provides some info on how to do this.
