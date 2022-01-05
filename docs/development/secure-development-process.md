@@ -190,7 +190,7 @@ Based on the teams experience we recommend:
 
 * Leverage containers that come with Node.js already bundled in.
 Typically there will be an updated container when there are CVE's reported against the Node.js runtime or any of the other components within the container. This is one of the reasons the teams members often use the ubi/nodejs container images(For example: [ubi8/nodejs-14](https://catalog.redhat.com/software/containers/ubi8/nodejs-14/5ed7887dd70cc50e69c2fabb)).
-* If you build Node.js binaries into a base image yourself, make sure to subscribe to the [nodejs-sec](https://groups.google.com/g/nodejs-sec) mailing list. This low volumne mailing list is used to provide advance notice of security releases and will give you the earliest warning that you may need to update your Node.js version.
+* If you build Node.js binaries into a base image yourself, make sure to subscribe to the [nodejs-sec](https://groups.google.com/g/nodejs-sec) mailing list. This low volume mailing list is used to provide advance notice of security releases and will give you the earliest warning that you may need to update your Node.js version.
 * On a regular basis, check for new versions of the base container that you use and plan your CI/CD pipeline so that you can rebase your application or dependency image on a new version of the container when updates are available.
 * If you use common dependencies across a number of projects
 create a depenency image. While is this good for build times as oultined in [dependency image](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/development/building-good-containers.md#dependency-image), it will also help to reduce the total work required for dependency updates when shared across a number of projects.
