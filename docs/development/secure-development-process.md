@@ -31,7 +31,7 @@ is covered in the
 ### Managing access and content of public and private data stores
 
 Modern development flows often use public and private data stores
-including npm and github. We recommend the following:
+including npm and GitHub. We recommend the following:
 
 * Enable Two-Factor Authentication (2FA)
 * Ensure projects use a `.npmignore`, `.gitignore`, etc. to avoid 
