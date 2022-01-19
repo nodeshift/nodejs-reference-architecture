@@ -53,11 +53,11 @@ with only a subset of sections having recommendations):
   - [Message Queuing](./docs/functional-components/message-queuing.md)
   - [Internationalization](./docs/functional-components/internationalization.md)
   - Accessibility
-  - API Definition
   - [GraphQL](./docs/functional-components/graphql.md)
   - [Databases](./docs/functional-components/databases.md)
   - [Authentication and Authorization](./docs/functional-components/auth.md)
   - [Data Caching](./docs/functional-components/data-caching.md)
+  - [REST API Development](./docs/functional-components/rest-api-development.md)
   - [Scaling and Multi-threading](./docs/functional-components/scaling-multi-threading.md)
   - Consuming Services
   - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
@@ -65,18 +65,20 @@ with only a subset of sections having recommendations):
 
 - Development
 
+  - [Choosing and vetting dependencies](./docs/development/dependencies.md)
   - [Building good containers](./docs/development/building-good-containers.md)
   - [Static Assets](./docs/functional-components/static-assets.md)
-  - Keeping up to date
   - Code Quality
     - [Code Consistency](./docs/development/code-consistency.md)
     - [Testing](./docs/development/testing.md)
+    - [Code Coverage](./docs/development/code-coverage.md)
+    - [TypeScript](./docs/development/typescript.md)
   - References to CI/CD
   - Npm
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
     - [Npm Publishing](./docs/development/npm-publishing.md)
     - Package Development
-  - Secure Development Process
+  - [Secure Development Process](./docs/development/secure-development-process.md)
 
 - Operations
   - [Health Checks](./docs/operations/healthchecks.md)
@@ -113,6 +115,7 @@ To Contribute to this project, please see the [Contributing Guide](./CONTRIBUTIN
 
 ## Contributors
 
+- Anthony Whalley - Technology Partner Architect - IBM
 - Bethany Griggs - Sr. Software Engineer - Red Hat
 - Carlos Santana - Senior Technical Staff Member - IBM
 - Dominic Harries - Dev Lead at IBM Garage for Cloud

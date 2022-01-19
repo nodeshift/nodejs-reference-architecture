@@ -31,4 +31,3 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install && npm run lint
-    - run: npx npcheck --github-token ${{ secrets.GITHUB_TOKEN }}

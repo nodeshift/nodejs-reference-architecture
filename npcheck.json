@@ -111,6 +111,46 @@
     {
       "name": "kafkajs",
       "npmlink": "https://www.npmjs.com/package/kafkajs"
+    },
+    {
+      "name": "@openapitools/openapi-generator-cli",
+      "npmlink": "https://www.npmjs.com/package/@openapitools/openapi-generator-cli"
+    },
+    {
+      "name": "openapi-backend",
+      "npmlink": "https://www.npmjs.com/package/openapi-backend"
+    },
+    {
+      "name": "@stoplight/prism-http",
+      "npmlink": "https://www.npmjs.com/package/@stoplight/prism-http"
+    },
+    {
+      "name": "express-openapi-validator",
+      "npmlink": "https://www.npmjs.com/package/express-openapi-validator"
+    },
+    {
+      "name": "swagger-editor",
+      "npmlink": "https://www.npmjs.com/package/swagger-editor"
+    },
+    {
+      "name": "openapi-editor",
+      "npmlink": "https://www.npmjs.com/package/openapi-editor"
+    },
+    {
+      "name": "nyc",
+      "npmlink":"https://www.npmjs.com/package/nyc"
+    },
+    {
+      "name": "dotenv",
+      "npmlink": "https://www.npmjs.com/package/dotenv"
+    }, 
+    {
+      "name": "node-vault",
+      "npmlink": "https://www.npmjs.com/package/node-vault"
+    },
+    {
+      "name": "@ibm-cloud/secrets-manager",
+      "npmlink": "https://www.npmjs.com/package/@ibm-cloud/secrets-manager"
     }
   ],
   "licenses": {
@@ -143,7 +183,43 @@
       "ibm_db": {
         "note": "buffers package that ibm_db depends on specifies MIT indirectly",
         "allow": ["Custom: http://github.com/substack/node-bufferlist"]
+      },
+      "nyc": {
+        "note": "dependency caniuse-lite uses CC-BY-4.0",
+        "allow": ["CC-BY-4.0"]
+      }, 
+      "eslint": {
+        "note": "dependency argparse uses licence Python-2.0",
+        "allow": ["Python-2.0"]
+      },
+      "@openapitools/openapi-generator-cli":{
+        "allow": ["0BSD"]
+      },
+      "openapi-backend": {
+        "note": "Multiple dependencies use licenses",
+        "allow": ["Python-2.0"]
+      },
+      "express-openapi-validator": {
+        "note": "Multiple dependencies use licenses",
+        "allow": ["Python-2.0"]
+      },
+      "swagger-editor": {
+        "note": "Multiple dependencies use licenses",
+        "allow": ["Python-2.0","0BSD"]
+      },
+      "@stoplight/prism-http":{
+        "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
+        "allow": ["0BSD"]
+      },
+      "openapi-editor": {
+        "note": "dependency caniuse-lite uses CC-BY-4.0",
+        "allow": ["CC-BY-4.0"]
       }
     }
+  },
+  "citgm": {
+    "note-1" : "ibmcloud-appid, @ibm-cloud/cloudant, opossum, ibm_db are Red Hat/IBM modules that would need broader usage before being considered for CITGM",
+    "note-2" : "cldr-localenames-full does not have tests as it is a data delivery module and therefore does not beong in CITGM",
+    "skip": ["ibmcloud-appid", "@ibm-cloud/cloudant", "opossum", "ibm_db", "cldr-localenames-full"]
   }
 }

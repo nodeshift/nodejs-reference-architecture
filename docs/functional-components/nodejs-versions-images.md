@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 # Node.js Versions and Container Images
@@ -150,9 +150,9 @@ Always cache the binaries, containers or OS packages tha you use in
 production and in build/test pipelines. For example, do not depend
 on the Node.js download site being available 24/7.
 
-Subscribe to the nodejs-sec mailing list. This low volumne
-mailing list is used to provide advance notice of security releases
-and will give you the earliest warning that you may need
+Subscribe to the [nodejs-sec](https://groups.google.com/g/nodejs-sec) mailing list.
+This low volumne mailing list is used to provide advance notice of security
+releases and will give you the earliest warning that you may need
 to update your Node.js version.
 
 For new applications always start with the latest LTS version.

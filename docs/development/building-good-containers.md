@@ -44,10 +44,10 @@ COPY --chown=1001:0 . .
 
 It is recommended that you run processes as `non-root` inside your containers.
 
-- Avoid using trusted ports
+## Avoid using trusted ports
 
 Ports below 1024 are considered `trusted` and a process must have
-additional priviledges to be able to bind to them.
+additional privileges to be able to bind to them.
 
 If you respect the recommendation to build your containers as
 `non-root` then your process will not be able to bind to the
@@ -130,17 +130,17 @@ node_modules
 
 The dependencies for your application likely change
 less often than the code for your application. This
-means that if you build/install your depdencies and
+means that if you build/install your dependencies and
 application in the same step you'll end up building/installing
-the depdencies even when they have not changed. Couple
+the dependencies even when they have not changed. Couple
 that will the fact that it often takes much longer
-to build/install the depdencies than the application
+to build/install the dependencies than the application
 and the result is that your build will likely take
 longer than needed.
 
 In order to optimize your build times it is often useful
 to build a dependency image. The creation of the
-dependency image builds/installs the appliation dependencies
+dependency image builds/installs the application dependencies
 to create a new image (often this is just npm install). Each
 time you change your application you then build on top of
 that dependency image which can often just be a `COPY`
@@ -168,7 +168,7 @@ to problems. You can read about the issue in:
 [docker-and-the-pid-1-zombie-reaping-problem](https://blog.phusion.nl/2015/01/20/docker-and-the-pid-1-zombie-reaping-problem/)
 
 [Tini](https://github.com/krallin/tini) is a process manager some of our teams have
-used successefully.
+used successfully.
 
 ## Manage scaling outside of the container
 
@@ -196,7 +196,7 @@ The following is an example of doing so in the start script within
 
 ```
 
-This will then allow you to conifgure the `max-old-space-size` to
+This will then allow you to configure the `max-old-space-size` to
 align with what you define in your kubernetes deployment files or
 set withe the --memory option in docker run commands.
 
@@ -220,7 +220,7 @@ Instead use a command like `CMD ["node","index.js"]`,
 
 ## tooling for building containers
 
-When containers where first introduced the only way to build
+When containers were first introduced the only way to build
 and run them was with `docker`. Depending on the operating
 system you are running on, there may be other options which
 provide advantages and are worth considering. You can
