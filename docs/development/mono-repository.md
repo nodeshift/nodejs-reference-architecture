@@ -4,9 +4,9 @@ sidebar_position: 7
 
 # Mono-Repository (monorepo) Tooling and Guidance
 
-Working across multiple repositories for the same project and/or team is cumbersome and slows down developer velocity. A way to improve developer velocity for teams and projects is to leverage a mono-repository (monorepo). With a monorepo, teams will be able to maintain multiple packages in a singular repository without having to switch to different repositories to maintain other packages.
+Working across multiple repositories for the same project and/or team is cumbersome and slows down developer velocity. A way to improve developer velocity for teams and projects is to leverage a mono-repository (monorepo). With a monorepo, teams will be able to maintain multiple packages in a singular repository without having to switch to different repositories to maintain other packages. A monorepo may not be only JavaScript, and can be a mixture of languages. For example, a monorepo can contain JavaScript, TypeScript, Golang, Python, etc. A monorepo could also be scoped per team or project, meaning any project could belong in a monorepo, or a monorepo could be exclusively scoped for a particular project. As an example, [babel][babel] is a monorepo for babel, whereas Google has an entire monorepo for the company.
 
-## Tooling
+## Recommended Packages
 
 To enable a mono-repository, we recommend leveraging [yarn workspaces][yarn-workspaces] or [npm workspaces][npm-workspaces].
 
@@ -14,7 +14,7 @@ To enable a mono-repository, we recommend leveraging [yarn workspaces][yarn-work
 
 #### Modify package.json in the workspace root
 
-```json
+```js
 {
   "private": true,
   // this is an array containing glob paths to each workspace
@@ -24,7 +24,7 @@ To enable a mono-repository, we recommend leveraging [yarn workspaces][yarn-work
 
 #### Create subfolders and package.json for each package in the monorepo
 
-```json
+```js
 // /workspace-a/package.json
 {
   "name": "workspace-a",
@@ -54,25 +54,38 @@ Given the above, we should expect the following folder structure
 /node_modules/workspace-a -> /workspace-a
 ```
 
-#### Maintaining
+## Guidance
 
-With a monorepo, teams can now leverage a common set of tooling for [linting][linting] and [testing][testing] across all packages in the repository. See our [code-consistency][code-consistency] section for further guidance.
+There are a handful of benefits and challenges to monorepos.
 
-You can modify the `package.json` `scripts` section with linting and testing commands.
+With a monorepo, it is recommended to leverage a common set of tooling for [linting][linting] and [testing][testing] across all packages in the repository. See our [code-consistency][code-consistency] section for further guidance. Having a common set of tooling is a benefit for monorepos since each package managed in the repo does not need its set of tooling or versioning.
 
-##### Building
+While there are a benefits, there are challenges to overcome.
 
-When building package artifacts (the build ) in the monorepo, we recommend:
+* Detecting what to build. Build times can be long due to overbuilding the entire repository
+* Long build times. Because of having to build the entire repository, this will cause build times to increase because tooling no longer is just building one artifact/package, but many different ones.
+* Not just JavaScript. A monorepo may not just be JavaScript, and can impact organization, tooling, and how to approach building different artifacts or packages in different languages.
+* Git repositories can grow larger in size.  Since we are building and maintaing different packages in a singular repository, we can exponentially grow the size of the git repository.
+* Commit messages can be harder to interpret due to multiple artifacts, packages, or teams.
+
+
+### Building
+
+When building npm packages (or any type of package) (the build) in the monorepo, we recommend:
 
 * [bazel][bazel]
 * Custom scripts
 
-##### Publishing
+Using appropriate build tools help overcome challenges state previously. With build tools, we are able to detect file changes and build the appropriate artifact/packages necessary without building the entire repository. This helps reduce long build times. Having a good build tool like [bazel][bazel] also allows for potential to build out other project artifact/packages in different languages.
+
+When committing messages, teams can utilize [conventionalcommits][conventionalcommits] to reduce confusion when working on a monorepo.
+
+### Publishing
 
 If you are working with a set of packages that need to be published, you can leverage:
 
 * [changesets][changesets]
-* [semantic-release][semantic-release]
+* [lerna][lerna] - Was previously used but because of [yarn workspaces][yarn-workspaces] and [npm workspaces][npm-workspaces], teams have no longer found a need for [lerna][lerna]
 
 We recommend following semantic versioning across all packages. If a change does not impact all packages, then bump the appropriate minor/patch version as necessary.
 
@@ -87,9 +100,12 @@ If you are making a breaking change that is across all packages, apply major ver
 
 [yarn-workspaces]: https://classic.yarnpkg.com/lang/en/docs/workspaces/
 [npm-workspaces]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
+[lerna]: https://github.com/lerna/lerna
+[babel]: https://github.com/babel/babel
 [code-consistency]: ./code-consistency.md#guidance
 [changesets]: https://github.com/atlassian/changesets
 [semantic-release]: https://github.com/semantic-release/semantic-release
 [bazel]: https://bazel.build/
 [linting]: ./code-consistency.md
 [testing]: ./testing.md
+[conventionalcommits]: https://www.conventionalcommits.org/en/v1.0.0/
