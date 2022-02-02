@@ -58,7 +58,7 @@ Given the above, we should expect the following folder structure
 
 There are a handful of benefits and challenges to monorepos.
 
-With a monorepo, it is recommended to leverage a common set of tooling for [linting][linting] and [testing][testing] across all packages in the repository. See our [code-consistency][code-consistency] section for further guidance. Having a common set of tooling is a benefit for monorepos since each package managed in the repo does not need its set of tooling or versioning.
+With a monorepo, it is recommended to leverage a common set of tooling for [linting][linting] and [testing][testing] across all packages in the repository. See our [code-consistency][code-consistency] section for further guidance. Having a common set of tooling is a benefit for monorepos since each package managed in the repo does not need its set of tooling or versioning. On the other hand, teams can also control scripts individually per artifact or package if necessary. See `Advanced Tips / Tricks` section for more details.
 
 While there are a benefits, there are challenges to overcome.
 
@@ -87,16 +87,25 @@ If you are working with a set of packages that need to be published, you can lev
 * [changesets][changesets]
 * [lerna][lerna] - Was previously used but because of [yarn workspaces][yarn-workspaces] and [npm workspaces][npm-workspaces], teams have no longer found a need for [lerna][lerna]
 
+#### Package Releasing
+
 We recommend following semantic versioning across all packages. If a change does not impact all packages, then bump the appropriate minor/patch version as necessary.
 
 For example, if a Package A needs security remediation, and Package B does not, simply increment patch version for Package A.
 
 If you are making a breaking change that is across all packages, apply major version to all packages.
 
+#### Service Releasing
+
+Service releasing is treated differently than publishing since services are released not for package consumption but as a service.
+
+Releases could be tagged differently per change or as an entire set (version of the repository).
+
 #### Advanced Tips / Tricks
 
 * TODO section blurb about hoisting and nohoist for strategies
 * TODO section for yarn resolutions
+* TODO section for individually controlled scripts. Provide use case when you might have scripts that need to be defined differently due to different package behaviors
 
 [yarn-workspaces]: https://classic.yarnpkg.com/lang/en/docs/workspaces/
 [npm-workspaces]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
