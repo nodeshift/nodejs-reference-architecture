@@ -214,8 +214,11 @@
       "openapi-editor": {
         "note": "dependency caniuse-lite uses CC-BY-4.0",
         "allow": ["CC-BY-4.0"]
+      },
+      "@elastic/elasticsearch": {
+        "note": "dependency tslib@2.3.1 reports 0BSD which is a less restrictive than BSD",
+         "allow": ["0BSD"]
       }
-    }
   },
   "citgm": {
     "note-1" : "ibmcloud-appid, @ibm-cloud/cloudant, opossum, ibm_db are Red Hat/IBM modules that would need broader usage before being considered for CITGM",
