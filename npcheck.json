@@ -214,6 +214,10 @@
       "openapi-editor": {
         "note": "dependency caniuse-lite uses CC-BY-4.0",
         "allow": ["CC-BY-4.0"]
+      },
+      "@elastic/elasticsearch": {
+        "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
+        "allow": ["0BSD"]
       }
     }
   },
