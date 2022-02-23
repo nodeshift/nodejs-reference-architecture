@@ -68,6 +68,7 @@ with only a subset of sections having recommendations):
   - [Choosing and vetting dependencies](./docs/development/dependencies.md)
   - [Building good containers](./docs/development/building-good-containers.md)
   - [Static Assets](./docs/functional-components/static-assets.md)
+  - [Protecting Code](./docs/development/protecting-code.md)
   - Code Quality
     - [Code Consistency](./docs/development/code-consistency.md)
     - [Testing](./docs/development/testing.md)
