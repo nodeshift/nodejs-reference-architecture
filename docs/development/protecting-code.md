@@ -42,7 +42,7 @@ available publicly and therefore many of the motivations listed above
 will not apply. Typically obsfucation is not used within Red Hat
 as products are based on freely available open source.
 
-`Minification` is a related practice to `obfuscation` in that it
+Minification is a related practice to obfuscation in that it
 makes source code less readable with the motivation of reducing
 the number of bytes that must be transferred to a clients browser.
 It is widely used for front-end JavaScript.
