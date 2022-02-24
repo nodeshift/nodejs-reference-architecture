@@ -17,7 +17,7 @@ The motivations that have been mentioned include:
 The preferred approach to protect source code is most often
 by shipping binaries after the source code has been compiled.
 This is not an option for JavaScript (without extreme effort
-for front-end JavaScript and significant effort for Server side JavaScript)
+for front-end JavaScript and significant effort for server side JavaScript)
 and `obfuscation` is typically used instead.
 
 Only source code that is available to customers or end users needs
