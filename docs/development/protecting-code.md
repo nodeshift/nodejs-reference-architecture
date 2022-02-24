@@ -34,7 +34,7 @@ and that steps have been taken to avoid obvious disclosure.
 
 ## Guidance
 
-Before employing obsfucation, validate that the value provided
+Before employing obfuscation, validate that the value provided
 by obfusaction warrants the effort and downsides. Including
 licence headers in the code may be an alternative in some cases.
 If the product is based on an open source upstream, the code is already
