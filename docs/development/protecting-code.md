@@ -82,7 +82,7 @@ source code for each release. For front-end JavaScript teams should validate
 the process of using offline source maps in their typical problem
 investigation workflow. This
 [article](https://dev.to/ivanstanevich/using-js-source-maps-in-production-1ecc)
-has some suggestions for doign that.
+has some suggestions for doing that.
 
 For back end JavaScript it should be possible to use the source maps
 to get a readable stack trace from a minified version provided by a
