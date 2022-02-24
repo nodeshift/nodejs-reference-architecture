@@ -5,7 +5,7 @@ to protect source code.
 
 The motivations that have been mentioned include:
 
-* protection intelectual property by marking it harder for the
+* protection of intellectual property by making it harder for the
   code to be copied.
 * making it easier to pursue those who copy it by ensuring
   it takes more than casual/accidental access to the code to see it.
