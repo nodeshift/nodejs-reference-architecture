@@ -74,7 +74,7 @@ the generation of
 [source maps](https://en.wikipedia.org/wiki/Minification_(programming)#Source_mapping)
 which can help map back to the original source code. Making
 source maps available would at least partially invalidate
-the benefits of obsfucation so when obfuscation is a requirement they
+the benefits of obfuscation so when obfuscation is a requirement they
 should not be made publicly available.
 
 Source maps should still be generated and stored with the original
