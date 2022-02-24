@@ -39,7 +39,7 @@ by obfusaction warrants the effort and downsides. Including
 licence headers in the code may be an alternative in some cases.
 If the product is based on an open source upstream, the code is already
 available publicly and therefore many of the motivations listed above
-will not apply. Typically obsfucation is not used within Red Hat
+will not apply. Typically obfuscation is not used within Red Hat
 as products are based on freely available open source.
 
 Minification is a related practice to obfuscation in that it
