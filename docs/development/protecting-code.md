@@ -28,7 +28,7 @@ are sold to and run by customers.
 
 It is understood that obfuscation does not make it impossible
 to recover the original source code, only that is is harder
-and that steps have been take to avoid obvious disclosure.
+and that steps have been taken to avoid obvious disclosure.
 
 ## Recommendation Components
 
