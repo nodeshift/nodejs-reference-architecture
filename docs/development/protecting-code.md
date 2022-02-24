@@ -52,7 +52,7 @@ are often enough to meet an organizations requirement for obsfucation.
 These tools are broadly used, and therefore add little risk of
 functional or performance issues being introduced. Our teams have
 had success using [Terser](https://www.npmjs.com/package/terser) and
-(esbuild-loader)[https://github.com/privatenumber/esbuild-loader].
+[esbuild-loader](https://github.com/privatenumber/esbuild-loader).
 
 If you are going to both minify and use a separate obfuscator,
 minify first.
