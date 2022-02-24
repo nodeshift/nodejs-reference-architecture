@@ -21,8 +21,8 @@ for front-end JavaScript and significant effort for server side JavaScript)
 and `obfuscation` is typically used instead.
 
 Only source code that is available to customers or end users needs
-to be protected. Front end JavaScript is almost always avialable
-to end users and while less common, back end JavaScript may be
+to be protected. Front-end JavaScript is almost always available
+to end users and while less common, back-end JavaScript may be
 available to customers when it is included in products that
 are sold to and run by customers.
 
