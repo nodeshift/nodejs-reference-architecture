@@ -46,11 +46,12 @@ Generating heap dumps will have a performance impact on the process both in term
 and execution when the dump is being generated. Some of the team's suggestions for limiting the impact:
 * only enable heap dumps for one process/instance of the application, leaving the others to better server customers
 * try to minimize the size of the heap dumps. For example, if you increased the memory allocated to the application
-* make sure to disable Kubernetes liveness checks (may require new deployment with that setting) or the periodic liveness check may kill your app before it finishes creating the heap dump. 
   as part of trying to investigate the issue, revert that change. If possible limit the instance of the application
   to using less memory than you normally would.
-* Make sure you have enough additional memory available on the machine running the process. The dump may need double
-  the size of heap while it is being generated
+* make sure you have enough additional memory available on the machine running the process. The dump may need double
+  the size of heap while it is being generated.
+* make sure to disable Kubernetes liveness checks (may require new deployment with that setting) or
+  the periodic liveness check may kill your app before it finishes creating the heap dump. 
 
 #### Hangs or slow performance
 
