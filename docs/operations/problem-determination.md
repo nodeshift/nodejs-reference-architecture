@@ -89,7 +89,7 @@ process to be in the hung/slow state while investigating in order to limit impac
 #### Unhandled promise rejections or exceptions
 
 * Symtoms
-  * process terminatese reporting an unhandled rejection or exception
+  * process terminates reporting an unhandled rejection or exception
   
 * Approach
   * review log to find stack strace, review code indicated in stack trace
