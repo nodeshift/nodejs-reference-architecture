@@ -108,7 +108,7 @@ process to be in the hung/slow state while investigating in order to limit impac
 
 #### Network Issues
 
-* Symtoms
+* Symptoms
   * external health checks fail, while internal metrics look ok
 
 * Approach
