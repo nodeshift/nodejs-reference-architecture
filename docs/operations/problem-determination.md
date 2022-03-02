@@ -61,7 +61,7 @@ and execution when the dump is being generated. Some of the team's suggestions f
   * metrics report higher than expected CPU usage
 
 * Approach
-  * generate a [Diagnostic report](https://nodejs.org/api/report.html) and look for ref flags
+  * generate a [Diagnostic report](https://nodejs.org/api/report.html) and look for red flags
   * generate a [flame graph](https://nodejs.org/en/docs/guides/diagnostics-flamegraph/). The team
     has had success with [0x](https://www.npmjs.com/package/0x) and [bubbleprof(https://clinicjs.org/bubbleprof/)
     and [Flame](https://clinicjs.org/flame/)
