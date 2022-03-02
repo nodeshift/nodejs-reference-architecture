@@ -67,7 +67,7 @@ and execution when the dump is being generated. Some of the team's suggestions f
     and [Flame](https://clinicjs.org/flame/)
 
 It may be difficult to investigate performance issues in the production system. Once you have identified
-that there is a problem, being able to recreate in another environment make it much easier. The team has
+that there is a problem, being able to recreate in another environment, that is similar to the production, make it much easier. The team has
 had success using [goreplay](https://github.com/buger/goreplay) as well as
 [Autocannon](https://www.npmjs.com/package/autocannon) to generate load in test environments in order to
 reproduce issue seen in production.
