@@ -52,4 +52,4 @@ When deploying Express we have the following additional recommendations:
 
 ## Further Reading
 
-[Introduction to the Node.js reference architecture: Choosing Web Frameworks](https://developers.redhat.com/articles/2021/12/03/introduction-nodejs-reference-architecture-part-6-choosing-web-frameworks#)
+[Introduction to the Node.js reference architecture: Choosing Web Frameworks](https://developers.redhat.com/articles/2021/12/03/introduction-nodejs-reference-architecture-part-6-choosing-web-frameworks)
