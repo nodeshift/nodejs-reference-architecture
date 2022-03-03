@@ -56,4 +56,4 @@ string and objects.
 
 ## Further Reading
 
-[Introduction to the Node.js reference architecture: Logging](https://developer.ibm.com/blogs/nodejs-reference-architectire-pino-for-logging/)
+[Introduction to the Node.js reference architecture: Logging](https://developer.ibm.com/blogs/nodejs-reference-architectire-pino-for-logging)
