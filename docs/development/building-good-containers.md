@@ -226,3 +226,8 @@ system you are running on, there may be other options which
 provide advantages and are worth considering. You can
 read more about some of these in
 [Podman and Buildah for Docker users](https://developers.redhat.com/blog/2019/02/21/podman-and-buildah-for-docker-users#what_is_buildah_and_why_would_i_use_it_-h2).
+
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: Building Good Containers](https://developers.redhat.com/articles/2021/08/26/introduction-nodejs-reference-architecture-part-5-building-good-containers)

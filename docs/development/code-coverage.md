@@ -55,3 +55,8 @@ A common output format is the lcov format, which the recommeneded modules can pr
 
 [jest]: https://www.npmjs.com/package/jest
 [nyc]: https://www.npmjs.com/package/nyc
+
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: Choosing Web Frameworks](https://developers.redhat.com/articles/2022/03/02/introduction-nodejs-reference-architecture-part-7-code-coverage)

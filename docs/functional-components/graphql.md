@@ -130,3 +130,7 @@ https://github.com/valu-digital/graphql-codegen-persisted-query-ids
 For dynamic persisted queries we recomend
 
 2. [Apollo APQs](https://www.apollographql.com/docs/apollo-server/performance/apq/) which needs [Apollo server](https://www.apollographql.com/docs/apollo-server/)
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: GraphQL](https://developers.redhat.com/articles/2021/06/22/introduction-nodejs-reference-architecture-part-4-graphql-nodejs)
