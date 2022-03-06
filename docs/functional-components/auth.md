@@ -31,7 +31,7 @@ sidebar_position: 2
 
 - A Frontend WebApp should never handle end user credentials such as username/password, it should always delegate to an Authorization Server for example AppID service. https://github.com/ibm-cloud-security/appid-video-tutorials/blob/master/02a-simple-node-web-app/app.js
 
-- A pure Backend API that never deals with a fronted should never be concern of redirecting or dealing with end users, they would require an access/AOI token or assume the proxy/gateway in front is already handling this and not require token at all. https://github.com/ibm-cloud-security/appid-video-tutorials/blob/master/02b-simple-node-backend-app/app.js
+- A pure Backend API that never deals with a Frontend should never be concern of redirecting or dealing with end users, they would require an access/AOI token or assume the proxy/gateway in front is already handling this and not require token at all. https://github.com/ibm-cloud-security/appid-video-tutorials/blob/master/02b-simple-node-backend-app/app.js
 
 - The browser/client should never have access to access token.
 
