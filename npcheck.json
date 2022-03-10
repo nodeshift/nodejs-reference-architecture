@@ -229,9 +229,10 @@
   "audit": {
     "allow": {
       "CVE-2022-0235": [{
-        "note": ["opencollective uses an old version of node-fetch. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
+        "note": ["opencollective uses an old version of node-fetch. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module",
+                 "an older version of node-fetch is also used by swagger-editor through isomorphic-fetch, Red Hat and Synk both assessed the node-fetch vuln as medium instead of high as reported by npm so suppress related failures"],
         "name": "node-fetch",
-        "effects": ["opencollective"]
+        "effects": ["isomorphic-fetch", "opencollective"]
       }]
     }
   }
