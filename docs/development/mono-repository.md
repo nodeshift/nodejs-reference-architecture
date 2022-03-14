@@ -85,7 +85,8 @@ When committing messages, teams can utilize [conventionalcommits][conventionalco
 If you are working with a set of packages that need to be published, you can leverage:
 
 * [changesets][changesets]
-* [lerna][lerna] - Was previously used but because of [yarn workspaces][yarn-workspaces] and [npm workspaces][npm-workspaces], teams have no longer found a need for [lerna][lerna]
+
+About [lerna][lerna]: Lerna was previously used but because of [yarn workspaces][yarn-workspaces] and [npm workspaces][npm-workspaces], teams have no longer found a need for [lerna][lerna]
 
 #### Package Releasing
 
