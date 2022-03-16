@@ -112,5 +112,4 @@ Based on the teams experience we recommend the following:
 
 OpenAPI spec provides an complete and minimalistic [PetStore](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml) example. This example follows all the best practices and patterns for building API.
 
-
 [GraphQL Guide]: https://nodeshift.dev/nodejs-reference-architecture/functional-components/graphql
