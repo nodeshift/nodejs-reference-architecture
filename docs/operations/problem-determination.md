@@ -61,8 +61,8 @@ and execution when the dump is being generated. Some of the team's suggestions f
   * metrics report higher than expected CPU usage
 
 * Approach
-   * review application logs, turn on additional levels of logging if necessary.
-   * If you have log level with profiling logs, urn those on.
+  * review application logs, turn on additional levels of logging if necessary.
+  * If you have log level with profiling logs, urn those on.
   * Review [transaction traces](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/operations/distributed-tracing.md)
   * generate a [Diagnostic report](https://nodejs.org/api/report.html) and look for red flags
   * generate a [flame graph](https://nodejs.org/en/docs/guides/diagnostics-flamegraph/). The team
