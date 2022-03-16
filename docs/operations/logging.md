@@ -53,3 +53,7 @@ redacted (like values read from a secret-storage like Vault), one can implement
 redacting logic inside a Pino
 [logMethod](https://getpino.io/#/docs/api?id=logmethod) to filter the message
 string and objects.
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: Logging](https://developer.ibm.com/blogs/nodejs-reference-architectire-pino-for-logging)

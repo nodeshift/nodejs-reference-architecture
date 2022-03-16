@@ -106,3 +106,7 @@ if not all teams.
   ```
 
 - Always ensure CI/CD is running linting regardless of hooks.
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: Code Consistency](https://developers.redhat.com/articles/2021/05/17/introduction-nodejs-reference-architecture-part-3-code-consistency)
