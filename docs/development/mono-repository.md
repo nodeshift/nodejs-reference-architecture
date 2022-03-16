@@ -110,12 +110,6 @@ Service releasing is treated differently than publishing since services are rele
 
 Dependent upon deployment strategy, releases could be tagged differently per change or as an entire set (version of the repository).
 
-#### Advanced Tips / Tricks
-
-* TODO section blurb about hoisting and nohoist for strategies
-* TODO section for yarn resolutions
-* TODO section for individually controlled scripts. Provide use case when you might have scripts that need to be defined differently due to different package behaviors
-
 [yarn-workspaces]: https://classic.yarnpkg.com/lang/en/docs/workspaces/
 [npm-workspaces]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
 [lerna]: https://github.com/lerna/lerna
