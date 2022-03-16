@@ -47,8 +47,8 @@ makes source code less readable with the motivation of reducing
 the number of bytes that must be transferred to a clients browser.
 It is widely used for front-end JavaScript.
 
-In the teams experience the use of existing `minification` tools
-are often enough to meet an organizations requirement for obsfucation.
+In the team's experience the use of existing minification tools
+are often enough to meet an organization's requirement for obfuscation.
 These tools are broadly used, and therefore add little risk of
 functional or performance issues being introduced. Our teams have
 had success using [Terser](https://www.npmjs.com/package/terser) and
