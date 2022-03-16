@@ -14,7 +14,7 @@ To enable a mono-repository, we recommend leveraging [yarn workspaces][yarn-work
 
 #### Modify package.json in the workspace root
 
-```js
+```
 {
   "private": true,
   // this is an array containing glob paths to each workspace
@@ -24,7 +24,7 @@ To enable a mono-repository, we recommend leveraging [yarn workspaces][yarn-work
 
 #### Create subfolders and package.json for each package in the monorepo
 
-```js
+```
 // /workspace-a/package.json
 {
   "name": "workspace-a",
@@ -71,7 +71,7 @@ While there are a benefits, there are challenges to overcome.
 
 ### Building
 
-When building npm packages (or any type of package) (the build) in the monorepo, we recommend:
+When building npm packages (or any type of package) (the build) in the monorepo, we have had success using:
 
 * [bazel][bazel]
 * Custom scripts
@@ -79,6 +79,14 @@ When building npm packages (or any type of package) (the build) in the monorepo,
 Using appropriate build tools help overcome challenges state previously. With build tools, we are able to detect file changes and build the appropriate artifact/packages necessary without building the entire repository. This helps reduce long build times. Having a good build tool like [bazel][bazel] also allows for potential to build out other project artifact/packages in different languages.
 
 When committing messages, teams can utilize [conventionalcommits][conventionalcommits] to reduce confusion when working on a monorepo.
+
+#### Bazel
+
+We use the Bazel to support multiple programming languages and to determine what components have to be compiled and tested based on source code changes.
+
+#### Custom Scripts
+
+For custom scripts, we leverage Shell Scripts, Makefiles, JS, and Golang tooling to detect changes and build packages and services.
 
 ### Publishing
 
