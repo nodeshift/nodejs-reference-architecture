@@ -23,7 +23,6 @@ one of the common categories.
 The teams recommendations/guidance is based on the implementation and typical categories
 of problems that we have seen.
 
-N/A
 ## Recommended Components
 
 ## Guidance
