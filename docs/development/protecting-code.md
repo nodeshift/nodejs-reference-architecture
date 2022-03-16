@@ -32,6 +32,7 @@ and that steps have been taken to avoid obvious disclosure.
 
 ## Recommendation Components
 
+N/A
 ## Guidance
 
 Before employing obfuscation, validate that the value provided
