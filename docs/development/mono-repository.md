@@ -108,7 +108,7 @@ If you are making a breaking change that is across all packages, apply major ver
 
 Service releasing is treated differently than publishing since services are released not for package consumption but as a service.
 
-Releases could be tagged differently per change or as an entire set (version of the repository).
+Dependent upon deployment strategy, releases could be tagged differently per change or as an entire set (version of the repository).
 
 #### Advanced Tips / Tricks
 
