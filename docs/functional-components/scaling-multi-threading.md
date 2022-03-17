@@ -50,7 +50,7 @@ We don't recommened any specific components at this time.
 - when possible applications should be decomposed so that a
   request to a single container will need no more than single
   thread of execution in order to complete in a reasonable time.
-  When necessary to achive this, consider futher decomposing
+  When necessary to achieve this, consider further decomposing
   the application. If this is not reasonable,
   [WorkerThreads](https://nodejs.org/api/worker_threads.html)
   are recommended versus multiple processes in the same container.
