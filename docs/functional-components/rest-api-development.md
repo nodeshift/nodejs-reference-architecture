@@ -74,7 +74,7 @@ npx @openapitools/openapi-generator-cli generate -g typescript-node -i yourapi.j
 on an OpenAPI definition by returning predefined strings. The library provides way not only
 return predefined stubs but also perform validation or handle different use cases depending on request 
 
-[@stoplightio/prism](https://www.npmjs.com/package/@stoplight/prism-http) allows you to
+[@stoplight/prism-cli](https://www.npmjs.com/package/@stoplight/prism-cli) allows you to
 automatically mock API using OpenAPI spec definitions. This package is recommended if you
 need is an out of the box way to mock API without any development involved.
 
@@ -98,7 +98,7 @@ have used successfully.
 
 Based on the teams experience we recommend the following:
 
-1. Define the API using OpenAPI 3.0, you can write the OpenAPI definitions in YAML or JSON formats, the team does not have a preference for one over the other.
+1. Define the API using OpenAPI 3.0 or 3.1, you can write the OpenAPI definitions in YAML or JSON formats, the team does not have a preference for one over the other.
 2. Prefer generating code from OpenAPI file for both client and server. Generating code based on the specification will ensure that the same types, formats are used. This will enable your team to iterate on the specification without worry of getting out of sync.
 3. When making changes in the OpenAPI file change it's [version](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml#L3). Changed version will help others to detect what kind of changes were made.
 4. When introducing breaking changes consider adding them as new endpoints by introducing another v2 prefix in the API path. 
@@ -111,6 +111,5 @@ Based on the teams experience we recommend the following:
 ### A good example
 
 OpenAPI spec provides an complete and minimalistic [PetStore](https://github.com/OAI/OpenAPI-Specification/blob/main/examples/v3.0/petstore-expanded.yaml) example. This example follows all the best practices and patterns for building API.
-
 
 [GraphQL Guide]: https://nodeshift.dev/nodejs-reference-architecture/functional-components/graphql

@@ -121,8 +121,8 @@
       "npmlink": "https://www.npmjs.com/package/openapi-backend"
     },
     {
-      "name": "@stoplight/prism-http",
-      "npmlink": "https://www.npmjs.com/package/@stoplight/prism-http"
+      "name": "@stoplight/prism-cli",
+      "npmlink": "https://www.npmjs.com/package/@stoplight/prism-cli"
     },
     {
       "name": "express-openapi-validator",
@@ -207,9 +207,10 @@
         "note": "Multiple dependencies use licenses",
         "allow": ["Python-2.0","0BSD"]
       },
-      "@stoplight/prism-http":{
+      "@stoplight/prism-cli":{
         "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
-        "allow": ["0BSD"]
+        "note": "dependency fastestsmallesttextencoderdecoder@1.0.22 reports CC0-1.0 which gives up all rights", 
+        "allow": ["0BSD", "CC0-1.0"]
       },
       "openapi-editor": {
         "note": "dependency caniuse-lite uses CC-BY-4.0",
