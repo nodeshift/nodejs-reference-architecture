@@ -25,6 +25,8 @@ of problems that we have seen.
 
 ## Recommended Components
 
+N/A
+
 ## Guidance
 
 ### Common problems
@@ -66,7 +68,7 @@ and execution when the dump is being generated. Some of the team's suggestions f
   * Review [transaction traces](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/operations/distributed-tracing.md)
   * generate a [Diagnostic report](https://nodejs.org/api/report.html) and look for red flags
   * generate a [flame graph](https://nodejs.org/en/docs/guides/diagnostics-flamegraph/). The team
-    has had success with [0x](https://www.npmjs.com/package/0x) and [bubbleprof(https://clinicjs.org/bubbleprof/)
+    has had success with [0x](https://www.npmjs.com/package/0x) and [bubbleprof](https://clinicjs.org/bubbleprof/)
     and [Flame](https://clinicjs.org/flame/)
 
 It may be difficult to investigate performance issues in the production system. Once you have identified
@@ -88,6 +90,13 @@ process to be in the hung/slow state while investigating in order to limit impac
   * Review application logs, turn on additional levels of logging if necessary
   * Review [transaction traces](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/operations/distributed-tracing.md)
 
+If you write your application in a language like TypeScript as opposed to plain JavaScript, raw stack traces may not map directly to your
+source code. In these cases tools typically support the generation of
+[source maps](https://en.wikipedia.org/wiki/Minification_(programming)#Source_mapping)
+which can help map back to the original source code. 
+
+Source maps should be generated and stored with the original source code for each release. For front-end JavaScript teams should validate the process of using offline source maps in their typical problem investigation workflow. This
+[article](https://dev.to/ivanstanevich/using-js-source-maps-in-production-1ecc) has some suggestions for doing that.
 
 #### Unhandled promise rejections or exceptions
 
@@ -162,6 +171,9 @@ that you can use the APM for local development/debugging in addition to producti
 Platform tools will provide some support for generating key metrics as well as storing 
 [logs](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/operations/logging.md),
 and [metrics](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/operations/metrics.md).
+The Node.js [Performance Timing API](https://nodejs.org/dist./v10.17.0/docs/api/perf_hooks.html#perf_hooks_performance_timing_api)
+and more specifically [performance.now()](https://nodejs.org/api/perf_hooks.html#performancenow)
+may be useful in capturing the time events occur. 
 
 The level of support available will depend on the platform with cloud platforms and kubernetes based platforms
 (for example OpenShift) providing more built in capabilities than an operating system. The team
