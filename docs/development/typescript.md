@@ -99,3 +99,7 @@ If you are publishing a library code rather than an application it is good pract
     }
     ```
 You should also ensure you include dependencies for the types of modules that you depend on, see the [TypeScript documentation](https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html) for further details.
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: Typescript](https://developers.redhat.com/articles/2022/04/11/introduction-nodejs-reference-architecture-part-8-typescript)
