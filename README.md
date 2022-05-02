@@ -73,7 +73,7 @@ with only a subset of sections having recommendations):
     - [Testing](./docs/development/testing.md)
     - [Code Coverage](./docs/development/code-coverage.md)
     - [TypeScript](./docs/development/typescript.md)
-  - [Accessibility](.docs/development/accessibility.md)
+  - [Accessibility](./docs/development/accessibility.md)
   - References to CI/CD
   - Npm
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
