@@ -116,4 +116,4 @@ built in Node.js and are delivered through npm. They will, therefore, fit easily
 or Node.js workflow when nessary. For example:
 * [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 * [axe-core](https://www.npmjs.com/package/axe-core)
-* [pa11y](https://www.npmjs.com/package/pa11y))
+* [pa11y](https://www.npmjs.com/package/pa11y)
