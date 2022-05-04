@@ -45,7 +45,7 @@ Examples of such guidelines which apply to the work of the team members include:
 * [PatternFly accessibility guide](https://pf4.patternfly.org/accessibility-guide/)
 
 It is also best practice to incorporate testing of your application with common
-assisitive technologies like screen readers and limiting input to keyboard interaction. 
+assisitive technologies like screen readers and limiting input to keyboard interaction. See [tooling](#tooling) below.
 
 For those working on Linux
 [List Of Accessibility Documentation Sources And Tools (For GNU/Linux Development And Testing)](https://desktopqe-jenkins.rhev-ci-vms.eng.rdu2.redhat.com:3200/desktopqe/d06-projects/a11y.A11y_devel_doc_sources.html)
