@@ -10,7 +10,7 @@ able to effectively participate in those interactions.
 For software developed with JavaScript the user interface (UI) typically
 falls into one of the following:
 
-1) Browswer based UI delivered though JavaScript, HTML and CSS.
+1) Browser based UI delivered though JavaScript, HTML and CSS.
 1) Desktop type application built on something like
    [electron](https://www.electronjs.org/).
 1) Command line scripts/applications.
