@@ -44,6 +44,12 @@ Examples of such guidelines which apply to the work of the team members include:
 * [IBM Accessibility requirements](https://www.ibm.com/able/requirements/requirements/)
 * [PatternFly accessibility guide](https://pf4.patternfly.org/accessibility-guide/)
 
+Developers may also use pre-made components with accessibility features built in:
+
+* [PatternFly React](https://github.com/patternfly/patternfly-react)
+* [Red Hat Design System](https://github.com/redhat-ux/red-hat-design-system/)
+
+Users should make sure to read and understand the accessibility documentation for pre-made components.
 It is also best practice to incorporate testing of your application with common
 assisitive technologies like screen readers and limiting input to keyboard interaction. See [tooling](#tooling) below.
 
