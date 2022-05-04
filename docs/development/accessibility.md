@@ -58,7 +58,7 @@ In web based applications most of the accessibility work is done in the front-en
 the recognized standard for making a web application accessible. The teams
 members have found the
 [WCAG quick reference](https://www.w3.org/WAI/WCAG21/quickref/) a useful
-reference for working with the guidelines.
+reference for working with the guidelines. The [WAI-ARIA Authoring Practices Examples](https://www.w3.org/TR/wai-aria-practices/examples/) provide a comprehensive list of exemplary widgets complete with code snippets and live demos.
 
 In the teams experience testing/validation of accessibility requirements will be
 against the front-end and not the APIs provided by the Node.js back-end. The result
