@@ -29,6 +29,8 @@ In this context, the focus on accessibility is in the
 development of the front-end as opposed to
 JavaScript running under Node.js in the back-end.
 
+## Legal Requirements
+We have outlined above the moral obligation to ensure that our software is accessible. Many jurisdictions also mandate software accessibility by law. For example, in [Israel](https://www.gov.il/he/Departments/Guides/website_accessibility?chapterIndex=3), websites that offer a public service (to exclude, e.g. a private blog) must conform to WCAG 2.0 at the AA level, and businesses that do not comply may be liable for statutory damages.
 ## Recommendation Components
 
 N/A
