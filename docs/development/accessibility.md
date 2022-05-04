@@ -7,7 +7,7 @@ through the screen, keyboard, mouse, and speakers it is
 important to ensure that the widest possible group of users will be
 able to effectively participate in those interactions.
 
-For software developed in Node.js the user interface (UI) typically
+For software developed with JavaScript the user interface (UI) typically
 falls into one of the following:
 
 1) Browswer based UI delivered though JavaScript, HTML and CSS.
