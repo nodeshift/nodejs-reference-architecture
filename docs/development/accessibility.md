@@ -3,7 +3,7 @@
 In the context of software development accessibility refers to
 the use of assistive technologies to aid users in effectively
 using the software being developed. When designing interactions
-through the screen, keyboard, mouse and speakers it is
+through the screen, keyboard, mouse, and speakers it is
 important to ensure that people with disabilities will be
 able to effectively participate in those interactions.
 
