@@ -9,9 +9,6 @@ sidebar_position: 2
 - Passport - http://www.passportjs.org/
   Passport is authentication middleware for Node.js. Extremely flexible and modular, Passport can be unobtrusively dropped in to any Express-based web application. Is based on strategies which allows for a large number of integrations.
 
-- HelmetJS - https://helmetjs.github.io/
-  Helmet helps you secure your Express apps by setting various HTTP headers. It’s not a silver bullet, but it can help!
-
 - IBM Cloud AppID https://cloud.ibm.com/docs/services/appid
   App ID helps developers to easily add authentication to their web and mobile apps with few lines of code, and secure their Cloud-native applications and services on IBM Cloud.
 
