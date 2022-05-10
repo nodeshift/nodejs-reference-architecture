@@ -87,7 +87,7 @@ with only a subset of sections having recommendations):
     - Monitoring
     - [Metrics Collection](./docs/operations/metrics.md)
     - [Distributed Tracing](./docs/operations/distributed-tracing.md)
-  - Problem Determination
+  - [Problem Determination](./docs/operations/problem-determination.md)
   - [Logging](./docs/operations/logging.md)
   - Rollout
   - Deployment
