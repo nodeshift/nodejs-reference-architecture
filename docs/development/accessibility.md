@@ -30,7 +30,13 @@ development of the front-end as opposed to
 JavaScript running under Node.js in the back-end.
 
 ## Legal Requirements
-We have outlined above the moral obligation to ensure that our software is accessible. Many jurisdictions also mandate software accessibility by law. For example, in [Israel](https://www.gov.il/he/Departments/Guides/website_accessibility?chapterIndex=3), websites that offer a public service (to exclude, e.g. a private blog) must conform to WCAG 2.0 at the AA level, and businesses that do not comply may be liable for statutory damages.
+We have outlined above the moral obligation to ensure that our software is accessible. Many jurisdictions also mandate software accessibility by law. For example, in [Israel](https://www.gov.il/he/Departments/Guides/website_accessibility?chapterIndex=3), websites that offer a public service (to exclude, e.g. a private blog) must conform to WCAG 2.0 at the AA level, and businesses that do not comply may be liable for statutory damages. Another good example for requirements in the US public sector
+is the requirements related to [Section 508](https://www.section508.gov/). 
+
+In order to find out about policies that may apply to your jurisdiction, this
+[page](https://www.w3.org/WAI/policies/)
+from the W3C provides a good starting point.
+
 ## Recommendation Components
 
 N/A
