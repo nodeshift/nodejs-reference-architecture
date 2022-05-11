@@ -40,7 +40,7 @@ N/A
 The teams experience is that it is useful for organizations and teams
 building products or components with significant user interfaces to
 define guidelines and or design systems that apply to their product or organization
-and help ensure accssibility is planned in from the start.
+and help ensure accessibility is planned in from the start.
 Examples of such guidelines which apply to the work of the team members include:
 
 * [IBM Accessibility requirements](https://www.ibm.com/able/requirements/requirements/)
