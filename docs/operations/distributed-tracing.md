@@ -16,7 +16,7 @@ and a separate mechanism for reporting and visualizing those traces.
 
 For adding instrumentation to Node applications and services:
 
-- [@opentelemetry/node](https://www.npmjs.com/package/@opentelemetry/node) - See the
+- [@opentelemetry/sdk-trace-node](https://www.npmjs.com/package/@opentelemetry/sdk-trace-node) - See the
   [Getting Started Guide](https://github.com/open-telemetry/opentelemetry-js/blob/master/getting-started/README.md)
 
 Reasons for choosing OpenTelemetry:
