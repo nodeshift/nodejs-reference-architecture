@@ -153,8 +153,8 @@
       "npmlink": "https://www.npmjs.com/package/@ibm-cloud/secrets-manager"
     },
     {
-      "name": "@opentelemetry/node",
-      "npmlink": "https://www.npmjs.com/package/@opentelemetry/node"
+      "name": "@opentelemetry/sdk-trace-node",
+      "npmlink": "https://www.npmjs.com/package/@opentelemetry/sdk-trace-node"
     }
   ],
   "licenses": {
