@@ -17,7 +17,7 @@ component-based web applications, and can be used in other contexts. It is consi
 _opinionated_ framework, as it provides its own set of assertions, spies/stubs/mocks, and
 other features (such as snapshot testing and code coverage) out-of-the-box.
 
-Jest is owned by Facebook.
+Jest is an now an [OpenJS Foundation project](https://openjsf.org/blog/2022/05/11/openjs-foundation-welcomes-jest/)
 
 ## Mocha - <https://mochajs.org>
 
