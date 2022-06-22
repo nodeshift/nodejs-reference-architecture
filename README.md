@@ -64,6 +64,8 @@ with only a subset of sections having recommendations):
 
 - Development
 
+  - Typical Development Workflows
+  - Development Environment
   - [Choosing and vetting dependencies](./docs/development/dependencies.md)
   - [Building good containers](./docs/development/building-good-containers.md)
   - [Static Assets](./docs/functional-components/static-assets.md)
@@ -74,26 +76,23 @@ with only a subset of sections having recommendations):
     - [Code Coverage](./docs/development/code-coverage.md)
     - [TypeScript](./docs/development/typescript.md)
   - [Accessibility](./docs/development/accessibility.md)
-  - References to CI/CD
+  - Cross origin resource sharing (CORS)
+  - CI/CD
   - Npm
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
     - [Npm Publishing](./docs/development/npm-publishing.md)
     - Package Development
   - [Secure Development Process](./docs/development/secure-development-process.md)
+  - Serverless
+  - Load-balancing
 
 - Operations
-  - [Health Checks](./docs/operations/healthchecks.md)
-  - Monitoring/Metrics
-    - Monitoring
+  - Monitoring
+    - [Logging](./docs/operations/logging.md)
     - [Metrics Collection](./docs/operations/metrics.md)
+    - [Health Checks](./docs/operations/healthchecks.md)
     - [Distributed Tracing](./docs/operations/distributed-tracing.md)
   - [Problem Determination](./docs/operations/problem-determination.md)
-  - [Logging](./docs/operations/logging.md)
-  - Rollout
-  - Deployment
-    - Containers
-    - Serverless
-  - Load-balancing
   - [Failure Handling](./docs/operations/failurehandling.md)
 
 ## Module Diligence
