@@ -239,6 +239,20 @@
         "name": "node-fetch",
         "effects": ["isomorphic-fetch", "opencollective"]
       }]
+    },
+    "allow": {
+      "CVE-2021-44906": [{
+        "note": ["opencollective uses an old version of minimist. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
+        "name": "swagger-editor",
+        "effects": ["opencollective"]
+      }]
+    },
+    "allow": {
+      "CVE-2020-7598": [{
+        "note": ["opencollective uses an old version of minimist. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
+        "name": "swagger-editor",
+        "effects": ["opencollective"]
+      }]
     }
   }
 }
