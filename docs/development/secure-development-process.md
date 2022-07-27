@@ -207,13 +207,16 @@ given vulnerable dependency version.  Therefore, security teams will require you
 vulnerable, the parent module using it will have a newer version that references a fixed version in its depenedencies.  However, that is not always the case and there are tools to manage the cases where
 a nested vulnerable dependency version is pulled in by a different npm library that has not yet adjusted it dependencies to the fixed versions. 
 
-One of these tools is the [npm-force-resolutions](https://www.npmjs.com/package/npm-force-resolutions) library, which relies upon a "resolutions" section in the package.json to force all instances of a given 
-npm module to be set to that version in the package-lock.json.  This tool is then run in a "preinstall" script phase so that the actual "npm install" follows the versions it configures in the package-lock.json.
-The 'yarn' package-management tool also honors this "resolutions" section. 
-
-The other tool is just having npm version 8.3 or higher and using the [overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) section.  It supports the same single 
+If you are using npm the best approach is to use npm version 8.3 or higher and using the [overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) section. It supports the same single 
 version override mechanism as "resolutions" but also supports specifying different dependency versions based on the parent module.  This way, if a single older library can not use the latest dependency due to 
 breaking changes, while other dependencies require the latest breaking changes, one can specify a default version and different version for the specific older library. 
+
+For older versions of npm, [npm-force-resolutions](https://www.npmjs.com/package/npm-force-resolutions) library, which reads a "resolutions" section in the package.json to force all instances of a given 
+npm module to be set to that version in the package-lock.json. This tool is then run in a "preinstall" script phase so that the actual "npm install" follows the versions it configures in the package-lock.json.
+
+If you are using the'yarn' package-management tool it honors the
+[resolutions](https://yarnpkg.com/configuration/manifest#resolutions) 
+section without any needing an additional package.
 
 ### Maintaining individual modules
 
