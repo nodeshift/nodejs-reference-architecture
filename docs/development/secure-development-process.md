@@ -199,6 +199,21 @@ create a depenency image. While is this good for build times as oultined in [dep
 * On each update to the dependency image and on a regular basis scan the depencencies in the dependency image for vulnerabilities. A number of the teams members have had success in using `snyk` to complete these scans. Plan your dependency image CI/CD pipeline so that you can update to new versions of dependencies and publish a new version of the dependency image when necessary. Plan your application CI/CD pipelines so that you can rebase your applications on a new version of the dependeny image when necessary.
 * On each deployment, change to an application's depdencies, and on regular basis scan the dependencies which are deployed for each application. A number of the teams members have had success in using `snyk` to complete these scans. Plan your application CI/CD pipelines so that you can update to new versions of dependencies and redeploy your application when necessary.
 
+### Resolving nested dependencies
+
+Tools like snyk or Mend (aka WhiteSource) will identify npm packages dependencies with versions that have known security vulnerabilities (typically tracked with CVE's).  While often such vulnerabilities are 
+not actually exposed in the app using them, like the case of prototype pollution vulnerabilities in an app that does strong input checking, its very hard to prove and maintain/track the lack of exposure to a 
+given vulnerable dependency version, so security teams will require your app have the updated dependency versions for simplicity.  Ideally, in the case where a nested npm module is pulled in is vulnerable, 
+the parent module using it will reference a newer version of that module in its depenedencies.  However, that is not always the case and there are tools to manage the cases where a nested vulnerable dependency 
+version is pulled in by a different npm library that has not adjusted it dependencies to the fixed versions. 
+
+One of these tools is the [npm-force-resolutions] (https://www.npmjs.com/package/npm-force-resolutions) library, which relies upon a "resolutions" section in the package.json to force all instances of a given 
+npm module to be a set to that version in the package-lock.json.  This tool is then run in a "preinstall" script phase so that the actual "npm install" follows the versions it specified in the package-lock.json.
+The 'yarn' package-management tool also honors this "resolutions" section. 
+
+The other tool is just having npm version 8.3 or higher and using the [overrides] (https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) section.  It supports the same single 
+version override mechanism as "resolutions" but also supports specifying different dependency versions based on the parent module.  This way, if a single older library can not use the latest dependency due to 
+breaking changes, while other dependencies require the latest breaking changes, one can specify a default version and different version for the specific older library. 
 
 ### Maintaining individual modules
 
