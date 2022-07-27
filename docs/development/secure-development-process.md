@@ -214,7 +214,7 @@ breaking changes, while other dependencies require the latest breaking changes, 
 For older versions of npm, [npm-force-resolutions](https://www.npmjs.com/package/npm-force-resolutions) library, which reads a "resolutions" section in the package.json to force all instances of a given 
 npm module to be set to that version in the package-lock.json. This tool is then run in a "preinstall" script phase so that the actual "npm install" follows the versions it configures in the package-lock.json.
 
-If you are using the'yarn' package-management tool it honors the
+If you are using the `yarn` package-management tool it honors the
 [resolutions](https://yarnpkg.com/configuration/manifest#resolutions) 
 section without any needing an additional package.
 
