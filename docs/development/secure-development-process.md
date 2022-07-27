@@ -203,12 +203,12 @@ create a depenency image. While is this good for build times as oultined in [dep
 
 Tools like snyk or Mend (aka WhiteSource) will identify npm packages dependencies with versions that have known security vulnerabilities (typically tracked with CVE's).  While often such vulnerabilities are 
 not actually exposed in the app using them, like the case of prototype pollution vulnerabilities in an app that does strong input checking, its very hard to prove and maintain/track the lack of exposure to a 
-given vulnerable dependency version, so security teams will require your app have the updated dependency versions for simplicity.  Ideally, in the case where a nested npm module is pulled in is vulnerable, 
-the parent module using it will reference a newer version of that module in its depenedencies.  However, that is not always the case and there are tools to manage the cases where a nested vulnerable dependency 
-version is pulled in by a different npm library that has not adjusted it dependencies to the fixed versions. 
+given vulnerable dependency version.  Therefore, security teams will require your app have the updated dependency versions for simplicity.  Ideally, in the case where a nested npm module is pulled in is 
+vulnerable, the parent module using it will have a newer version that references a fixed version in its depenedencies.  However, that is not always the case and there are tools to manage the cases where
+a nested vulnerable dependency version is pulled in by a different npm library that has not yet adjusted it dependencies to the fixed versions. 
 
 One of these tools is the [npm-force-resolutions](https://www.npmjs.com/package/npm-force-resolutions) library, which relies upon a "resolutions" section in the package.json to force all instances of a given 
-npm module to be a set to that version in the package-lock.json.  This tool is then run in a "preinstall" script phase so that the actual "npm install" follows the versions it specified in the package-lock.json.
+npm module to be set to that version in the package-lock.json.  This tool is then run in a "preinstall" script phase so that the actual "npm install" follows the versions it configures in the package-lock.json.
 The 'yarn' package-management tool also honors this "resolutions" section. 
 
 The other tool is just having npm version 8.3 or higher and using the [overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) section.  It supports the same single 
