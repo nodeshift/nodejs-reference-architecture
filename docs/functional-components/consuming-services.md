@@ -17,20 +17,60 @@ them.
 
 Two packages that the team has had success with are:
 
-- [axios](https://www.npmjs.com/package/axios) for Node.js
-  Axios is a promise based HTTP client for the browser and node.js.
+- [axios](https://www.npmjs.com/package/axios) is a promise based
+  HTTP client for the browser and node.js.
   Axios is a client that is full featured and has
   significant ecosystem usage.
 
-- [node-fetch](https://github.com/node-fetch/node-fetch) for standard
-  `fetch` API compatibility A light-weight module that brings
+- [node-fetch](https://github.com/node-fetch/node-fetch) is a light-weight module that brings
   [window.fetch](https://fetch.spec.whatwg.org/) to Node.js.
   Using the fetch API provides fewer features, however it has the
-  advantage of being almost what is provided in the browser. Node.js has an
+  advantage of being almost what is provided in the browser. While node-fetch version 3 is
+  ESM only, the project has indicated that they
+  [continue to maintain version 2](https://github.com/node-fetch/node-fetch#commonjs). Node.js has an
   [experimental version of fetch](https://nodejs.org/docs/latest/api/globals.html#fetch)
   which may be a good alternate choice in the future.
 
 ## General Guidance
+
+Plan to use a more complete HTTP client from the start of your development.
+The experience of the team is that real deployments need more capabilities
+than provided by the Node.js HTTP client. Some of the areas where team
+commonly find additional functionality is required include:
+
+* Automatic Retries limited to a specified time period
+* Caching based on response cache headers to reduce pulling same content repeatedly
+* Error handling based on error code to retry or fail quickly
+
+If both the front and backend are written in JavaScript, using the same library
+across both front end and backend is good practice. This may favor node-fetch
+as it avoids having to pull in an additional library in the browser.
+
+The tools outlined in [REST APIs Development](./rest-api-development.md) may
+generate clients in addition to stubs for the API itself. If those
+tools generate clients for you, feel comfortable using the http packages
+they depend on even if they are not those recommended above. 
+
+Many cloud SDKS provide a higher level API and should be preferred
+versus using the HTTP clients recommended above even if they use
+a different HTTP client under the covers.
+
+When using node-fetch all HTTP codes are treated as successful, even the 4XX and
+5XX. In order to get the behaviour expected with most other clients you will
+need to add something like 
+
+```JavaScript
+if (res.ok) {return res.json()} else {throw new Error(...) }
+```
+The fetch API was designed for the browser and cannot be fully
+implemented in the back end. In addition, it does cover all aspects
+required for a back-end implementation. The API 
+provided by [node-fetch](https://github.com/node-fetch/node-fetch)
+and the
+[experimental version of fetch](https://nodejs.org/docs/latest/api/globals.html#fetch)
+in Node.js are not the same as difference choices were made on how
+to handle the gaps. For this reason moving from
+node-fetch to the built in version of fetch in Node.js will not be seamless.
 
 While [request](https://www.npmjs.com/package/request) is a widely used
 package, it has been deprecated and will not be getting updates.
@@ -39,18 +79,7 @@ do not use it and start with one of the above.  (TODO I remember
 a mentioned of a maintained fork of request and that it
 would be useful to mention here).
 
-The tools outlined in [REST APIs Development](./rest-api-development.md) may
-generate clients in addition to stubs for the API itself. If those
-tools generate clients for you, feel comfortable using the http packages
-they depend on even if they are not those recommended above.
 
-The API provided by [node-fetch](https://github.com/node-fetch/node-fetch)
-and the
-[experimental version of fetch](https://nodejs.org/docs/latest/api/globals.html#fetch)
-in Node.js are not the same. This is because although the fetch API was
-designed for the browser, and it cannot be implemented completely and
-without extensions in the back end. For this reason moving from
-node-fetch to the built in version of fetch in Node.js will not be seamless.
 
 
 
