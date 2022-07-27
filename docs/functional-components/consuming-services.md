@@ -78,11 +78,3 @@ For new applications we recommend you
 do not use it and start with one of the above.  (TODO I remember
 a mentioned of a maintained fork of request and that it
 would be useful to mention here).
-
-
-
-
-
-
-
-
