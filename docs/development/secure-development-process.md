@@ -207,11 +207,11 @@ given vulnerable dependency version, so security teams will require your app hav
 the parent module using it will reference a newer version of that module in its depenedencies.  However, that is not always the case and there are tools to manage the cases where a nested vulnerable dependency 
 version is pulled in by a different npm library that has not adjusted it dependencies to the fixed versions. 
 
-One of these tools is the [npm-force-resolutions] (https://www.npmjs.com/package/npm-force-resolutions) library, which relies upon a "resolutions" section in the package.json to force all instances of a given 
+One of these tools is the [npm-force-resolutions](https://www.npmjs.com/package/npm-force-resolutions) library, which relies upon a "resolutions" section in the package.json to force all instances of a given 
 npm module to be a set to that version in the package-lock.json.  This tool is then run in a "preinstall" script phase so that the actual "npm install" follows the versions it specified in the package-lock.json.
 The 'yarn' package-management tool also honors this "resolutions" section. 
 
-The other tool is just having npm version 8.3 or higher and using the [overrides] (https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) section.  It supports the same single 
+The other tool is just having npm version 8.3 or higher and using the [overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) section.  It supports the same single 
 version override mechanism as "resolutions" but also supports specifying different dependency versions based on the parent module.  This way, if a single older library can not use the latest dependency due to 
 breaking changes, while other dependencies require the latest breaking changes, one can specify a default version and different version for the specific older library. 
 
