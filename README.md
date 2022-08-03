@@ -58,7 +58,7 @@ with only a subset of sections having recommendations):
   - [Data Caching](./docs/functional-components/data-caching.md)
   - [REST API Development](./docs/functional-components/rest-api-development.md)
   - [Scaling and Multi-threading](./docs/functional-components/scaling-multi-threading.md)
-  - Consuming Services
+  - [Consuming Services](./docs/functional-components/consuming-services.md)
   - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
   - Transactions_handling
 

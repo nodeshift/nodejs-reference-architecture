@@ -155,6 +155,14 @@
     {
       "name": "@opentelemetry/sdk-trace-node",
       "npmlink": "https://www.npmjs.com/package/@opentelemetry/sdk-trace-node"
+    },
+    {
+      "name": "axios",
+      "npmlink": "https://www.npmjs.com/package/axios"
+    },
+    {
+      "name": "node-fetch",
+      "npmlink": "https://www.npmjs.com/package/node-fetch"
     }
   ],
   "licenses": {
