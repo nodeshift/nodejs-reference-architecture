@@ -35,7 +35,7 @@ OpenShift Serverless on OpenShift Container Platform enables stateless serverles
 
 [Node.js serverless functions on Red Hat OpenShift, Part 1: Logging](https://developers.redhat.com/articles/2021/07/01/nodejs-serverless-functions-red-hat-openshift-part-1-logging)
 
-[Node.js serverless functions on Red Hat OpenShift, Part 2: Debugging locally](hhttps://developers.redhat.com/articles/2021/07/13/nodejs-serverless-functions-red-hat-openshift-part-2-debugging-locally)
+[Node.js serverless functions on Red Hat OpenShift, Part 2: Debugging locally](https://developers.redhat.com/articles/2021/07/13/nodejs-serverless-functions-red-hat-openshift-part-2-debugging-locally)
 
 [Node.js serverless functions on Red Hat OpenShift, Part 3: Debugging on a cluster](https://developers.redhat.com/articles/2021/12/08/nodejs-serverless-functions-red-hat-openshift-part-3-debugging-cluster)
 
