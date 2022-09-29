@@ -19,7 +19,7 @@ Node.js does not support running TypeScript natively, so it must first be transp
 
 For front end development, sometimes [`babel`](https://babeljs.io) is used with the [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript) preset for transpilation, but this does _not_ support type checking and we do not recommend it for Node.js. More information on choosing a transpiler can be found in the [typescript documentation](https://www.typescriptlang.org/docs/handbook/babel-with-typescript.html).
 
-Avoid mixing transpilers on the same project as this can lead to inconsistencies. Sometimes projects unintentially use `babel` for their jest tests as it the [default](https://jestjs.io/docs/getting-started#using-typescript).
+Avoid mixing transpilers on the same project as this can lead to inconsistencies. Sometimes projects unintentionally use `babel` for their jest tests as it is the [default](https://jestjs.io/docs/getting-started#using-typescript).
 
 ## Transpiling in development
 
