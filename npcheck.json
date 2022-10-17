@@ -260,6 +260,11 @@
         "note": ["opencollective uses an old version of minimist. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
         "name": "minimist",
         "effects": ["opencollective"]
+      }],
+      "CVE-2020-15168": [{
+        "note": ["swagger-editor isomorphic-fetch which uses node-fetch. The github and CVE list the severity as low/medium, while what is returned by the query to the github db says hight in one place and low in the other. This is unlikely to be an issue in use in swagger-editor and it seems like the rating should be low so just allow"],
+        "name": "node-fetch",
+        "effects": ["isomorphic-fetch"]
       }]
     }
   }
