@@ -235,6 +235,13 @@
       "@elastic/elasticsearch": {
         "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
         "allow": ["0BSD"]
+      },
+      "node-rdkafka": {
+        "note": "dev depdency on domhandler, domutil and entities which are under BSD like reported as BSD*",
+        "note": "depends on argparse which is under Python-2.0",
+        "note": "dev dependency toolkit-jsdoc appears to be UNLICENCED (reports as Undefined) and shoujld not be installed, not required for non-dev use",
+        "note": "dependency taffydb reports an unknown licence but repo says it is BSD-2-Clause on npm",
+        "allow": ["BSD", "Python-2.0", "Undefined", "UNKNOWN"]
       }
     }
   },
@@ -253,8 +260,9 @@
       }],
       "CVE-2021-44906": [{
         "note": ["opencollective uses an old version of minimist. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
+	"note": ["mocha uses an old version of mkdirp. mocha is used for testing and the proptotype pollution vuln is not a concern in that module"],
         "name": "minimist",
-        "effects": ["opencollective"]
+        "effects": ["opencollective", "mkdirp"]
       }],
       "CVE-2020-7598": [{
         "note": ["opencollective uses an old version of minimist. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
