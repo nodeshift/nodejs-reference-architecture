@@ -1,6 +1,8 @@
 # Serverless
 
-Serverless is a powerful and popular paradigm where you don’t have to worry about managing and maintaining your application infrastructure. In the serverless context, a function is a single-purpose piece of code created by the developer but run and monitored by the managed infrastructure. A serverless function’s value is its simplicity and swiftness, which can entice even those who don’t consider themselves developers.
+Serverless is a powerful and popular model where you don’t have to worry about managing and maintaining your application infrastructure. There are two main paradigms when it comes to Serverless.  The first is the operations paradigm which is responsible for the orchestration of containers to zero.
+
+The second paradigm is functions.  In the serverless context, a function is a single-purpose piece of code created by the developer but run and monitored by the managed infrastructure. A serverless function’s value is its simplicity and swiftness, which can entice even those who don’t consider themselves developers.
 
 
 ## Recommended Components
@@ -15,6 +17,14 @@ While the team doesn't have to much experience in the serverless realm at the mo
 
 One of the main recommendations that we can give related to Functions and Serverless in general, is to keep things as stateless as possible.  When a request comes in, the function will scale up and become available for a set period of time before it scales back down and the current context is destroyed.
 
+Node.js is one of the top recommended languages for Functions due to Node's small memory foot print, quick startup time and asynchronus nature.
+
+#### Challenges
+
+There are some challenges when deciding to use functions.  The first is that there is no standard.  The way a function needs to be created and what data is available in the function signature, is based on the vendor that the function is being created for.  While not a standard, the [CloudEvents specification](https://github.com/cloudevents/spec) is trying to standardize the payload that is sent.
+
+Second is the local development and debugging experience.  There are tools that exist to help with this experience, such as the [faas-js-runtime](https://www.npmjs.com/package/faas-js-runtime), but again, this is based on a specific vendor.
+
 ### Serverless Platforms
 
 #### Openshift Serverless
@@ -25,7 +35,25 @@ Developers on OpenShift Serverless can use the provided Kubernetes native APIs, 
 
 OpenShift Serverless on OpenShift Container Platform enables stateless serverless workloads to all run on a single multi-cloud container platform with automated operations. Developers can use a single platform for hosting their microservices, legacy, and serverless applications.
 
+#### Apache OpenWhisk
 
+TODO
+
+#### AWS Lambda
+
+TODO
+
+#### Akamai EdgeWorkers
+
+TODO
+
+#### Cloudflare Workers
+
+TODO
+
+#### Fastly Compute@Edge
+
+TODO
 
 ## Further Reading
 
