@@ -87,7 +87,8 @@ Disadvantages:
 * Network connectivity is required to develop
 * Harder to explore/test out changes needed in other components to support
   the component you are working on
-* Concurent use of of shared development/test environment running other
+* Concurrent use of of shared development/test environment running other
+
   services can add need for co-ordination with other developers/teams. 
 
 ## Fully remote development, container based
