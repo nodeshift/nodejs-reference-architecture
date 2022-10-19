@@ -35,6 +35,8 @@ options which include:
 Developers build/test in the local environment (Windows/MacOS) using npm start and once
 ready push to CI where the target container is built. Testing with other components
 is limited to test/integration environments. Any local testing uses mocs for other components.
+This is a common starting point when teams are building a simple application, with a limited
+number of components that can be easily moc'd or run locally.
 
 Advantages:
 * Easy to set up
