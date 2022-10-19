@@ -74,7 +74,7 @@ Disadvantages:
 * harder to manage configuration drift between development environment and
   deployment environment
 
-## Local component development, remove services
+## Local development of team's component, remote services in a common development environment
 
 Developer build/test/integrate in containers and access other components for
 testing in a shared development/test environment. 
@@ -85,6 +85,8 @@ Advantages:
 
 Disadvantages:
 * Network connectivity is required to develop
+* Harder to explore/test out changes needed in other components to support
+  the component you are working on
 * Concurent use of of shared development/test environment running other
   services can add need for co-ordination with other developers/teams. 
 
