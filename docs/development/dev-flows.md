@@ -126,6 +126,9 @@ As another example, as an extension to the fully remote development workflow a
 shared development environment may provide UI's to edit code, build
 containers and deploy to a shared kubernetes environment.
 
+The most extreme case of this model is to limit access to a Cloud based IDE
+which restricts the functionality available to the developer.
+
 As a baseline this approach inherits the advantages/disadvantages of
 the underlying model that it extends.
 
