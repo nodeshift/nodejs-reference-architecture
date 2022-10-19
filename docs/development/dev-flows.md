@@ -13,6 +13,7 @@ The typical development flows encountered by the team include:
 * Fully local development, container based
 * Local development of team's component, remote services in a common development environment
 * Fully remote development, container based.
+* Zero install development environment
 
 Regardless of the development flow, developers typically develop on Windows or MacOS with Linux being
 distant third. When running on Windows the trend is towards the use of the Windows Subsystem for Linux.
@@ -88,8 +89,9 @@ Disadvantages:
 * Harder to explore/test out changes needed in other components to support
   the component you are working on
 * Concurrent use of of shared development/test environment running other
-
   services can add need for co-ordination with other developers/teams. 
+* There may be more limited access to containers when running in the
+  shared environment, making it harder to debug.
 
 ## Fully remote development, container based
 
@@ -101,7 +103,41 @@ on remote system.
 Advantages:
 * Limited resource requirement for developer machines
 * Less management/complexity for developer
+* Easier to keep development and deployment environments in sync
 
 Disadvantages:
 * Network connectivity is required to develop
-* Time to push changes can affect interation time.
+* Time to push changes can affect iteration time.
+* Each developer requires sandbox in common kubernetes, adding to management
+  complexity and resource requirements.
+* Cleanup of non-used resources can be a challenge
+  
+## Zero install development environment
+
+Developers use a virtualized remote enviroment and use their local laptop
+only as a thin client.
+
+This model is typically an extension to one of the other
+development models listed, with the difference being where the code being
+developed resides/is created by the developer. For example, as an extension
+to the fully local development workflow the developer may use a
+remote virtual machine instead of developing directly on their laptop.
+As another example, as an extension to the fully remote development workflow a
+shared development environment may provide UI's to edit code, build
+containers and deploy to a shared kubernetes environment.
+
+As a baseline this approach inherits the advantages/disadvantages of
+the underlying model that it extends.
+
+Additional Advantages:
+* Easier setup
+* Better control for an organization over the development environment
+  and code being developed
+* Supports organizations that use a perimeter security model
+
+Additional Disadvantages:
+* Additional resources are required
+* Cleanup of non-used resources can be a challenge
+* High dependency on network connection
+* Cloud IDEs tend to be more locked down, giving developers less
+  flexibility over development workflow and tools
