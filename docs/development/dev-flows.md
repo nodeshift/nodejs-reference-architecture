@@ -22,7 +22,8 @@ a container, the team's experience is that it is important for the developer to 
 testing in a container as part of their workflow.
 
 In the past the most common approach for building/running containers on Windows and MacOS
-was docker desktop. Now that docker desktop is longer free, development teams are exploring other
+was docker desktop. Now that docker desktop is no longer free, development teams are exploring other
+
 options which include:
 * Virtualbox with a linux VM (the disadvantage is that this requires developers to become more
   familiar with Linux). Docker client is still free and it can connect to a remove virtual
