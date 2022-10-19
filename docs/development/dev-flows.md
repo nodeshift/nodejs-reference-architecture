@@ -71,6 +71,8 @@ Advantages:
 Disadvantages:
 * more complex to setup and manage for each developer
 * significant developer machine requirements to run kubernetes and other components
+* harder to manage configuration drift between development environment and
+  deployment environment
 
 ## Local component development, remove services
 
