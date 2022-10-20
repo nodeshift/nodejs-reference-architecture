@@ -2,6 +2,7 @@
 
 ## Diff in npcheck.json since last review 
 
+```shell
 diff --git a/npcheck.json b/npcheck.json
 index 7978fdf..2a320fa 100644
 --- a/npcheck.json
@@ -63,7 +64,7 @@ index 7978fdf..2a320fa 100644
        }]
      }
    }
-
+```
 
 ## Results
 
