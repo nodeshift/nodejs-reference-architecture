@@ -242,6 +242,10 @@
         "note": "dev dependency toolkit-jsdoc appears to be UNLICENCED (reports as Undefined) and shoujld not be installed, not required for non-dev use",
         "note": "dependency taffydb reports an unknown licence but repo says it is BSD-2-Clause on npm",
         "allow": ["BSD", "Python-2.0", "Undefined", "UNKNOWN"]
+      },
+      "mongodb": {
+        "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
+        "allow": ["0BSD"]
       }
     }
   },
