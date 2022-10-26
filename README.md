@@ -64,7 +64,7 @@ with only a subset of sections having recommendations):
 
 - Development
 
-  - Typical Development Workflows
+  - [Typical Development Workflows](./docs/development/dev-flows.md)
   - Development Environment
   - [Choosing and vetting dependencies](./docs/development/dependencies.md)
   - [Building good containers](./docs/development/building-good-containers.md)
