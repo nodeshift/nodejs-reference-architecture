@@ -83,12 +83,12 @@ Disadvantages:
 
 ## Local development of team's component, remote services in a common development environment
 
-Developer build/test/integrate in containers and access other components for
+Developers build/test/integrate in containers and access other components for
 testing in a shared development/test environment. 
 
 Advantages:
 * More limited resource requirement for developer machines
-* Less management/complexity for developer
+* Less management/complexity for developers
 
 Disadvantages:
 * Network connectivity is required to develop
@@ -102,18 +102,18 @@ Disadvantages:
 ## Fully remote development, container based
 
 Developers build/test/integrate in containers by pushing changes which are built and
-tested in kubernetes environment which is also running the other required components.
+tested in a kubernetes environment which is also running the other required components.
 Developers often run some limited test with npm start but bulk of testing is done
 on remote system.
 
 Advantages:
-* Limited resource requirement for developer machines
+* Limited resource requirements for developer machines
 * Less management/complexity for developer
 * Easier to keep development and deployment environments in sync
 
 Disadvantages:
 * Network connectivity is required to develop
-* Time to push changes can affect iteration time.
+* Time to push changes can affect iteration time
 * Each developer requires sandbox in common kubernetes, adding to management
   complexity and resource requirements.
 * Cleanup of non-used resources can be a challenge
