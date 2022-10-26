@@ -70,6 +70,9 @@ Advantages:
 * Problem related to interaction with other components are discovered earlier
   in the development process.
 * No need for network access in order while developing/testing 
+* Easier to manage and test against different application dependency versions
+  as they are managed locally instead of a shared environment and often have easy to
+  use docker image tags.
 
 Disadvantages:
 * more complex to setup and manage for each developer
