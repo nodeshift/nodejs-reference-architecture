@@ -74,7 +74,8 @@ Disadvantages:
 * more complex to setup and manage for each developer
 * significant developer machine requirements to run kubernetes and other components
 * harder to manage configuration drift between development environment and
-  deployment environment
+  deployment environment because the container infrastructure used on the developers
+  workstation often different than that used for production deployment.
 
 ## Local development of team's component, remote services in a common development environment
 
