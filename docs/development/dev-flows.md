@@ -3,8 +3,8 @@
 Developement flows within the team's developer and the customers the team works
 with need to accomodate the following:
 
+* the end target/deployment artifact is most often a container
 * for some platforms, deployment remains a server or virtual machine
-* ```
 * applications are made of multiple components some of which may be being developed
   by other teams.
 
