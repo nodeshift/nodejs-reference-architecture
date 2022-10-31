@@ -21,9 +21,11 @@ Node.js is one of the top recommended languages for Functions due to Node's smal
 
 #### Challenges
 
-There are some challenges when deciding to use functions.  The first is that there is no standard.  The way a function needs to be created and what data is available in the function signature, is based on the vendor that the function is being created for.  While not a standard, the [CloudEvents specification](https://github.com/cloudevents/spec) is trying to standardize the payload that is sent.
+There are some challenges when deciding to use functions.  The first is that there is no standard.  The way a function needs to be created and what data is available in the function signature, is based on the vendor that the function is being created for.  While not a standard for how functions should be created, the [CloudEvents specification](https://github.com/cloudevents/spec) is trying to standardize the payload that is sent.
 
-Second is the local development and debugging experience.  There are tools that exist to help with this experience, such as the [faas-js-runtime](https://www.npmjs.com/package/faas-js-runtime), but again, this is based on a specific vendor.
+Second is the local development and debugging experience.  This can be challenging for a couple of reasons.
+
+There are tools that exist to help with this experience, such as the [faas-js-runtime](https://www.npmjs.com/package/faas-js-runtime), but again, this is based on a specific vendor.
 
 ### Serverless Platforms
 
@@ -35,6 +37,7 @@ Developers on OpenShift Serverless can use the provided Kubernetes native APIs, 
 
 OpenShift Serverless on OpenShift Container Platform enables stateless serverless workloads to all run on a single multi-cloud container platform with automated operations. Developers can use a single platform for hosting their microservices, legacy, and serverless applications.
 
+<!--
 #### Apache OpenWhisk
 
 TODO
@@ -54,6 +57,8 @@ TODO
 #### Fastly Compute@Edge
 
 TODO
+
+-->
 
 ## Further Reading
 
