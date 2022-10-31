@@ -1,4 +1,4 @@
-# npcheck review - July 7 - 2022
+# npcheck review - October 20 - 2022
 
 ## Diff in npcheck.json since last review 
 
