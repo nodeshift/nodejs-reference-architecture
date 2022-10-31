@@ -254,6 +254,7 @@
     "note-2" : "cldr-localenames-full does not have tests as it is a data delivery module and therefore does not beong in CITGM",
     "note-3" : "eslint and mocha look to be permanently skipped in CIGTM due to needing headless chrome to run tests",
     "note-4" : "node-rdkafka, rhea, odbc, @openapitools/openapi-generator-cli, openapi-backend, @stoplight/prism-http, express-openapi-validator, swagger-editor, openapi-editor have low download numbers and will be skipped in CITGM",
+    "note-5" : "kafkajs, @elastic/elasticsearch, helmet, passport propose additions to CITGM in the future",
     "skip": [
       "ibmcloud-appid",
       "@ibm-cloud/cloudant",
@@ -270,7 +271,11 @@
       "@stoplight/prism-http",
       "express-openapi-validator",
       "swagger-editor",
-      "openapi-editor"
+      "openapi-editor",
+      "kafkajs",
+      "@elastic/elasticsearch",
+      "helmet",
+      "passport"
     ]
   },
   "audit": {
