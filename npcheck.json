@@ -253,6 +253,7 @@
     "note-1" : "ibmcloud-appid, @ibm-cloud/cloudant, opossum, ibm_db are Red Hat/IBM modules that would need broader usage before being considered for CITGM",
     "note-2" : "cldr-localenames-full does not have tests as it is a data delivery module and therefore does not beong in CITGM",
     "note-3" : "eslint and mocha look to be permanently skipped in CIGTM due to needing headless chrome to run tests",
+    "note-4" : "node-rdkafka, rhea, odbc, @openapitools/openapi-generator-cli, openapi-backend, @stoplight/prism-http, express-openapi-validator, swagger-editor, openapi-editor have low download numbers and will be skipped in CITGM",
     "skip": [
       "ibmcloud-appid",
       "@ibm-cloud/cloudant",
@@ -260,7 +261,16 @@
       "ibm_db",
       "cldr-localenames-full",
       "eslint",
-      "mocha"
+      "mocha",
+      "node-rdkafka",
+      "rhea",
+      "odbc",
+      "@openapitools/openapi-generator-cli",
+      "openapi-backend",
+      "@stoplight/prism-http",
+      "express-openapi-validator",
+      "swagger-editor",
+      "openapi-editor"
     ]
   },
   "audit": {
