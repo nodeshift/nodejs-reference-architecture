@@ -23,7 +23,7 @@ Node.js is one of the top recommended languages for Functions due to Node's smal
 
 There are some challenges when deciding to use functions.  The first is that there is no standard.  The way a function needs to be created and what data is available in the function signature, is based on the vendor that the function is being created for.  While not a standard for how functions should be created, the [CloudEvents specification](https://github.com/cloudevents/spec) is trying to standardize the payload that is sent.
 
-Second is the local development and debugging experience.  This can be challenging for a couple of reasons.
+Second is the local development and remote debugging experience.  This can be challenging for a couple of reasons.  First, when developing locally, if the function needs to interact with other remote services, this can be challenging to setup.  Second, once the function is running on its respective serverless platform, debugging the remote function can be challening, since it is no small feat to connect a debugger to a remote service.
 
 There are tools that exist to help with this experience, such as the [faas-js-runtime](https://www.npmjs.com/package/faas-js-runtime), but again, this is based on a specific vendor.
 
