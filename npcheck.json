@@ -252,7 +252,37 @@
   "citgm": {
     "note-1" : "ibmcloud-appid, @ibm-cloud/cloudant, opossum, ibm_db are Red Hat/IBM modules that would need broader usage before being considered for CITGM",
     "note-2" : "cldr-localenames-full does not have tests as it is a data delivery module and therefore does not beong in CITGM",
-    "skip": ["ibmcloud-appid", "@ibm-cloud/cloudant", "opossum", "ibm_db", "cldr-localenames-full"]
+    "note-3" : "eslint and mocha look to be permanently skipped in CIGTM due to needing headless chrome to run tests",
+    "note-4" : "node-rdkafka, rhea, odbc, @openapitools/openapi-generator-cli, openapi-backend, @stoplight/prism-http, express-openapi-validator, swagger-editor, openapi-editor have low download numbers and will be skipped in CITGM",
+    "note-5" : "kafkajs, @elastic/elasticsearch, helmet, passport propose additions to CITGM in the future",
+    "note-6" : "nano, express-prom-bundle, i18next-icu, i18next-http-middleware, i18next-fs-backend review in the future to see if they make sense to add to CITGM",
+    "skip": [
+      "ibmcloud-appid",
+      "@ibm-cloud/cloudant",
+      "opossum",
+      "ibm_db",
+      "cldr-localenames-full",
+      "eslint",
+      "mocha",
+      "node-rdkafka",
+      "rhea",
+      "odbc",
+      "@openapitools/openapi-generator-cli",
+      "openapi-backend",
+      "@stoplight/prism-http",
+      "express-openapi-validator",
+      "swagger-editor",
+      "openapi-editor",
+      "kafkajs",
+      "@elastic/elasticsearch",
+      "helmet",
+      "passport",
+      "nano",
+      "express-prom-bundle",
+      "i18next-icu",
+      "i18next-http-middleware",
+      "i18next-fs-backend"
+    ]
   },
   "audit": {
     "allow": {
