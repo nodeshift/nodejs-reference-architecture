@@ -1,6 +1,6 @@
 # Serverless
 
-Serverless is a powerful and popular model where you don’t have to worry about managing and maintaining your application infrastructure. There are two main paradigms when it comes to Serverless.  The first is the operations paradigm which is responsible for the orchestration of containers to zero.
+Serverless is a powerful and popular development model where you don’t have to worry about managing and maintaining your application infrastructure. There are two main paradigms when it comes to Serverless.  The first is the operations paradigm which is responsible for the orchestration of containers, scaling them up from and down to zero running instances.
 
 The second paradigm is functions.  In the serverless context, a function is a single-purpose piece of code created by the developer but run and monitored by the managed infrastructure. A serverless function’s value is its simplicity and swiftness, which can entice even those who don’t consider themselves developers.
 
