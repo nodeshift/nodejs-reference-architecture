@@ -83,7 +83,7 @@ with only a subset of sections having recommendations):
     - [Npm Publishing](./docs/development/npm-publishing.md)
     - Package Development
   - [Secure Development Process](./docs/development/secure-development-process.md)
-  - Serverless
+  - [Serverless](./docs/development/serverless.md)
   - Load-balancing
 
 - Operations
