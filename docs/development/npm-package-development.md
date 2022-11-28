@@ -12,7 +12,8 @@
   * setting the node version / engines?
   * name and description?
   * using npm scripts
-    * Do we care to comment on not using the post-publish as advertising?
+    * Do we care to comment on not using the post-publish as advertising? - no
+    * maybe not use postInstall scripts - additional security risk
   * structure?
     * mention that if a company has many modules,  it is good to have common development deps(linting, testing)
     * link to recommended testing libs
@@ -63,7 +64,18 @@ When starting the creation of a new package, it is recommended to use the `npm i
 }
 ```
 
+//TODO: talk about changing the licnese
+* propritory stuff, put unlicensed?
+* the team most often uses apache2 / MIT
+
 //TODO: add a small mention that you can override the `init` command?  Does any of our teams do this?  if we don't then do we mention this?
+
+-- CREATE JIRA to create thing
+
+
+-scoping
+-type - which is for cjs/esm
+import/export
 
 #### package.json
 
@@ -71,6 +83,9 @@ While name and version are the only fields that are required to publish a packag
 
 
 **Current List of fields(delete this heading once we get the full list)**
+
+* Added the private field?
+
 * description - Yea
 * main or bin or both
   * entry point for the package, usually index.js
@@ -84,7 +99,7 @@ While name and version are the only fields that are required to publish a packag
 * keywords // probably a good idea
 * author // Be the company name? or indivual user? depends on what?
 * license - what license you use is up to you - link out to ref arch recommendation?
-* repository - if this is a public module / private module don't need
+* repository - if this is a public module
 * files
   * add the files that you want to publish
   * something about compiling and pointing to the dist instead of src?
@@ -104,6 +119,13 @@ While name and version are the only fields that are required to publish a packag
 * support - need to go into this a little
   * mention working closely with the package maintence team?
 
+* type`
+  * "commonjs" or "module"
+
+  https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system
+
+https://nodejs.org/api/packages.html#exports
+
 
 #### Development Dependecies
 
@@ -119,11 +141,22 @@ While there is no list of development dependecies that the team recommends, we d
 #### Dependencies
 
 See the vetted section [link]
+* add something about best practice with semver things
+
+package-lock/not package lock
+shrinkwrap.json
+
+section on trade-off with versions of other modules
+
+TS Typing version?
 
 ### CJS / ESM ?
 
 Is there anything to mention in the package.json or name of the file if using esm and not CJS?
 
+* post to node.js/javascript chat
+
+* look at module list and see what they support
 
 ### Bundlers
 
@@ -133,9 +166,12 @@ Is there anything to mention in the package.json or name of the file if using es
   * don't want to be a typescript module creation tutorial
 
 
+
 ### Publish
   * mention the prepublish scripts that we use here or in the package.json section?  probably here
   * link to the npm-publishing section
+
+  * version bumps
 
 #### dist-tag
   * mention how to see the latest
