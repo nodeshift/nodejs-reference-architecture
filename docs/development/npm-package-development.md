@@ -1,35 +1,5 @@
 # Npm Package Development
 
-* intro
-
-* npm init?
-  * custom init files - maybe only if we have experience with it?
-  * custom create- ?
-
-* package.json things
-  * main prop
-  * bin - if cli
-  * setting the node version / engines?
-  * name and description?
-  * using npm scripts
-    * Do we care to comment on not using the post-publish as advertising? - no
-    * maybe not use postInstall scripts - additional security risk
-  * structure?
-    * mention that if a company has many modules,  it is good to have common development deps(linting, testing)
-    * link to recommended testing libs
-  * including files
-
-  * Peer Dependecies
-    * bad practice to include peer deps unless as a dev dep?
-
-* ESM / CJS - What do we have familiarty with?
-  * Not a guide on how to setup bundlers or dual esm/cjs
-
-* bundlers
-  * mention you can use these for creating both node and browser
-  * TS
-  * transpile
-
 ## Recommended Components
 
 N/A
@@ -55,65 +25,61 @@ When starting the creation of a new package, it is recommended to use the `npm i
 }
 ```
 
-//TODO: talk about changing the licnese
-* propritory stuff, put unlicensed?
-* the team most often uses apache2 / MIT
-
-//TODO: add a small mention that you can override the `init` command?  Does any of our teams do this?  if we don't then do we mention this?
-
--- CREATE JIRA to create thing
-
--type - which is for cjs/esm
-import/export
+It should be noted that users and organizations can modify how `npm init` works, tailoring the resulting package.json to their needs.  For more information on this, check out the [official docs](https://docs.npmjs.com/cli/v9/commands/npm-init)
 
 #### package.json
 
-While name and version are the only fields that are required to publish a package, the team recommends a few others that provide more information to the user.
+While **name** and **version** are the only fields that are required to publish a package, the team recommends a few others that provide more information to the user.
 
+* **description** - This is a string that will help users discover the package, especially if it is published to the public npm registry
 
-**Current List of fields(delete this heading once we get the full list)**
+* **keywords** - This is an array of strings that will help users discover the package, especially if it is published
+to the public npm registry
 
-* Added the private field?
+* **homepage** - A url to the project homepage,  most likely to point at a github repo.
 
-* description - Yea
-* main or bin or both
-  * entry point for the package, usually index.js
-  * use bin when you are creating a cli
-    * recommended to name the executable file the same as the package name?
-    * show example?
-* scripts
-  * mention testing / linting / building?
-  * mention the pre/post things
-  * mention composable
-* keywords // probably a good idea
-* author // Be the company name? or indivual user? depends on what?
-* license - what license you use is up to you - link out to ref arch recommendation?
-* repository - if this is a public module
-* files
-  * add the files that you want to publish
-  * something about compiling and pointing to the dist instead of src?
-    * briefly mention the src vs. dist but not go into it,  thats not really what this doc is
-  * mention that some things are included by default
-  * recommendation on what those files should be. don't usually include tests, but docs sometimes
-  * https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files
-* bugs?
-  * if a public package and code is on github, then usually point to those issues
-  * company one, point to theirs,  or nothing
-* homepage?
-  * usually points to GH repo(if one)
-* maintainers?
-  * public package, could to show the maintainers?
-* engines - should have these
-  * what engines you support are up to you,  and if for a company, could be dictated there.  if a public module, should look to support the lts versions
-* support - need to go into this a little
-  * mention working closely with the package maintence team?
+* **bugs** - The url to your project's issue tracker and / or the email address to which issues should be reported. These are helpful for people who encounter issues with your package.  Formatting should look like this:
 
-* type`
-  * "commonjs" or "module"
+  ```
+    {
+      "url" : "https://github.com/owner/project/issues",
+      "email" : "project@hostname.com"
+    }
+  ```
 
-  https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system
+* **author** - An Author is one person or company who maintains the package.  This field usually consists of an object with a name, and optionally an email and url.
 
-https://nodejs.org/api/packages.html#exports
+* **contributors** - Contributors is an array of people who maintain the package
+
+* **license** - You should specify a license for your package so that people know how they are permitted to use it, and any restrictions you're placing on it.  More information on licenses and how they relate to the package.json can be [found here](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#license)
+
+* **files** - The list of files that you want published with your package.  This field is very handy when using a bundler to transpile code and you only want to include that transpiled code.  The team recommends not to include tests, which should reduce the package size, but to include docs.  For a listing of the files that are automatically included, check out the [npm docs here](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files)
+
+* **main** - This is the primary entry point to your package.  This should be a modul relative to the root of your package folder.  Most times this will be `index.js`, which is the default if this field is not set.
+
+* **bin** - If your package is intended to be used as a CLI tool, this field should be added and is a map of the command name to the local file name.
+
+  ```
+    {
+      "bin": {
+        "myapp": "./cli.js"
+      }
+    }
+  ```
+
+* **repository** - Specify the place where your code lives. If your package is public, this is helpful for people who want to contribute.
+
+* **scripts** - This property is an array containing script commands that are run at various times in the lifecycle of your package. The key is the lifecycle event, and the value is the command to run at that point.  The team recommends creating scripts that handle calling the tests, linters and any build steps that might need to occur.  The team does recommend to not use a postInstall script if possible, as this could be a security risk.
+
+* **engines** - This is recommended to show which versions of Node.js your package supports.  If this is a public module, it is recommended to try and support the latest LTS versions.  If this is a private package, then this value could be determined by your company.
+
+* **private** - This field is only recommended and should be set to `yes` if your package will not be published to npm.
+
+* **support** - This field is to help package maintainers communicate with and set expectations for their users about the level of support they are willing to provide on a package.  The team has worked closely with the [Node.js Package Maintence Team](https://github.com/nodejs/package-maintenance) on their recommendations on what this support field should look like.  For one of your modules, [opossum](https://github.com/nodeshift/opossum), we [set this field](https://github.com/nodeshift/opossum/blob/main/package.json#L75) to `true` and supplied our support information in a separate [package-support.json file](https://github.com/nodeshift/opossum/blob/main/package-support.json).
+
+  For more information on the support field, check out what the [Package Maintence Team says](https://github.com/nodejs/package-maintenance/blob/main/docs/PACKAGE-SUPPORT.md)
+
+* **type** - This field defines the module format that Node.js will use.  For ES Modules(ESM), use `module` and for Common JS(CJS) modules, use `commonjs`.  For more information on how Node.js determines the difference between ESM and CJS modules take a [look at the Node.js official docs here](https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system)
 
 
 #### Development Dependecies
@@ -135,22 +101,17 @@ The `~` will include everything greater than a particular version in the same mi
 
 This [semver calculator](https://semver.npmjs.com/) is a great resource to make this determination
 
-### CJS / ESM ?
+### CJS / ESM
 
-Is there anything to mention in the package.json or name of the file if using esm and not CJS?
+TBD
 
-* post to node.js/javascript chat
+### Bundlers and Transpilers
 
-* look at module list and see what they support
+Bundlers are helpful if your package needs to be used by both node.js and the browser.  The same codebase can be packaged for multiple platforms with a trivial amount of work by using a bundler.  [Webpack](https://webpack.js.org/) is one such bundler that the team has some familarity with.
 
-### Bundlers
+For those packages being written in Typescript, you will need to use a transpiler since Node.js does not support running TypeScript natively, so it must first be transpiled to JavaScript. We recommend the `tsc` transpiler that is shipped with [typescript](https://www.npmjs.com/package/typescript). This supports both type checking and transpilation to JavaScript.
 
-* mention browser / node combo
-* tree-shaking?
-* for typescript modules?
-  * don't want to be a typescript module creation tutorial
-
-
+For more information on developing with Typescript, check out our section on [Typescript](./typescript.md)
 
 ### Publish
 
@@ -182,7 +143,10 @@ There might come a time when a package needs to be deprecated.  The general guid
 
 ## Further Reading
 
+* https://docs.npmjs.com/cli/v9/commands/npm-init
 * https://docs.npmjs.com/cli/v8/configuring-npm/package-json
+* https://docs.npmjs.com/cli/v8/using-npm/scripts
+* https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system
 * https://semver.npmjs.com/
 * https://docs.npmjs.com/cli/v9/commands/npm-dist-tag
 * https://docs.npmjs.com/cli/v9/commands/npm-deprecate
