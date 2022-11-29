@@ -188,5 +188,6 @@ There might come a time when a package needs to be deprecated.  The general guid
 ## Further Reading
 
 * https://docs.npmjs.com/cli/v8/configuring-npm/package-json
+* https://semver.npmjs.com/
 * https://docs.npmjs.com/cli/v9/commands/npm-dist-tag
 * https://docs.npmjs.com/cli/v9/commands/npm-deprecate
