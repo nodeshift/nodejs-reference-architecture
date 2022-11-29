@@ -82,17 +82,17 @@ to the public npm registry
 * **type** - This field defines the module format that Node.js will use.  For ES Modules(ESM), use `module` and for Common JS(CJS) modules, use `commonjs`.  For more information on how Node.js determines the difference between ESM and CJS modules take a [look at the Node.js official docs here](https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system)
 
 
-#### Development Dependecies
+#### Development Dependencies
 
-While there is no list of development dependecies that the team recommends, we do find that it is helpful to agree on the same list across a team of develoeprs.  This is especially important for linting and testing libraries.  Having a similar set can help with ramp up time if a developer moves teams.
+While there is no list of development dependencies that the team recommends, we do find that it is helpful to agree on the same list across a team of develoeprs.  This is especially important for linting and testing libraries.  Having a similar set can help with ramp up time if a developer moves teams.
 
 #### Dependencies
 
-For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependecies).
+For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependencies).
 
 * add something about best practice with semver things
 
-During development of a pacakge, it is helpful to add the package-lock.json to source control, so all developers working on the package will be able to install the same versions of dependecies.
+During development of a pacakge, it is helpful to add the package-lock.json to source control, so all developers working on the package will be able to install the same versions of dependencies.
 
 It is also recommended to know what semver range you are specifying for any dependecy you wish to install.  For example:
 
