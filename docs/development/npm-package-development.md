@@ -34,11 +34,6 @@
   * TS
   * transpile
 
-
-* npm publish
-* dist-tag
-* npm deprecate
-
 ## Recommended Components
 
 N/A
@@ -72,8 +67,6 @@ When starting the creation of a new package, it is recommended to use the `npm i
 
 -- CREATE JIRA to create thing
 
-
--scoping
 -type - which is for cjs/esm
 import/export
 
@@ -168,15 +161,28 @@ Is there anything to mention in the package.json or name of the file if using es
 
 
 ### Publish
-  * mention the prepublish scripts that we use here or in the package.json section?  probably here
-  * link to the npm-publishing section
 
-  * version bumps
+  For the teams publishing recommendations, see the [Npm Publishing Guidelines](./npm-publishing.md) section
 
-#### dist-tag
-  * mention how to see the latest
-    * and how to set?
-  * mention how to create a canary/beta/etc...
+#### tags
+
+There are times when we want to publish an early-release or need to have multiple development streams for a package.  The team recommends the usage of the `tag` flag.
+
+By default, the `latest` tag is used when a package is published.  The `latest` tag is also used when doing a `npm install <package>` when no version is specified.
+
+Here is an example of a package being published as a beta release:
+
+```
+npm publish exampleModule --tag beta
+```
+
+We can also add tags to previously published packages using the `dist-tag` command:
+
+```
+npm dist-tag add exampleModule@0.1.0 beta
+```
+
+To see the current list of tags available for a package, use the `npm dist-tag ls` command.
 
 ### Deprecate
 
@@ -185,4 +191,5 @@ There might come a time when a package needs to be deprecated.  The general guid
 ## Further Reading
 
 * https://docs.npmjs.com/cli/v8/configuring-npm/package-json
+* https://docs.npmjs.com/cli/v9/commands/npm-dist-tag
 * https://docs.npmjs.com/cli/v9/commands/npm-deprecate
