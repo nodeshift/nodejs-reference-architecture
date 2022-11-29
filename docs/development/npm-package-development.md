@@ -180,8 +180,9 @@ Is there anything to mention in the package.json or name of the file if using es
 
 ### Deprecate
 
-  * Look at our current guidance doc
+There might come a time when a package needs to be deprecated.  The general guidance that the team follows is to first update any readme that is associated with the package with details on the deprecation, then do a release.  The next step is to run the `npm deprecate` command to update the npm registry for a package, providing a deprecation warning to all that attempt to install it.
 
 ## Further Reading
 
 * https://docs.npmjs.com/cli/v8/configuring-npm/package-json
+* https://docs.npmjs.com/cli/v9/commands/npm-deprecate
