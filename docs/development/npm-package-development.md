@@ -19,12 +19,8 @@
     * link to recommended testing libs
   * including files
 
-  * Dependecies
-    * looking at vetting deps for this one
-  * Dev Dependecies
   * Peer Dependecies
     * bad practice to include peer deps unless as a dev dep?
-  * See vetted deps for a guide on ...
 
 * ESM / CJS - What do we have familiarty with?
   * Not a guide on how to setup bundlers or dual esm/cjs
@@ -122,9 +118,7 @@ https://nodejs.org/api/packages.html#exports
 
 #### Development Dependecies
 
-While there is no list of development dependecies that the team recommends, we do find that it is helpful to agree on the same list across a company/organization/division/some_other_name.  This is especially important for linting and testing libraries.  Having a similar set can help with ramp up time if a developer moves teams.
-
-* say something about how we on the nodeshift team used a tool to make sure all the modules are using a certain list.
+While there is no list of development dependecies that the team recommends, we do find that it is helpful to agree on the same list across a team of develoeprs.  This is especially important for linting and testing libraries.  Having a similar set can help with ramp up time if a developer moves teams.
 
 #### Peer Dependecies
 
@@ -133,15 +127,18 @@ While there is no list of development dependecies that the team recommends, we d
 
 #### Dependencies
 
-See the vetted section [link]
+For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependecies).
+
 * add something about best practice with semver things
 
-package-lock/not package lock
-shrinkwrap.json
+During development of a pacakge, it is helpful to add the package-lock.json to source control, so all developers working on the package will be able to install the same versions of dependecies.
 
-section on trade-off with versions of other modules
+It is also recommended to know what semver range you are specifying for any dependecy you wish to install.  For example:
 
-TS Typing version?
+The `^` will give you all the minor and patch releases when they become available.
+The `~` will include everything greater than a particular version in the same minor range.
+
+This [semver calculator](https://semver.npmjs.com/) is a great resource to make this determination
 
 ### CJS / ESM ?
 
