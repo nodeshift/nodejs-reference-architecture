@@ -120,11 +120,6 @@ https://nodejs.org/api/packages.html#exports
 
 While there is no list of development dependecies that the team recommends, we do find that it is helpful to agree on the same list across a team of develoeprs.  This is especially important for linting and testing libraries.  Having a similar set can help with ramp up time if a developer moves teams.
 
-#### Peer Dependecies
-
-//TODO: need more info here
-// bad practice to include peer deps unless as a dev dep?
-
 #### Dependencies
 
 For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependecies).
