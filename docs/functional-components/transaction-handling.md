@@ -52,5 +52,5 @@ need some form of messaging queing as covered
 in the [message queuing](message-queuing.md) section.
 
 Some databases offer support to help with implementing
-2 phase commit so read through the documentation for the
+the 2 phase commit technique, so read through the documentation for the
 database you are using if you are planning to that technique.
