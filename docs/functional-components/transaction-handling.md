@@ -27,7 +27,7 @@ in the [databases](./databases.md) section support transactions.
 This makes it relatively easy to update multiple elements
 with the database within a transaction. Typically
 the clients provide a simple API to start, commit and rollback
-transactions or the equivalent can be done by sumitting queries
+transactions or the equivalent can be done by submitting queries
 through the same APIs used to query and update data. Since
 these APIs vary by database, consult the documentation for the
 client and database for example of how to use transactions.
