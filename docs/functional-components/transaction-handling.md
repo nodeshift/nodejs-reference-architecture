@@ -45,8 +45,15 @@ being updated are updated through the same database
 connection. The related challenges are not specific to
 Node.js and there are common techniques that are used
 including:
-  * 2 phase commit
-  * Saga pattern
+  * [2 phase commit](https://www.educative.io/answers/what-is-the-two-phase-commit-protocol)
+  * [Saga pattern](https://medium.com/trendyol-tech/saga-pattern-briefly-5b6cf22dfabc)
+  
+In the teams experience Node.js applications will most often use the
+Saga pattern as opposed to 2 phase commit. When 2 phase commit is
+used it will have to depend on external support from an underlying
+data store. Some databases offer support to help with implementing
+the 2 phase commit technique, so read through the documentation for the
+database you are using if you are planning to use that technique.
 
 If you want to read more in depth about these techniques
 and which one you might want to use, 
