@@ -30,7 +30,8 @@ the clients provide a simple API to start, commit and rollback
 transactions or the equivalent can be done by submitting queries
 through the same APIs used to query and update data. Since
 these APIs vary by database, consult the documentation for the
-As an example this [section in the Node.js pg client [documentation](https://node-postgres.com/features/transactions)
+database you are using. As an example this 
+[section in the Node.js pg client documentation](https://node-postgres.com/features/transactions)
 shows how to handle rollback when using transactions.
 
 Node.js applications are often structured to use microservices
