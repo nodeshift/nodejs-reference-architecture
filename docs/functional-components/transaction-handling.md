@@ -6,7 +6,7 @@ sidebar_position: 13
 
 Transactions are a common requirement for applications. They
 are needed when you want a set of updates either to all
-succeed for fail as a group. For a nice intro to some of
+succeed or fail as a group. For a nice intro to some of
 the concepts check out
 [Transactions](https://cs.uwaterloo.ca/~tozsu/courses/CS338/lectures/15.%20Transactions.pdf).
 
