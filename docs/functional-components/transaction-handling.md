@@ -32,7 +32,11 @@ through the same APIs used to query and update data. Since
 these APIs vary by database, consult the documentation for the
 database you are using. As an example this 
 [section in the Node.js pg client documentation](https://node-postgres.com/features/transactions)
-shows how to handle rollback when using transactions.
+shows how to handle rollback when using transactions. 
+
+In the team's experience transactions work best with async/await versus
+generators and it is good to have a try/catch around the
+rollback sections in addition to those which do the commit.
 
 Node.js applications are often structured to use microservices
 instead of a monolith which may limit the ability to leverage
