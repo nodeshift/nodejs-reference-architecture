@@ -17,7 +17,7 @@ None
 
 ### General Guidance
 
-Unlike like Java ecosystem, there are no well established application
+Unlike in the Java ecosystem, there are no well-established application
 servers that support transactions and no JavaScript specific standards
 for transactions.
 
