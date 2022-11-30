@@ -30,7 +30,7 @@ the clients provide a simple API to start, commit and rollback
 transactions or the equivalent can be done by submitting queries
 through the same APIs used to query and update data. Since
 these APIs vary by database, consult the documentation for the
-client and database for example of how to use transactions.
+client and database for examples of how to use transactions.
 
 Node.js applications are often structured to use microservices
 instead of a monolith which may limit the ability to leverage
