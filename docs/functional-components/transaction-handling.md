@@ -4,7 +4,7 @@ sidebar_position: 13
 
 # Transaction Handling
 
-Transactions are a common requirement for applcations. They
+Transactions are a common requirement for applications. They
 are needed when you want a set of updates either to all
 succeed for fail as a group. For a nice intro to some of
 the concepts check out
