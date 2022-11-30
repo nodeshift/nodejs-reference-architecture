@@ -53,4 +53,4 @@ in the [message queuing](message-queuing.md) section.
 
 Some databases offer support to help with implementing
 the 2 phase commit technique, so read through the documentation for the
-database you are using if you are planning to that technique.
+database you are using if you are planning to use that technique.
