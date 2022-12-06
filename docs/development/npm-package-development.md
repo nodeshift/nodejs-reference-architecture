@@ -29,7 +29,17 @@ It should be noted that users and organizations can modify how `npm init` works,
 
 #### package.json
 
-While **name** and **version** are the only fields that are required to publish a package, the team recommends a few others that provide more information to the user.
+While **name** and **version** are the only fields that are required to publish a package, the team recommends a few others that provide more information to the user.  Recommended package.json fields are below:
+
+* **name** - This is a required field.  While the package name can be anything, it is recommended that the name be something related to the package being created.
+
+  If an organization will be creating multiple packages, it can be a good idea to use the scoping syntax for those packages.  For example, a scoped package in the Nodeshift organization might look like this: `@nodeshift/package1`
+
+* **version** - This is a required field.  It is recommended that any package that is publish adhere to [semantic versioning](https://semver.org/).
+
+  It is recommended that when an older Node.js version is removed and no longer supported, the package should release a new major version.
+
+  For more information and tools that can help with this, checkout our [Module Version](./npm-publishing.md#module-versions) section of the [npm publishing section](./npm-publishing.md).
 
 * **description** - This is a string that will help users discover the package, especially if it is published to the public npm registry
 
@@ -51,7 +61,11 @@ to the public npm registry
 
 * **contributors** - Contributors is an array of people who maintain the package
 
-* **license** - You should specify a license for your package so that people know how they are permitted to use it, and any restrictions you're placing on it.  More information on licenses and how they relate to the package.json can be [found here](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#license)
+* **license** - You should specify a license for your package so that people know how they are permitted to use it, and any restrictions you're placing on it.  The team has the most experience with using both the MIT and Apache-2 licenses, but if you are publishing a package on behalf of a company, it is recommended to consult your organization on what licenses they prefer.
+
+  If a package is going to be unlicensed, it is recommended to set the **private** field to `true`
+
+  More information on licenses and how they relate to the package.json can be [found here](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#license)
 
 * **files** - The list of files that you want published with your package.  This field is very handy when using a bundler to transpile code and you only want to include that transpiled code.  The team recommends not to include tests, which should reduce the package size, but to include docs.  For a listing of the files that are automatically included, check out the [npm docs here](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files)
 
@@ -90,13 +104,12 @@ While there is no list of development dependencies that the team recommends, we 
 
 For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependencies).
 
-* add something about best practice with semver things
-
 During development of a pacakge, it is helpful to add the package-lock.json to source control, so all developers working on the package will be able to install the same versions of dependencies.
 
 It is also recommended to know what semver range you are specifying for any dependecy you wish to install.  For example:
 
 The `^` will give you all the minor and patch releases when they become available.
+
 The `~` will include everything greater than a particular version in the same minor range.
 
 This [semver calculator](https://semver.npmjs.com/) is a great resource to make this determination
