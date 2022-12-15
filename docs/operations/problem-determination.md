@@ -7,7 +7,7 @@ sidebar_position: 6
 It is important to be able to investigate problems that occur in production.
 Team members have typically used one of these implementations:
 * existing Application Performance Management offering
-* custom solution leveraging avialable platform tools (for example,
+* custom solution leveraging available platform tools (for example,
   those provided by a Cloud provider or OpenShift)
 
 Irrespective of the implementation, the experience of the team is that it is important
