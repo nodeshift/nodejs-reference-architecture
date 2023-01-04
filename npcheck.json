@@ -173,6 +173,7 @@
     "allow": [
       "MIT", 
       "Apache-2.0", 
+      "Apache 2.0", 
       "ISC", 
       "BSD-2-Clause", 
       "BSD-3-Clause", 
@@ -185,7 +186,9 @@
         "allow": ["Apache"]
       },
       "ibmcloud-appid": {
-        "allow": ["BSD"]
+        "note": "dependency spdx-exceptions,spdx-license-ids uses CC0-1.0 indicates no copyright",
+        "note": "dependency spdx-exceptions uses CC-BY-3.0 allows broad use with attribution",
+        "allow": ["BSD", "CC0-1.0", "CC-BY-3.0" ]
       },
       "i18next-icu":{
         "allow": ["0BSD"]
@@ -246,6 +249,12 @@
       "mongodb": {
         "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
         "allow": ["0BSD"]
+      },
+      "@ibm-cloud/secrets-manager": {
+        "note": "dependency npm uses Artistic-2.0 which allows any use but no modifications",
+        "note": "dependency spdx-exceptions,spdx-license-ids uses CC0-1.0 indicates no copyright",
+        "note": "dependency spdx-exceptions uses CC-BY-3.0 allows broad use with attribution",
+        "allow": ["Artistic-2.0", "CC0-1.0", "CC-BY-3.0" ]
       }
     }
   },
@@ -294,7 +303,7 @@
       }],
       "CVE-2021-44906": [{
         "note": ["opencollective uses an old version of minimist. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
-	"note": ["mocha uses an old version of mkdirp. mocha is used for testing and the proptotype pollution vuln is not a concern in that module"],
+        "note": ["mocha uses an old version of mkdirp. mocha is used for testing and the proptotype pollution vuln is not a concern in that module"],
         "name": "minimist",
         "effects": ["opencollective", "mkdirp"]
       }],
@@ -304,9 +313,16 @@
         "effects": ["opencollective"]
       }],
       "CVE-2020-15168": [{
-        "note": ["swagger-editor isomorphic-fetch which uses node-fetch. The github and CVE list the severity as low/medium, while what is returned by the query to the github db says hight in one place and low in the other. This is unlikely to be an issue in use in swagger-editor and it seems like the rating should be low so just allow"],
+        "note": ["swagger-editor uses an old version of minimist. opencollective is used to ask for funding and the reported vulnerability is not a concern in that module"],
+        "note": ["swagger-editor isomorphic-fetch which uses node-fetch. The github and CVE list the severity as low/medium, while what is returned by the query to the github db says high in one place and low in the other. This is unlikely to be an issue in use in swagger-editor and it seems like the rating should be low so just allow"],
+        "note": ["swagger-client uses cross-fetch which uses node-fetch. The github and CVE list the severity as low/medium, while what is returned by the query to the github db says high in one place and low in the other. This is unlikely to be an issue in use in swagger-editor and it seems like the rating should be low so just allow"],
         "name": "node-fetch",
-        "effects": ["isomorphic-fetch"]
+        "effects": ["isomorphic-fetch", "cross-fetch", "opencollective"]
+      }],
+      "CVE-2022-3517": [{
+        "note": ["node-rdkafka uses a version of mocha that uses an old version of minimatch, as mocha is a test package used in dev, the ReDoS impact/risk is likely low"],
+        "name": "minimatch",
+        "effects": ["mocha"]
       }]
     }
   }
