@@ -254,7 +254,7 @@
         "note": "dependency npm uses Artistic-2.0 which allows any use but no modifications",
         "note": "dependency spdx-exceptions,spdx-license-ids uses CC0-1.0 indicates no copyright",
         "note": "dependency spdx-exceptions uses CC-BY-3.0 allows broad use with attribution",
-        "note": "dependency argparse@2.0.1" uses Python-2.0",
+        "note": "dependency argparse@2.0.1 uses Python-2.0",
         "allow": ["Artistic-2.0", "CC0-1.0", "CC-BY-3.0", "Python-2.0" ]
       }
     }
