@@ -69,7 +69,7 @@ to the public npm registry
 
 * **files** - The list of files that you want published with your package.  This field is very handy when using a bundler to transpile code and you only want to include that transpiled code.  The team recommends not to include tests, which should reduce the package size, but to include docs.  For a listing of the files that are automatically included, check out the [npm docs here](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#files)
 
-* **main** - This is the primary entry point to your package.  This should be a modul relative to the root of your package folder.  Most times this will be `index.js`, which is the default if this field is not set.
+* **main** - This is the primary entry point to your package.  This should be a module relative to the root of your package folder.  Most times this will be `index.js`, which is the default if this field is not set.
 
 * **bin** - If your package is intended to be used as a CLI tool, this field should be added and is a map of the command name to the local file name.
 
