@@ -60,10 +60,6 @@ and which one you might want to use,
 [Saga: The new era of transactions in a microservices architecture](https://www.redhat.com/files/summit/session-assets/2019/T42224.pdf)
 covers them in more depth.
 
-To implement 2 phase commit and saga techniques you may also
-need some form of messaging queing as covered
-in the [message queuing](message-queuing.md) section.
-
 Some databases offer support to help with implementing
 the 2 phase commit technique, so read through the documentation for the
 database you are using if you are planning to use that technique.
