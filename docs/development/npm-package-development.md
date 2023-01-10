@@ -95,6 +95,7 @@ to the public npm registry
 
 * **type** - This field defines the module format that Node.js will use.  For ES Modules(ESM), use `module` and for Common JS(CJS) modules, use `commonjs`.  For more information on how Node.js determines the difference between ESM and CJS modules take a [look at the Node.js official docs here](https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system)
 
+* **types/typings** - For those packages that would like to provide Typescript typings, the types/typings field can be used.  For more information on developing with Typescript, check out our section on [Typescript](./typescript.md)
 
 #### Development Dependencies
 
@@ -114,9 +115,11 @@ The `~` will include everything greater than a particular version in the same mi
 
 This [semver calculator](https://semver.npmjs.com/) is a great resource to make this determination
 
-### CJS / ESM
 
-TBD
+### Workspaces
+
+npm Workspaces supports managing multiple projects within a singular top-level, root package.  To learn more about using Workspaces, check out the [Mono-Repository (monorepo) Tooling and Guidance](./mono-repository) section
+
 
 ### Bundlers and Transpilers
 
