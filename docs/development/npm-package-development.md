@@ -8,7 +8,7 @@ N/A
 
 ### Package Creation
 
-When starting the creation of a new package, it is recommended to use the `npm init` command instead of hand coding, to quickly and accuretly create a new package.json.  The results of accepting all the defaults, which can be done easily with this command `npm init -y`, is below:
+When starting the creation of a new package, it is recommended to use the `npm init` command instead of hand coding, to quickly and accurately create a new package.json.  The results of accepting all the defaults, which can be done easily with this command `npm init -y`, is below:
 
 ```
 {
