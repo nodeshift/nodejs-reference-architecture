@@ -99,7 +99,7 @@ to the public npm registry
 
 #### Development Dependencies
 
-While there is no list of development dependencies that the team recommends, we do find that it is helpful to agree on the same list across a team of develoeprs.  This is especially important for linting and testing libraries.  Having a similar set can help with ramp up time if a developer moves teams.
+While there is no list of development dependencies that the team recommends, we do find that it is helpful to agree on the same list across a team of developers.  This is especially important for linting and testing libraries.  Having a similar set can help with ramp up time if a developer moves teams.
 
 #### Dependencies
 
