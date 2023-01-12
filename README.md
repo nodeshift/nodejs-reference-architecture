@@ -81,7 +81,7 @@ with only a subset of sections having recommendations):
   - Npm
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
     - [Npm Publishing](./docs/development/npm-publishing.md)
-    - Package Development
+    - [Package Development](./docs/development/npm-package-development.md)
   - [Secure Development Process](./docs/development/secure-development-process.md)
   - [Serverless](./docs/development/serverless.md)
   - Load-balancing
