@@ -123,7 +123,7 @@ npm Workspaces supports managing multiple projects within a singular top-level, 
 
 ### Bundlers and Transpilers
 
-Bundlers are helpful if your package needs to be used by both node.js and the browser.  The same codebase can be packaged for multiple platforms with a trivial amount of work by using a bundler.  [Webpack](https://webpack.js.org/) is one such bundler that the team has some familarity with.
+Bundlers are helpful if your package needs to be used by both Node.js and the browser.  The same codebase can be packaged for multiple platforms with a trivial amount of work by using a bundler.  [Webpack](https://webpack.js.org/) is one such bundler that the team has some familarity with.
 
 For those packages being written in Typescript, you will need to use a transpiler since Node.js does not support running TypeScript natively, so it must first be transpiled to JavaScript. We recommend the `tsc` transpiler that is shipped with [typescript](https://www.npmjs.com/package/typescript). This supports both type checking and transpilation to JavaScript.
 
