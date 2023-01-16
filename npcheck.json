@@ -2,171 +2,432 @@
   "modules": [
     {
       "name": "cldr-localenames-full",
-      "npmLink": "https://npmjs.com/package/cldr-localenames-full"
+      "npmLink": "https://npmjs.com/package/cldr-localenames-full",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Internationalization"
+      ]
     },
     {
       "name": "eslint",
-      "npmlink": "https://www.npmjs.com/package/eslint"
+      "npmlink": "https://www.npmjs.com/package/eslint",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "foundation": "https://openjsf.org/",
+      "section": [
+        "Code Consistency"
+      ]
     },
     {
       "name": "express",
-      "npmlink": "https://www.npmjs.com/package/express"
+      "npmlink": "https://www.npmjs.com/package/express",
+      "reviewlevel": "Active Watch",
+      "activitycurrent": "Tested and Verified",
+      "activitytarget": "None",
+      "foundation": "https://openjsf.org/",
+      "section": [
+        "Web Framework"
+      ]
     },
     {
       "name": "express-prom-bundle",
-      "npmlink": "https://www.npmjs.com/package/express-prom-bundle"
+      "npmlink": "https://www.npmjs.com/package/express-prom-bundle",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Metrics"
+      ]
     },
     {
       "name": "helmet",
-      "npmlink": "https://www.npmjs.com/package/helmet"
+      "npmlink": "https://www.npmjs.com/package/helmet",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Web Framework",
+        "Secure Development Process"
+      ]
     },
     {
       "name": "ibmcloud-appid",
-      "npmlink": "https://www.npmjs.com/package/ibmcloud-appid"
+      "npmlink": "https://www.npmjs.com/package/ibmcloud-appid",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Authentication"
+      ]
     },
     {
       "name": "i18next",
-      "npmlink": "https://www.npmjs.com/package/i18next"
+      "npmlink": "https://www.npmjs.com/package/i18next",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Internationalization"
+      ]
     },
     {
       "name": "i18next-icu",
-      "npmlink": "https://www.npmjs.com/package/i18next-icu"
+      "npmlink": "https://www.npmjs.com/package/i18next-icu",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Internationalization"
+      ]
     },
     {
       "name": "i18next-http-middleware",
-      "npmlink": "https://www.npmjs.com/package/i18next-http-middleware"
+      "npmlink": "https://www.npmjs.com/package/i18next-http-middleware",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Internationalization"
+      ]
     },
     {
       "name": "i18next-fs-backend",
-      "npmlink": "https://www.npmjs.com/package/i18next-fs-backend"
+      "npmlink": "https://www.npmjs.com/package/i18next-fs-backend",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Internationalization"
+      ]
     },
     {
       "name": "ioredis",
-      "npmlink": "https://www.npmjs.com/package/ioredis"
+      "npmlink": "https://www.npmjs.com/package/ioredis",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Data Caching",
+        "Databases",
+        "Message Queuing"
+      ]
     },
     {
       "name": "node-rdkafka",
-      "npmlink": "https://www.npmjs.com/package/node-rdkafka"
+      "npmlink": "https://www.npmjs.com/package/node-rdkafka",
+      "reviewlevel": "Active Watch",
+      "activitycurrent": "None",
+      "activitytarget": "Tested and Verified",
+      "section": [
+        "Message Queuing"
+      ]
     },
     {
       "name": "opossum",
-      "npmlink": "https://www.npmjs.com/package/opossum"
+      "npmlink": "https://www.npmjs.com/package/opossum",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "Maintainer",
+      "activitytarget": "Maintainer",
+      "section": [
+        "Fault Tolerance"
+      ]
     },
     {
       "name": "passport",
-      "npmlink": "https://www.npmjs.com/package/passport"
+      "npmlink": "https://www.npmjs.com/package/passport",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Authentication"
+      ]
     },
     {
       "name": "pino",
-      "npmlink": "https://www.npmjs.com/package/pino"
+      "npmlink": "https://www.npmjs.com/package/pino",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "Tested and Verified",
+      "activitytarget": "Tested and Verified",
+      "section": [
+        "Logging"
+      ]
     },
     {
       "name": "prom-client",
-      "npmlink": "https://www.npmjs.com/package/prom-client"
+      "npmlink": "https://www.npmjs.com/package/prom-client",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "Tested and Verified",
+      "activitytarget": "Tested and Verified",
+      "section": [
+        "Metrics"
+      ]
     },
     {
       "name": "rhea",
-      "npmlink": "https://www.npmjs.com/package/rhea"
+      "npmlink": "https://www.npmjs.com/package/rhea",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "Tested and Verified",
+      "section": [
+        "Message Queuing"
+      ]
     },
     {
       "name": "lru-cache",
-      "npmlink": "https://www.npmjs.com/package/lru-cache"
+      "npmlink": "https://www.npmjs.com/package/lru-cache",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Data Caching"
+      ]
     },
     {
       "name": "mocha",
-      "npmlink": "https://www.npmjs.com/package/mocha"
+      "npmlink": "https://www.npmjs.com/package/mocha",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "foundation": "https://openjsf.org/",
+      "section": [
+        "Testing"
+      ]
     },
     {
       "name": "jest",
-      "npmlink": "https://www.npmjs.com/package/jest"
+      "npmlink": "https://www.npmjs.com/package/jest",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "foundation": "https://openjsf.org/",
+      "section": [
+        "Testing"
+      ]
     },
     {
       "name": "@ibm-cloud/cloudant",
-      "npmlink": "https://www.npmjs.com/package/@ibm-cloud/cloudant"
+      "npmlink": "https://www.npmjs.com/package/@ibm-cloud/cloudant",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Databases"
+      ]
     },
     {
       "name": "nano",
-      "npmlink": "https://www.npmjs.com/package/nano"
+      "npmlink": "https://www.npmjs.com/package/nano",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Databases"
+      ]
     },
     {
       "name": "@elastic/elasticsearch",
-      "npmlink": "https://www.npmjs.com/package/@elastic/elasticsearch"
+      "npmlink": "https://www.npmjs.com/package/@elastic/elasticsearch",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Databases"
+      ]
     },
     {
       "name": "odbc",
-      "npmlink": "https://www.npmjs.com/package/odbc"
+      "npmlink": "https://www.npmjs.com/package/odbc",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Databases"
+      ]
     },
     {
       "name": "ibm_db",
-      "npmlink": "https://www.npmjs.com/package/ibm_db"
+      "npmlink": "https://www.npmjs.com/package/ibm_db",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Databases"
+      ]
     },
     {
       "name": "mongodb",
-      "npmlink": "https://www.npmjs.com/package/mongodb"
+      "npmlink": "https://www.npmjs.com/package/mongodb",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Databases"
+      ]
     },
     {
       "name": "pg",
-      "npmlink": "https://www.npmjs.com/package/pg"
+      "npmlink": "https://www.npmjs.com/package/pg",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "Tested and Verified",
+      "section": [
+        "Databases"
+      ]
     },
     {
       "name": "kafkajs",
-      "npmlink": "https://www.npmjs.com/package/kafkajs"
+      "npmlink": "https://www.npmjs.com/package/kafkajs",
+      "reviewlevel": "Active Watch",
+      "activitycurrent": "None",
+      "activitytarget": "Tested and Verified",
+      "section": [
+        "Message Queuing"
+      ]
     },
     {
       "name": "@openapitools/openapi-generator-cli",
-      "npmlink": "https://www.npmjs.com/package/@openapitools/openapi-generator-cli"
+      "npmlink": "https://www.npmjs.com/package/@openapitools/openapi-generator-cli",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "REST APIs Development"
+      ]
     },
     {
       "name": "openapi-backend",
-      "npmlink": "https://www.npmjs.com/package/openapi-backend"
+      "npmlink": "https://www.npmjs.com/package/openapi-backend",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "REST APIs Development"
+      ]
     },
     {
       "name": "@stoplight/prism-cli",
-      "npmlink": "https://www.npmjs.com/package/@stoplight/prism-cli"
+      "npmlink": "https://www.npmjs.com/package/@stoplight/prism-cli",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "REST APIs Development"
+      ]
     },
     {
       "name": "express-openapi-validator",
-      "npmlink": "https://www.npmjs.com/package/express-openapi-validator"
+      "npmlink": "https://www.npmjs.com/package/express-openapi-validator",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "REST APIs Development"
+      ]
     },
     {
       "name": "swagger-editor",
-      "npmlink": "https://www.npmjs.com/package/swagger-editor"
+      "npmlink": "https://www.npmjs.com/package/swagger-editor",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "REST APIs Development"
+      ]
     },
     {
       "name": "openapi-editor",
-      "npmlink": "https://www.npmjs.com/package/openapi-editor"
+      "npmlink": "https://www.npmjs.com/package/openapi-editor",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "REST APIs Development"
+      ]
     },
     {
       "name": "nyc",
-      "npmlink":"https://www.npmjs.com/package/nyc"
+      "npmlink":"https://www.npmjs.com/package/nyc",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Code Coverage"
+      ]
     },
     {
       "name": "dotenv",
-      "npmlink": "https://www.npmjs.com/package/dotenv"
-    }, 
+      "npmlink": "https://www.npmjs.com/package/dotenv",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Secure Development Process"
+      ]
+    },
     {
       "name": "node-vault",
-      "npmlink": "https://www.npmjs.com/package/node-vault"
+      "npmlink": "https://www.npmjs.com/package/node-vault",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Secure Development Process"
+      ]
     },
     {
       "name": "@ibm-cloud/secrets-manager",
-      "npmlink": "https://www.npmjs.com/package/@ibm-cloud/secrets-manager"
+      "npmlink": "https://www.npmjs.com/package/@ibm-cloud/secrets-manager",
+      "reviewlevel": "Active Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Secure Development Process"
+      ]
     },
     {
       "name": "@opentelemetry/sdk-trace-base",
-      "npmlink": "https://www.npmjs.com/package/@opentelemetry/sdk-trace-base"
+      "npmlink": "https://www.npmjs.com/package/@opentelemetry/sdk-trace-base",
+      "reviewlevel": "Active Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "foundation": "https://www.cncf.io/projects/",
+      "section": [
+        "Observability"
+      ]
     },
     {
       "name": "@opentelemetry/sdk-trace-node",
-      "npmlink": "https://www.npmjs.com/package/@opentelemetry/sdk-trace-node"
+      "npmlink": "https://www.npmjs.com/package/@opentelemetry/sdk-trace-node",
+      "reviewlevel": "Active Watch",
+      "activitycurrent": "None",
+      "activitytarget": "Tested and Verified",
+      "foundation": "https://www.cncf.io/projects/",
+      "section": [
+        "Observability"
+      ]
     },
     {
       "name": "axios",
-      "npmlink": "https://www.npmjs.com/package/axios"
+      "npmlink": "https://www.npmjs.com/package/axios",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Consuming Services"
+      ]
     },
     {
       "name": "node-fetch",
-      "npmlink": "https://www.npmjs.com/package/node-fetch"
+      "npmlink": "https://www.npmjs.com/package/node-fetch",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "Consuming Services"
+      ]
     }
   ],
   "licenses": {
