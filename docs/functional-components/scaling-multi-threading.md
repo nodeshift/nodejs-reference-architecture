@@ -2,7 +2,7 @@
 sidebar_position: 9
 ---
 
-# Scaling and Multi-threading
+# Load balancing, Scaling and Multi-threading
 
 Node.js is said to be `single-threaded`. While not quite true, it reflects that
 most work is done on a single thread running the event loop. The asynchronous
@@ -56,9 +56,10 @@ We don't recommened any specific components at this time.
   are recommended versus multiple processes in the same container.
 
 - delegate management of the containers supporting
-  the application and the routing of requests to those containers
-  to the highest layer possible. For example, if the application
-  is deployed to kubernetes, do not use tools like the
+  the application and the load balancing/routing of requests
+  to those containers to the highest layer possible. For
+  example, if the application is deployed to kubernetes,
+  do not use tools like the
   [Cluster API](https://nodejs.org/api/cluster.html) to manage
   requests within a container, instead rely on the facilities
   provided by kubernetes. In our experience this has been

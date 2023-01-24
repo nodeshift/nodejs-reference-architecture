@@ -57,7 +57,7 @@ with only a subset of sections having recommendations):
   - [Authentication and Authorization](./docs/functional-components/auth.md)
   - [Data Caching](./docs/functional-components/data-caching.md)
   - [REST API Development](./docs/functional-components/rest-api-development.md)
-  - [Scaling and Multi-threading](./docs/functional-components/scaling-multi-threading.md)
+  - [Load Balancing, Scaling and Multi-threading](./docs/functional-components/scaling-multi-threading.md)
   - [Consuming Services](./docs/functional-components/consuming-services.md)
   - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
   - [Transactions_handling](./docs/functional-commponents/transaction-handling.md)
@@ -84,7 +84,6 @@ with only a subset of sections having recommendations):
     - [Package Development](./docs/development/npm-package-development.md)
   - [Secure Development Process](./docs/development/secure-development-process.md)
   - [Serverless](./docs/development/serverless.md)
-  - Load-balancing
 
 - Operations
   - Monitoring
