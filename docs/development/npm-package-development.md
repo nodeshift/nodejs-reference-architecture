@@ -103,7 +103,7 @@ While there is no list of development dependencies that the team recommends, we 
 
 #### Dependencies
 
-For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependencies).
+For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependencies.md).
 
 During development of a pacakge, it is helpful to add the package-lock.json to source control, so all developers working on the package will be able to install the same versions of dependencies.
 
@@ -118,7 +118,7 @@ This [semver calculator](https://semver.npmjs.com/) is a great resource to make 
 
 ### Workspaces
 
-npm Workspaces supports managing multiple projects within a singular top-level, root package.  To learn more about using Workspaces, check out the [Mono-Repository (monorepo) Tooling and Guidance](./mono-repository) section
+npm Workspaces supports managing multiple projects within a singular top-level, root package.  To learn more about using Workspaces, check out the [Mono-Repository (monorepo) Tooling and Guidance](./mono-repository.md) section
 
 
 ### Bundlers and Transpilers
