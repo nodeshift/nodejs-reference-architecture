@@ -143,7 +143,7 @@ Source maps should be generated and stored with the original source code for eac
 If you are operating a service where you own all deployments an existing Application
 Performance Management (APM) solution can make sense if budget is not an issue.
 (they can become expensive for large deployments). They offer the advantage
-or requiring less up front investment and leveraging a solution designed to help
+of requiring less up front investment and leveraging a solution designed to help
 investigate problems. The team has had success with using
 [Dynatrace](https://www.dynatrace.com/),
 [Instana](https://www.ibm.com/cloud/instana),
