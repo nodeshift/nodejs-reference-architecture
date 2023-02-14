@@ -150,7 +150,7 @@ investigate problems. The team has had success with using
 and [NewRelic](https://newrelic.com/)
 
 If you develop applications that will be operated by customers, adding a dependency
-on a specifc APM for problem determination is not recommended. The cost may be an issue
+on a specific APM for problem determination is not recommended. The cost may be an issue
 for some customers, while others may already have standardized on a specific APM. Larger
 organizations in particular are likely to want to leverage their APM of choice across
 applications. It is recommended that whenever possible you leverage standard clients
