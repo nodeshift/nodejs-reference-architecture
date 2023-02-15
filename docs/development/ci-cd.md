@@ -12,10 +12,9 @@ one or more containers.
 
 In the context of a Node.js component the version of the component and
 the version of Node.js used to run that component are managed through
-tools like [helm](https://helm.sh/) or [flux](https://fluxcd.io/) to
-configure the version of the component and the base container to be
-used in a deployment. The base container may be an existing Node.js
-container (for example)
+a Dockerfile to configure the version of the component and the base
+container to be used in a deployment. The base container may be an
+existing Node.js container (for example)
 [ubi8/nodejs-16](https://catalog.redhat.com/software/containers/ubi8/nodejs-16/615aee9fc739c0a4123a87e1)
 container or a [dependency image](./docs/development/building-good-containers.md#dependency-image).
 
