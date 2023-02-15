@@ -40,45 +40,48 @@ which are used at the same time:
 While tools like [Source to image](https://github.com/openshift/source-to-image),
 [docker](https://www.docker.com/) or [podman](https://podman.io/) maybe used by
 the developer to test locally as documented in
-[Fully local development, container based](./docs/development/dev-flows.md#fully-local-development-container-based),
+[Fully local development, container based](./docs/development/dev-flows.md#fully-local-development-container-based) workflow,
 the developer does not push the container to source control. Instead,
 the containers used for deployment are build as part of the container pipeline.
 
 ## Testing on code check-in
 
-When updates are checked into a source code repository (most often
+When a PR is made against a main branch in a source code repository (most often
 some form of git these days) initial testing is automatically kicked off
 using services like [Travis CI](https://www.travis-ci.com/) or
 [GitHub actions](https://github.com/features/actions). This level of testing
-is generally `unit` and `code quality` testing and the teams recommendations
+is starts with `unit` and `code quality` testing and the teams recommendations
 for this kind of testing for Node.js components are captured in the
 [Code Consistency](./docs/development/code-consistency.md),
 [Testing](./docs/development/testing.md), and
-[Code Coverage](./docs/development/code-coverage.md) sections.
+[Code Coverage](./docs/development/code-coverage.md) sections. Teams often
+then also test the PR by spinning up a container environment and runing some
+initial integration test.
 
-When an update lands in the source code repository after passing
-those checks, the pipeline for building and testing containers may be triggered
-automatically or it may be triggered separately at some interval.
+When an PR lands in the source code repository after passing
+those checks, the pipeline for building and testing images
+may be triggered automatically or it may be triggered separately
+at some interval.
 
 Check-in testing if often configured to run on a number of Node.js
 versions in parallel and the team recommends that you test at least on the
 LTS version of Node.js that you currently deploy with along with
 later LTS versions in order to enable future upgrades.
 
-While the check-in testing may not run on the container that flows
+While the check-in testing may not run on the image that flows
 through the container pipeline, the team tries to ensure
 that testing is on the same environment/architecture as used
 by the container pipeline. In addition, the team also recommends
 that the same is true for local testing done by developers.
 
-## Container Pipeline
+## Image Pipeline
 
 Once updates have passed the initial check-in testing, the container
 pipeline is kicked off. In the teams experience the pipeline may
 support a number of stages/environments including:
 
 * Development
-  * This environment often mirros the main branch of each component
+  * This environment often mirrors the main branch of each component
     and may sometimes not be working due to mistmatches in APIs/use of APIs.
   * Once tests pass in development, PRs may be automatically opened to
     update Staging to the new component levels.
@@ -97,6 +100,8 @@ support a number of stages/environments including:
 * Pre-Production (optional)
   * pre-production may be used to allow customer testing/sign
     off before push to production.
+  * Some teams use Staging intead of having a separate pre-production
+    environment.
 * Production
   * Environment that hosts the customer facing service.
 
