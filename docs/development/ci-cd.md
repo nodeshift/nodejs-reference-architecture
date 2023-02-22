@@ -50,7 +50,7 @@ When a PR is made against a main branch in a source code repository (most often
 some form of git these days) initial testing is automatically kicked off
 using services like [Travis CI](https://www.travis-ci.com/) or
 [GitHub actions](https://github.com/features/actions). This level of testing
-is starts with `unit` and `code quality` testing and the teams recommendations
+starts with `unit` and `code quality` testing and the teams recommendations
 for this kind of testing for Node.js components are captured in the
 [Code Consistency](./docs/development/code-consistency.md),
 [Testing](./docs/development/testing.md), and
