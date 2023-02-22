@@ -6,17 +6,17 @@ sidebar_position: 14
 
 Based on common developer workflows as documented in the section titled
 [Typical Development Workflows](./docs/development/dev-flows.md#typical-development-workflows)
-the end target/deployment artifact is often a container. Most of our
+the end target/deployment artifact is often a container image. Most of our
 advice/recommendations are therefore in the context of building/testing
-one or more containers.
+one or more images.
 
 In the context of a Node.js component the version of the component and
 the version of Node.js used to run that component are managed through
 a Dockerfile to configure the version of the component and the base
-container to be used in a deployment. The base container may be an
-existing Node.js container (for example)
+image to be used in a deployment. The base image may be an
+existing Node.js image (for example)
 [ubi8/nodejs-16](https://catalog.redhat.com/software/containers/ubi8/nodejs-16/615aee9fc739c0a4123a87e1)
-container or a [dependency image](./docs/development/building-good-containers.md#dependency-image).
+image or a [dependency image](./docs/development/building-good-containers.md#dependency-image).
 
 While a Node.js developer may not need to setup the CI/CD pipleline a
 good understanding of their organizations pipeline is often valuable
@@ -34,15 +34,15 @@ The team's experiece is that there are most often two different ci/cd flows
 which are used at the same time:
 
 * Testing on code check-in
-* Container pipeline - a pipeline to build and test containers as they
+* Container pipeline - a pipeline to build and test images as they
   are promoted from development through to production.
 
 While tools like [Source to image](https://github.com/openshift/source-to-image),
 [docker](https://www.docker.com/) or [podman](https://podman.io/) maybe used by
 the developer to test locally as documented in
 [Fully local development, container based](./docs/development/dev-flows.md#fully-local-development-container-based) workflow,
-the developer does not push the container to source control. Instead,
-the containers used for deployment are build as part of the container pipeline.
+the developer does not push the image to source control. Instead,
+the images used for deployment are build as part of the container pipeline.
 
 ## Testing on code check-in
 
@@ -74,7 +74,7 @@ that testing is on the same environment/architecture as used
 by the container pipeline. In addition, the team also recommends
 that the same is true for local testing done by developers.
 
-## Image Pipeline
+## Container Pipeline
 
 Once updates have passed the initial check-in testing, the container
 pipeline is kicked off. In the teams experience the pipeline may
@@ -111,11 +111,11 @@ needed is advantageous.
 
 The version of the component and the version of Node.js (through the base
 container image used) is fixed in the Development stage of the pipeline
-where the container is built for the component. That container is typically
+where the image is built for the component. That iamge is typically
 pushed to an internal registry and later steps in the pipeline use a tagged
-version of that container from the registry. 
+version of that image from the registry. 
 
-As the container for the Node.js component is built once and promoted
+As the image for the Node.js component is built once and promoted
 through the pipeline stages, it is important that all configuration
 related to the environment is externalized so that environment specific
 values can be provided in each environment. This includes for example
@@ -147,7 +147,7 @@ deploys checks in both the check-in tests as well as the container pipeline.
 Tools like [mend](https://www.mend.io/), [Synk](https://snyk.io/) and those
 built into GitHub have been used for scanning in the check-in phase.
 
-Additional container based scans are then employed in the piplelines phases.
+Additional image based scans are then employed in the piplelines phases.
 
 
 
