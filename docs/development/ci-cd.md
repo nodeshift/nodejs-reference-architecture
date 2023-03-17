@@ -60,7 +60,7 @@ initial integration test.  If you run check-in integration tests it is often use
 integration and unit tests in the container in order to capture a more complete picture
 of the Code Coverage achieved.
 
-When an PR lands in the source code repository after passing
+When a PR lands in the source code repository after passing
 those checks, the pipeline for building and testing images
 may be triggered automatically or it may be triggered separately
 at some interval.
