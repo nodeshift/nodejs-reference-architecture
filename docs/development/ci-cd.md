@@ -88,7 +88,7 @@ support a number of stages/environments including:
   * Once tests pass in development, PRs may be automatically opened to
     update Staging to the new component levels.
 * Staging
-  * Staging uses tagged versions of each component which are know to
+  * Staging uses tagged versions of each component which are known to
     work together.
   * They may be multiple staging environments. One which
     mirrors production in terms of non-application components
