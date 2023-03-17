@@ -95,7 +95,7 @@ support a number of stages/environments including:
     (versions of istio, kubernetes, etc.) and additional
     environments which reflect future target configurations
     for these components.
-  * PRs may be automatically created to update components version in
+ * PRs may be automatically created to update component versions in
     production once test pass in Staging but there is most often a
     formal sign off (by QA or other teams) for these to be accepted
     into production.
