@@ -77,7 +77,7 @@ with only a subset of sections having recommendations):
     - [TypeScript](./docs/development/typescript.md)
   - [Accessibility](./docs/development/accessibility.md)
   - Cross origin resource sharing (CORS)
-  - CI/CD
+  - [CI/CD](./docs/development/ci-cd.md)
   - Npm
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
     - [Npm Publishing](./docs/development/npm-publishing.md)
