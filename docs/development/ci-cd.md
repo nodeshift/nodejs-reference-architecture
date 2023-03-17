@@ -144,6 +144,9 @@ changes from the more common component version changes.
 ## Security scans
 
 Security checks are an important part of CI/CD pipelines. Typically the team
+deploys code and image scans in the check-in tests and/or the container pipeline.
+The benefit of running in the check-in tests helps developers validate that
+they have resolved reported issue.
 deploys checks in both the check-in tests as well as the container pipeline.
 
 Tools like [mend](https://www.mend.io/), [Synk](https://snyk.io/) and those
