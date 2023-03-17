@@ -56,7 +56,9 @@ for this kind of testing for Node.js components are captured in the
 [Testing](./docs/development/testing.md), and
 [Code Coverage](./docs/development/code-coverage.md) sections. Teams often
 then also test the PR by spinning up a container environment and runing some
-initial integration test.
+initial integration test.  If you run check-in integration tests it is often useful to run both 
+integration and unit tests in the container in order to capture a more complete picture
+of the Code Coverage achieved.
 
 When an PR lands in the source code repository after passing
 those checks, the pipeline for building and testing images
