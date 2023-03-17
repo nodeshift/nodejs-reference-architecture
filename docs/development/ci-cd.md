@@ -5,7 +5,7 @@ sidebar_position: 14
 # CI/CD
 
 Based on common developer workflows as documented in the section titled
-[Typical Development Workflows](./docs/development/dev-flows.md#typical-development-workflows)
+[Typical Development Workflows](./dev-flows.md#typical-development-workflows)
 the end target/deployment artifact is often a container image. Most of our
 advice/recommendations are therefore in the context of building/testing
 one or more images.
@@ -16,7 +16,7 @@ a Dockerfile to configure the version of the component and the base
 image to be used in a deployment. The base image may be an
 existing Node.js image (for example)
 [ubi8/nodejs-16](https://catalog.redhat.com/software/containers/ubi8/nodejs-16/615aee9fc739c0a4123a87e1)
-image or a [dependency image](./docs/development/building-good-containers.md#dependency-image).
+image or a [dependency image](./building-good-containers.md#dependency-image).
 
 While a Node.js developer may not need to setup the CI/CD pipleline a
 good understanding of their organizations pipeline is often valuable
@@ -40,7 +40,7 @@ which are used at the same time:
 While tools like [Source to image](https://github.com/openshift/source-to-image),
 [docker](https://www.docker.com/) or [podman](https://podman.io/) maybe used by
 the developer to test locally as documented in
-[Fully local development, container based](./docs/development/dev-flows.md#fully-local-development-container-based) workflow,
+[Fully local development, container based](./dev-flows.md#fully-local-development-container-based) workflow,
 the developer does not push the image to source control. Instead,
 the images used for deployment are build as part of the container pipeline.
 
@@ -52,9 +52,9 @@ using services like [Travis CI](https://www.travis-ci.com/) or
 [GitHub actions](https://github.com/features/actions). This level of testing
 starts with `unit` and `code quality` testing and the teams recommendations
 for this kind of testing for Node.js components are captured in the
-[Code Consistency](./docs/development/code-consistency.md),
-[Testing](./docs/development/testing.md), and
-[Code Coverage](./docs/development/code-coverage.md) sections. Teams often
+[Code Consistency](./code-consistency.md),
+[Testing](./testing.md), and
+[Code Coverage](./code-coverage.md) sections. Teams often
 then also test the PR by spinning up a container environment and runing some
 initial integration test.  If you run check-in integration tests it is often useful to run both 
 integration and unit tests in the container in order to capture a more complete picture
