@@ -65,7 +65,7 @@ those checks, the pipeline for building and testing images
 may be triggered automatically or it may be triggered separately
 at some interval.
 
-Check-in testing if often configured to run on a number of Node.js
+Check-in testing is often configured to run on a number of Node.js
 versions in parallel and the team recommends that you test at least on the
 LTS version of Node.js that you currently deploy with along with
 later LTS versions in order to enable future upgrades.
