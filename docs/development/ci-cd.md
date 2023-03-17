@@ -135,7 +135,7 @@ within the container pipeline. One commmon pattern the team has seen is using
 helm charts within this repo to configure the versions of the components used
 along with the configuration required for a given environment.
 
-The team has found is useful to have shared helm charts for common application
+The team has found that it is useful to have shared helm charts for common application
 categories, deploying them helm parameters. In addition the team has also found
 it useful to separate configuration of the component versions from other
 configuration which does not change as often. This helps to isolate other
