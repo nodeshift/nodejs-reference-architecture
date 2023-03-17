@@ -113,7 +113,7 @@ needed is advantageous.
 
 The version of the component and the version of Node.js (through the base
 container image used) is fixed in the Development stage of the pipeline
-where the image is built for the component. That iamge is typically
+where the image is built for the component. That image is typically
 pushed to an internal registry and later steps in the pipeline use a tagged
 version of that image from the registry. 
 
