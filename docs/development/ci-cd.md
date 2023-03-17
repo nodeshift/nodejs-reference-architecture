@@ -147,7 +147,13 @@ Security checks are an important part of CI/CD pipelines. Typically the team
 deploys checks in both the check-in tests as well as the container pipeline.
 
 Tools like [mend](https://www.mend.io/), [Synk](https://snyk.io/) and those
-built into GitHub have been used for scanning in the check-in phase.
+built into GitHub have been used for scanning in the check-in phase. Often
+a number of differents scans are required to cover all of the important aspects
+which include scans of:
+* application depencencies for vulnerabilities
+* os packages for vulnerabilities
+* source code using static analysis
+* container images for best practices (not running as root etc.)
 
 Additional image based scans are then employed in the piplelines phases.
 
