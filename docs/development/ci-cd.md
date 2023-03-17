@@ -157,13 +157,3 @@ which include scans of:
 
 Additional image based scans are then employed in the piplelines phases.
 
-
-
-
-
-
-
-
-
-
-
