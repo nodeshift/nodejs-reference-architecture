@@ -96,7 +96,7 @@ support a number of stages/environments including:
     environments which reflect future target configurations
     for these components.
  * PRs may be automatically created to update component versions in
-    production once test pass in Staging but there is most often a
+    production once tests pass in Staging but there is most often a
     formal sign off (by QA or other teams) for these to be accepted
     into production.
 * Pre-Production (optional)
