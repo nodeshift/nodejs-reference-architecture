@@ -102,7 +102,7 @@ support a number of stages/environments including:
 * Pre-Production (optional)
   * pre-production may be used to allow customer testing/sign
     off before push to production.
-  * Some teams use Staging intead of having a separate pre-production
+  * Some teams use Staging instead of having a separate pre-production
     environment.
 * Production
   * Environment that hosts the customer facing service.
