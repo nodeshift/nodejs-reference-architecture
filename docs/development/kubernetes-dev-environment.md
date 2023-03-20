@@ -1,4 +1,4 @@
-﻿# Kubernetes-based Development Environment Recommendations
+# Kubernetes-based Development Environment Recommendations
 
 Developement and local-testing flows should ideally be the same for all the developers of a project, but its
 common for developers on a team to have heterogeneus development platforms (i.e. Linux, Intel-based MacOS, M1-based MacOS, Windows).
@@ -24,9 +24,10 @@ supporting a local kubernetes running your development/tests, having a microserv
 fitting within a 8Gb memory footprint for your kubernetes deployment.  Another powerful trick is to identify those dependent services that
 provide stateless support, in that functional calls to them are stateless where they are deployed, such as identity-lookup/token-exchange
 APIs, and utilize the deployments in your shared development-zone cluster (what is deployed to when your Git PRs are merged) for your
-local-microservice needs.  If your microservice APIs have to support multiple tenants/organizations, it is recommended that your development-zone 
-cluster and local cluster share definitions of test users and organizations, but DO NOT share them with other CI pipeline clusters.
-Specifically, test org display-names can still be the same in other clusters, but the guids and credentials for them should be different.
+local-microservice needs.  If your microservice APIs have to support multiple tenants/organizations, it is recommended that your 
+development-zone cluster and local cluster share definitions of test users and organizations, but DO NOT share them with other CI pipeline
+clusters. Specifically, test org display-names can still be the same in other clusters, but the guids and credentials for them should be
+different.
 
 We've had good success with defining our configurations for microservices in a hierarchical set of yaml files where the overrides
 work in ascending order:
@@ -44,18 +45,19 @@ helm template ../helm-charts/app1 --name-template app1-dev --output-dir ../kubec
 ```
 
 # Replicating non-stateless DBs/queues locally
-If possible, avoid using shared databases and use local k8s deployments of the databases/queues to avoid test case collision between developers.
-As long as you are careful to make sure your development zone does not contain customer data, then making backups of your development databases
-and loading those backups in local development copies can help speed up your testcase creation process and leverage "end to end" tests that may
-use such data.  Remember, you can use Minio to locally replicate storage in S3.
+If possible, avoid using shared databases and use local k8s deployments of the databases/queues to avoid test case collision between 
+developers. As long as you are careful to make sure your development zone does not contain customer data, then making backups of your 
+development databases and loading those backups in local development copies can help speed up your testcase creation process and leverage 
+"end to end" tests that may use such data.  Remember, you can use Minio to locally replicate storage in S3.
 
 # Doing interactive nodejs debugging in containers
-The kubernetes pod's spec.containers.args field can be configured in a helm chart to conditionally override of the primary command the container
-uses when starting up.  This can be used to then override the regular node <my-app-entry>.js command to also pass in the --inspect-brk flag, making
-the node (or nodemon) process wait for a remote debugger connection after starting up.  Remember, the same yaml-config value used to turn on this 
-debugging mode should also be used to disable liveness/readiness checks in the pod, or else the pod will get restarted by such checks.  One can
-then use the "kubectl port-forward" command to establish a tunnel to the remote-debug port the nodejs process is listening to.  IDE's like
-Visual Studio Code can then connect to that tunnel-port to reach the backend nodejs process you want to interactively debug.
+The kubernetes pod's spec.containers.args field can be configured in a helm chart to conditionally override of the primary command the 
+container uses when starting up.  This can be used to then override the regular node <my-app-entry>.js command to also pass in the 
+--inspect-brk flag, making the node (or nodemon) process wait for a remote debugger connection after starting up.  Remember, the same 
+yaml-config value used to turn on this debugging mode should also be used to disable liveness/readiness checks in the pod, or else the pod 
+will get restarted by such checks.  One can then use the "kubectl port-forward" command to establish a tunnel to the remote-debug port the 
+nodejs process is listening to.  IDE's like Visual Studio Code can then connect to that tunnel-port to reach the backend nodejs process you 
+want to interactively debug.
 
 # Using nodemon in local containers
 Similar to changing the startup command to set the --inspect-brk flag, local containers can also replace node with 'nodemon'.  Nodemon is
@@ -64,8 +66,8 @@ allow developers to modify the js code running on a container without having to 
 helps to accelerate the re-build process, but just copying over a few changed files can save 30 seconds or so in the iteration process.
 Nodemon should NEVER be used in production but it's fine to be installed but unused in a production image.
 
-Here is a sample bash shell script to copy over the updated .ts file and re-run 'tsc' in the deployed container, which often only takes about
-5 seconds to run: 
+Here is a sample bash shell script to copy over the updated .ts file and re-run 'tsc' in the deployed container, which often only takes 
+about 5 seconds to run:
 ```
 updatePod(){
   POD_NAME="$1"
@@ -108,12 +110,12 @@ updatePod(){
 ```
 
 # Extracting test results from Kubernetes pods
-So just like how debugger flags and nodemon can be conditionally turned on in a pod deployment, the same goes for starting a unit + integration
-test run.  When doing this, one should run nyc around the execution of the unit + integration tests to capture the code coverage from the
-combination of the two types of tests.  However, one can't have the pod test-script immediately finish once the test finishes, or else the test
-results will disappear when the test pod shuts down.  Normally, local developer testing can then just look at the logs of the shutdown pod to
-see if it was successful or not, but when debugging failures in a CICD pipeline like Travis/Jenkins, its very useful to run the same logic locally 
-on one's development system, and those flows will typically need the full test result files.
+So just like how debugger flags and nodemon can be conditionally turned on in a pod deployment, the same goes for starting a unit + 
+integration test run.  When doing this, one should run nyc around the execution of the unit + integration tests to capture the code 
+coverage from the combination of the two types of tests.  However, one can't have the pod test-script immediately finish once the test 
+finishes, or else the test results will disappear when the test pod shuts down.  Normally, local developer testing can then just look at 
+the logs of the shutdown pod to see if it was successful or not, but when debugging failures in a CICD pipeline like Travis/Jenkins, its 
+very useful to run the same logic locally on one's development system, and those flows will typically need the full test result files.
 
 There are two general solutions for this:
 * For tests run in a non-production environment like minikube, a kubernetes Physical Volume (PV) can be created and
@@ -123,9 +125,9 @@ development system (or CICD engine like Travis/Jenkins) can then copy out the te
 * Utilize a communication-state handshake between the high level test scripting (eg. Travis/Jenkins/laptop shell) and the process in the
 test pod.  This can be done with a file in the pod, where the test scripting writes the process return-code from the tests to a file and
 loops (i.e. stays alive) until file is deleted.  Example post-test script logic in the test-pod:
-```
-; TEST_RESULT=$?; echo $TEST_RESULT > /tmp/test.report.generated.semaphore; echo 'Waiting for test reports to be fetched...'; (while [ -f /tmp/test.report.generated.semaphore ]; do sleep 2; done); echo 'Test reports pulled!'; exit $TEST_RESULT
-```
-The parent layer can then use "kubectl exec ... -- ls /tmp/test.report.generated.semaphore" to check for the presence of the semaphore file
-that tells when tests finished.  It can then copy out the results with "kubectl cp ...", and delete the semaphore file with "kubectl exec ... -- rm
-/tmp/test.report.generated.semaphore"
+  ```
+  ; TEST_RESULT=$?; echo $TEST_RESULT > /tmp/test.report.generated.semaphore; echo 'Waiting for test reports to be fetched...'; (while [ -f /tmp/test.report.generated.semaphore ]; do sleep 2; done); echo 'Test reports pulled!'; exit $TEST_RESULT
+  ```
+  The parent layer can then use "kubectl exec ... -- ls /tmp/test.report.generated.semaphore" to check for the presence of the semaphore file 
+  that tells when tests finished.  It can then copy out the results with "kubectl cp ...", and delete the semaphore file with "kubectl exec 
+  ... -- rm /tmp/test.report.generated.semaphore"
