@@ -122,9 +122,9 @@ There are two general solutions for this:
 and mounted in the test container for the post-test script to copy its result files into.  The higher level test-logic flow on one's
 development system (or CICD engine like Travis/Jenkins) can then copy out the test result and coverage files. 
 
-* Utilize a communication-state handshake between the high level test scripting (eg. Travis/Jenkins/laptop shell) and the process in the
-test pod.  This can be done with a file in the pod, where the test scripting writes the process return-code from the tests to a file and
-loops (i.e. stays alive) until file is deleted.  Example post-test script logic in the test-pod:
+* Utilize a state-handshake between the high level test scripting (eg. Travis/Jenkins/laptop shell) and the process in the
+test pod.  This can be done with a file in the pod, where the test scripting writes the process return-code from the tests to that file and
+loops (i.e. stays alive) until the file is deleted.  Example post-test script logic in the test-pod:
   ```
   ; TEST_RESULT=$?; echo $TEST_RESULT > /tmp/test.report.generated.semaphore; echo 'Waiting for test reports to be fetched...'; (while [ -f /tmp/test.report.generated.semaphore ]; do sleep 2; done); echo 'Test reports pulled!'; exit $TEST_RESULT
   ```
