@@ -60,7 +60,7 @@ with only a subset of sections having recommendations):
   - [Load Balancing, Scaling and Multi-threading](./docs/functional-components/scaling-multi-threading.md)
   - [Consuming Services](./docs/functional-components/consuming-services.md)
   - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
-  - [Transactions_handling](./docs/functional-commponents/transaction-handling.md)
+  - [Transactions_handling](./docs/functional-components/transaction-handling.md)
 
 - Development
 
