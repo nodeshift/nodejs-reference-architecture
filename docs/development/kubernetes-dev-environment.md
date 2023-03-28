@@ -52,7 +52,7 @@ development databases and loading those backups in local development copies can 
 
 # Doing interactive nodejs debugging in containers
 The kubernetes pod's spec.containers.args field can be configured in a helm chart to conditionally override of the primary command the 
-container uses when starting up.  This can be used to then override the regular node <my-app-entry>.js command to also pass in the 
+container uses when starting up.  This can be used to then override the regular node (my-app-entry).js command to also pass in the 
 --inspect-brk flag, making the node (or nodemon) process wait for a remote debugger connection after starting up.  Remember, the same 
 yaml-config value used to turn on this debugging mode should also be used to disable liveness/readiness checks in the pod, or else the pod 
 will get restarted by such checks.  One can then use the "kubectl port-forward" command to establish a tunnel to the remote-debug port the 
