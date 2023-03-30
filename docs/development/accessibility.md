@@ -133,3 +133,7 @@ or Node.js workflow when nessary. For example:
 * [axe-core](https://www.npmjs.com/package/axe-core)
 * [pa11y](https://www.npmjs.com/package/pa11y)
 * [web test runner](https://modern-web.dev/docs/test-runner/overview/) and [open-wc testing helpers](https://open-wc.org/docs/testing/chai-a11y-axe/) provide framework-agnostic a11y unit testing tools. See [PatternFly Elements' `<pfe-accordion>`](https://github.com/patternfly/patternfly-elements/blob/6363f03d2d95db5146eee6453330b919655fb034/elements/pfe-accordion/test/pfe-accordion.spec.ts#L449-L452) for an example of how to write keyboard accessibility tests for interactive widgets
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: Accessibility](https://developers.redhat.com/articles/2022/11/03/nodejs-reference-architecture-part-10-accessibility)
