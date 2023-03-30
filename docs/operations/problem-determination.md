@@ -225,10 +225,9 @@ The team has used a hidden rest call in the application which allows changing th
 See [Node.js Reference Architecture, Part 2: Logging in Node.js](https://developer.ibm.com/blogs/nodejs-reference-architectire-pino-for-logging/)
 for more details.
 
+## Further Reading
 
-
-
-
+[Introduction to the Node.js reference architecture: How to investigate 7 common problems in production](https://developers.redhat.com/articles/2023/03/21/how-investigate-7-common-problems-production)
 
 
 

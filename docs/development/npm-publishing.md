@@ -83,8 +83,10 @@ registry=http://my-internal-registry.local
 
 If you are using the global `.npmrc` file, you can use the [npmrc module](https://www.npmjs.com/package/npmrc) to easily switch between multiple `.npmrc` configurations, although it is not necessary for publishing to an internal registry.
 
-## Learning Resources
+## Further Reading
 
-- https://github.blog/changelog/2020-10-02-npm-automation-tokens/
+* [Introduction to the Node.js reference architecture: Node Module Development](https://developers.redhat.com/articles/2023/02/22/installing-nodejs-modules-using-npm-registry)
 
-- https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610
+* https://github.blog/changelog/2020-10-02-npm-automation-tokens/
+
+* https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610

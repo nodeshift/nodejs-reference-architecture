@@ -150,3 +150,7 @@ Additional Disadvantages:
 * High dependency on network connection
 * Cloud IDEs tend to be more locked down, giving developers less
   flexibility over development workflow and tools
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: Typical development workflows](https://developers.redhat.com/articles/2022/12/21/typical-development-workflows)

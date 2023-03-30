@@ -166,3 +166,5 @@ There might come a time when a package needs to be deprecated.  The general guid
 * https://semver.npmjs.com/
 * https://docs.npmjs.com/cli/v9/commands/npm-dist-tag
 * https://docs.npmjs.com/cli/v9/commands/npm-deprecate
+
+* [Introduction to the Node.js reference architecture: Node Module Development](https://developers.redhat.com/articles/2023/02/22/installing-nodejs-modules-using-npm-registry)

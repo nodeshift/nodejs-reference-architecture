@@ -226,3 +226,7 @@ Based on the teams experience we recommend:
   and review/land the PRs generated.
 * Test and ensure that the module runs/passes tests on the
   latest LTS versions. This will reduce risk when updates are required for Node.js security releases.
+
+## Further Reading
+
+[Introduction to the Node.js reference architecture: 8 elements of securing Node.js applications](https://developers.redhat.com/articles/2022/08/09/8-elements-securing-nodejs-applications)
