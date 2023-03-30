@@ -30,10 +30,12 @@ Using a npm mirror/proxy is fairly easy. You can set the _registry_ that the npm
 
 Since these registry are not Node.js specific and can be used by other languages, organizations might already have something running where npm support can be turned on.
 
-## Learning Resources
+## Further Reading
 
-https://jfrog.com/artifactory/
+* [Introduction to the Node.js reference architecture: Node Module Development](https://developers.redhat.com/articles/2023/02/22/installing-nodejs-modules-using-npm-registry)
 
-https://guides.sonatype.com/repo3/quick-start-guides/proxying-maven-and-npm/
+* https://jfrog.com/artifactory/
 
-https://www.sonatype.com/products/repository-oss-vs-pro-features
+* https://guides.sonatype.com/repo3/quick-start-guides/proxying-maven-and-npm/
+
+* https://www.sonatype.com/products/repository-oss-vs-pro-features
