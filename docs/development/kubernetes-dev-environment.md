@@ -14,8 +14,9 @@ options which include:
   familiar with Linux). Docker client is still free and it can connect to a remove virtual
   machine.  However, this has not worked well with recent versions of MacOS Ventura.
 * podman and podman desktop which provides similar functionality to docker desktop but is
-  open source and free.  The podman virtual machine does have stability issues and needs to be rebuilt
-  or restarted every few days, which can take 5-10 minutes.
+  open source and free.  The podman virtual machine does have two stability issues (it doesn't resync its
+  clock after a sleep) and sometimes the minikube client on it becomes unresponsive, but usually it can run for multiple
+  days before that happens.  Often, is fastest to just delete/rebuild the podman virtual machine, which can take 5-10 minutes.
 
 # Sharing development-zone configurations
 When developing microservices within a multi-microservice app, its ideal for the microservice architecture to not require all the
@@ -35,7 +36,7 @@ work in ascending order:
 2. cross-zone app-specific settings,
 3. zone-specific app-generic settings,
 4. zone-specific app-specific settings,
-5. local development settings (if local)
+5. **local development settings (if local)**
 
 This structure helps avoid redundancy of configuration settings and also allows our local development yaml to just override a few settings
 like external hostnames and references to local databases/queues but otherwise inherit our 'development' zone settings.  Typically, this
@@ -47,8 +48,11 @@ helm template ../helm-charts/app1 --name-template app1-dev --output-dir ../kubec
 # Replicating non-stateless DBs/queues locally
 If possible, avoid using shared databases and use local k8s deployments of the databases/queues to avoid test case collision between 
 developers. As long as you are careful to make sure your development zone does not contain customer data, then making backups of your 
-development databases and loading those backups in local development copies can help speed up your testcase creation process and leverage 
-"end to end" tests that may use such data.  Remember, you can use Minio to locally replicate storage in S3.
+development databases and loading those backups in local development copies can help speed up your testcase creation process and 
+leverage "end to end" tests that may use such data.  It's common to use public helm charts (or make a copy of them) to deploy these
+databases in your local or CICD environments.  Example charts:
+ * Minio to locally replicate S3 APIs and storage: https://github.com/minio/minio/tree/master/helm/minio
+ * A huge selection of others can be found from Bitnami's collection at https://github.com/bitnami/charts/tree/main/bitnami
 
 # Doing interactive nodejs debugging in containers
 The kubernetes pod's spec.containers.args field can be configured in a helm chart to conditionally override of the primary command the 
