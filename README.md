@@ -65,7 +65,7 @@ with only a subset of sections having recommendations):
 - Development
 
   - [Typical Development Workflows](./docs/development/dev-flows.md)
-  - Development Environment
+  - [Kubernetes-based Development Environment] (./docs/kubernetes-dev-environment.md)
   - [Choosing and vetting dependencies](./docs/development/dependencies.md)
   - [Building good containers](./docs/development/building-good-containers.md)
   - [Static Assets](./docs/functional-components/static-assets.md)
