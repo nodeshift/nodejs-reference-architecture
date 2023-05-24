@@ -4,6 +4,65 @@ Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP he
 
 In other words, CORS is a browser security feature that restricts cross-origin HTTP requests with other servers and specifies which domains access your resources.
 
+CORS works by adding new HTTP headers that let servers describe which origins are permitted to read that information from a web browser.  For HTTP requests other than GET and POST, the CORS specification mandates that browers "preflight" the request with an HTTP OPTIONS method to check which methods are supported by the server.  Upon "approval" from the server, the request can be made.
+
+## Simple Requests
+
+Requests that don't trigger a CORS preflight are know as simple requests.  A simple request can be either a GET or a POST.
+
+Given this example:
+
+```js
+const xhr = new XMLHttpRequest();
+const url = "https://bar.other/resources/public-data/";
+
+xhr.open("GET", url);
+xhr.onreadystatechange = someHandler;
+xhr.send();
+```
+
+This performs a simple exchange between the client and server, using CORS headers to handle the privileges.
+
+The browser might send something that looks like this:
+
+```
+GET /resources/public-data/ HTTP/1.1
+Host: bar.other
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:71.0) Gecko/20100101 Firefox/71.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Connection: keep-alive
+Origin: https://foo.example
+```
+
+The request header of note is Origin, which shows that the invocation is coming from https://foo.example.
+
+The server might respond like this:
+
+```
+HTTP/1.1 200 OK
+Date: Mon, 01 Dec 2008 00:23:53 GMT
+Server: Apache/2
+Access-Control-Allow-Origin: *
+Keep-Alive: timeout=2, max=100
+Connection: Keep-Alive
+Transfer-Encoding: chunked
+Content-Type: application/xml
+
+[…XML Data…]
+```
+
+In response, the server returns an **Access-Control-Allow-Origin** header with `Access-Control-Allow-Origin: *` , which means that the resource can be accessed by any origin.
+
+This pattern of the **Origin** and **Access-Control-Allow-Origin** headers is the simplest use of the access control protocol.  If the resource owners at https://bar.other wished to restrict access to the resource to requests only from https://foo.example, they could send `Access-Control-Allow-Origin: https://foo.example`
+
+
+
+## Preflighted requests
+
+Unlike simple requests, for "preflighted" requests the browser first sends an HTTP request using the OPTIONS method to the resource on the other origin, in order to determine if the actual request is safe to send. Such cross-origin requests are preflighted since they may have implications for user data.
+
 
 ## Recommended Components
 
