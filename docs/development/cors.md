@@ -157,3 +157,40 @@ Most web frameworks, like express.js, have [similar modules](https://www.npmjs.c
 * [CORS module search on npm](https://www.npmjs.com/search?q=cors)
 
 * [CORS on mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+
+
+
+------------------------------------------
+
+recoomend componts - mention that they all use the same underlying module
+
+pair down the intro section, and then attribute
+
+disambiquate the intro paragraph
+
+access to multiple
+- env variable for different environments
+
+guidance
+ - proxy server is one way?
+  - do we want to do that? it circumvents the browser model
+  - if we do have recommnedations on this, needs caveats and related things
+- additional htpp layer before the node server,
+- separate proxy section, possibly look at API section, even auth section
+
+subsection related to patterns
+- token related things
+
+
+Rename - cross domain communication
+
+
+reason to enbable:
+  - have to require instead of nice to add
+  - limit to just domains,  if possible.  public not so much, could whitelist with tokens
+  - teams have seen specific origins for things like auth providers,  open for more public things
+    - only setting the clients domains for certain projects - david from IBM
+curl doesn't care about cors
+
+API section - securing your backend
