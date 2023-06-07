@@ -76,7 +76,7 @@ with only a subset of sections having recommendations):
     - [Code Coverage](./docs/development/code-coverage.md)
     - [TypeScript](./docs/development/typescript.md)
   - [Accessibility](./docs/development/accessibility.md)
-  - [Cross origin resource sharing (CORS)](./docs/development/cors.md)
+  - [Cross Origin Communication](./docs/development/cross-origin.md)
   - [CI/CD](./docs/development/ci-cd.md)
   - Npm
     - [Npm Proxy / Internal Registries](./docs/development/npm-proxy.md)
