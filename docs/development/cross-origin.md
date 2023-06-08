@@ -49,13 +49,3 @@ Most web frameworks, like express.js, have [similar modules](https://www.npmjs.c
 * [CORS module search on npm](https://www.npmjs.com/search?q=cors)
 
 * [CORS on mdn](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-
-
-
---------------------------------
-
-pop in a screenshot of the CORS error
-  maybe showing the example with the CORS header
-  link to existing example?
-
-
