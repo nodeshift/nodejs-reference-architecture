@@ -428,6 +428,16 @@
       "section": [
         "Consuming Services"
       ]
+    },
+    {
+      "name": "cors",
+      "npmlink": "https://www.npmjs.com/package/cors",
+      "reviewlevel": "Yearly Watch",
+      "activitycurrent": "None",
+      "activitytarget": "None",
+      "section": [
+        "CORS"
+      ]
     }
   ],
   "licenses": {
