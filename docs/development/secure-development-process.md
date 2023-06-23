@@ -123,7 +123,7 @@ Harden external http endpoints by:
   * Protect against Cross site scripting (XSS). For example by using a package like [xss]
     (https://www.npmjs.com/package/xss).
   * Protect against cross site forgery requests
-    * Use Anti-CSRF tokens. Note that [csurf](https://www.npmjs.com/package/csurf) is depercated
+ Use Anti-CSRF tokens. Note that [csurf](https://www.npmjs.com/package/csurf) is deprecated
       and not recommended for use.
 
 **Avoid leaking info through errors**
