@@ -6,14 +6,14 @@ sidebar_position: 12
 
 ## Recommended Components
 
-- Express - https://expressjs.com/
-  With 10 million downloads a month, Express is the most popular backend Node.js web framework.
-  By comparison all of the competitors together have 500k-1m downloads and many of those use Express under the covers.
-  It provides a fast, opinionated, minimalist web framework on top of Node.js
-
+- The team has past success with Express - https://expressjs.com/ and it continues to
+  be broadly used in the ecosystem with 29 million weekly downloads.
+- There are other frameworks that are gaining on Express and may be a good fit for your deployemnts.
+  The team has had success with some of them, however, there is still no clear
+  successor to express. For a good overview of some of the other frameworks and considerations for
+  selecting a web framework you can check out this article -  [introduction-nodejs-reference-architecture-part-6-choosing-web-frameworks](https://developers.redhat.com/articles/2021/12/03/introduction-nodejs-reference-architecture-part-6-choosing-web-frameworks)
+  
 ## Guidance
-
-Express - https://expressjs.com/ is the recommended general web framework for Node.js based on it's broad use, shallow dependency tree and the available resources for getting started.
 
 When deploying Express we have the following additional recommendations:
 
