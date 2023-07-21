@@ -531,6 +531,10 @@
       "@opentelemetry/sdk-trace-base": {
         "note": "dependency tslib@2.6.0 uses which is less restrictive than BSD",
          "allow": ["0BSD" ]
+      },
+      "@opentelemetry/sdk-trace-node": {
+        "note": "dependency tslib@2.6.0 uses which is less restrictive than BSD",
+         "allow": ["0BSD" ]
       }
     }
   },
