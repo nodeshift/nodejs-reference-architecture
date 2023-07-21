@@ -527,6 +527,10 @@
         "note": "dependency spdx-exceptions uses CC-BY-3.0 allows broad use with attribution",
         "note": "dependency argparse@2.0.1 uses Python-2.0",
         "allow": ["Artistic-2.0", "CC0-1.0", "CC-BY-3.0", "Python-2.0" ]
+      },
+      "@opentelemetry/sdk-trace-base": {
+        "note": "dependency "tslib@2.6.0" uses which is less restrictive than BSD",
+         "allow": ["0BSD" ]
       }
     }
   },
