@@ -63,3 +63,7 @@ covers them in more depth.
 Some databases offer support to help with implementing
 the 2 phase commit technique, so read through the documentation for the
 database you are using if you are planning to use that technique.
+
+## Further Reading
+
+* [Introduction to the Node.js reference architecture: Testing](https://developers.redhat.com/articles/2023/07/31/how-handle-transactions-nodejs-reference-architecture)

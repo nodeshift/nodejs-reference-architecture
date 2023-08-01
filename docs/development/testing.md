@@ -156,3 +156,7 @@ For more on Code Coverage, see the [Code Coverage](./code-coverage) section
 [unexpected]: https://www.npmjs.com/package/unexpected
 [webdriverio]: https://www.npmjs.org/package/webdriverio
 [snapshots]: https://jestjs.io/docs/snapshot-testing
+
+## Further Reading
+
+* [Introduction to the Node.js reference architecture: Testing](https://developers.redhat.com/articles/2023/07/27/introduction-nodejs-reference-architecture-testing)
