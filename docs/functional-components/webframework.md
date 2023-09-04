@@ -8,7 +8,7 @@ sidebar_position: 12
 
 - The team has past success with Express - https://expressjs.com/ and it continues to
   be broadly used in the ecosystem with 29 million weekly downloads.
-- There are other frameworks that are gaining on Express and may be a good fit for your deployemnts.
+- There are other frameworks that are gaining on Express and may be a good fit for your deployments.
   The team has had success with some of them, however, there is still no clear
   successor to express. For a good overview of some of the other frameworks and considerations for
   selecting a web framework you can check out this article -  [introduction-nodejs-reference-architecture-part-6-choosing-web-frameworks](https://developers.redhat.com/articles/2021/12/03/introduction-nodejs-reference-architecture-part-6-choosing-web-frameworks)
