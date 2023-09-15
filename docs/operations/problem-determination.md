@@ -113,7 +113,7 @@ Source maps should be generated and stored with the original source code for eac
   * process fails reporting lack of resources (for example sockets)
 
 * Approach
-  * generate a sequence of [Diagnostic report](https://nodejs.org/api/report.html)s.
+  * generate a sequence of [Diagnostic reports](https://nodejs.org/api/report.html).
   * compare resources reported between reports using
     [report-toolkit](https://developer.ibm.com/articles/introducing-report-toolkit-for-nodejs-diagnostic-reports/)
 
