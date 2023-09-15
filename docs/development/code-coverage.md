@@ -51,7 +51,7 @@ Code coverage should never block a production deployment
 
 ## Output Formats
 
-A common output format is the lcov format, which the recommeneded modules can produce.
+A common output format is the lcov format, which the recommended modules can produce.
 
 [jest]: https://www.npmjs.com/package/jest
 [nyc]: https://www.npmjs.com/package/nyc

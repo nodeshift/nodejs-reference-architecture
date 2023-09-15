@@ -49,7 +49,7 @@ file when building containers through one of these options:
   [sneak secreats into your containers](https://projectatomic.io/blog/2018/06/sneak-secrets-into-containers)
   article provides some info on how to do this.
 * Delete the `.npmrc` file from the final image AND compressing images
-  to flatten layers (least perferred).
+  to flatten layers (least preferred).
 
 ### Writing defensive code
 
@@ -134,9 +134,9 @@ Do not expose sensitive or internal information in errors returned to the end us
 
 Only send the required data to the front end. For example if a database query returns 4 fields but the front end will only display 3, make sure to remove the fourth field before sending the data on to the front end.
 
-**Discard sentive data after use**
+**Discard sensitive data after use**
 
-Do not retain senstive information beyond where it is needed. Overwrite fields/variables that contain sensitive data once it is not longer needed.
+Do not retain sensitive information beyond where it is needed. Overwrite fields/variables that contain sensitive data once it is not longer needed.
 
 **Validate input**
 
@@ -168,7 +168,7 @@ Design your application to run with the least privileges required. Ensure your a
 
 ### Support logging and monitoring
 
-Design your application to log sensitive/interesting actions and to make it easy for monitoring tools to collect and analyse these logs to indentify suspicious patterns. See the section on [logging](../operations/logging.md) for package recommendations.
+Design your application to log sensitive/interesting actions and to make it easy for monitoring tools to collect and analyze these logs to identify suspicious patterns. See the section on [logging](../operations/logging.md) for package recommendations.
 
 ### Externalize secrets
 
@@ -182,7 +182,7 @@ More specific to Node.js deployments, [dotenv](https://www.npmjs.com/package/dot
 
 ### Maintaining a secure and up to date foundation for deployed applications
 
-A Node.js application is built on top of a number of foundation components. Thoughout its lifetime it is important that you keep this foundation secure and up to date, even if no code changes within your application.
+A Node.js application is built on top of a number of foundation components. Throughout its lifetime it is important that you keep this foundation secure and up to date, even if no code changes within your application.
 
 The key elements include:
 * Secure and up to date base container images
@@ -196,16 +196,16 @@ Typically there will be an updated container when there are CVE's reported again
 * If you build Node.js binaries into a base image yourself, make sure to subscribe to the [nodejs-sec](https://groups.google.com/g/nodejs-sec) mailing list. This low volume mailing list is used to provide advance notice of security releases and will give you the earliest warning that you may need to update your Node.js version.
 * On a regular basis, check for new versions of the base container that you use and plan your CI/CD pipeline so that you can rebase your application or dependency image on a new version of the container when updates are available.
 * If you use common dependencies across a number of projects
-create a depenency image. While is this good for build times as oultined in [dependency image](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/development/building-good-containers.md#dependency-image), it will also help to reduce the total work required for dependency updates when shared across a number of projects.
-* On each update to the dependency image and on a regular basis scan the depencencies in the dependency image for vulnerabilities. A number of the teams members have had success in using `snyk` to complete these scans. Plan your dependency image CI/CD pipeline so that you can update to new versions of dependencies and publish a new version of the dependency image when necessary. Plan your application CI/CD pipelines so that you can rebase your applications on a new version of the dependeny image when necessary.
-* On each deployment, change to an application's depdencies, and on regular basis scan the dependencies which are deployed for each application. A number of the teams members have had success in using `snyk` to complete these scans. Plan your application CI/CD pipelines so that you can update to new versions of dependencies and redeploy your application when necessary.
+create a dependency image. While is this good for build times as outlined in [dependency image](https://github.com/nodeshift/nodejs-reference-architecture/blob/main/docs/development/building-good-containers.md#dependency-image), it will also help to reduce the total work required for dependency updates when shared across a number of projects.
+* On each update to the dependency image and on a regular basis scan the dependencies in the dependency image for vulnerabilities. A number of the teams members have had success in using `snyk` to complete these scans. Plan your dependency image CI/CD pipeline so that you can update to new versions of dependencies and publish a new version of the dependency image when necessary. Plan your application CI/CD pipelines so that you can rebase your applications on a new version of the dependency image when necessary.
+* On each deployment, change to an application's dependencies, and on regular basis scan the dependencies which are deployed for each application. A number of the teams members have had success in using `snyk` to complete these scans. Plan your application CI/CD pipelines so that you can update to new versions of dependencies and redeploy your application when necessary.
 
 ### Resolving nested dependencies
 
 Tools like snyk or Mend (aka WhiteSource) will identify npm packages dependencies with versions that have known security vulnerabilities (typically tracked with CVE's).  While often such vulnerabilities are 
 not actually exposed in the app using them, like the case of prototype pollution vulnerabilities in an app that does strong input checking, its very hard to prove and maintain/track the lack of exposure to a 
 given vulnerable dependency version.  Therefore, security teams will require your app have the updated dependency versions for simplicity.  Ideally, in the case where a nested npm module is pulled in is 
-vulnerable, the parent module using it will have a newer version that references a fixed version in its depenedencies.  However, that is not always the case and there are tools to manage the cases where
+vulnerable, the parent module using it will have a newer version that references a fixed version in its dependencies.  However, that is not always the case and there are tools to manage the cases where
 a nested vulnerable dependency version is pulled in by a different npm library that has not yet adjusted it dependencies to the fixed versions. 
 
 If you are using npm the best approach is to use npm version 8.3 or higher and using the [overrides](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#overrides) section. It supports the same single 
@@ -223,7 +223,7 @@ section without any needing an additional package.
 
 Based on the teams experience we recommend:
 
-* For modules maintined in GitHub, enable the `snyk` integration 
+* For modules maintained in GitHub, enable the `snyk` integration 
   and review/land the PRs generated.
 * Test and ensure that the module runs/passes tests on the
   latest LTS versions. This will reduce risk when updates are required for Node.js security releases.

@@ -7,7 +7,7 @@ There are two patterns that the team is familiar with when dealing with Cross Or
 
 ## Cross Origin Resource Sharing (CORS)
 
-By default, browers assume that your backend server doesn't want to share its resources with a front-end that it doesn't know about.
+By default, browsers assume that your backend server doesn't want to share its resources with a front-end that it doesn't know about.
 
 You might have seen this error in the browsers dev console:
 
@@ -21,7 +21,7 @@ However, there are certain situations where your backend might want to be access
 
 When developing a backend with a public API and you would like to control access to certain resources and how they are used, CORS should be enabled.
 
-**note: When enabling CORS, it is important to limit those methods and headers your application allows to prevent unwanted actors from accessesing resources they shouldn't be accessing.**
+**note: When enabling CORS, it is important to limit those methods and headers your application allows to prevent unwanted actors from accessing resources they shouldn't be accessing.**
 
 
 ### Access to Multiple Environments

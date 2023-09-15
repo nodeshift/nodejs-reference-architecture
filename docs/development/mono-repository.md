@@ -65,7 +65,7 @@ While there are a benefits, there are challenges to overcome.
 * Detecting what to build. Build times can be long due to overbuilding the entire repository
 * Long build times. Because of having to build the entire repository, this will cause build times to increase because tooling no longer is just building one artifact/package, but many different ones.
 * Not just JavaScript. A monorepo may not just be JavaScript, and can impact organization, tooling, and how to approach building different artifacts or packages in different languages.
-* Git repositories can grow larger in size.  Since we are building and maintaing different packages in a singular repository, we can exponentially grow the size of the git repository.
+* Git repositories can grow larger in size.  Since we are building and maintaining different packages in a singular repository, we can exponentially grow the size of the git repository.
 * Commit messages can be harder to interpret due to multiple artifacts, packages, or teams.
 
 

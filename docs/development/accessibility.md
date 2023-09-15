@@ -59,7 +59,7 @@ Developers may also use pre-made components with accessibility features built in
 
 Users should make sure to read and understand the accessibility documentation for pre-made components.
 It is also best practice to incorporate testing of your application with common
-assisitive technologies like screen readers and limiting input to keyboard interaction. See [tooling](#tooling) below.
+assistive technologies like screen readers and limiting input to keyboard interaction. See [tooling](#tooling) below.
 
 For those working on Linux
 [List Of Accessibility Documentation Sources And Tools (For GNU/Linux Development And Testing)](https://desktopqe-jenkins.rhev-ci-vms.eng.rdu2.redhat.com:3200/desktopqe/d06-projects/a11y.A11y_devel_doc_sources.html)
@@ -76,7 +76,7 @@ reference for working with the guidelines. The [WAI-ARIA Authoring Practices Exa
 
 In the teams experience testing/validation of accessibility requirements will be
 against the front-end and not the APIs provided by the Node.js back-end. The result
-being that team members building the front-end must be knowleadgeable on
+being that team members building the front-end must be knowledgeable on
 accessibility requirements. Back-end Node.js developers, on the other hand, will support
 requirements that come from the front-end versus driving the accessibility effort.
 
@@ -104,7 +104,7 @@ accessibility testing.
 Command line tools have been historically considered more accessible (see
 [Accessibility of Command Line Interfaces](https://dl.acm.org/doi/fullHtml/10.1145/3411764.3445544)
 for discussion on this topic).
-For this reason, most if not all of accessibility standards and guidlines are for
+For this reason, most if not all of accessibility standards and guidelines are for
 graphical user interfaces. The team is not aware of standards or guidelines that
 provide guidance specifically for command line applications. 
 
@@ -128,7 +128,7 @@ include:
 
 Accessibility tooling is generally not Node.js specific. However some tools are
 built in Node.js and are delivered through npm. They will, therefore, fit easily in a JavaScript
-or Node.js workflow when nessary. For example:
+or Node.js workflow when necessary. For example:
 * [eslint-plugin-jsx-a11y](https://www.npmjs.com/package/eslint-plugin-jsx-a11y)
 * [axe-core](https://www.npmjs.com/package/axe-core)
 * [pa11y](https://www.npmjs.com/package/pa11y)

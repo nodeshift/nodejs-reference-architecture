@@ -17,13 +17,13 @@ While the team doesn't have to much experience in the serverless realm at the mo
 
 One of the main recommendations that we can give related to Functions and Serverless in general, is to keep things as stateless as possible.  When a request comes in, the function will scale up and become available for a set period of time before it scales back down and the current context is destroyed.
 
-Node.js is one of the top recommended languages for Functions due to Node's small memory foot print, quick startup time and asynchronus nature.
+Node.js is one of the top recommended languages for Functions due to Node's small memory foot print, quick startup time and asynchronous nature.
 
 #### Challenges
 
 There are some challenges when deciding to use functions.  The first is that there is no standard.  How a function should be created and what data and types are available in the function signature, is based on the vendor that the function is being created for.  While not a standard for how functions should be created, the [CloudEvents specification](https://github.com/cloudevents/spec) standardizes on many platforms, such as Knative Serverless and Google Cloud Functions, the payload that is sent.
 
-Second is the local development and remote debugging experience.  This can be challenging for a couple of reasons.  First, when developing locally, if the function needs to interact with other remote services, this can be challenging to setup.  Second, once the function is running on its respective serverless platform, debugging the remote function can be challening, since it is no small feat to connect a debugger to a remote service.
+Second is the local development and remote debugging experience.  This can be challenging for a couple of reasons.  First, when developing locally, if the function needs to interact with other remote services, this can be challenging to setup.  Second, once the function is running on its respective serverless platform, debugging the remote function can be challenging, since it is no small feat to connect a debugger to a remote service.
 
 There are tools that exist to help with this experience, such as the [faas-js-runtime](https://www.npmjs.com/package/faas-js-runtime), but again, this is based on a specific vendor.
 

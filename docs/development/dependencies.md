@@ -43,14 +43,14 @@ Based on the teams experience we recommend the following:
     [Canary in the Gold Mine](https://github.com/nodejs/citgm)?
   * If the dependency is a native module does it use Node-API (use
     of Node-API means that packages can work across Node.js major versions)
-* Only use dependencies with licences acceptable to your organization
+* Only use dependencies with licenses acceptable to your organization
 * When choosing to use dependencies with a lower level of use in the 
   ecosystem doing a code review to look for red flags can be useful.
 
 When evaluating dependencies, the teams typically evaluate the top level
 dependencies versus the full tree **EXCEPT** for the following in which
 we evaluate the full tree:
-* Licence Checks
+* License Checks
 * Security vulnerabilities (CVEs)
 Total number of sub-dependencies
 

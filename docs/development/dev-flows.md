@@ -1,7 +1,7 @@
 ﻿# Typical Development Workflows
 
-Developement flows within the team's developer and the customers the team works
-with need to accomodate the following:
+Development flows within the team's developer and the customers the team works
+with need to accommodate the following:
 
 * the end target/deployment artifact is most often a container
 * for some platforms, deployment remains a server or virtual machine
@@ -120,7 +120,7 @@ Disadvantages:
   
 ## Zero install development environment
 
-Developers use a virtualized remote enviroment and use their local laptop
+Developers use a virtualized remote environment and use their local laptop
 only as a thin client.
 
 This model is typically an extension to one of the other

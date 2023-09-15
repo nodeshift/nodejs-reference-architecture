@@ -6,15 +6,15 @@ sidebar_position: 4
 
 ## Guidance
 
-When publishing modules to npm, it is recommened to enable 2 factor authenticaton. How to set that up can be found here https://docs.npmjs.com/configuring-two-factor-authentication. It is also a good practice to require the use of two-factor authentication or automation tokens for each module that is published.
+When publishing modules to npm, it is recommended to enable 2 factor authentication. How to set that up can be found here https://docs.npmjs.com/configuring-two-factor-authentication. It is also a good practice to require the use of two-factor authentication or automation tokens for each module that is published.
 
 If the module will be maintained by a group of people, it is better to create an organization for your team/project on npm to make it easier for multiple maintainers to manage and publish the package.
 
 It is also a good practice to have a "prepublish" npm script in the package.json that runs linting and tests before publishing happens. If your code needs to be transpiled first, having a "prepublish" script will make sure this is also done before publishing.
 
-The use of scoped pacakges is a good practice if you are creating many related packages.
+The use of scoped packages is a good practice if you are creating many related packages.
 
-When creating modules that will be published to an internal registry that is not upstream npm, it is a good practice to scope those modules to the name of your organization. It is also important that you or your company are the owners of the scoped orginization on upstream npm. This is important if a public module which depends on a private module is accidently published to upstream npm, which can lead to the "Dependecy Confusion" hack that is outlined [in this post](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610)
+When creating modules that will be published to an internal registry that is not upstream npm, it is a good practice to scope those modules to the name of your organization. It is also important that you or your company are the owners of the scoped organization on upstream npm. This is important if a public module which depends on a private module is accidentally published to upstream npm, which can lead to the "Dependency Confusion" hack that is outlined [in this post](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610)
 
 ## Publishing Modules
 
@@ -42,7 +42,7 @@ Not including these files can decrease the size of the package that is being ins
 
 A package written in another language like TypeScript should be published with transpiled JavaScript as the primary executable.
 
-Generally the original sources should not be required to use your published package, but it's your preference whether to publish them or not. Similar to the guidance on tests, the modules that the team publishs that are transpiled only contain the generated code.
+Generally the original sources should not be required to use your published package, but it's your preference whether to publish them or not. Similar to the guidance on tests, the modules that the team publishes that are transpiled only contain the generated code.
 
 If your module requires build steps, it is recommended to run those before you publish and not when the user installs the package. This is where you would use the `prePublish` script as mentioned above.
 
@@ -58,22 +58,22 @@ It is important if you are using Typescript or are generating type definitions f
 
 #### Module Versions
 
-It is recommened to use [Semantic Versioning](https://semver.org/) when possible. This will make it easier for a user to determine if a new version of a module will potentianlly break their code.
+It is recommended to use [Semantic Versioning](https://semver.org/) when possible. This will make it easier for a user to determine if a new version of a module will potentially break their code.
 
 There are some automation tools that can help with bumping your module to the correct version.
 
 - [release-please](https://github.com/googleapis/release-please)
 - [standard-version](https://github.com/conventional-changelog/standard-version)
 
-Both of those tools will base the version bump on commit messages that follow the [coventional commit standard](https://www.conventionalcommits.org/en/v1.0.0/)
+Both of those tools will base the version bump on commit messages that follow the [conventional commit standard](https://www.conventionalcommits.org/en/v1.0.0/)
 
 The npm cli also provides a [`version` command](https://docs.npmjs.com/cli/v7/commands/npm-version) that can be used to increase the version of package.
 
 #### Publish Internal Modules
 
-When publishing to an internal registry, like Artifactory or Nexus, it is recommended to scope your package. This adds extra protection if this module is accidently published to a public registry and avoids the dependecy confusion hack mentioned above.
+When publishing to an internal registry, like Artifactory or Nexus, it is recommended to scope your package. This adds extra protection if this module is accidentally published to a public registry and avoids the dependency confusion hack mentioned above.
 
-How to publish to an internal registry is up to you, but the team recommneds the usage of a `.npmrc` file.
+How to publish to an internal registry is up to you, but the team recommends the usage of a `.npmrc` file.
 
 A `.npmrc` file can also be used either per project or globally to change the registry that your package is published to. The contents of this file might look something like this:
 
