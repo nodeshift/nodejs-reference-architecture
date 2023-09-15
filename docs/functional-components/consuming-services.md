@@ -13,7 +13,7 @@ This section is the compliment to
 with the packages used to comsumes services instead of building
 them.
 
-## Recommened Packages
+## Recommended Packages
 
 Two packages that the team has had success with are:
 
