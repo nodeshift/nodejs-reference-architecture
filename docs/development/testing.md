@@ -52,7 +52,7 @@ test('unknown service', () => {
   });
 ```
 
-The first time the test is run it will create/store a snapshot of the exepcted exception.
+The first time the test is run it will create/store a snapshot of the expected exception.
 On subsequent runs if the exception does not match the snapshot, it will report
 a test failure. This makes generating/capturing the result from an operation being tested
 fast and easy.

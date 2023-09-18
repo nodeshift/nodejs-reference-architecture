@@ -18,7 +18,7 @@ existing Node.js image (for example)
 [ubi8/nodejs-16](https://catalog.redhat.com/software/containers/ubi8/nodejs-16/615aee9fc739c0a4123a87e1)
 image or a [dependency image](./building-good-containers.md#dependency-image).
 
-While a Node.js developer may not need to setup the CI/CD pipleline a
+While a Node.js developer may not need to setup the CI/CD pipeline a
 good understanding of their organizations pipeline is often valuable
 in order to understand what's needed to externalize configuration in
 the code they write as well as being able to investigate problems that
@@ -30,7 +30,7 @@ N/A
 
 ## Guidance
 
-The team's experiece is that there are most often two different ci/cd flows
+The team's experience is that there are most often two different ci/cd flows
 which are used at the same time:
 
 * Testing on code check-in
@@ -55,7 +55,7 @@ for this kind of testing for Node.js components are captured in the
 [Code Consistency](./code-consistency.md),
 [Testing](./testing.md), and
 [Code Coverage](./code-coverage.md) sections. Teams often
-then also test the PR by spinning up a container environment and runing some
+then also test the PR by spinning up a container environment and running some
 initial integration test.  If you run check-in integration tests it is often useful to run both 
 integration and unit tests in the container in order to capture a more complete picture
 of the Code Coverage achieved.
@@ -84,7 +84,7 @@ support a number of stages/environments including:
 
 * Development
   * This environment often mirrors the main branch of each component
-    and may sometimes not be working due to mistmatches in APIs/use of APIs.
+    and may sometimes not be working due to mismatches in APIs/use of APIs.
   * Once tests pass in development, PRs may be automatically opened to
     update Staging to the new component levels.
 * Staging
@@ -92,7 +92,7 @@ support a number of stages/environments including:
     work together.
   * They may be multiple staging environments. One which
     mirrors production in terms of non-application components
-    (versions of istio, kubernetes, etc.) and additional
+    (versions of Istio, Kubernetes, etc.) and additional
     environments which reflect future target configurations
     for these components.
  * PRs may be automatically created to update component versions in
@@ -125,13 +125,13 @@ configuration for how to connect to databases and other services, the
 Node.js run configuration (production/development) and any other configuration
 information.
 
-[Jekins](https://www.jenkins.io/) and
+[Jenkins](https://www.jenkins.io/) and
 [Tekton Pipelines](https://tekton.dev/) are common tools that have been
 used by the team to implement the container pipeline.
 
 The team has found that it is advisable to use a separate git repository/branch
 to configure the versions of the components to be tested in each environment
-within the container pipeline. One commmon pattern the team has seen is using
+within the container pipeline. One common pattern the team has seen is using
 helm charts within this repo to configure the versions of the components used
 along with the configuration required for a given environment.
 
@@ -149,11 +149,11 @@ The benefit of running in the check-in tests helps developers validate that
 they have resolved reported issue.
 deploys checks in both the check-in tests as well as the container pipeline.
 
-Tools like [mend](https://www.mend.io/), [Synk](https://snyk.io/) and those
+Tools like [mend](https://www.mend.io/), [Snyk](https://snyk.io/) and those
 built into GitHub have been used for scanning in the check-in phase. Often
-a number of differents scans are required to cover all of the important aspects
+a number of different scans are required to cover all of the important aspects
 which include scans of:
-* application depencencies for vulnerabilities
+* application dependencies for vulnerabilities
 * os packages for vulnerabilities
 * source code using static analysis
 * container images for best practices (not running as root etc.)

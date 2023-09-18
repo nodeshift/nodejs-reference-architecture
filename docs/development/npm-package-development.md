@@ -89,9 +89,9 @@ to the public npm registry
 
 * **private** - This field is only recommended and should be set to `yes` if your package will not be published to npm.
 
-* **support** - This field is to help package maintainers communicate with and set expectations for their users about the level of support they are willing to provide on a package.  The team has worked closely with the [Node.js Package Maintence Team](https://github.com/nodejs/package-maintenance) on their recommendations on what this support field should look like.  For one of your modules, [opossum](https://github.com/nodeshift/opossum), we [set this field](https://github.com/nodeshift/opossum/blob/main/package.json#L75) to `true` and supplied our support information in a separate [package-support.json file](https://github.com/nodeshift/opossum/blob/main/package-support.json).
+* **support** - This field is to help package maintainers communicate with and set expectations for their users about the level of support they are willing to provide on a package.  The team has worked closely with the [Node.js Package Maintenance Team](https://github.com/nodejs/package-maintenance) on their recommendations on what this support field should look like.  For one of your modules, [opossum](https://github.com/nodeshift/opossum), we [set this field](https://github.com/nodeshift/opossum/blob/main/package.json#L75) to `true` and supplied our support information in a separate [package-support.json file](https://github.com/nodeshift/opossum/blob/main/package-support.json).
 
-  For more information on the support field, check out what the [Package Maintence Team says](https://github.com/nodejs/package-maintenance/blob/main/docs/PACKAGE-SUPPORT.md)
+  For more information on the support field, check out what the [Package Maintenance Team says](https://github.com/nodejs/package-maintenance/blob/main/docs/PACKAGE-SUPPORT.md)
 
 * **type** - This field defines the module format that Node.js will use.  For ES Modules(ESM), use `module` and for Common JS(CJS) modules, use `commonjs`.  For more information on how Node.js determines the difference between ESM and CJS modules take a [look at the Node.js official docs here](https://nodejs.org/dist/latest-v18.x/docs/api/packages.html#determining-module-system)
 
@@ -105,9 +105,9 @@ While there is no list of development dependencies that the team recommends, we 
 
 For the teams guidance on choosing dependencies, check out the [Choosing and vetting dependencies](./dependencies.md).
 
-During development of a pacakge, it is helpful to add the package-lock.json to source control, so all developers working on the package will be able to install the same versions of dependencies.
+During development of a package, it is helpful to add the package-lock.json to source control, so all developers working on the package will be able to install the same versions of dependencies.
 
-It is also recommended to know what semver range you are specifying for any dependecy you wish to install.  For example:
+It is also recommended to know what semver range you are specifying for any dependency you wish to install.  For example:
 
 The `^` will give you all the minor and patch releases when they become available.
 
@@ -123,7 +123,7 @@ npm Workspaces supports managing multiple projects within a singular top-level, 
 
 ### Bundlers and Transpilers
 
-Bundlers are helpful if your package needs to be used by both Node.js and the browser.  The same codebase can be packaged for multiple platforms with a trivial amount of work by using a bundler.  [Webpack](https://webpack.js.org/) is one such bundler that the team has some familarity with.
+Bundlers are helpful if your package needs to be used by both Node.js and the browser.  The same codebase can be packaged for multiple platforms with a trivial amount of work by using a bundler.  [Webpack](https://webpack.js.org/) is one such bundler that the team has some familiarity with.
 
 For those packages being written in Typescript, you will need to use a transpiler since Node.js does not support running TypeScript natively, so it must first be transpiled to JavaScript. We recommend the `tsc` transpiler that is shipped with [typescript](https://www.npmjs.com/package/typescript). This supports both type checking and transpilation to JavaScript.
 

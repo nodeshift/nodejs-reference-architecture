@@ -1,7 +1,7 @@
 # Kubernetes-based Development Environment Recommendations
 
-Developement and local-testing flows should ideally be the same for all the developers of a project, but its
-common for developers on a team to have heterogeneus development platforms (i.e. Linux, Intel-based MacOS, M1-based MacOS, Windows).
+Development and local-testing flows should ideally be the same for all the developers of a project, but its
+common for developers on a team to have heterogenous development platforms (i.e. Linux, Intel-based MacOS, M1-based MacOS, Windows).
 Using kubernetes as a homogenized execution/configuration layer can be key to ensure testing/deployment
 use the same configuration settings for all developers.  Building a docker image is the same "docker build ..." command
 regardless of development platform, and kubernetes configuration settings, ideally built through yaml configuration files and 
@@ -50,7 +50,7 @@ If possible, avoid using shared databases and use local k8s deployments of the d
 developers. As long as you are careful to make sure your development zone does not contain customer data, then making backups of your 
 development databases and loading those backups in local development copies can help speed up your testcase creation process and 
 leverage "end to end" tests that may use such data.  It's common to use public helm charts (or make a copy of them) to deploy these
-databases in your local or CICD environments.  Example charts:
+databases in your local or CI/CD environments.  Example charts:
  * Minio to locally replicate S3 APIs and storage: https://github.com/minio/minio/tree/master/helm/minio
  * A huge selection of others can be found from Bitnami's collection at https://github.com/bitnami/charts/tree/main/bitnami
 
@@ -118,13 +118,13 @@ So just like how debugger flags and nodemon can be conditionally turned on in a 
 integration test run.  When doing this, one should run nyc around the execution of the unit + integration tests to capture the code 
 coverage from the combination of the two types of tests.  However, one can't have the pod test-script immediately finish once the test 
 finishes, or else the test results will disappear when the test pod shuts down.  Normally, local developer testing can then just look at 
-the logs of the shutdown pod to see if it was successful or not, but when debugging failures in a CICD pipeline like Travis/Jenkins, its 
+the logs of the shutdown pod to see if it was successful or not, but when debugging failures in a CI/CD pipeline like Travis/Jenkins, its 
 very useful to run the same logic locally on one's development system, and those flows will typically need the full test result files.
 
 There are two general solutions for this:
 * For tests run in a non-production environment like minikube, a kubernetes Physical Volume (PV) can be created and
 and mounted in the test container for the post-test script to copy its result files into.  The higher level test-logic flow on one's
-development system (or CICD engine like Travis/Jenkins) can then copy out the test result and coverage files. 
+development system (or CI/CD engine like Travis/Jenkins) can then copy out the test result and coverage files. 
 
 * Utilize a state-handshake between the high level test scripting (eg. Travis/Jenkins/laptop shell) and the process in the
 test pod.  This can be done with a file in the pod, where the test scripting writes the process return-code from the tests to that file and

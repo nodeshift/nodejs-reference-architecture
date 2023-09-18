@@ -36,8 +36,8 @@ N/A
 ## Guidance
 
 Before employing obfuscation, validate that the value provided
-by obfusaction warrants the effort and downsides. Including
-licence headers in the code may be an alternative in some cases.
+by obfuscation warrants the effort and downsides. Including
+license headers in the code may be an alternative in some cases.
 If the product is based on an open source upstream, the code is already
 available publicly and therefore many of the motivations listed above
 will not apply. Typically obfuscation is not used within Red Hat

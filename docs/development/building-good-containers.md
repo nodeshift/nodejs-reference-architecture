@@ -60,7 +60,7 @@ as not being able use the `NODE_EXTRA_CA_CERTS` environment
 variable. You can read more about the issue
 [here](https://github.com/nodejs/node/pull/37727).
 
-Typical work arounds which include using firewall functionality to
+Typical workarounds which include using firewall functionality to
 proxy ports most often don't work in containers as the firewall
 capability is often not included in container distributions.
 
