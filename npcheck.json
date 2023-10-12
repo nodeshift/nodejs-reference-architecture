@@ -495,7 +495,8 @@
       },
       "swagger-editor": {
         "note": "Multiple dependencies use licenses",
-        "allow": ["Python-2.0","0BSD"]
+        "note": "depends on jsonify which is under Public Domain",
+        "allow": ["Python-2.0","0BSD", "Public Domain"]
       },
       "@stoplight/prism-cli":{
         "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
