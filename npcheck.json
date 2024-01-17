@@ -116,16 +116,6 @@
       ]
     },
     {
-      "name": "node-rdkafka",
-      "npmlink": "https://www.npmjs.com/package/node-rdkafka",
-      "reviewlevel": "Active Watch",
-      "activitycurrent": "None",
-      "activitytarget": "Tested and Verified",
-      "section": [
-        "Message Queuing"
-      ]
-    },
-    {
       "name": "opossum",
       "npmlink": "https://www.npmjs.com/package/opossum",
       "reviewlevel": "Yearly Watch",
