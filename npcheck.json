@@ -1,6 +1,16 @@
 {
   "modules": [
     {
+      "name": "node-rdkafka",
+      "npmlink": "https://www.npmjs.com/package/node-rdkafka",
+      "reviewlevel": "Active Watch",
+      "activitycurrent": "None",
+      "activitytarget": "Tested and Verified",
+      "section": [
+        "Message Queuing"
+      ]
+    },
+    {
       "name": "cldr-localenames-full",
       "npmLink": "https://npmjs.com/package/cldr-localenames-full",
       "reviewlevel": "Yearly Watch",
