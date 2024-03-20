@@ -46,7 +46,7 @@ The `team` consists of engineers from across groups within IBM and Red Hat who:
 The reference architecture covers the following components (currently a work in progress
 with only a subset of sections having recommendations):
 
-- Functional Components
+#### Functional Components
 
   - [Web Framework](./docs/functional-components/webframework.md)
   - [Template Engines](./docs/functional-components/template-engines.md)
@@ -62,7 +62,7 @@ with only a subset of sections having recommendations):
   - [Node versions/images](./docs/functional-components/nodejs-versions-images.md)
   - [Transactions_handling](./docs/functional-components/transaction-handling.md)
 
-- Development
+#### Development
 
   - [Typical Development Workflows](./docs/development/dev-flows.md)
   - [Kubernetes-based Development Environment](./docs/development/kubernetes-dev-environment.md)
@@ -85,7 +85,7 @@ with only a subset of sections having recommendations):
   - [Secure Development Process](./docs/development/secure-development-process.md)
   - [Serverless](./docs/development/serverless.md)
 
-- Operations
+#### Operations
   - Monitoring
     - [Logging](./docs/operations/logging.md)
     - [Metrics Collection](./docs/operations/metrics.md)
