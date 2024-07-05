@@ -4,7 +4,22 @@
 
 ## Diff in npcheck.json since last review
 
-none
+```shell
+diff --git a/npcheck.json b/npcheck.json
+index 1f65eff..dba4bca 100644
+--- a/npcheck.json
++++ b/npcheck.json
+@@ -450,7 +450,8 @@
+       "BSD-3-Clause",
+       "Unlicense",
+       "WTFPL",
+-      "Unicode-DFS-2016"
++      "Unicode-DFS-2016",
++      "Unicode-3.0"
+     ],
+     "rules": {
+       "ioredis": {
+```
 
 ## Results
 
@@ -102,5 +117,17 @@ None
 ```
 ## Notes
 
+There was a release of NYC since the last report.  It had been 4 years since the last one
+
+(2): The module "cldr-localenames-full" is under the non-acceptable license(s) "Unicode-3.0". - ERROR
+(3): The module "cldr-localenames-full" depends on the "cldr-core@45.0.0" package which is under the non-acceptable license "Unicode-3.0". - ERROR
+
 The `cldr-localenames-full` and `cldr-core` have changed their licenses from `Unicode-DFS-2016` to `Unicode-3.0` which is failing the checks.  I think we can just add the `Unicode-3.0` option to the list of valid licenses.
 
+A few modules are `aging` in terms of the last release. Not necessariliy something to worry about yet but worth keeping an eye on
+
+Aging
+(12): The latest release of "helmet" was 8 months ago
+(20): The latest release of "i18next-fs-backend" was 7 months ago
+(24): The latest release of "passport" was 7 months ago
+(35): The latest release of "nano" was 8 months ago
