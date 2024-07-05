@@ -450,7 +450,8 @@
       "BSD-3-Clause", 
       "Unlicense", 
       "WTFPL", 
-      "Unicode-DFS-2016"
+      "Unicode-DFS-2016",
+      "Unicode-3.0"
     ],
     "rules": {
       "ioredis": {
