@@ -451,7 +451,8 @@
       "Unlicense", 
       "WTFPL", 
       "Unicode-DFS-2016",
-      "Unicode-3.0"
+      "Unicode-3.0",
+      "BlueOak-1.0.0"
     ],
     "rules": {
       "ioredis": {
