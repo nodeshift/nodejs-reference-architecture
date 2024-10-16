@@ -123,7 +123,7 @@ There was a release of Helmet since the last report.  It had been 8 months since
 
 (40): The module "@openapitools/openapi-generator-cli" depends on the "path-scurry@1.11.1" package which is under the non-acceptable license "BlueOak-1.0.0". - ERROR
 
-The latest release of `@openapitools/openapi-generator-cli` added the `glob` module which includes `path-scurry` which had a license(BlueOak-1.0.0) that was not in the list.  It has now been added to the list.
+The latest release of `@openapitools/openapi-generator-cli` added the `glob` module which includes `path-scurry` which had a license(BlueOak-1.0.0) that was not in the list.  It has now been added to the list.  The "Due Dilligence" action is now green after adding this in.
 
 A few modules are `aging` in terms of the last release. Not necessariliy something to worry about yet but worth keeping an eye on
 
