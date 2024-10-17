@@ -5,20 +5,31 @@
 ## Diff in npcheck.json since last review
 
 ```shell
+@@ -498,7 +498,7 @@
 diff --git a/npcheck.json b/npcheck.json
-index dba4bca..a4333bb 100644
+index 1f65eff..761845b 100644
 --- a/npcheck.json
 +++ b/npcheck.json
-@@ -451,7 +451,8 @@
+@@ -450,7 +450,9 @@
+       "BSD-3-Clause",
        "Unlicense",
        "WTFPL",
-       "Unicode-DFS-2016",
--      "Unicode-3.0"
+-      "Unicode-DFS-2016"
++      "Unicode-DFS-2016",
 +      "Unicode-3.0",
 +      "BlueOak-1.0.0"
      ],
      "rules": {
        "ioredis": {
+@@ -496,7 +498,7 @@
+       "swagger-editor": {
+         "note": "Multiple dependencies use licenses",
+         "note": "depends on jsonify which is under Public Domain",
+-        "allow": ["Python-2.0","0BSD", "Public Domain"]
++        "allow": ["Python-2.0","0BSD", "Public Domain", "CC0-1.0"]
+       },
+       "@stoplight/prism-cli":{
+         "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
 ```
 
 ## Results
@@ -124,6 +135,8 @@ There was a release of Helmet since the last report.  It had been 8 months since
 (40): The module "@openapitools/openapi-generator-cli" depends on the "path-scurry@1.11.1" package which is under the non-acceptable license "BlueOak-1.0.0". - ERROR
 
 The latest release of `@openapitools/openapi-generator-cli` added the `glob` module which includes `path-scurry` which had a license(BlueOak-1.0.0) that was not in the list.  It has now been added to the list.  The "Due Dilligence" action is now green after adding this in.
+
+The latest release of swagger-editor depends on react-syntax-highlighter, which just added a new dependecy, highlightjs-vue, which has a license that was not previously in the list(CC0-1.0)
 
 A few modules are `aging` in terms of the last release. Not necessariliy something to worry about yet but worth keeping an eye on
 
