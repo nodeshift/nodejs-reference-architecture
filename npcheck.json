@@ -451,7 +451,8 @@
       "Unlicense", 
       "WTFPL", 
       "Unicode-DFS-2016",
-      "Unicode-3.0"
+      "Unicode-3.0",
+      "BlueOak-1.0.0"
     ],
     "rules": {
       "ioredis": {
@@ -497,7 +498,7 @@
       "swagger-editor": {
         "note": "Multiple dependencies use licenses",
         "note": "depends on jsonify which is under Public Domain",
-        "allow": ["Python-2.0","0BSD", "Public Domain"]
+        "allow": ["Python-2.0","0BSD", "Public Domain", "CC0-1.0"]
       },
       "@stoplight/prism-cli":{
         "note": "dependency tslib@2.3.1 reports 0BSD which is less restrictive than BSD",
